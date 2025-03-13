@@ -1,0 +1,255 @@
+{
+  "main": {
+    "id": "b62c090612830622",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f4e342369053af0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f78089659de0962",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "EBAOBAO 的宇宙无敌超级第一 Git 笔记"
+            }
+          },
+          {
+            "id": "9f4fc48adb5ee881",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记"
+            }
+          },
+          {
+            "id": "f0085ba893ad704a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "EBAOBAO 的宇宙无敌超级第一 Git 笔记"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e29c8bacaccb9ea9",
+    "type": "split",
+    "children": [
+      {
+        "id": "44dc59027e449e8e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c7b138c2bcccb2dd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "1c8e99fcf6f3b1ec",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "22b36ac945c1957a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a75f923a627f52b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1650b9d576b3eb3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "293a5ba457a9a8bd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "EBAOBAO 的宇宙无敌超级第一 JS 笔记 的反向链接列表"
+            }
+          },
+          {
+            "id": "48e1362c64d836f4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "6d4b87d57d03507d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e003fd834f83acc9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "f0085ba893ad704a",
+  "lastOpenFiles": [
+    "新建 文本文档.txt",
+    "numpy.md",
+    "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
+    "python/爬虫.md",
+    "python 声音处理.md",
+    "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
+    "Excalidraw/Drawing 2025-03-11 20.41.18.excalidraw.md",
+    "2025-03-13.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+    "imgs/imgSTM32/6-4 PWM驱动舵机.jpg",
+    "imgs/imgSTM32/OC.png",
+    "imgs/imgSTM32/TIM.png",
+    "imgs/imgSTM32/GPIOJiBenJiaGou.png",
+    "imgs/imgSTM32/DuoJi.png",
+    "计算机通识.md",
+    "imgs/imgSTM32/EXTI.png",
+    "imgs/imgSTM32/QiDongWenJian.png",
+    "imgs/imgSTM32/stm32JieGou.png",
+    "imgs/imgSTM32/stm32periph.png",
+    "imgs/imgSTM32/stm32XingHao.png",
+    "日常.md",
+    "数理乱记.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+    "python/manim.md",
+    "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
+    "java/SE/java SE.md",
+    "java/java 设计模式.md",
+    "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
+    "imgs/未命名.md",
+    "imgs/imgSTM32",
+    "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",
+    "elec/电子百科.md",
+    "imgs/imgJavaSE",
+    "未命名",
+    "jekyll.md",
+    "elec/电分.md",
+    "elec",
+    "imgs/imgDianBai",
+    "Excalidraw/Drawing 2025-03-06 17.06.35.excalidraw.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记.md",
+    "项目.md",
+    "python",
+    "未命名.canvas",
+    "前端",
+    "java/Web",
+    "java/SE",
+    "java",
+    "Untitled.canvas",
+    "Untitled 1.canvas"
+  ]
+}
