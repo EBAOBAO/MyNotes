@@ -41,10 +41,10 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "imgs/2024-02-07/M5w42JJ1MftrJjqj.png"
+                "file": "imgs/2024-10-26/0sdalM1n2elyW1yd.png"
               },
               "icon": "lucide-image",
-              "title": "M5w42JJ1MftrJjqj"
+              "title": "0sdalM1n2elyW1yd"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "imgs/2024-02-07/M5w42JJ1MftrJjqj.png",
+                "file": "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "M5w42JJ1MftrJjqj 的大纲"
+              "title": "0sdalM1n2elyW1yd 的大纲"
             }
           }
         ],
@@ -199,18 +199,19 @@
   },
   "active": "f0085ba893ad704a",
   "lastOpenFiles": [
+    "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
+    "imgs/2024-10-04",
+    "imgs/2024-10-26/gS4rIMZbBk85TjHK.png",
+    "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
+    "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
+    "imgs/2024-02-07/M5w42JJ1MftrJjqj.png",
     "imgs/2024-12-27/vtp8bYuzP5WJIrfX.png",
     "imgs/2024-12-27/TfgXfY3PbXMaL8Uh.png",
     "imgs/2024-12-27/jZsRogbK7KJdv5wB.png",
     "imgs/2024-11-16/kqKeYeM6u0SHyo06.png",
     "imgs/2024-11-16/o1Gkie7CdITTgTeW.png",
-    "imgs/2024-10-26/gS4rIMZbBk85TjHK.png",
-    "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
-    "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "imgs/2024-10-21/DShKUh2Wt9iSPTFO.png",
-    "imgs/2024-10-21/izmzpSi0bYGUWfWp.png",
-    "imgs/2024-10-21/JTKh56ltBJHgxnAz.png",
     "计算机通识.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "新建 文本文档.txt",
@@ -245,7 +246,6 @@
     "未命名.canvas",
     "前端",
     "java/Web",
-    "java/SE",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
