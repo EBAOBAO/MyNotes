@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 JS 笔记"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记"
             }
           }
         ],
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 JS 笔记 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的大纲"
             }
           }
         ],
@@ -199,8 +199,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c7b138c2bcccb2dd",
+  "active": "f0085ba893ad704a",
   "lastOpenFiles": [
+    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
     "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
     "imgs/2024-10-04",
@@ -213,7 +214,6 @@
     "imgs/2024-11-16/kqKeYeM6u0SHyo06.png",
     "imgs/2024-11-16/o1Gkie7CdITTgTeW.png",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
-    "imgs/2024-10-21/DShKUh2Wt9iSPTFO.png",
     "计算机通识.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "新建 文本文档.txt",
@@ -226,7 +226,6 @@
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "日常.md",
     "数理乱记.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "python/manim.md",
     "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
     "java/SE/java SE.md",

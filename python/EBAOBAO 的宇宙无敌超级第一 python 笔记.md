@@ -443,6 +443,8 @@ set可以看成数学意义上的无序和无重复元素的集合，因此，�
 
 [Python3 数据类型转换 | 菜鸟教程 (runoob.com)](https://www.runoob.com/python3/python3-type-conversion.html)
 
+# 字面量
+
 # 运算符
 
 [Python 运算符 | 菜鸟教程 (runoob.com)](https://www.runoob.com/python/python-operators.html)
