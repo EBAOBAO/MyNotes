@@ -1086,7 +1086,23 @@ void PWM_SetCompare2(uint16_t Compare)
 {
 	TIM_SetCompare2(TIM2, Compare);
 }
+```
 
+```c
+/* Servo.c */
+
+#include "stm32f10x.h"                  // Device header
+#include "PWM.h"
+
+void Servo_Init()
+{
+	PWM_Init();
+}
+
+void Servo_SetAngle(float angle)
+{
+	PWM_SetCompare2(angle / 180 * 2000 + 500);
+}
 ```
 
 ## 库函数
@@ -1280,7 +1296,7 @@ void TIM2_IRQHandler()
 
 
 
-# USART 模块
+# USART 串口通信
 
 ```c
 /**
