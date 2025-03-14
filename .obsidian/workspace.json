@@ -39,12 +39,14 @@
             "id": "f0085ba893ad704a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "imgs/2024-10-26/0sdalM1n2elyW1yd.png"
+                "file": "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "0sdalM1n2elyW1yd"
+              "icon": "lucide-file",
+              "title": "EBAOBAO 的宇宙无敌超级第一 JS 笔记"
             }
           }
         ],
@@ -168,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
+                "file": "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0sdalM1n2elyW1yd 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 JS 笔记 的大纲"
             }
           }
         ],
@@ -197,12 +199,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f0085ba893ad704a",
+  "active": "c7b138c2bcccb2dd",
   "lastOpenFiles": [
+    "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
     "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
     "imgs/2024-10-04",
     "imgs/2024-10-26/gS4rIMZbBk85TjHK.png",
-    "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
     "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
     "imgs/2024-02-07/M5w42JJ1MftrJjqj.png",
     "imgs/2024-12-27/vtp8bYuzP5WJIrfX.png",
@@ -215,10 +217,10 @@
     "计算机通识.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "新建 文本文档.txt",
-    "numpy.md",
+    "python/numpy.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "python/爬虫.md",
-    "python 声音处理.md",
+    "python/python 声音处理.md",
     "Excalidraw/Drawing 2025-03-11 20.41.18.excalidraw.md",
     "2025-03-13.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
