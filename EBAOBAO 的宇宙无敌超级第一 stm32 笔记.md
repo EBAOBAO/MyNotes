@@ -1302,6 +1302,8 @@ void TIM2_IRQHandler()
 
 # USART 串口通信
 
+stm32 中集成了很多用于通信的模块，
+
 ```c
 /**
   * @brief  Initializes the USARTx peripheral according to the specified
