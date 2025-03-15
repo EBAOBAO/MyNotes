@@ -36,206 +36,64 @@ x, y, z = 0, 1, 2
 HUMOU_SALARY = 0
 ```
 
-## 数据类型
-
 ### 数
 
 > "Hell SU meal?" ——宇宙混沌大帝Humou
-### 字符串
 
-### 布尔值
-### 列表
+## 数据类型转换
 
-**列表** 由一系列按特定顺序排列的元素组成。你可以创建包含字母表中所有字母、数字0～9或所有家庭成 员姓名的列表；也可以将任何东西加入列表中，其中的元素之间可以没有任何关系。
+Python 数据类型转换可以分为两种：
 
-添加或删除元素的方法：
+- 隐式类型转换 - 自动完成
+- 显式类型转换 - 需要使用类型函数来转换
 
-`append(<value>)` : 在结尾处添加元素
-`insert(<index>, <value>) `: 在相应位置插入元素
-`pop(<index>)` : 删除并返回列表中相应位置元素，参数缺省则为最后一个元素
-`remove(<value>)` : 删除列表中第一个相应值的元素，列表中没有就报错
-    
-也可以这样删除元素：
+### 隐式类型转换
+
+在隐式类型转换中，Python 会自动将一种数据类型转换为另一种数据类型，不需要我们去干预。
+
+不同类型的数在参与运算时会自动转换成较大的类型：
 
 ```python
-del list[i]
+num_int = 123
+num_flo = 1.23
+
+num_new = num_int + num_flo
+
+print("num_int 数据类型为:",type(num_int)) 
+# num_int 数据类型为: <class 'int'>
+
+print("num_flo 数据类型为:",type(num_flo))
+# num_flo 数据类型为: <class 'float'>
+
+print("num_new 值为:",num_new)
+# num_new: 值为: 124.23
+print("num_new 数据类型为:",type(num_new))
+# num_new 数据类型为: <class 'float'>
 ```
 
-排序相关的方法：
+顺便一提，python 中 **数不能直接与字符串一起运算** ！
 
-`sort(reverse)` : 替换原来的列表的排序，参数reverse默认为False，即升序排序
-`reverse()` : 倒序（替换原列表）
-    
-```python
-list1 = ['wuLingHongGuang', 'guangLun3000', 'UFO', 'bean','ufo']
-print(sorted(list1)) 
-# 输出：['UFO', 'bean', 'guangLun3000', 'ufo', 'wuLingHongGuang']
-print(sorted(list1, reverse = True)) 
-# 输出：['wuLingHongGuang', 'ufo', 'guangLun3000', 'bean', 'UFO']
+### 显式类型转换
 
-print(list1) 
-# 输出：['wuLingHongGuang', 'guangLun3000', 'UFO', 'bean','ufo']
+以下几个内置的函数可以执行数据类型之间的转换。这些函数返回一个新的对象，表示转换的值。
 
-list1.sort()
-print(list1) 
-# 输出：['UFO', 'bean', 'guangLun3000', 'ufo', 'wuLingHongGuang']
-list1.sort(reverse = True) 
-print(list1) 
-# 输出：['wuLingHongGuang', 'ufo', 'guangLun3000', 'bean', 'UFO']
-```
-
-#### 函数
-
-`len()`：取列表长度
-`sorted(list, reverse)` : 返回排序后列表，不改变原列表
-
-专门用于处理数字列表的Python函数：
-
-`min()`
-`max()`
-`sum()`
-
-#### 复制列表
-
-```python
-list2 = list1
-list3 = list1[:]
-```
-
-这两者是不一样的！！
-
-```python
-list1 = [1, 2, 3, 4]
-list2 = list1
-list3 = list1[:] 
-
-list1[1] = 'a'
-
-print(list2) # [1, 'a', 3, 4]
-print(list3) # [1, 2, 3, 4]
-```
-
-#### 列表生成式
-
-```python
-squares = [value**2 for value in range(1, 11)] print(squares)
-```
-
-for循环后面还可以加上if判断来进行筛选：
-
-```python
->>> [x * x for x in range(1, 11) if x % 2 == 0]
-[4, 16, 36, 64, 100]
-```
-
-但是，我们不能在最后的`if`加上`else`，解决方法是像：
-
-```python
->>> [x if x % 2 == 0 else -x for x in range(1, 11)]
-[-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]
-```
-
-这样的话就必须有`else`。
-
-还可以使用两层循环，可以生成全排列：
-
-```python
->>> [m + n for m in 'ABC' for n in 'XYZ']
-['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
-```
-
-### 元组
-
-另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改。
-
-```python
-classmates = ('Michael', 'Bob', 'Tracy')
-```
-
-现在，classmates这个tuple不能变了，它也没有append()，insert()这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用`classmates[0]`，`classmates[-1]`，但不能赋值成另外的元素。
-
-如果要定义一个空的tuple，可以写成`()`。
-
-不可变的tuple有什么意义？因为tuple不可变，所以代码更安全。**如果可能，能用tuple代替list就尽量用tuple。**
-
-**只有1个元素的tuple定义时必须加一个`,`，来消除歧义。**
-
-**tuple所谓的“不变”是说，tuple的每个元素，指向（地址）永远不变。**
-
-### 字典
-
-```python
-d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
-```
-
-字典是一种动态结构，可随时在其中添加键值对。要添加键值对，可依次指定字典名、用方括号括起 的键和相关联的值。
-
-对于字典中不再需要的信息，可使用`del` 语句将相应的键值对彻底删除。
-
-#### 方法
-
-`get(<key>, <value>)`：（下方详解）
-`items()`：返回一个键值对列表
-`keys()`：返回键的列表
-`values()`：返回值的列表
-`pop(<key>)`：删除`<key>`对应的键值对
-
-使用例：
-
-```python
-user_0 = { 
-	'username': 'efermi', 
-	'first': 'enrico', 
-	'last': 'fermi', 
-}
-
-for key, value in user_0.items(): 
-	print(f"\nKey: {key}") 
-	print(f"Value: {value}")
-```
-
-通过dict提供的`get()`方法，如果key不存在，可以返回`None`，或者自己指定的value
-
-```python
->>> d.get('Thomas')
->>> d.get('Thomas', -1)
--1
-```
-
-可以使用`sorted()`函数对dict（根据键）进行排序
-
-#### 注意
-
-1. 键不能重复
-2. 键是**不可变对象**，因为dict根据key来计算value的存储位置，如果每次计算相同的key得出的结果不同，那dict内部就完全混乱了。这个通过key计算位置的算法称为哈希算法（Hash）。
-
-### 集合
-
-**集合（set）** 即没有重复元素的列表，通过对包含重复元素的列表调用set() ，可让Python找出列表中独一无二的元素，并使用这些元素 来创建一个集合。
-
-```python
->>> s = set([1, 2, 3])
-```
-
-方法：
-
-`add(<element>)`：添加元素
-
-
-set可以看成数学意义上的无序和无重复元素的集合，因此，两个set可以做数学意义上的交集、并集等操作：
-
-```python
->>> s1 = set([1, 2, 3])
->>> s2 = set([2, 3, 4])
->>> s1 & s2
-{2, 3}
->>> s1 | s2
-{1, 2, 3, 4}
-```
-
-## 类型转换
-
-[Python3 数据类型转换 | 菜鸟教程 (runoob.com)](https://www.runoob.com/python3/python3-type-conversion.html)
+| 函数                                                                               | 描述                               |
+| -------------------------------------------------------------------------------- | -------------------------------- |
+| [int(x [,base])](https://www.runoob.com/python3/python-func-int.html)            | 将x转换为一个整数                        |
+| [float(x)](https://www.runoob.com/python3/python-func-float.html)                | 将x转换到一个浮点数                       |
+| [complex(real [,imag])](https://www.runoob.com/python3/python-func-complex.html) | 创建一个复数                           |
+| [str(x)](https://www.runoob.com/python3/python-func-str.html)                    | 将对象 x 转换为字符串                     |
+| [repr(x)](https://www.runoob.com/python3/python-func-repr.html)                  | 将对象 x 转换为表达式字符串                  |
+| [eval(str)](https://www.runoob.com/python3/python-func-eval.html)                | 用来计算在字符串中的有效Python表达式,并返回一个对象    |
+| [tuple(s)](https://www.runoob.com/python3/python3-func-tuple.html)               | 将序列 s 转换为一个元组                    |
+| [list(s)](https://www.runoob.com/python3/python3-att-list-list.html)             | 将序列 s 转换为一个列表                    |
+| [set(s)](https://www.runoob.com/python3/python-func-set.html)                    | 转换为可变集合                          |
+| [dict(d)](https://www.runoob.com/python3/python-func-dict.html)                  | 创建一个字典。d 必须是一个 (key, value)元组序列。 |
+| [frozenset(s)](https://www.runoob.com/python3/python-func-frozenset.html)        | 转换为不可变集合                         |
+| [chr(x)](https://www.runoob.com/python3/python-func-chr.html)                    | 将一个整数转换为一个字符                     |
+| [ord(x)](https://www.runoob.com/python3/python-func-ord.html)                    | 将一个字符转换为它的整数值                    |
+| [hex(x)](https://www.runoob.com/python3/python-func-hex.html)                    | 将一个整数转换为一个十六进制字符串                |
+| [oct(x)](https://www.runoob.com/python3/python-func-oct.html)                    | 将一个整数转换为一个八进制字符串                 |
 # 字面量
 
 ## 数
@@ -252,6 +110,23 @@ a3 = 0b1100 # 二进制
 
 ```python
 humou_age = 114_514_191_981
+```
+
+除此外，python 甚至还有复数：
+
+```python
+>>>complex(1, 2)
+(1 + 2j) 
+
+>>> complex(1)    # 数字 
+(1 + 0j) 
+
+>>> complex("1")  # 当做字符串处理
+(1 + 0j) 
+
+# 注意：这个地方在"+"号两边不能有空格，也就是不能写成"1 + 2j"，应该是"1+2j"，否则会报错 
+>>> complex("1+2j") 
+(1 + 2j)
 ```
 
 ## 字符串
@@ -360,16 +235,15 @@ The area of a circle with radius 2.5 is 19.62
 | in not in | 成员运算符 |
 | not and or | 逻辑运算符 |
 
-
-# 列表
-
-# 字典
-
-# 元组
-
 # 操作字符串
 
-字符串有一些很有用的方法：
+## 切片
+
+Python没有针对字符串的截取函数，只需要切片一个操作就可以完成，非常简单。
+
+### 练习
+
+## 方法
 
 `upper()` : 全部字母改为大写
 `lower()` : 全部字母改为小写
@@ -499,6 +373,210 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid 
 第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；
 
 第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。
+# 列表
+
+**列表** 由一系列按特定顺序排列的元素组成。你可以创建包含字母表中所有字母、数字0～9或所有家庭成 员姓名的列表；也可以将任何东西加入列表中，其中的元素之间可以没有任何关系。
+
+```python
+[1, 2, "huhu"]
+```
+
+用索引来访问list中每一个位置的元素，索引是从`0`开始。当索引超出了范围时，Python会报一个`IndexError`错误，所以，要确保索引不要越界，记得最后一个元素的索引是`len(classmates) - 1`。
+
+添加或删除元素的方法：
+
+`append(<value>)` : 在结尾处添加元素
+`insert(<index>, <value>) `: 在相应位置插入元素
+`pop(<index>)` : 删除并返回列表中相应位置元素，参数缺省则为最后一个元素
+`remove(<value>)` : 删除列表中第一个相应值的元素，列表中没有就报错
+
+也可以这样删除元素：
+
+```python
+del list[i]
+```
+
+排序相关的方法：
+
+`sort(reverse)` : 替换原来的列表的排序，参数reverse默认为False，即升序排序
+`reverse()` : 倒序（替换原列表）
+
+```python
+list1 = ['wuLingHongGuang', 'guangLun3000', 'UFO', 'bean','ufo']
+print(sorted(list1)) 
+# 输出：['UFO', 'bean', 'guangLun3000', 'ufo', 'wuLingHongGuang']
+print(sorted(list1, reverse = True)) 
+# 输出：['wuLingHongGuang', 'ufo', 'guangLun3000', 'bean', 'UFO']
+
+print(list1) 
+# 输出：['wuLingHongGuang', 'guangLun3000', 'UFO', 'bean','ufo']
+
+list1.sort()
+print(list1) 
+# 输出：['UFO', 'bean', 'guangLun3000', 'ufo', 'wuLingHongGuang']
+list1.sort(reverse = True) 
+print(list1) 
+# 输出：['wuLingHongGuang', 'ufo', 'guangLun3000', 'bean', 'UFO']
+```
+
+## 函数
+
+`len()`：取列表长度
+`sorted(list, reverse)` : 返回排序后列表，不改变原列表
+`list()`：将可迭代对象（iterable，如字符串、元组、集合、字典、生成器等）转换为列表
+
+```python
+list(range())
+```
+
+专门用于处理数字列表的Python函数：
+
+`min()`
+`max()`
+`sum()`
+
+## 复制列表
+
+```python
+list2 = list1
+list3 = list1[:]
+```
+
+这两者是不一样的！！
+
+```python
+list1 = [1, 2, 3, 4]
+list2 = list1
+list3 = list1[:] 
+
+list1[1] = 'a'
+
+print(list2) # [1, 'a', 3, 4]
+print(list3) # [1, 2, 3, 4]
+```
+
+## 列表生成式
+
+```python
+squares = [value**2 for value in range(1, 11)] 
+print(squares)
+```
+
+for循环后面还可以加上if判断来进行筛选：
+
+```python
+>>> [x * x for x in range(1, 11) if x % 2 == 0]
+[4, 16, 36, 64, 100]
+```
+
+但是，我们不能在最后的`if`加上`else`，解决方法是像：
+
+```python
+>>> [x if x % 2 == 0 else -x for x in range(1, 11)]
+[-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]
+```
+
+这样的话就必须有`else`。
+
+还可以使用两层循环，可以生成全排列：
+
+```python
+>>> [m + n for m in 'ABC' for n in 'XYZ']
+['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
+```
+
+# 元组
+
+另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改。
+
+```python
+classmates = ('Michael', 'Bob', 'Tracy')
+```
+
+现在，classmates这个tuple不能变了，它也没有 `append()`，`insert()` 这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用`classmates[0]`，`classmates[-1]`，但不能赋值成另外的元素。
+
+如果要定义一个空的tuple，可以写成`()`。
+
+不可变的tuple有什么意义？因为tuple不可变，所以代码更安全。**如果可能，能用tuple代替list就尽量用tuple。**
+
+**只有1个元素的tuple定义时必须加一个`,`，来消除歧义。**
+
+**tuple所谓的“不变”是说，tuple的每个元素，指向（地址）永远不变。**
+
+# 字典
+
+```python
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+```
+
+字典是一种动态结构，可随时在其中添加键值对。要添加键值对，可依次指定字典名、用方括号括起 的键和相关联的值。
+
+对于字典中不再需要的信息，可使用`del` 语句将相应的键值对彻底删除。
+
+#### 方法
+
+`get(<key>, <value>)`：（下方详解）
+`items()`：返回一个键值对列表
+`keys()`：返回键的列表
+`values()`：返回值的列表
+`pop(<key>)`：删除`<key>`对应的键值对
+
+使用例：
+
+```python
+user_0 = { 
+	'username': 'efermi', 
+	'first': 'enrico', 
+	'last': 'fermi', 
+}
+
+for key, value in user_0.items(): 
+	print(f"\nKey: {key}") 
+	print(f"Value: {value}")
+```
+
+通过dict提供的`get()`方法，如果key不存在，可以返回`None`，或者自己指定的value
+
+```python
+>>> d.get('Thomas')
+>>> d.get('Thomas', -1)
+-1
+```
+
+（注意：返回`None`的时候Python的交互环境不显示结果。）
+
+### 函数
+
+`sorted()`：对dict（根据键）进行排序
+
+### 注意
+
+1. 键不能重复
+2. 键是**不可变对象**，因为dict根据key来计算value的存储位置，如果每次计算相同的key得出的结果不同，那dict内部就完全混乱了。这个通过key计算位置的算法称为哈希算法（Hash）。
+
+# 集合
+
+**集合（set）** 即没有重复元素的列表，通过对包含重复元素的列表调用set() ，可让Python找出列表中独一无二的元素，并使用这些元素 来创建一个集合。
+
+```python
+>>> s = set([1, 2, 3])
+```
+
+方法：
+
+`add(<element>)`：添加元素
+
+
+set可以看成数学意义上的无序和无重复元素的集合，因此，两个set可以做数学意义上的交集、并集等操作：
+
+```python
+>>> s1 = set([1, 2, 3])
+>>> s2 = set([2, 3, 4])
+>>> s1 & s2
+{2, 3}
+>>> s1 | s2
+{1, 2, 3, 4}
+```
 # 流程控制
 
 ## 分支
@@ -557,7 +635,7 @@ match args:
         print('invalid command.')
 ```
 
-第二个`case ['gcc', file1, *files]`表示列表第一个字符串是`'gcc'`，第二个字符串绑定到变量`file1`，后面的任意个字符串绑定到`*files`（符号`*`的作用将在函数的参数中讲解），它实际上表示至少指定一个文件
+第二个`case ['gcc', file1, *files]`表示列表第一个字符串是`'gcc'`，第二个字符串绑定到变量`file1`，后面的任意个字符串绑定到`*files`（符号`*`的作用将在函数的参数中讲解），它实际上表示至少指定一个文件。
 
 ## 循环
 
@@ -577,12 +655,9 @@ for value in range(1, 5):
 ### while
 
 
+# 函数
 
-# 函数式编程
-
-## 函数
-
-### 定义
+## 定义
 
 用`def`来定义函数
 
@@ -1086,6 +1161,7 @@ def blabla(
     huhu):
     function_body
 ```
+
 
 # 面向对象
 
