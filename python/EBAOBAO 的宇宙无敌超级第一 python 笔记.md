@@ -43,110 +43,7 @@ HUMOU_SALARY = 0
 > "Hell SU meal?" ——宇宙混沌大帝Humou
 ### 字符串
 
-
-
-#### 编码与解码
-
-单个字符的编码相关 *函数*：
-
-`ord()`：获取字符的整数表示。
-`chr()`：把编码转换为对应的字符。
-
-```python
->>> ord('A')
-65
->>> ord('中')
-20013
->>> chr(66)
-'B'
->>> chr(25991)
-'文'
-```
-
-如果知道字符的整数编码，可以用十六进制写`str`：
-
-```python
->>> '\u4e2d\u6587'
-'中文'
-```
-
-由于Python的字符串类型是`str`，在内存中以Unicode表示，一个字符对应若干个字节。如果要在网络上传输，或者保存到磁盘上，就需要把`str`变为以字节为单位的`bytes`。
-
-Python对`bytes`类型的数据用带`b`前缀的单引号或双引号表示：
-
-```python
-x = b'ABC'
-```
-
-**`bytes`的每个字符都只占用一个字节。**
-
-以Unicode表示的`str`通过`encode()`方法可以编码为指定的`bytes`：
-
-```python
->>> 'ABC'.encode('ascii')
-b'ABC'
->>> '中文'.encode('utf-8')
-b'\xe4\xb8\xad\xe6\x96\x87' 
-# 在bytes中，无法显示为ASCII字符的字节，用`\x##`显示
->>> '中文'.encode('ascii')
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
-
-## 中文编码的范围超过了ASCII编码的范围，Python会报错。
-```
-
-反过来，如果我们从网络或磁盘上读取了字节流，那么读到的数据就是`bytes`。要把`bytes`变为`str`，就需要用`decode()`方法：
-
-```python
->>> b'ABC'.decode('ascii')
-'ABC'
->>> b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
-'中文'
-```
-
-如果`bytes`中包含无法解码的字节，`decode()`方法会报错：
-
-```python
->>> b'\xe4\xb8\xad\xff'.decode('utf-8')
-Traceback (most recent call last):
-  ...
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
-```
-
-如果`bytes`中只有一小部分无效的字节，可以传入`errors='ignore'`忽略错误的字节：
-
-```python
->>> b'\xe4\xb8\xad\xff'.decode('utf-8', errors='ignore')
-'中'
-```
-
-要计算`str`包含多少个字符或`bytes`包含多少字节，可以用`len()`函数：
-
-```python
->>> len(b'ABC')
-3
->>> len(b'\xe4\xb8\xad\xe6\x96\x87')
-6
->>> len('中文'.encode('utf-8'))
-6
-```
-
-由于Python源代码也是一个文本文件，所以，当你的源代码中包含中文的时候，在保存源代码时，就需要务必指定保存为UTF-8编码。当Python解释器读取源代码时，为了让它按UTF-8编码读取，我们通常在文件开头写上这两行：
-
-```python
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-```
-
-第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；
-
-第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。
-
 ### 布尔值
-
-`True` 与 `False`。（注意大小写）
-
 ### 列表
 
 **列表** 由一系列按特定顺序排列的元素组成。你可以创建包含字母表中所有字母、数字0～9或所有家庭成 员姓名的列表；也可以将任何东西加入列表中，其中的元素之间可以没有任何关系。
@@ -369,6 +266,30 @@ str = r"I'm a fuckin asshole"
 
 ……**只要外面的引号与里面的引号都不一样即可。**
 
+当使用三个双引号定义字符串时（`"""xxx""" 或 '''xxx'''`），它允许字符串内容跨越多行：
+
+```python
+multi_line_string = """
+这是一个多行字符串。
+它可以包含多行文本，
+并且会保留换行符。
+"""
+```
+
+如果三个双引号没有被赋值给任何变量或对象，它也可以被用作多行注释，但这种用法并不常见，**而且我们也不推荐这么用**，因为它会作为一个字符串对象被加载到内存中。如果注释内容较多，可能会占用不必要的内存资源。
+
+不过事实上，将多行字符串直接写在类、模块、函数或方法体的开头，就可以将其用作 *文档字符串* ，它看起来像注释，但它实际上是一个字符串，被存储在对象的 `__doc__` 属性中。
+
+```python
+def add(a, b):
+    """
+    这是一个加法函数。
+    它接受两个参数 a 和 b，并返回它们的和。
+    """
+    return a + b
+
+print(add.__doc__)
+```
 ### 格式化字符串
 
 我们经常会输出类似`'亲爱的xxx你好！你xx月的话费是xx，余额是xx'`（不是谁会经常输出这玩意啊）之类的字符串，而xxx的内容都是根据变量变化的，所以，需要一种简便的格式化字符串的方式。
@@ -413,6 +334,33 @@ The area of a circle with radius 2.5 is 19.62
 有些时候，字符串里面的`%`是一个普通字符怎么办？这个时候就需要转义，用`%%`来表示一个`%`
 ## 布尔值
 
+`True` 与 `False`。（注意大小写）
+
+还有列表，字典等常用的数据类型的字面量，这些我们会在之后
+
+# 运算符
+
+[Python 运算符 | 菜鸟教程 (runoob.com)](https://www.runoob.com/python/python-operators.html)
+
+以下表格列出了从最高到最低优先级的所有运算符：
+
+| 运算符 | 描述 |
+|--|--|
+| ** | 指数 (最高优先级) |
+| ~ + - | 按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@) |
+| * / % // | 乘，除，取模和取整除 |
+| + - | 加法减法 |
+| >> << | 右移，左移运算符 |
+| & | 位 'AND' |
+| ^ \| | 位运算符 |
+| <= < > >= | 比较运算符 |
+| <> == != | 等于运算符 |
+| = %= /= //= -= += *= **= | 赋值运算符 |
+| is is not | 身份运算符 |
+| in not in | 成员运算符 |
+| not and or | 逻辑运算符 |
+
+
 # 列表
 
 # 字典
@@ -454,28 +402,103 @@ print('''床前明月光，
 疑是地上霜。''')
 ```
 
-# 运算符
+#### 编码与解码
 
-[Python 运算符 | 菜鸟教程 (runoob.com)](https://www.runoob.com/python/python-operators.html)
+单个字符的编码相关 *函数*：
 
-以下表格列出了从最高到最低优先级的所有运算符：
+`ord()`：获取字符的整数表示。
+`chr()`：把编码转换为对应的字符。
 
-| 运算符 | 描述 |
-|--|--|
-| ** | 指数 (最高优先级) |
-| ~ + - | 按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@) |
-| * / % // | 乘，除，取模和取整除 |
-| + - | 加法减法 |
-| >> << | 右移，左移运算符 |
-| & | 位 'AND' |
-| ^ \| | 位运算符 |
-| <= < > >= | 比较运算符 |
-| <> == != | 等于运算符 |
-| = %= /= //= -= += *= **= | 赋值运算符 |
-| is is not | 身份运算符 |
-| in not in | 成员运算符 |
-| not and or | 逻辑运算符 |
+```python
+>>> ord('A')
+65
+>>> ord('中')
+20013
+>>> chr(66)
+'B'
+>>> chr(25991)
+'文'
+```
 
+如果知道字符的整数编码，可以用十六进制写`str`：
+
+```python
+>>> '\u4e2d\u6587'
+'中文'
+```
+
+由于Python的字符串类型是`str`，在内存中以Unicode表示，一个字符对应若干个字节。如果要在网络上传输，或者保存到磁盘上，就需要把`str`变为以字节为单位的`bytes`。
+
+Python对`bytes`类型的数据用带`b`前缀的单引号或双引号表示：
+
+```python
+x = b'ABC'
+```
+
+**`bytes`的每个字符都只占用一个字节。**
+
+以Unicode表示的`str`通过`encode()`方法可以编码为指定的`bytes`：
+
+```python
+>>> 'ABC'.encode('ascii')
+b'ABC'
+>>> '中文'.encode('utf-8')
+b'\xe4\xb8\xad\xe6\x96\x87' 
+# 在bytes中，无法显示为ASCII字符的字节，用`\x##`显示
+>>> '中文'.encode('ascii')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
+
+## 中文编码的范围超过了ASCII编码的范围，Python会报错。
+```
+
+反过来，如果我们从网络或磁盘上读取了字节流，那么读到的数据就是`bytes`。要把`bytes`变为`str`，就需要用`decode()`方法：
+
+```python
+>>> b'ABC'.decode('ascii')
+'ABC'
+>>> b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
+'中文'
+```
+
+如果`bytes`中包含无法解码的字节，`decode()`方法会报错：
+
+```python
+>>> b'\xe4\xb8\xad\xff'.decode('utf-8')
+Traceback (most recent call last):
+  ...
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
+```
+
+如果`bytes`中只有一小部分无效的字节，可以传入`errors='ignore'`忽略错误的字节：
+
+```python
+>>> b'\xe4\xb8\xad\xff'.decode('utf-8', errors='ignore')
+'中'
+```
+
+要计算`str`包含多少个字符或`bytes`包含多少字节，可以用`len()`函数：
+
+```python
+>>> len(b'ABC')
+3
+>>> len(b'\xe4\xb8\xad\xe6\x96\x87')
+6
+>>> len('中文'.encode('utf-8'))
+6
+```
+
+由于Python源代码也是一个文本文件，所以，当你的源代码中包含中文的时候，在保存源代码时，就需要务必指定保存为UTF-8编码。当Python解释器读取源代码时，为了让它按UTF-8编码读取，我们通常在文件开头写上这两行：
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+```
+
+第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；
+
+第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。
 # 流程控制
 
 ## 分支
