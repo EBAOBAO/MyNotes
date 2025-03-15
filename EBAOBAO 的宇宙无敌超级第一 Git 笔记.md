@@ -1,5 +1,3 @@
-# 我的Git笔记
-
 [Git简介 - 廖雪峰的官方网站 (liaoxuefeng.com)](https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000)
 
 **git** 是用于版本控制的工具
@@ -8,16 +6,63 @@
 [windows 常用的shell（cmd.exe）命令大全 - 小林野夫 - 博客园 (cnblogs.com)](https://www.cnblogs.com/cdaniu/p/15168720.html)
 [Windows Shell 常用命令](https://zhuanlan.zhihu.com/p/143381025)
 
-## 走进git
+# 内容概览
 
-git大致分为四个板块：
+设定用户名：`git config --global user.name "EBAOBAO
+设定邮箱：`git config --global user.email "..."`
+使用 `git config --global -l` 或 `git config --list` 来查看配置。
 
-1. 工作目录：存放我们正在写的代码
-2. 暂存区：暂时保存我们待提交的内容
-3. 本地仓库：位于我们电脑上的一个版本控制仓库（存放的就是当前项目各个版本代码的增删信息）
-4. 远程仓库：位于服务器上的版本控制仓库
+新建仓库：`git init`
+添加修改：`git add <fileEdit>`
+移除修改：`git rm <fileEdit>`
+提交修改：`git commit -m <message>`
 
-它是一个分布式的控制系统，因此一般情况下我们每个人的电脑上都有一个本地仓库，由大家共同想远程仓库去推送版本迭代信息。
+查询状态：`git status`
+查询具体修改内容：`git diff <file>`
+最近一次变更的详细内容：`git show`
+查看提交历史记录：`git log`
+记录每一次命令: `git reflog`
+
+回滚版本：`git reset --hard HEAD^/<版本号头几位>` （版本号可以用上面那些指令执行）
+
+丢弃工作区的修改：`git checkout -- file`（用版本库里的版本替换工作区的版本）
+撤销暂存区修改：`git reset HEAD <file>`
+
+创建 ssh key：`ssh-keygen -t rsa -C "youremail@example.com"`
+添加远程库：`git remote add origin <link>`
+把本地库的所有内容推送到远程库上：`git push -u origin master`，后 `git push origin master`
+删除远程库：`git remote rm <name>`
+查看远程库信息：`git remote -v`
+从远程库克隆：`git clone git@github.com:michaelliao/gitskills.git`
+# 走进git
+
+## 什么是 git
+
+Git是目前世界上最先进的分布式版本控制系统（没有之一）。
+
+那版本控制系统又是什么东西？它有什么用？如果你用 Word 写过长篇大论，那你一定有这样的经历：
+
+想删除一个段落，又怕将来想恢复找不回来怎么办？有办法，先把当前文件“另存为……”一个新的Word文件，再接着改，改到一定程度，再“另存为……”一个新文件，这样一直改下去，最后你的Word文档变成了这样：
+
+![lots-of-docs](https://liaoxuefeng.com/books/git/what-is-git/docs.jpg)
+
+过了一周，你想找回被删除的文字，但是已经记不清删除前保存在哪个文件里了，只好一个一个文件去找，真麻烦；看着一堆乱七八糟的文件，想保留最新的一个，然后把其他的删掉，又怕哪天会用上，还不敢删，真郁闷；更要命的是，有些部分需要你的财务同事帮助填写，于是你把文件Copy到U盘里给她（也可能通过Email发送一份给她），然后，你继续修改Word文件。一天后，同事再把Word文件传给你，此时，你必须想想，发给她之后到你收到她的文件期间，你作了哪些改动，得把你的改动和她的部分合并，真困难。
+
+这个时候，版本控制系统的作用就体现出来了，git 可以帮你做到以下事情：
+
+1. 自动帮你记录每次文件的改动。
+2. 当你想撤销修改时，可以帮你将文件恢复到之前的模样。
+3. 当你与别人合作开发时，可以将不同成员对文件的不同改动自动合并。
+
+## git 结构
+
+那么 git 是怎么来实现这种操作的呢？首先你的文件在你自己电脑的文件管理器中的某个文件夹之中，你也经常会在这里修改你的文件，在你引入 git 之后，这里就是你的 *工作区* 。然后 git 会在这里生成一个 *仓库（Repository，也叫版本库）*，这个仓库就能实时关注这个工作区中文件发生的变化，你也能够将你的改动记录到仓库中去，这样就能让 git 帮助你实现回退等操作了。Git的版本库里存了很多东西，其中最重要的就是 *暂存区（stage，或 index）* 和 Git 为我们自动创建的第一个 *主分支（master）*，以及指向主分支的一个指针叫 `HEAD` ，如图所示：
+
+![git-repo](/imgs/2024-12-27/vtp8bYuzP5WJIrfX.png)
+
+分支和`HEAD`的概念我们以后再讲。不过了解了这个基本结构之后，你就能对使用 Git 进行开发的流程有些眉目了：首先你要把文件的修改添加到暂存区，这一步是一个 “缓冲”，算是个正式 *提交* 到分支前的一个草稿，然后改的差不多了以后你就把暂存区的所有修改提交到当前分支，在这里就是主分支。一次提交就相当于是给这个分支 “更新了一个版本”，而且你最好还要做一下“更新日志“，也就是提交时记录一下提交的信息来说明一下这次提交你进行了哪些改动，这样就能方便自己回退到某个版本或是方便别人了解你都改了什么。
+
+以上就是 git 的基础操作了，如果不考虑和别人一起合作开发一个项目的话，这基本上就是你所要了解的一切了！怎么样，入门 git 没想象中的那么难对吧？那么废话不多说，我们赶紧安装好 git 并实现这些基本的操作。
 
 **什么是仓库（Repository）？**：_[仓库](https://docs.github.com/get-started/quickstart/github-glossary#repository)_ 是 GitHub 最基本的元素。 它们很容易被想象为项目的文件夹。 仓库包含所有项目文件（包括文档），并存储每个文件的修改历史记录。 仓库可以有多个协作者，仓库可以是公开的，也可以设置为私有的。详情介绍请查看[GitHub 文档](https://docs.github.com/repositories/creating-and-managing-repositories/about-repositories)
 
@@ -27,13 +72,13 @@ git大致分为四个板块：
 
 -   介绍您的工作和兴趣
 -   您引以为豪的贡献以及这些贡献的背景信息
--   在您参与的社区获得帮助的指南 ![profile README](https://static.github-zh.com/static/skills/profile-readme-example.png)
+-   在您参与的社区获得帮助的指南
 
 **什么是提交(commit)？**："提交“是指对项目中的文件或文件夹的一组修改。有关更多信息，请参阅“[关于提交](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits)”。
 
 **什么是拉取请求(pull request)？：** 拉取请求是 GitHub 上协作的核心。 拉取请求向他人展示你分支中发生的修改，并允许其他人接受、拒绝或者增加其他修改建议。 通过side by side 比较方式，显示两个分支中内容的差异，此拉取请求将保留您刚刚在分支上所做的修改，并提议将它们合并到`main`分支上。 更多关于拉取请求，请查看文档"[About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)"
 
-## 安装git
+# 安装git
 
 安装完成后，需要设定用户名与邮箱来区分不同的用户
 
@@ -43,12 +88,11 @@ git config --global user.email "..."
 ```
 
 使用 `git config --global -l` 或 `git config --list` 来查看配置。
+# git 基础操作
 
 ## 创建仓库
 
-什么是版本库呢？版本库又名仓库，英文名**repository**，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。
-
-创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
+创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录，或者进入你想要创建 git 仓库的文件夹之中：
 
 ```
 mkdir learngit //创建空目录
@@ -59,7 +103,7 @@ pwd            //显示当前目录（windows要用chdir）
 
 [cmd常用命令](https://zhuanlan.zhihu.com/p/8602611339)
 
-第二步，通过`git init`命令把这个目录变成Git可以管理的仓库：
+第二步，通过`git init`命令把这个目录变成 Git 可以管理的仓库：
 
 ```
 $ git init
@@ -70,21 +114,59 @@ Initialized empty Git repository in /Users/michael/learngit/.git/
 
 如果你没有看到`.git`目录，那是因为这个目录默认是隐藏的，用`ls -ah`命令就可以看见。（windows用`dir /a`，后面加`/b`隐藏其他信息，再加`/s`显示所有子目录）
 
-也不一定必须在空目录下创建Git仓库，选择一个已经有东西的目录也是可以的。
+## 将改动添加到暂存区
 
-## 添加文件
+哦，对了，在学习 git 的基础操作前，我最好先在这里明确一下，**所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。** 版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”，**事实上它所记录的东西也就是这些改动而非具体的某些文件经过修改后的结果**。像图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。
 
-### 把文件添加到版本库
-
-首先这里再明确一下，所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。
-
-不幸的是，Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的，前面我们举的例子只是为了演示，如果要真正使用版本控制系统，就要以纯文本方式编写文件。
+更加不幸的是，Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的，前面我们举的例子只是为了演示，如果要真正使用版本控制系统，就要以纯文本方式编写文件（所以我强烈推荐大家都去学习 markdown ，它不管是在记录的便捷性上还是在可移植性上都远优于 word ！）。
 
 因为文本是有编码的，比如中文有常用的GBK编码，日文有Shift_JIS编码，如果没有历史遗留问题，强烈建议使用标准的UTF-8编码，所有语言使用同一种编码，既没有冲突，又被所有平台所支持。
 
-## 添加文件
+好了接下来我们来正式开始学习 git 的操作：
 
-第一步，用命令`git add`告诉Git，把文件添加到仓库：
+现在，你的工作区有个 `readme.txt` 和 `LICENSE` 文本文件（可以新建它们，内容随便写）。你想要把
+
+
+
+现在，使用两次命令`git add`，把`readme.txt`和`LICENSE`都添加后，用`git status`再查看一下：
+
+```
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   LICENSE
+	modified:   readme.txt
+```
+
+现在，暂存区的状态就变成这样了：
+
+![git-stage](/imgs/2024-12-27/TfgXfY3PbXMaL8Uh.png)
+
+所以，`git add`命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行`git commit`就可以一次性把暂存区的所有修改提交到分支。
+
+```
+$ git commit -m "understand how stage works"
+[master e43a48b] understand how stage works
+ 2 files changed, 2 insertions(+)
+ create mode 100644 LICENSE
+```
+
+一旦提交后，如果你又没有对工作区做任何修改，那么工作区就是“干净”的：
+
+```
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+现在版本库变成了这样，暂存区就没有任何内容了：
+
+![git-stage-after-commit](/imgs/2024-12-27/jZsRogbK7KJdv5wB.png)
+
+
+第一步，用命令 `git add` 把文件添加到暂存区：
 
 ```
 $ git add readme.txt
@@ -116,6 +198,19 @@ test/ # 这一文件夹中的文件
 xxx/*.txt # xxx中所有txt文件，不包括子目录
 xxx/**/*.txt # xxx中所有txt文件，包括子目录
 ```
+
+
+
+第一步是用`git add`把文件添加进去，实际上就是把文件修改添加到暂存区；
+
+第二步是用`git commit`提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+
+因为我们创建Git版本库时，Git自动为我们创建了唯一一个`master`分支，所以，现在，`git commit`就是往`master`分支上提交更改。
+
+你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。
+
+俗话说，实践出真知。
+
 
 ## 掌握仓库状态
 
@@ -151,9 +246,30 @@ index 46d49bf..9247db6 100644
 
 `git diff`顾名思义就是查看difference，显示的格式正是Unix通用的diff格式，可以从上面的命令输出看到，我们在第一行添加了一个`distributed`单词。
 
+先用`git status`查看一下状态：
+
+```
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	LICENSE
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Git非常清楚地告诉我们，`readme.txt`被修改了，而`LICENSE`还从来没有被添加过，所以它的状态是`Untracked`。
+
 ---
 
-### **补充：git格式的diff**
+### 补充：git格式的diff
 
 第一行表示结果为git格式的diff。
 
@@ -280,101 +396,6 @@ eaadf4e HEAD@{4}: commit (initial): wrote a readme file
 
 终于舒了口气，从输出可知，`append GPL`的commit id是`1094adb`，现在，你又可以乘坐时光机回到未来了。
 
-# 工作区和暂存区
-
-Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的概念。
-
-先来看名词解释。
-
-工作区（Working Directory）
-: 就是你在电脑里能看到的目录，比如我的`learngit`文件夹就是一个工作区：
-
-版本库（Repository）
-: 工作区有一个隐藏目录`.git`，这个不算工作区，而是Git的版本库。
-
-Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支`master`，以及指向`master`的一个指针叫`HEAD`。
-
-![git-repo](/imgs/2024-12-27/vtp8bYuzP5WJIrfX.png)
-
-分支和`HEAD`的概念我们以后再讲。
-
-前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：
-
-第一步是用`git add`把文件添加进去，实际上就是把文件修改添加到暂存区；
-
-第二步是用`git commit`提交更改，实际上就是把暂存区的所有内容提交到当前分支。
-
-因为我们创建Git版本库时，Git自动为我们创建了唯一一个`master`分支，所以，现在，`git commit`就是往`master`分支上提交更改。
-
-你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。
-
-俗话说，实践出真知。现在，我们再练习一遍，先对`readme.txt`做个修改，比如加上一行内容：
-
-```
-Git is a distributed version control system.
-Git is free software distributed under the GPL.
-Git has a mutable index called stage.
-```
-
-然后，在工作区新增一个`LICENSE`文本文件（内容随便写）。
-
-先用`git status`查看一下状态：
-
-```
-$ git status
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   readme.txt
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	LICENSE
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-
-Git非常清楚地告诉我们，`readme.txt`被修改了，而`LICENSE`还从来没有被添加过，所以它的状态是`Untracked`。
-
-现在，使用两次命令`git add`，把`readme.txt`和`LICENSE`都添加后，用`git status`再查看一下：
-
-```
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	new file:   LICENSE
-	modified:   readme.txt
-```
-
-现在，暂存区的状态就变成这样了：
-
-![git-stage](/imgs/2024-12-27/TfgXfY3PbXMaL8Uh.png)
-
-所以，`git add`命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行`git commit`就可以一次性把暂存区的所有修改提交到分支。
-
-```
-$ git commit -m "understand how stage works"
-[master e43a48b] understand how stage works
- 2 files changed, 2 insertions(+)
- create mode 100644 LICENSE
-```
-
-一旦提交后，如果你又没有对工作区做任何修改，那么工作区就是“干净”的：
-
-```
-$ git status
-On branch master
-nothing to commit, working tree clean
-```
-
-现在版本库变成了这样，暂存区就没有任何内容了：
-
-![git-stage-after-commit](/imgs/2024-12-27/jZsRogbK7KJdv5wB.png)
 
 # 撤销修改
 
@@ -706,19 +727,6 @@ $ git remote rm origin
 ```
 
 此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。
-
-### 小结
-
-要关联一个远程库，使用命令`git remote add origin git@server-name:path/repo-name.git`；
-
-关联一个远程库时必须给远程库指定一个名字，`origin`是默认习惯命名；
-
-关联后，使用命令`git push -u origin master`第一次推送`master`分支的所有内容；
-
-此后，每次本地提交后，只要有必要，就可以使用命令`git push origin master`推送最新修改；
-
-分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
-
 # 从远程库克隆
 
 上次我们讲了先有本地库，后有远程库的时候，如何关联远程库。
@@ -757,12 +765,6 @@ README.md
 
 使用`https`除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放`http`端口的公司内部就无法使用`ssh`协议而只能用`https`。
 
-### 小结
-
-要克隆一个仓库，首先必须知道仓库的地址，然后使用`git clone`命令克隆。
-
-Git支持多种协议，包括`https`，但`ssh`协议速度最快。
-
 # 分支管理
 
 分支就是科幻电影里面的平行宇宙，当你正在电脑前努力学习Git的时候，另一个你正在另一个平行宇宙里努力学习SVN。
@@ -779,5 +781,212 @@ Git支持多种协议，包括`https`，但`ssh`协议速度最快。
 
 但Git的分支是与众不同的，无论创建、切换和删除分支，Git在1秒钟之内就能完成！无论你的版本库是1个文件还是1万个文件。
 
-# 令牌
+## 创建与合并分支
+
+在[版本回退](https://liaoxuefeng.com/books/git/time-travel/reset/index.html)里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即`master`分支。`HEAD`严格来说不是指向提交，而是指向`master`，`master`才是指向提交的，所以，`HEAD`指向的就是当前分支。
+
+一开始的时候，`master`分支是一条线，Git用`master`指向最新的提交，再用`HEAD`指向`master`，就能确定当前分支，以及当前分支的提交点：
+
+```
+                  HEAD
+                    │
+                    ▼
+                 master
+                    │
+                    ▼
+┌───┐    ┌───┐    ┌───┐
+│   │───▶│   │───▶│   │
+└───┘    └───┘    └───┘
+```
+
+每次提交，`master`分支都会向前移动一步，这样，随着你不断提交，`master`分支的线也越来越长。
+
+当我们创建新的分支，例如`dev`时，Git新建了一个指针叫`dev`，指向`master`相同的提交，再把`HEAD`指向`dev`，就表示当前分支在`dev`上：
+
+```
+                 master
+                    │
+                    ▼
+┌───┐    ┌───┐    ┌───┐
+│   │───▶│   │───▶│   │
+└───┘    └───┘    └───┘
+                    ▲
+                    │
+                   dev
+                    ▲
+                    │
+                  HEAD
+```
+
+你看，Git创建一个分支很快，因为除了增加一个`dev`指针，改改`HEAD`的指向，工作区的文件都没有任何变化！
+
+不过，从现在开始，对工作区的修改和提交就是针对`dev`分支了，比如新提交一次后，`dev`指针往前移动一步，而`master`指针不变：
+
+```
+                 master
+                    │
+                    ▼
+┌───┐    ┌───┐    ┌───┐    ┌───┐
+│   │───▶│   │───▶│   │───▶│   │
+└───┘    └───┘    └───┘    └───┘
+                             ▲
+                             │
+                            dev
+                             ▲
+                             │
+                           HEAD
+```
+
+假如我们在`dev`上的工作完成了，就可以把`dev`合并到`master`上。Git怎么合并呢？最简单的方法，就是直接把`master`指向`dev`的当前提交，就完成了合并：
+
+```
+                           HEAD
+                             │
+                             ▼
+                          master
+                             │
+                             ▼
+┌───┐    ┌───┐    ┌───┐    ┌───┐
+│   │───▶│   │───▶│   │───▶│   │
+└───┘    └───┘    └───┘    └───┘
+                             ▲
+                             │
+                            dev
+```
+
+所以Git合并分支也很快！就改改指针，工作区内容也不变！
+
+合并完分支后，甚至可以删除`dev`分支。删除`dev`分支就是把`dev`指针给删掉，删掉后，我们就剩下了一条`master`分支：
+
+```
+                           HEAD
+                             │
+                             ▼
+                          master
+                             │
+                             ▼
+┌───┐    ┌───┐    ┌───┐    ┌───┐
+│   │───▶│   │───▶│   │───▶│   │
+└───┘    └───┘    └───┘    └───┘
+```
+
+真是太神奇了，你看得出来有些提交是通过分支完成的吗？
+
+下面开始实战。
+
+首先，我们创建`dev`分支，然后切换到`dev`分支：
+
+```plain
+$ git checkout -b dev
+Switched to a new branch 'dev'
+```
+
+`git checkout`命令加上`-b`参数表示创建并切换，相当于以下两条命令：
+
+```plain
+$ git branch dev
+$ git checkout dev
+Switched to branch 'dev'
+```
+
+然后，用`git branch`命令查看当前分支：
+
+```plain
+$ git branch
+* dev
+  master
+```
+
+`git branch`命令会列出所有分支，当前分支前面会标一个`*`号。
+
+然后，我们就可以在`dev`分支上正常提交，比如对`readme.txt`做个修改，加上一行：
+
+```plain
+Creating a new branch is quick.
+```
+
+然后提交：
+
+```plain
+$ git add readme.txt 
+$ git commit -m "branch test"
+[dev b17d20e] branch test
+ 1 file changed, 1 insertion(+)
+```
+
+现在，`dev`分支的工作完成，我们就可以切换回`master`分支：
+
+```plain
+$ git checkout master
+Switched to branch 'master'
+```
+
+切换回`master`分支后，再查看一个`readme.txt`文件，刚才添加的内容不见了！因为那个提交是在`dev`分支上，而`master`分支此刻的提交点并没有变：
+
+```
+                  HEAD
+                    │
+                    ▼
+                 master
+                    │
+                    ▼
+┌───┐    ┌───┐    ┌───┐    ┌───┐
+│   │───▶│   │───▶│   │───▶│   │
+└───┘    └───┘    └───┘    └───┘
+                             ▲
+                             │
+                            dev
+```
+
+现在，我们把`dev`分支的工作成果合并到`master`分支上：
+
+```plain
+$ git merge dev
+Updating d46f35e..b17d20e
+Fast-forward
+ readme.txt | 1 +
+ 1 file changed, 1 insertion(+)
+```
+
+`git merge`命令用于合并指定分支到当前分支。合并后，再查看`readme.txt`的内容，就可以看到，和`dev`分支的最新提交是完全一样的。
+
+注意到上面的`Fast-forward`信息，Git告诉我们，这次合并是“快进模式”，也就是直接把`master`指向`dev`的当前提交，所以合并速度非常快。
+
+当然，也不是每次合并都能`Fast-forward`，我们后面会讲其他方式的合并。
+
+合并完成后，就可以放心地删除`dev`分支了：
+
+```plain
+$ git branch -d dev
+Deleted branch dev (was b17d20e).
+```
+
+删除后，查看`branch`，就只剩下`master`分支了：
+
+```plain
+$ git branch
+* master
+```
+
+因为创建、合并和删除分支非常快，所以Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在`master`分支上工作效果是一样的，但过程更安全。
+
+### switch
+
+我们注意到切换分支使用`git checkout <branch>`，而前面讲过的撤销修改则是`git checkout -- <file>`，同一个命令，有两种作用，确实有点令人迷惑。
+
+实际上，切换分支这个动作，用`switch`更科学。因此，最新版本的Git提供了新的`git switch`命令来切换分支：
+
+创建并切换到新的`dev`分支，可以使用：
+
+```plain
+$ git switch -c dev
+```
+
+直接切换到已有的`master`分支，可以使用：
+
+```plain
+$ git switch master
+```
+
+使用新的`git switch`命令，比`git checkout`要更容易理解。
 
