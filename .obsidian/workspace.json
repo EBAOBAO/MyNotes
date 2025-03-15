@@ -90,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -163,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +173,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "EBAOBAO 的宇宙无敌超级第一 JS 笔记 的反向链接列表"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的反向链接列表"
             }
           },
           {
@@ -182,11 +182,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的出链列表"
             }
           },
           {
@@ -196,12 +197,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
+                "useHierarchy": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "标签"
             }
           },
           {
@@ -210,22 +211,31 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的大纲"
+            }
+          },
+          {
+            "id": "346c1b22e5c735d7",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,15 +250,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9fdb720fd9a4935f",
+  "active": "e003fd834f83acc9",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
-    "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
-    "python/爬虫.md",
+    "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "blender.md",
-    "编曲.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+    "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
+    "python/爬虫.md",
+    "编曲.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
     "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
