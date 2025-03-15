@@ -78,6 +78,10 @@ STM32内部采用分区供电的方式，故供电口会较多（Vxx_1/2/3）。
 
 JLINK：ARM -> Segger -> USBDriver
 
+# cubeMX
+
+
+
 # 建立工程
 
 ![工程架构](projectStructure.png)
