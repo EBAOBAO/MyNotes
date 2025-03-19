@@ -173,6 +173,50 @@ n/2, & \text{huhu} \\
 \end{cases}
 $$
 
+```mermaid
+classDiagram
+
+    Animal <|-- Duck
+
+    Animal <|-- Fish
+
+    Animal <|-- Zebra
+
+    Animal : +int age
+
+    Animal : +String gender
+
+    Animal: +isMammal()
+
+    Animal: +mate()
+
+    class Duck{
+
+      +String beakColor
+
+      +swim()
+
+      +quack()
+
+    }
+
+    class Fish{
+
+      -int sizeInFeet
+
+      -canEat()
+
+    }
+
+    class Zebra{
+
+      +bool is_wild
+
+      +run()
+
+    }
+```
+
 ## 摘抄：爱猫与男娘——作为真实的虚拟
 
 [爱猫与男娘——作为真实的虚拟_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Ef421i7EC/?spm_id_from=333.788.recommend_more_video.8&vd_source=7a774f3cabca1af30bf72e095164a42b) 作者：符号社
