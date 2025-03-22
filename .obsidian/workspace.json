@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1"
+              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
             }
           },
           {
@@ -211,13 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
             }
           },
           {
@@ -252,6 +252,7 @@
   },
   "active": "19647e68efea074f",
   "lastOpenFiles": [
+    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "日常.md",
     "matlab.md",
     "jekyll.md",
@@ -262,7 +263,6 @@
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
-    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "未命名.canvas",
     "imgs/imgSTM32/OLED7.png",
     "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",
