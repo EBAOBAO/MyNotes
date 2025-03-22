@@ -8,34 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8f78089659de0962",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "jekyll.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "jekyll"
-            }
-          },
-          {
-            "id": "19647e68efea074f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
-            }
-          },
-          {
             "id": "f0085ba893ad704a",
             "type": "leaf",
             "state": {
@@ -89,8 +61,7 @@
               "title": "Drawing 2025-03-15 16.06.12.excalidraw"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -147,7 +118,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -235,7 +207,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -250,17 +223,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19647e68efea074f",
+  "active": "f0085ba893ad704a",
   "lastOpenFiles": [
+    "jekyll.md",
+    "imgs/imgSTM32/ZuiXiaoXiTongDianLu.png",
+    "imgs/imgSTM32/6-5 PWM驱动直流电机.jpg",
+    "imgs/imgSTM32/6-4 PWM驱动舵机.jpg",
+    "imgs/imgSTM32/DuoJi.png",
+    "imgs/imgSTM32/NVIC.png",
+    "imgs/imgSTM32/GPIO.png",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "日常.md",
     "matlab.md",
-    "jekyll.md",
     "编曲.md",
     "Test.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "未命名 1.canvas",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "未命名.canvas",
@@ -276,12 +255,6 @@
     "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
     "imgs/2024-10-04",
     "imgs/2024-10-26/gS4rIMZbBk85TjHK.png",
-    "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
-    "imgs/2024-02-07/M5w42JJ1MftrJjqj.png",
-    "imgs/2024-12-27/vtp8bYuzP5WJIrfX.png",
-    "imgs/2024-12-27/TfgXfY3PbXMaL8Uh.png",
-    "imgs/2024-12-27/jZsRogbK7KJdv5wB.png",
-    "imgs/2024-11-16/kqKeYeM6u0SHyo06.png",
     "计算机通识.md",
     "新建 文本文档.txt",
     "python/numpy.md",
@@ -291,7 +264,6 @@
     "python/manim.md",
     "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
     "java/SE/java SE.md",
-    "java/java 设计模式.md",
     "imgs/imgSTM32",
     "imgs/imgJavaSE",
     "未命名",

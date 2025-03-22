@@ -1109,6 +1109,41 @@ void Servo_SetAngle(float angle)
 }
 ```
 
+使用例3：直流电机驱动（也是与 PWM 模块配合）
+
+![[6-4 PWM驱动舵机.jpg]]
+
+```c
+#include "stm32f10x.h"                  // Device header
+#include "PWM.h"
+
+void Motor_Init()
+{
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	
+	GPIO_InitTypeDef GPIO_InitStruct;
+	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5;
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &GPIO_InitStruct);
+	
+	PWM_Init();
+}
+
+void Motor_SetSpeed(int8_t Speed)
+{
+	if (Speed >= 0) {
+		GPIO_SetBits(GPIOA, GPIO_Pin_4);
+		GPIO_ResetBits(GPIOA, GPIO_Pin_5);
+		PWM_SetCompare3(Speed);
+	} else {
+		GPIO_SetBits(GPIOA, GPIO_Pin_5);
+		GPIO_ResetBits(GPIOA, GPIO_Pin_4);
+		PWM_SetCompare3(-Speed);
+	}
+}
+```
+
 ## 库函数
 
 `void TIM_DeInit(TIM_TypeDef* TIMx)`
@@ -1302,7 +1337,7 @@ void TIM2_IRQHandler()
 
 # USART 串口通信
 
-stm32 中集成了很多用于通信的模块，
+stm32 中集成了很多用于通信的模块，usart 就是其中一个，ppt p91 中列出了 stm32 中的所有通信接口，f103c8t6是全部支持的。
 
 ```c
 /**
