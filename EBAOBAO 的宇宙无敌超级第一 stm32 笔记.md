@@ -1339,6 +1339,18 @@ void TIM2_IRQHandler()
 
 stm32 中集成了很多用于通信的模块，usart 就是其中一个，ppt p91 中列出了 stm32 中的所有通信接口，f103c8t6是全部支持的。
 
+## 通信
+
+通信的目的在于将一个设备的数据传送到另一个设备，扩展硬件系统，实现控制外挂模块和读取外挂模块数据的目的。
+
+要实现通信，就要有 *通信协议* ，及通信双方进行数据收发所要遵守的规则。
+
+USART 的引脚为 `TX（TXD, Transmit exchange 数据发送脚）` 与 `RX（RXD, Receive exchange）数据接收脚` 。
+
+时钟特性分为同步与异步，有的外设有单独的时钟线，使接收方可以在时钟信号的指引下进行采样，这样就是 *同步* 的；像 USART 没有时钟线，就需要双方约定一个采样频率，还要加一些什么帧头帧尾之类的东西进行采样位置的对齐，这样就是 *异步通信* 。
+
+*电平特性* ：引脚的高低电平都是对 GND 的电压差（通信双方共地），这样是 *单端信号* 。而靠两个引脚的电压差来传输信号就是 *差分信号*，这样可以极大地提高抗干扰特性，故差分信号一般传输速度和距离都会非常高。
+
 ```c
 /**
   * @brief  Initializes the USARTx peripheral according to the specified
@@ -1354,6 +1366,12 @@ stm32 中集成了很多用于通信的模块，usart 就是其中一个，ppt p
 void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct);
 ```
 
+# I2C 通信
+# SPI 通信
+
+# CAN 通信
+
+# USB 通信
 # 其他硬件设备
 
 ## 舵机
