@@ -118,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -225,6 +224,11 @@
   },
   "active": "f0085ba893ad704a",
   "lastOpenFiles": [
+    "imgs/imgSTM32/ShuJuZhen00.png",
+    "Excalidraw/Drawing 2025-03-11 20.41.18.excalidraw.md",
+    "blender.md",
+    "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "jekyll.md",
     "imgs/imgSTM32/ZuiXiaoXiTongDianLu.png",
     "imgs/imgSTM32/6-5 PWM驱动直流电机.jpg",
@@ -232,7 +236,6 @@
     "imgs/imgSTM32/DuoJi.png",
     "imgs/imgSTM32/NVIC.png",
     "imgs/imgSTM32/GPIO.png",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "日常.md",
     "matlab.md",
@@ -244,11 +247,8 @@
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "未命名.canvas",
     "imgs/imgSTM32/OLED7.png",
-    "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",
-    "Excalidraw/Drawing 2025-03-11 20.41.18.excalidraw.md",
     "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
     "Excalidraw/Drawing 2025-03-15 21.20.57.excalidraw.md",
-    "blender.md",
     "python/爬虫.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
