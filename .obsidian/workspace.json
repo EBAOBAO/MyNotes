@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "matlab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
+              "title": "matlab"
             }
           },
           {
@@ -118,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -225,12 +224,12 @@
   },
   "active": "f0085ba893ad704a",
   "lastOpenFiles": [
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "imgs/imgSTM32/usartKuangtu.png",
     "imgs/imgSTM32/ShuJuZhen00.png",
     "Excalidraw/Drawing 2025-03-11 20.41.18.excalidraw.md",
     "blender.md",
     "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "jekyll.md",
     "imgs/imgSTM32/ZuiXiaoXiTongDianLu.png",
     "imgs/imgSTM32/6-5 PWM驱动直流电机.jpg",
@@ -254,7 +253,6 @@
     "python/爬虫.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
-    "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
     "imgs/2024-10-04",
     "计算机通识.md",
     "新建 文本文档.txt",
