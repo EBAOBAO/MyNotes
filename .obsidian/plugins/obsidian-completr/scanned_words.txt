@@ -650,7 +650,6 @@ Serializable
 SignStyle
 Set
 SE
-State
 SOJaUNCTy
 SU
 SetConsoleOutputCP
@@ -1111,6 +1110,7 @@ mR
 mK
 mq
 mX
+matlab
 Object
 Operating
 Outer
@@ -1154,7 +1154,6 @@ OOq
 OO
 control
 core
-class
 cmd
 ctrl
 classes
@@ -1495,7 +1494,6 @@ RetentionPolicy
 RUNTIME
 Returns
 Runnable
-Reader
 Reflection
 Right
 Register
@@ -1791,7 +1789,6 @@ runoob
 relativeFile
 requires
 re
-ready
 rD
 ref
 reference
@@ -1812,7 +1809,6 @@ rtl
 radio
 reset
 required
-readonly
 requests
 resp
 ry
