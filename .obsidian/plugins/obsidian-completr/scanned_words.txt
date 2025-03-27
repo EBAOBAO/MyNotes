@@ -392,6 +392,7 @@ DM
 Df
 Device
 DIV
+DanDianBiao
 URL
 Undefined
 USB
@@ -680,6 +681,7 @@ Cmd
 ClearITPendingBit
 CRL
 COM
+CMOS
 String
 Symbol
 Swift

@@ -1432,6 +1432,12 @@ SCLK 用于产生同步的时钟信号，不可接收同步时钟信号，发送
 void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct);
 ```
 
+## 使用例
+
+1) 串口发送
+
+![[9-1 串口发送.jpg]]
+
 # I2C 通信
 # SPI 通信
 
