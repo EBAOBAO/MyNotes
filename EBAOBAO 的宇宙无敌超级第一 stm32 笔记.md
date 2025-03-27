@@ -1418,18 +1418,38 @@ SCLK 用于产生同步的时钟信号，不可接收同步时钟信号，发送
 ## 库函数
 
 ```c
-/**
-  * @brief  Initializes the USARTx peripheral according to the specified
-  *         parameters in the USART_InitStruct .
-  * @param  USARTx: Select the USART or the UART peripheral. 
-  *   This parameter can be one of the following values:
-  *   USART1, USART2, USART3, UART4 or UART5.
-  * @param  USART_InitStruct: pointer to a USART_InitTypeDef structure
-  *         that contains the configuration information for the specified USART 
-  *         peripheral.
-  * @retval None
-  */
+void USART_DeInit(USART_TypeDef* USARTx);
 void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct);
+void USART_StructInit(USART_InitTypeDef* USART_InitStruct);
+```
+
+配置同步时钟输出：
+
+```c
+void USART_ClockInit(USART_TypeDef* USARTx, USART_ClockInitTypeDef* USART_ClockInitStruct);
+void USART_ClockStructInit(USART_ClockInitTypeDef* USART_ClockInitStruct);
+```
+
+```c
+void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_ITConfig(USART_TypeDef* USARTx, uint16_t USART_IT, FunctionalState NewState);
+```
+
+收发数据：
+
+```c
+void USART_SendData(USART_TypeDef* USARTx, uint16_t Data);
+uint16_t USART_ReceiveData(USART_TypeDef* USARTx);
+```
+
+标志位函数：
+
+```c
+FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, uint16_t USART_FLAG);
+void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);
+ITStatus USART_GetITStatus(USART_TypeDef* USARTx, uint16_t USART_IT);
+void USART_ClearITPendingBit(USART_TypeDef* USARTx, uint16_t USART_IT);
+
 ```
 
 ## 使用例
