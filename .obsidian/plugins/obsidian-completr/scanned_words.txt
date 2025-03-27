@@ -35,6 +35,7 @@ JJ
 Jz
 JS
 JLL
+JieGou
 Navigator
 NB
 Number
@@ -74,6 +75,9 @@ Nt
 NZ
 NO
 NRw
+NVICYouXianJi
+NPolarityConfig
+None
 Web
 World
 WINTER
@@ -191,6 +195,8 @@ BL
 Bdjp
 BMz
 BA
+Break
+Byte
 Eich
 ECMAScript
 ES
@@ -249,6 +255,7 @@ Ej
 Ejp
 EEEQ
 EZ
+ENABLE
 IE
 IDEA
 InnerClassExercise
@@ -312,6 +319,19 @@ Iu
 Ii
 If
 Ix
+Init
+InternalClockConfig
+IT
+ITConfig
+InitTypeDef
+InitStruct
+IRQChannel
+IRQn
+IRQChannelCmd
+IRQChannelPreemptionPriority
+IRQChannelSubPriority
+IRQHandler
+Initializes
 DOM
 Dictionary
 DVD
@@ -370,6 +390,8 @@ DDD
 Dgqq
 DM
 Df
+Device
+DIV
 URL
 Undefined
 USB
@@ -406,6 +428,10 @@ Uu
 UJ
 UN
 UC
+Up
+Update
+USARTx
+UART
 html
 head
 hello
@@ -503,6 +529,9 @@ bw
 bO
 bNJ
 bwY
+brief
+bytes
+bits
 Title
 TB
 Test
@@ -554,6 +583,14 @@ TM
 TQ
 TE
 TL
+TX
+TIMER
+TimeBaseInitTypeDef
+TimeBaseInitStruct
+TimeBaseInit
+TXD
+Transmit
+TypeDef
 Contents
 CPU
 CD
@@ -632,6 +669,17 @@ CCC
 Cze
 CY
 CWQ
+Config
+ClearOC
+CCxNCmd
+ClockDivision
+CKD
+CounterMode
+ClearFlag
+Cmd
+ClearITPendingBit
+CRL
+COM
 String
 Symbol
 Swift
@@ -704,6 +752,9 @@ SPb
 So
 SkG
 Si
+SetCompare
+SET
+Select
 Python
 PACKAGE
 PARAMETER
@@ -762,6 +813,15 @@ Px
 Pu
 PCB
 PL
+Path
+PreloadConfig
+PolarityConfig
+PeriphClockCmd
+Periph
+Period
+Prescaler
+PriorityGroupConfig
+PriorityGroup
 sup
 sqrt
 settings
@@ -882,6 +942,8 @@ sUx
 sr
 sZ
 sy
+specified
+structure
 python
 pytohn
 px
@@ -950,6 +1012,12 @@ pa
 pm
 pL
 pB
+periph
+projectStructure
+peripheral
+parameters
+param
+pReg
 List
 LAN
 LOCAL
@@ -996,6 +1064,7 @@ Lv
 Ls
 LHB
 LyS
+LED
 Array
 Access
 API
@@ -1152,6 +1221,8 @@ Ohh
 OU
 OOq
 OO
+OLEDFunction
+ODR
 control
 core
 cmd
@@ -1238,6 +1309,7 @@ cfj
 cW
 cGe
 cA
+cubeMX
 unit
 utf
 unicode
@@ -1284,6 +1356,7 @@ uz
 uV
 uT
 uoI
+uint
 arithmetic
 application
 appearance
@@ -1363,6 +1436,8 @@ aB
 aäK
 ah
 aS
+armv
+according
 logic
 live
 long
@@ -1457,6 +1532,9 @@ GDL
 GvH
 GJ
 Gu
+GetITStatus
+GND
+GPIOx
 kHz
 kit
 kbd
@@ -1534,6 +1612,11 @@ RCF
 Ra
 RDnw
 RaE
+Ref
+REF
+RepetitionCounter
+RXD
+Receive
 Memory
 MB
 MemberInnerClass
@@ -1826,6 +1909,8 @@ rx
 rUq
 rY
 rd
+retval
+registerType
 environment
 editor
 encodings
@@ -1893,6 +1978,9 @@ eiGC
 el
 eR
 eD
+exchange
+example
+ex
 interface
 idea
 import
@@ -1967,6 +2055,8 @@ iic
 iK
 ii
 iVn
+iterable
+information
 file
 for
 float
@@ -2035,6 +2125,8 @@ fG
 fN
 fL
 fR
+following
+flag
 general
 gbk
 gb
@@ -2182,6 +2274,9 @@ Vt
 VF
 VA
 Vl
+VM
+VCC
+Value
 view
 void
 values
@@ -2300,6 +2395,8 @@ FAA
 FB
 Fo
 FC
+ForcedOC
+FastConfig
 out
 outer
 ordinal
@@ -2348,6 +2445,7 @@ oAn
 oj
 oe
 op
+one
 XXX
 XcbvjtWfpeOT
 XHR
@@ -2367,6 +2465,8 @@ XP
 Xw
 XO
 XU
+XingHao
+XFFFFFF
 zzz
 zJEN
 zoI
@@ -2455,6 +2555,7 @@ Yb
 Yg
 YC
 YV
+YinJiao
 ZoneId
 Zl
 ZhaoFeiYan
@@ -2475,6 +2576,8 @@ ZB
 ZE
 Zw
 ZI
+ZuiXiaoXiTongDianLu
+Zhongduan
 Qt
 Qn
 QJk
@@ -2492,6 +2595,8 @@ QGF
 QPP
 QwJ
 QA
+QiDonMoShi
+QiDongWenJian
 xxx
 xhh
 xX
@@ -2520,6 +2625,8 @@ xa
 xd
 xv
 xIDC
+xF
+xFFF
 qq
 quot
 qJ
