@@ -660,16 +660,32 @@ for value in range(1, 5):
 用`def`来定义函数
 
 ```python
-"""
-这是文档字符串，python用它来生成有关程序中函数的文档
-"""
 def greet_user(username):
+	"""
+	这是文档字符串，python用它来生成有关程序中函数的文档
+	"""
 	print(f"buzenmoyangda, {username}!")
 
 greet_user("humou") #输出：buzenmoyangda, humou!
 ```
 
+如果想定义一个什么事也不做的空函数，可以用`pass`语句：
 
+```python
+def nop():
+    pass
+```
+
+`pass`语句什么都不做，那有什么用？实际上`pass`可以用来作为占位符，比如现在还没想好怎么写函数的代码，就可以先放一个`pass`，让代码能运行起来。
+
+`pass`还可以用在其他语句里，比如：
+
+```python
+if age >= 18:
+    pass
+```
+
+缺少了`pass`，代码运行就会有语法错误。
 ## 传递实参
 
 向函数传递实参的方法有很多，可使用**位置实参**，这要求实参的顺序与形参的顺序相同：
@@ -732,6 +748,46 @@ Traceback (most recent call last):
 TypeError: abs() takes exactly one argument (2 given)
 ```
 
+但是如果参数类型不对，Python解释器就无法帮我们检查。试试`my_abs`和内置函数`abs`的差别：
+
+```python
+>>> my_abs('A')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in my_abs
+TypeError: unorderable types: str() >= int()
+>>> abs('A')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: bad operand type for abs(): 'str'
+```
+
+当传入了不恰当的参数时，内置函数`abs`会检查出参数错误，而我们定义的`my_abs`没有参数检查，会导致`if`语句出错，出错信息和`abs`不一样。所以，这个函数定义不够完善。
+
+让我们修改一下`my_abs`的定义，对参数类型做检查，只允许整数和浮点数类型的参数。数据类型检查可以用内置函数`isinstance()`实现：
+
+```python
+def my_abs(x):
+    if not isinstance(x, (int, float)):
+        raise TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
+```
+
+添加了参数检查后，如果传入错误的参数类型，函数就可以抛出一个错误：
+
+```python
+>>> my_abs('A')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in my_abs
+TypeError: bad operand type
+```
+
+错误和异常处理将在后续讲到。
+
 ## 传递列表
 
 将列表传递给函数后，函数就可对其进行修改。
@@ -775,7 +831,7 @@ print(unprinted_designs) # 输出: []
 print(completed_models) # 输出：['dodecahedron', 'robot pendant', 'phone case']
 ```
 
-如果要以列表为实参而不想改变列表原值的话，可以传入列表的副本.不过尽量还是将原列表传给函数，这样能减少创建副本的时间与内存
+**给函数传入列表作为实参时实际上是传入它的地址。** 如果要以列表为实参而不想改变列表原值的话，可以传入列表的副本.不过尽量还是将原列表传给函数，这样能减少创建副本的时间与内存
 
 ```python
 def print_models(unprinted_designs, completed_models):
@@ -797,7 +853,7 @@ def show_completed_models(completed_models):
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
 completed_models = []
 
-print_models(unprinted_designs[:], completed_models) # 像这样传入列表副本!
+print_models(unprinted_designs[:], completed_models) # 像这样传入列表副本（实际上也是副本的地址）!
 show_completed_models(completed_models)
 
 print(unprinted_designs) # 输出: ['phone case', 'robot pendant', 'dodecahedron']
@@ -824,7 +880,7 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
 # ('mushrooms', 'green peppers', 'extra cheese')
 ```
 
-注意，`toppings`与`*toppings`是不同的！
+这里 `*` 的使用看起来难免让人联想到 c 语言中对指针变量的解引用操作。事实上有的时候你还真的可以在程序中使用类似 `*toppings` 这样的东西：
 
 ```python
 def make_pizza(*toppings):
@@ -841,9 +897,7 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
 # mushrooms green peppers extra cheese
 ```
 
-（基本上不用在乎`*toppings`是什么东西，一般用不到）
-
-如果已经有一个list或者tuple，要调用一个可变参数怎么办？可以这样做：
+不过要注意 python 中的 `*` 加变量名跟指针的什么的没有任何关系，**甚至仅仅只是在上面这段简单的代码中 `*` 加变量名都有所不同**：在形参声明处的 `*toppings` 起到声明可变参数的作用，用于接收任意数量的位置参数，并将它们收集到一个元组中；而调用函数时传入的实参处 `*toppings` 则起到 *解包* 的作用，用于将可迭代对象的元素逐一拆解为单独的值并赋给相应变量。像下面这里也是解包的应用：
 
 ```python
 >>> nums = [1, 2, 3]
@@ -851,11 +905,11 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
 14
 ```
 
-`*nums`表示把`nums`这个list的所有元素作为可变参数传进去。这种写法相当有用，而且很常见。
+这种写法相当有用，而且很常见。关于解包的更多用法我们会在后文 [[#解包]] 中有所记录。
 
-### 关键字参数
+## 关键字参数
 
-**类似地，前面带`**`的则能接受任意数量的关键字形参, `XX`返回字典，而`**XX`是非法的**
+**类似地，前面带 `**` 则能接受任意数量的关键字形参然后将它们打包为一个字典，跟可变参数的用法类似*
 
 ```python
 def build_profile(first, last, **user_info):
@@ -884,7 +938,7 @@ print(user_profile)
 # {'age': 114514, 'job': 'student', 'hobbies': ['python', 'java'], 'first_name': 'E', 'last_name': 'BAOBAO'}
 ```
 
-当然，有dict又要调用时也有类似于可变参数的简便写法。
+当然，对字典而言也有类似的解包。
 
 ```python
 def person(name, age, **kw):
@@ -892,16 +946,13 @@ def person(name, age, **kw):
 
 dic1 = {'name': "humou", 'age': 114514, 'city': "SU", 'job': "shit"}
 
-person(**dic1)
-
-# 啊，是的，就连普通的参数都能像这样传参
+person(**dic1) # 将字典解包为关键字参数传给函数
 ```
 
 ```python
 def person(name, age, **kw):
-	print({'name': name, 'age': age, **kw}) # 这是合并dict的简便写法
+	print({'name': name, 'age': age, **kw}) # 这是合并dict的简便写法，也是解包的应用之一
 	print([name, age, *(kw.values())]) # 类似地，合并tuple或list时就可以这样
-	# 哦，我们之前见到过它！
 
 list1 = ["humou", 114514]
 dic1 = {'city': "SU", 'job': "shit"}
@@ -1214,6 +1265,12 @@ def blabla(
 # python特性
 
 ## 解包
+
+### 元组解包
+
+在 Python 中，元组解包（tuple unpacking）是指将元组中的元素逐一拆分并赋值给多个变量的过程。这在处理多个值时非常方便，它有以下应用场景：
+
+
 
 ## 迭代
 

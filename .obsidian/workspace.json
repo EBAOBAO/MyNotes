@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记"
             }
           },
           {
@@ -155,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的大纲"
             }
           },
           {
@@ -196,6 +196,8 @@
   },
   "active": "9fdb720fd9a4935f",
   "lastOpenFiles": [
+    "python/python 声音处理.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "imgs/imgSTM32/15-2 读取芯片ID.jpg",
     "imgs/imgSTM32/15-1 读写内部FLASH.jpg",
     "imgs/imgSTM32/14-2 窗口看门狗.jpg",
@@ -206,9 +208,7 @@
     "imgs/imgSTM32/13-1 修改主频.jpg",
     "imgs/imgSTM32/12-2 实时时钟.jpg",
     "imgs/imgSTM32/12-1 读写备份寄存器.jpg",
-    "imgs/imgSTM32/11-2 硬件SPI读写W25Q64.jpg",
     "elec/电子百科.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "imgs/imgBlender",
@@ -233,7 +233,6 @@
     "计算机通识.md",
     "新建 文本文档.txt",
     "python/numpy.md",
-    "python/python 声音处理.md",
     "2025-03-13.md",
     "数理乱记.md",
     "python/manim.md",
