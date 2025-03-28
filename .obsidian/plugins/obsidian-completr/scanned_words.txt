@@ -78,6 +78,7 @@ NRw
 NVICYouXianJi
 NPolarityConfig
 None
+NewState
 Web
 World
 WINTER
@@ -332,6 +333,7 @@ IRQChannelPreemptionPriority
 IRQChannelSubPriority
 IRQHandler
 Initializes
+ITStatus
 DOM
 Dictionary
 DVD
@@ -393,6 +395,7 @@ Df
 Device
 DIV
 DanDianBiao
+DeInit
 URL
 Undefined
 USB
@@ -407,7 +410,6 @@ Unix
 UDP
 USBDriver
 User
-USART
 UOYKe
 US
 UP
@@ -682,6 +684,10 @@ ClearITPendingBit
 CRL
 COM
 CMOS
+ClockInit
+ClockInitTypeDef
+ClockInitStruct
+ClockStructInit
 String
 Symbol
 Swift
@@ -757,6 +763,8 @@ Si
 SetCompare
 SET
 Select
+StructInit
+SendData
 Python
 PACKAGE
 PARAMETER
@@ -1537,6 +1545,7 @@ Gu
 GetITStatus
 GND
 GPIOx
+GetFlagStatus
 kHz
 kit
 kbd
@@ -1619,6 +1628,7 @@ REF
 RepetitionCounter
 RXD
 Receive
+ReceiveData
 Memory
 MB
 MemberInnerClass
@@ -2399,6 +2409,8 @@ Fo
 FC
 ForcedOC
 FastConfig
+FunctionalState
+FlagStatus
 out
 outer
 ordinal
