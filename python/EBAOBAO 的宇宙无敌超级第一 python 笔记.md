@@ -233,9 +233,12 @@ The area of a circle with radius 2.5 is 19.62
 首先最重要的就是最后的 `type` ，它用以指定输出的类型，下面是一些例子：
 
 ```python
-print("{123:d}")  # 十进制整数 → "123"
-print("{123.45:f}")  # 浮点数 → "123.450000"
-print("{"Hello":s}")  # 字符串 → "Hello"
+a = 123
+print("{a:d}")  # 十进制整数 → "123"
+b = 123.45
+print("{b:f}")  # 浮点数 → "123.450000"
+c = "Hello"
+print("{c:s}")  # 字符串 → "Hello"
 ```
 
 在Python中，采用的格式化方式和C语言是一致的，用`%`实现：
