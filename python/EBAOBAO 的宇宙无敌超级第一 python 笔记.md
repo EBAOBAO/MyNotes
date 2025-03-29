@@ -163,48 +163,6 @@ def add(a, b):
 
 print(add.__doc__)
 ```
-### 格式化字符串
-
-我们经常会输出类似`'亲爱的xxx你好！你xx月的话费是xx，余额是xx'`（不是谁会经常输出这玩意啊）之类的字符串，而xxx的内容都是根据变量变化的，所以，需要一种简便的格式化字符串的方式。
-
-可以用 **f字符串** 来在字符串中加入变量：
-
-```python
-first_name = "e"
-last_name = "baobao"
-fullname = f"{first_name} {last_name}"
-message = f"FUCKU, {fullname.title()}"
-print(message)
-
-# 输出：FUCKU, E Baobao
-```
-
-```python
->>> r = 2.5
->>> s = 3.14 * r ** 2
->>> print(f'The area of a circle with radius {r} is {s:.2f}')
-The area of a circle with radius 2.5 is 19.62
-```
-
-在Python中，采用的格式化方式和C语言是一致的，用`%`实现：
-
-```python
->>> 'Hello, %s' % 'world'
-'Hello, world'
->>> 'Hi, %s, you have $%d.' % ('Michael', 1000000)
-'Hi, Michael, you have $1000000.'
-```
-
-常见的占位符
-
-| 占位符 | 替换内容 |
-|--|--|
-| %d | 整数 |
-| %f | 浮点数 |
-| %s | 字符串 |
-| %x | 十六进制整数 |
-
-有些时候，字符串里面的`%`是一个普通字符怎么办？这个时候就需要转义，用`%%`来表示一个`%`
 ## 布尔值
 
 `True` 与 `False`。（注意大小写）
@@ -239,9 +197,61 @@ The area of a circle with radius 2.5 is 19.62
 
 Python没有针对字符串的截取函数，只需要切片一个操作就可以完成，非常简单。
 
-### 练习
+## 格式化字符串
 
-## 方法
+我们经常会输出类似`'亲爱的xxx你好！你xx月的话费是xx，余额是xx'`（不是谁会经常输出这玩意啊）之类的字符串，而xxx的内容都是根据变量变化的，所以，需要一种简便的格式化字符串的方式。
+
+可以用 **f字符串** 来在字符串中加入变量：
+
+```python
+first_name = "e"
+last_name = "baobao"
+fullname = f"{first_name} {last_name}"
+message = f"FUCKU, {fullname.title()}"
+print(message)
+
+# 输出：FUCKU, E Baobao
+```
+
+另外，可以在 `{}` 中用一定的方式来对数据进行格式化：
+
+```python
+>>> r = 2.5
+>>> s = 3.14 * r ** 2
+>>> print(f'The area of a circle with radius {r} is {s:.2f}')
+The area of a circle with radius 2.5 is 19.62
+```
+
+这里的 `{:.2f}` 就是将小数保留两位有效数字，就是说我们可以通过在那个冒号后面的 *格式说明符* 来规定插入数据的格式。格式说明符由多个部分组成，通常的形式是：
+
+```
+[[fill]align][sign][#][0][width][,][.precision][type]
+```
+
+在这里我们对其中的每一项进行解释：
+
+
+
+在Python中，采用的格式化方式和C语言是一致的，用`%`实现：
+
+```python
+>>> 'Hello, %s' % 'world'
+'Hello, world'
+>>> 'Hi, %s, you have $%d.' % ('Michael', 1000000)
+'Hi, Michael, you have $1000000.'
+```
+
+常见的占位符
+
+| 占位符 | 替换内容 |
+|--|--|
+| %d | 整数 |
+| %f | 浮点数 |
+| %s | 字符串 |
+| %x | 十六进制整数 |
+
+有些时候，字符串里面的`%`是一个普通字符怎么办？这个时候就需要转义，用`%%`来表示一个`%`
+## 常用方法
 
 `upper()` : 全部字母改为大写
 `lower()` : 全部字母改为小写
