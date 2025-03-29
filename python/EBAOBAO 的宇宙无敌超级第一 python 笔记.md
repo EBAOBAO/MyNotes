@@ -765,7 +765,7 @@ if age >= 18:
 
 ```python
 def describe_person(person_name, person_age):
-	print(f"{person_name.title()} is {person_age} years old, buzenmoyangda")# 嗯，整数型也可以直接传入f字符串里
+	print(f"{person_name.title()} is {person_age} years old, buzenmoyangda")、
 
 describe_person("humou", 114514)
 ```
