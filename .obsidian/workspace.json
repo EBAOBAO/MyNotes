@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -199,6 +200,8 @@
   },
   "active": "e68d9d5b67370ac9",
   "lastOpenFiles": [
+    "imgs/imgSTM32/PWMcalc.png",
+    "imgs/imgSTM32/TIMoutMode.png",
     "imgs/imgSTM32/GTIMout.png",
     "imgs/imgSTM32/HTIMout.png",
     "elec/电子百科.md",
@@ -217,8 +220,6 @@
     "imgs/imgSTM32/14-2 窗口看门狗.jpg",
     "imgs/imgSTM32/14-1 独立看门狗.jpg",
     "imgs/imgSTM32/13-4 待机模式+实时时钟.jpg",
-    "imgs/imgSTM32/13-3 停止模式+对射式红外传感器计次.jpg",
-    "imgs/imgSTM32/13-2 睡眠模式+串口发送+接收.jpg",
     "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "imgs/imgBlender",
     "blender.md",

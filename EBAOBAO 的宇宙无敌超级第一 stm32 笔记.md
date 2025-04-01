@@ -957,9 +957,11 @@ stm32定时器的一大特色就是 **主从触发模式** ，它能让内部硬
 
 输出比较的八种模式：
 
-
+![[TIMoutMode.png]]
 
 PWM计算：
+
+![[PWMcalc.png]]
 
 词汇：
 IC
@@ -1561,8 +1563,12 @@ void Serial_Printf(char *format, ...)
 	va_end(arg);
 	Serial_SendString(String);
 }
-
 ```
+
+2) 串口接收
+
+
+
 # I2C 通信
 # SPI 通信
 
