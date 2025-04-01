@@ -739,7 +739,7 @@ void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState); // 系
 void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource); // 
 ```
 
-在  stm32 中，中断函数的名字是固定的，每一个中断通道都对应一个中断函数，中断函数的函数名可以参考一下启动文件：那些以 `IRQHandler` 结尾的字符串就是中断函数的名字。
+在  stm32 中，中断函数的名字是固定的，每一个中断通道都对应一个中断函数，中断函数的函数名可以参考一下启动文件：*那些以 `IRQHandler` 结尾的字符串就是中断函数的名字。*
 
 ## 实例
 
@@ -1458,6 +1458,92 @@ void USART_ClearITPendingBit(USART_TypeDef* USARTx, uint16_t USART_IT);
 
 ![[9-1 串口发送.jpg]]
 
+有时在编译器中直接写汉字的话编译器会报错，在工程选项 -> C/C++ -> Misc Controls 中写上 `--no-multibyte-chars` 即可。
+
+```c
+#include "stm32f10x.h"                  // Device header
+#include <stdio.h>
+#include <stdarg.h>
+
+void Serial_Init()
+{
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	
+	USART_InitTypeDef USART_InitStruct;
+	USART_InitStruct.USART_BaudRate = 9600; // 需要什么波特率直接写就行了
+	USART_InitStruct.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+	USART_InitStruct.USART_Mode = USART_Mode_Tx;
+	USART_InitStruct.USART_Parity = USART_Parity_No;
+	USART_InitStruct.USART_StopBits = USART_StopBits_1;
+	USART_InitStruct.USART_WordLength = USART_WordLength_8b;
+	USART_Init(USART1, &USART_InitStruct);
+	
+	USART_Cmd(USART1, ENABLE);
+}
+
+void Serial_SendByte(uint8_t Byte)
+{
+	USART_SendData(USART1, Byte);
+	while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+}
+
+void Serial_SendArray(uint8_t *Array, uint16_t length)
+{
+	uint16_t i;
+	for (i = 0; i < length; i++)
+	{
+		Serial_SendByte(Array[i]);
+	}
+}
+
+void Serial_SendString(char *String)
+{
+	uint16_t i;
+	for (i = 0; String[i] != '\0'; i++)
+	{
+		Serial_SendByte(String[i]);
+	}
+}
+
+void Serial_SendNumber(uint32_t Number)
+{
+	uint32_t Bits[32] = {0};
+	int16_t top = 0;
+	while (Number != 0)
+	{
+		Bits[top++] = Number % 10 + '0';
+		Number /= 10;
+	}
+	for (--top; top >= 0; top--)
+	{
+		Serial_SendByte(Bits[top]);
+	}
+}
+
+int fputc(int ch, FILE *f)
+{
+	Serial_SendByte(ch);
+	return ch;
+}
+
+void Serial_Printf(char *format, ...)
+{
+	char String[100];
+	va_list	arg;
+	va_start(arg, format);
+	vsprintf(String, format, arg);
+	va_end(arg);
+	Serial_SendString(String);
+}
+
+```
 # I2C 通信
 # SPI 通信
 
