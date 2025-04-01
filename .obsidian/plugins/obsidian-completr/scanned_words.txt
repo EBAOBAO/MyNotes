@@ -106,6 +106,7 @@ Wz
 Wr
 WHf
 WSF
+WordLength
 HTML
 Hello
 Hz
@@ -149,6 +150,7 @@ Ht
 HRR
 Hn
 HRRu
+HardwareFlowControl
 Brendan
 BOM
 Boolean
@@ -198,6 +200,8 @@ BMz
 BA
 Break
 Byte
+BaudRate
+Bits
 Eich
 ECMAScript
 ES
@@ -334,6 +338,7 @@ IRQChannelSubPriority
 IRQHandler
 Initializes
 ITStatus
+InitStructure
 DOM
 Dictionary
 DVD
@@ -594,6 +599,7 @@ TimeBaseInit
 TXD
 Transmit
 TypeDef
+TXE
 Contents
 CPU
 CD
@@ -765,6 +771,13 @@ SET
 Select
 StructInit
 SendData
+Serial
+Speed
+StopBits
+SendByte
+SendArray
+SendString
+SendNumber
 Python
 PACKAGE
 PARAMETER
@@ -832,6 +845,8 @@ Period
 Prescaler
 PriorityGroupConfig
 PriorityGroup
+Parity
+Printf
 sup
 sqrt
 settings
@@ -1191,6 +1206,7 @@ mK
 mq
 mX
 matlab
+multibyte
 Object
 Operating
 Outer
@@ -1321,6 +1337,7 @@ cW
 cGe
 cA
 cubeMX
+chars
 unit
 utf
 unicode
@@ -1450,6 +1467,7 @@ ah
 aS
 armv
 according
+arg
 logic
 live
 long
@@ -1631,6 +1649,7 @@ RepetitionCounter
 RXD
 Receive
 ReceiveData
+RESET
 Memory
 MB
 MemberInnerClass
@@ -1680,6 +1699,7 @@ MD
 Mi
 MN
 MX
+Mode
 KB
 Keymap
 Keil
@@ -2141,6 +2161,7 @@ fL
 fR
 following
 flag
+fputc
 general
 gbk
 gb
@@ -2327,6 +2348,7 @@ vD
 vC
 vl
 vf
+vsprintf
 num
 new
 name
@@ -2365,6 +2387,7 @@ ng
 nQ
 nF
 nu
+no
 Father
 FIELD
 Field

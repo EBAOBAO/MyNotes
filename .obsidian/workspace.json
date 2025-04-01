@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -200,7 +199,12 @@
   },
   "active": "e68d9d5b67370ac9",
   "lastOpenFiles": [
+    "imgs/imgSTM32/GTIMout.png",
+    "imgs/imgSTM32/HTIMout.png",
     "elec/电子百科.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+    "imgs/imgSTM32/GTIMkuang.png",
+    "imgs/imgSTM32/TIMtype.png",
     "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
     "编曲乱记.md",
     "乱记.md",
@@ -208,7 +212,6 @@
     "前端/hc 乱记.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "python/python 声音处理.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "imgs/imgSTM32/15-2 读取芯片ID.jpg",
     "imgs/imgSTM32/15-1 读写内部FLASH.jpg",
     "imgs/imgSTM32/14-2 窗口看门狗.jpg",
@@ -216,9 +219,6 @@
     "imgs/imgSTM32/13-4 待机模式+实时时钟.jpg",
     "imgs/imgSTM32/13-3 停止模式+对射式红外传感器计次.jpg",
     "imgs/imgSTM32/13-2 睡眠模式+串口发送+接收.jpg",
-    "imgs/imgSTM32/13-1 修改主频.jpg",
-    "imgs/imgSTM32/12-2 实时时钟.jpg",
-    "imgs/imgSTM32/12-1 读写备份寄存器.jpg",
     "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "imgs/imgBlender",
     "blender.md",
@@ -240,7 +240,6 @@
     "计算机通识.md",
     "新建 文本文档.txt",
     "python/numpy.md",
-    "2025-03-13.md",
     "imgs/imgSTM32",
     "imgs/imgJavaSE",
     "未命名",
