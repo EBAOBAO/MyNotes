@@ -158,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "matlab.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+              "title": "matlab 的大纲"
             }
           },
           {
@@ -200,10 +200,14 @@
   },
   "active": "e68d9d5b67370ac9",
   "lastOpenFiles": [
+    "java/SE/java SE.md",
+    "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
+    "java/java 设计模式.md",
+    "java/java 算法基础.md",
+    "matlab.md",
     "编曲乱记.md",
     "计算机通识.md",
     "Test.md",
-    "matlab.md",
     "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "数理乱记.md",
     "乱记.md",
@@ -235,12 +239,8 @@
     "未命名 1.canvas",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "未命名.canvas",
-    "Excalidraw/Drawing 2025-03-15 21.20.57.excalidraw.md",
-    "python/爬虫.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "imgs/2024-10-04",
     "新建 文本文档.txt",
-    "python/numpy.md",
     "imgs/imgSTM32",
     "imgs/imgJavaSE",
     "未命名",

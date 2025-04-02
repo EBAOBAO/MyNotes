@@ -106,7 +106,7 @@ $$
 \lim_{x \longrightarrow a} F(x)
 $$
 
-符号求导：`diff(F, x, [n])`，相当于
+符号求导：`diff(F, [x, n])`，相当于
 
 $$
 \frac{d^n}{dx^n}F(x)
@@ -118,3 +118,4 @@ $$
 - 定积分 `int(F, x, a, b)`
 
 微分方程：`dsolve(方程)`（数值解不适用这个函数）
+
