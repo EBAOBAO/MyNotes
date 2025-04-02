@@ -339,6 +339,8 @@ IRQHandler
 Initializes
 ITStatus
 InitStructure
+IR
+ISA
 DOM
 Dictionary
 DVD
@@ -600,6 +602,7 @@ TXD
 Transmit
 TypeDef
 TXE
+TCM
 Contents
 CPU
 CD
@@ -694,6 +697,7 @@ ClockInit
 ClockInitTypeDef
 ClockInitStruct
 ClockStructInit
+Cache
 String
 Symbol
 Swift
@@ -1044,6 +1048,7 @@ parameters
 param
 pReg
 pyaudio
+pc
 List
 LAN
 LOCAL
@@ -1147,6 +1152,9 @@ AL
 AK
 AJ
 AY
+ALU
+ARMv
+AMBA
 map
 mHz
 main
@@ -1655,6 +1663,7 @@ RESET
 RXNE
 RxFlag
 RxData
+RISC
 Memory
 MB
 MemberInnerClass
@@ -1705,6 +1714,7 @@ Mi
 MN
 MX
 Mode
+MMU
 KB
 Keymap
 Keil
@@ -2671,6 +2681,7 @@ xv
 xIDC
 xF
 xFFF
+xPSR
 qq
 quot
 qJ
