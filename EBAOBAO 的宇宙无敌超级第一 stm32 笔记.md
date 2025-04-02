@@ -1569,7 +1569,49 @@ void Serial_Printf(char *format, ...)
 
 串口接收可以使用查询和中断两种方法，就是要么在主函数中不断查询 RXNE 标志位，置 1 了说明收到数据了，要么就使用中断。
 
+初始化中断：
 
+```c
+USART_ITConfig(USART1, USART_IT_RXNE, ENABLE); // 开启 RXNE 标志位到 NVIC 的输出
+	
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+	
+	NVIC_InitTypeDef NVIC_InitStructure;
+	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+	NVIC_Init(&NVIC_InitStructure);
+```
+
+中断接收数据并传到变量中传递，主程序中要用到数据只需调用封装后的 get 函数即可：
+
+```c
+uint8_t Serial_GetRxFlag()
+{
+	if (Serial_RxFlag == 1)
+	{
+		Serial_RxFlag = 0;
+		return 1;
+	}
+	return 0;
+}
+
+uint8_t Serial_GetRxData()
+{
+	return Serial_RxData;
+}
+
+void USART1_IRQHandler()
+{
+	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+	{
+		Serial_RxData = USART_ReceiveData(USART1);
+		Serial_RxFlag = 1;
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+	}
+}
+```
 
 # I2C 通信
 # SPI 通信

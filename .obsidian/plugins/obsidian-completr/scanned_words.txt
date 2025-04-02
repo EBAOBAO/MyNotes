@@ -1566,6 +1566,8 @@ GetITStatus
 GND
 GPIOx
 GetFlagStatus
+GetRxFlag
+GetRxData
 kHz
 kit
 kbd
@@ -1650,6 +1652,9 @@ RXD
 Receive
 ReceiveData
 RESET
+RXNE
+RxFlag
+RxData
 Memory
 MB
 MemberInnerClass
