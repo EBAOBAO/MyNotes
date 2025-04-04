@@ -45,3 +45,22 @@ using namespace std;
 
 1. 使用 `std::` 前缀。
 2. 使用 `using namespace std;` 。
+
+### std 包含内容
+
+`std` 命名空间包含了许多类，函数和对象，如：
+
+- 输入输出库（`std::cout`, `std::cin`, `std::endl` 等）
+- 容器类（`std::vector`, `std::map`, `std::set` 等）
+- 字符串类（`std::string`）
+- 异常类（`std::exception` 及其相关子类）
+- 算法（`std::sort`, `std::find` 等）
+- 使用工具（`std::pair`, `std::tuple` 等）
+- 等等……
+
+`std` 命名空间是 c++ 编程的基础部分，理解和正确使用它对于编写见状和搞笑的 c++ 代码至关重要！
+
+**对于小型代码或示例代码，使用标准命名空间通常是安全的。但遂于大型项目或库，建议显式使用 `std::` 前缀，以避免潜在的名称冲突，并提高代码的可读性和可维护性。**
+
+### 自定义命名空间
+
