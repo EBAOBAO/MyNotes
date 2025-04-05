@@ -64,3 +64,25 @@ using namespace std;
 
 ### 自定义命名空间
 
+```c
+#ifndef CIR_H
+#define CIR_H
+
+
+namespace cir {
+    double PI = 3.141592653;
+
+    double getLenthOfCircle(double radius) {
+        return 2 * PI * radius;
+    }
+
+    double getAreaOfCircle(double radius) {
+        return PI * radius * radius;
+    }
+}
+
+#endif // CIR_H
+```
+
+## 输入输出
+

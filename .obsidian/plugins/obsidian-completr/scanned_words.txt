@@ -973,6 +973,7 @@ sZ
 sy
 specified
 structure
+std
 python
 pytohn
 px
