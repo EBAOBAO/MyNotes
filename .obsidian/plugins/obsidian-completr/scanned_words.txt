@@ -1051,6 +1051,7 @@ pReg
 pyaudio
 pc
 pro
+promotions
 List
 LAN
 LOCAL

@@ -49,8 +49,7 @@
               "title": "matlab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -172,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1 的大纲"
             }
           },
           {
@@ -196,8 +195,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,12 +210,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e68d9d5b67370ac9",
+  "active": "1e6411536b01743f",
   "lastOpenFiles": [
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "imgs/imgSTM32/USARTjieshuju.png",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "elec/电子百科.md",
     "matlab.md",
     "qt.md",
@@ -245,7 +243,6 @@
     "imgs/imgSTM32/15-2 读取芯片ID.jpg",
     "imgs/imgSTM32/15-1 读写内部FLASH.jpg",
     "imgs/imgSTM32/14-2 窗口看门狗.jpg",
-    "imgs/imgSTM32/14-1 独立看门狗.jpg",
     "imgs/imgBlender",
     "blender.md",
     "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",

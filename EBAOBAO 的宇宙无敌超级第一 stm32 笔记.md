@@ -1629,9 +1629,103 @@ void USART1_IRQHandler()
 
 ![[9-3 串口收发HEX数据包.jpg]]
 
-
-
 ![[9-4 串口收发文本数据包.jpg]]
+
+```c
+uint8_t Serial_TxPacket[4];
+uint8_t Serial_RxPacket[4];
+uint8_t Serial_RxFlag;
+
+...
+
+void Serial_SendPacket()
+{
+	Serial_SendByte(0xFF);
+	Serial_SendArray(Serial_TxPacket, 4);
+	Serial_SendByte(0xFE);
+}
+
+...
+
+void USART1_IRQHandler()
+{
+	static uint8_t RxState = 0;
+	static uint8_t pRxPacket = 0;
+	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+	{
+		uint8_t RxData = USART_ReceiveData(USART1);
+		
+		if (RxState == 0)
+		{
+			if (RxData == 0xFF)
+			{
+				RxState = 1;
+				pRxPacket = 0;
+			}
+
+		}
+		else if (RxState == 1)
+		{
+			Serial_RxPacket[pRxPacket++] = RxData;
+			if (pRxPacket >= 4)
+				RxState = 2;
+		}
+		else if (RxState == 2)
+		{
+			if (RxData == 0xFE)
+			{
+				RxState = 0;
+				Serial_RxFlag = 1;
+			}
+		}
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+	}
+}
+
+... main.c:
+
+int main()
+{
+	OLED_Init();
+	Key_Init();
+	Serial_Init();
+	
+	OLED_ShowString(1, 1, "TxPacket");
+	OLED_ShowString(3, 1, "RxPacket");
+	uint8_t KeyNum = 0;
+	
+	Serial_TxPacket[0] = 0x01;
+	Serial_TxPacket[1] = 0x02;
+	Serial_TxPacket[2] = 0x03;
+	Serial_TxPacket[3] = 0x04;
+	
+	while (1)
+	{
+		KeyNum = Key_GetNum();
+		
+		if (KeyNum == 1)
+		{
+			Serial_TxPacket[0]++;
+			Serial_TxPacket[1]++;
+			Serial_TxPacket[2]++;
+			Serial_TxPacket[3]++;
+			Serial_SendPacket();
+			OLED_ShowHexNum(2, 1, Serial_TxPacket[0], 2);
+			OLED_ShowHexNum(2, 4, Serial_TxPacket[1], 2);
+			OLED_ShowHexNum(2, 7, Serial_TxPacket[2], 2);
+			OLED_ShowHexNum(2, 10, Serial_TxPacket[3], 2);
+		}
+		
+		if (Serial_GetRxFlag() == 1)
+		{
+			OLED_ShowHexNum(4, 1, Serial_RxPacket[0], 2);
+			OLED_ShowHexNum(4, 4, Serial_RxPacket[1], 2);
+			OLED_ShowHexNum(4, 7, Serial_RxPacket[2], 2);
+			OLED_ShowHexNum(4, 10, Serial_RxPacket[3], 2);
+		}
+	}
+}
+```
 
 # I2C 通信
 # SPI 通信
