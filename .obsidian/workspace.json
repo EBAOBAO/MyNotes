@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
+              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1 的大纲"
             }
           },
           {
@@ -212,6 +212,7 @@
   },
   "active": "1e6411536b01743f",
   "lastOpenFiles": [
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "elec/电子百科.md",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "matlab.md",
@@ -227,7 +228,6 @@
     "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "数理乱记.md",
     "乱记.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "imgs/imgSTM32/PWMcalc.png",
     "imgs/imgSTM32/TIMoutMode.png",
     "imgs/imgSTM32/GTIMout.png",

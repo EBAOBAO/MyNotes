@@ -3720,10 +3720,9 @@ int main()
 
 -   `va_start(ap, last_arg)`：初始化可变参数列表。`ap` 是一个 `va_list` 类型的变量，`last_arg` 是最后一个固定参数的名称（也就是可变参数列表之前的参数）。该宏将 `ap` 指向可变参数列表中的第一个参数。
     
--   `va_arg(ap, type)`：获取可变参数列表中的下一个参数。`ap` 是一个 `va_list` 类型的变量，`type` 是下一个参数的类型。该宏返回类型为 `type` 的值，并将 `ap` 指向下一个参数。
+-   `va_arg(ap, type)`：获取可变参数列表中的下一个 type 类型参数。`ap` 是一个 `va_list` 类型的变量，`type` 是下一个参数的类型。该宏返回类型为 `type` 的值，并将 `ap` 指向下一个参数。
     
 -   `va_end(ap)`：结束可变参数列表的访问。`ap` 是一个 `va_list` 类型的变量。该宏将 `ap` 置为 `NULL`。
-    
 
 现在让我们按照上面的步骤，来编写一个带有可变数量参数的函数，并返回它们的平均值：
 
@@ -3768,6 +3767,13 @@ Average of 2, 3, 4, 5 = 3.500000
 Average of 5, 10, 15 = 10.000000
 ```
 
+要注意的是， `va_arg(ap, type)` 宏中的 type 不可指定为 `char` 、`short` 、`float`。因为调用不带原型声明或声明为变参的函数时，主调函数会在传递未显式声明的参数前对其执行 *缺省参数提升(default argument promotions)* ，将提升后的参数值传递给被调函数。
+
+​ 提升操作如下：
+
+- float 类型的参数提升为 double 类型
+- char、short 和相应的 signed、unsigned 类型参数提升为 int 类型
+- 若 int 类型不能容纳原值，则提升为 unsigned int 类型
 
 # C 头文件
 
