@@ -1473,7 +1473,7 @@ void USART_ClearITPendingBit(USART_TypeDef* USARTx, uint16_t USART_IT);
 
 ```
 
-## 使用例
+## 示例代码
 
 1) 串口发送
 
@@ -1574,14 +1574,14 @@ void Serial_Printf(char *format, ...)
 ```c
 USART_ITConfig(USART1, USART_IT_RXNE, ENABLE); // 开启 RXNE 标志位到 NVIC 的输出
 	
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-	
-	NVIC_InitTypeDef NVIC_InitStructure;
-	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
-	NVIC_Init(&NVIC_InitStructure);
+NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+
+NVIC_InitTypeDef NVIC_InitStructure;
+NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+NVIC_Init(&NVIC_InitStructure);
 ```
 
 中断接收数据并传到变量中传递，主程序中要用到数据只需调用封装后的 get 函数即可：
