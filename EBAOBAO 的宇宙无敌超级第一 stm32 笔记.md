@@ -1608,10 +1608,14 @@ void USART1_IRQHandler()
 	{
 		Serial_RxData = USART_ReceiveData(USART1);
 		Serial_RxFlag = 1;
-		USART_ClearITPendingBit(USART1, USART_IT_RXNE); // 其实这句在这里加不加都行，因为执行 receive 方法后会
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE); // 其实这句在这里加不加都行
+		// 因为对USART_DR的读操作可以将该位清零。（参考手册 p540）
+		// RXNE位也可以通过写入0来清除，只有在多缓存通讯中才推荐这种清除程序。
 	}
 }
 ```
+
+我们很多时候也会一组一组地传输数据，这样我们需要传输的就是 *数据包* 。
 
 # I2C 通信
 # SPI 通信
