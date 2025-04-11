@@ -485,6 +485,7 @@ hqu
 hg
 hG
 hP
+hal
 body
 bit
 byte
@@ -603,6 +604,7 @@ Transmit
 TypeDef
 TXE
 TCM
+TxPacket
 Contents
 CPU
 CD
@@ -782,6 +784,9 @@ SendByte
 SendArray
 SendString
 SendNumber
+SendPacket
+ShowString
+ShowHexNum
 Python
 PACKAGE
 PARAMETER
@@ -1052,6 +1057,7 @@ pyaudio
 pc
 pro
 promotions
+pRxPacket
 List
 LAN
 LOCAL
@@ -1582,6 +1588,7 @@ GPIOx
 GetFlagStatus
 GetRxFlag
 GetRxData
+GetNum
 kHz
 kit
 kbd
@@ -1670,6 +1677,8 @@ RXNE
 RxFlag
 RxData
 RISC
+RxPacket
+RxState
 Memory
 MB
 MemberInnerClass
@@ -1749,6 +1758,8 @@ KuB
 Kb
 Kc
 KN
+Key
+KeyNum
 web
 win
 world
@@ -2691,6 +2702,8 @@ xIDC
 xF
 xFFF
 xPSR
+xFF
+xFE
 qq
 quot
 qJ

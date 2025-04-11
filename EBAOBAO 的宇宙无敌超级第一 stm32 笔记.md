@@ -1727,6 +1727,100 @@ int main()
 }
 ```
 
+```c
+char Serial_RxPacket[100];
+uint8_t Serial_RxFlag;
+
+...
+
+void USART1_IRQHandler()
+{
+	static uint8_t RxState = 0;
+	static uint8_t pRxPacket = 0;
+	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+	{
+		uint8_t RxData = USART_ReceiveData(USART1);
+		
+		if (RxState == 0)
+		{
+			if (RxData == '@' && Serial_RxFlag == 0)
+			{
+				RxState = 1;
+				pRxPacket = 0;
+			}
+
+		}
+		else if (RxState == 1)
+		{
+			if (RxData == '\r')
+				RxState = 2;
+			else
+				Serial_RxPacket[pRxPacket++] = RxData;
+		}
+		else if (RxState == 2)
+		{
+			if (RxData == '\n')
+			{
+				Serial_RxPacket[pRxPacket] = '\0';
+				RxState = 0;
+				Serial_RxFlag = 1;
+			}
+		}
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+	}
+}
+
+...main:
+
+int main()
+{
+	OLED_Init();
+	Serial_Init();
+	
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_WriteBit(GPIOA, GPIO_Pin_1, Bit_SET);
+	
+	OLED_ShowString(1, 1, "TxPacket");
+	OLED_ShowString(3, 1, "RxPacket");
+	
+	while (1)
+	{
+		if (Serial_RxFlag == 1)
+		{
+			OLED_ShowString(4, 1, "                ");
+			OLED_ShowString(4, 1, Serial_RxPacket);
+			
+			if (strcmp(Serial_RxPacket, "LED_ON") == 0)
+			{
+				GPIO_WriteBit(GPIOA, GPIO_Pin_1, Bit_RESET);
+				Serial_SendString("LED_ON_DONE\r\n");
+				OLED_ShowString(2, 1, "                ");
+				OLED_ShowString(2, 1, "LED_ON_DONE");
+			}
+			else if (strcmp(Serial_RxPacket, "LED_OFF") == 0)
+			{
+				GPIO_WriteBit(GPIOA, GPIO_Pin_1, Bit_SET);
+				Serial_SendString("LED_OFF_DONE\r\n");
+				OLED_ShowString(2, 1, "                ");
+				OLED_ShowString(2, 1, "LED_OFF_DONE");
+			}
+			else
+			{
+				Serial_SendString("ERROR_COMMAND\r\n");
+				OLED_ShowString(2, 1, "                ");
+				OLED_ShowString(2, 1, "ERROR_COMMAND");
+			}
+			Serial_RxFlag = 0;
+		}
+	}
+}
+```
+
 # I2C 通信
 # SPI 通信
 
