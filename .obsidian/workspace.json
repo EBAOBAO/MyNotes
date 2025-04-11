@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "elec/电子百科.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "电子百科"
+              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
             }
           },
           {
@@ -49,8 +49,7 @@
               "title": "matlab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -172,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "matlab.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "matlab 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
             }
           },
           {
@@ -196,8 +195,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,12 +210,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d34cf8b16d66ad5c",
+  "active": "1e6411536b01743f",
   "lastOpenFiles": [
-    "qt.md",
+    "elec/电子百科.md",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
-    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "matlab.md",
+    "qt.md",
+    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "java/SE/java SE.md",
     "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
     "java/java 设计模式.md",
@@ -233,7 +232,6 @@
     "imgs/imgSTM32/TIMoutMode.png",
     "imgs/imgSTM32/GTIMout.png",
     "imgs/imgSTM32/HTIMout.png",
-    "elec/电子百科.md",
     "imgs/imgSTM32/GTIMkuang.png",
     "imgs/imgSTM32/TIMtype.png",
     "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",

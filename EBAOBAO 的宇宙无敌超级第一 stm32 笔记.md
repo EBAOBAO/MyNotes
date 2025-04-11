@@ -1608,7 +1608,7 @@ void USART1_IRQHandler()
 	{
 		Serial_RxData = USART_ReceiveData(USART1);
 		Serial_RxFlag = 1;
-		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE); // 其实这句在这里加不加都行，因为执行 receive 方法后会
 	}
 }
 ```
