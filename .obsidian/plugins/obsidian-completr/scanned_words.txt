@@ -108,6 +108,7 @@ WHf
 WSF
 WordLength
 WriteBit
+WritePin
 HTML
 Hello
 Hz
@@ -406,6 +407,7 @@ DIV
 DanDianBiao
 DeInit
 DONE
+Delay
 URL
 Undefined
 USB
@@ -546,6 +548,7 @@ bwY
 brief
 bytes
 bits
+bootloader
 Title
 TB
 Test
@@ -860,6 +863,8 @@ PriorityGroupConfig
 PriorityGroup
 Parity
 Printf
+PinState
+PIN
 sup
 sqrt
 settings
@@ -1229,6 +1234,7 @@ mq
 mX
 matlab
 multibyte
+mos
 Object
 Operating
 Outer
@@ -1685,6 +1691,7 @@ RxData
 RISC
 RxPacket
 RxState
+ReadPin
 Memory
 MB
 MemberInnerClass
