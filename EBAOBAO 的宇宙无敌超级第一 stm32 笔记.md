@@ -2213,6 +2213,7 @@ pReg->Byte = 0x55;
 
 `void HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)` : 写入数据
 `void HAL_Delay(uint32_t Delay)` : 延迟，单位为 ms
+`GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)` : 读取引脚当前值
 
 **注意：代码要写在 USER CODE BEGIN 与 END 之间**
 
