@@ -2225,6 +2225,11 @@ HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 HAL_Delay(100);
 ```
 
+## bootloader 清除程序
+
+用 cubeMX 开发的第一步就是给芯片分配调试接口，如果忘记了这个步骤，芯片的调试接口将会被锁死，就会发现程序烧录不进去了。可以使用单片机的 bootloader 将里面的程序清除掉，这样调试接口就会被打开。
+
+[使用bootloader清除程序_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Hm421V7An?spm_id_from=333.788.player.switch&vd_source=7a774f3cabca1af30bf72e095164a42b)
 ## EXTI
 
 ## TIM
