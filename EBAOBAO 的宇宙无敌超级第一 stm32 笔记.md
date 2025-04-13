@@ -2216,7 +2216,14 @@ pReg->Byte = 0x55;
 
 **注意：代码要写在 USER CODE BEGIN 与 END 之间**
 
+### 示例代码
 
+```c
+HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+HAL_Delay(100);
+HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+HAL_Delay(100);
+```
 
 ## EXTI
 
