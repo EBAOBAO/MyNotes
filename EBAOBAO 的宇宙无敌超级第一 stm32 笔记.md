@@ -1978,7 +1978,7 @@ TIMx->SR = (uint16_t)~TIM_FLAG_CC3;
 struct 位域结构体名
 {
     类型说明符 位域名 ： 长度;
-}结构体变量名；
+} 结构体变量名；
 ```
 
 举个简单的例子进行说明：
@@ -1989,7 +1989,7 @@ struct example0
 	unsigned char x : 3;
 	unsigned char y : 2;
 	unsigned char z : 1;
-}ex0_t;
+} ex0_t;
 ```
 
 虽然 x 的类型是 unsigned char ，但是并没有占 8 个位，而是占了 3 个位，其取值范围也变成了 0 ～ 2^3-1。通过上述图片我们也可以猜到这个结构体位域的大小，笔者通过 printf 函数输出结构体位域的大小为：
@@ -2010,7 +2010,7 @@ union example1
     unsigned char x : 3;
     unsigned char y : 2;
     unsigned char z : 1;
-}ex1_u;
+} ex1_u;
 ```
 
 同样的，笔者在这里给出共用体位域在内存中的存储位置：
