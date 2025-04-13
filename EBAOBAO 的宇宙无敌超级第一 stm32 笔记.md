@@ -2053,8 +2053,8 @@ printf("%d,%d\n",BF8.a,BF8.b);
 ```c
 struct BitField_8
 {
-unsigned char a : 2;
-}BF8;
+	unsigned char a : 2;
+} BF8;
 printf("%p\n",&BF8.a); /*错误*/
 ```
 
@@ -2215,6 +2215,8 @@ pReg->Byte = 0x55;
 `void HAL_Delay(uint32_t Delay)` : 延迟，单位为 ms
 
 **注意：代码要写在 USER CODE BEGIN 与 END 之间**
+
+
 
 ## EXTI
 
