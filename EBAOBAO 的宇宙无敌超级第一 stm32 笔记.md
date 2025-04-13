@@ -2204,6 +2204,18 @@ pReg->Byte = 0x55;
 
 ## GPIO
 
+1. 设置芯片调试接口：System core -> SYS -> Debug\[Serial Wire\]
+2. 配置引脚：点击引脚选 GPIO_Output 或 GPIO_Input -> 左边 GPIO -> 设置引脚参数（GPIO output level 是初始值）
+3. 工程：给工程起名字，选择工程存放位置 -> 开发工具链（Toolchain/IDE）\[MDK-ARM\] -> Code Generator 中勾上 Generate periphral initialization as a pair of '.c/.h' files per periphral
+4. GENERATE CODE
+
+函数：
+
+`void HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)` : 写入数据
+`void HAL_Delay(uint32_t Delay)` : 延迟，单位为 ms
+
+**注意：代码要写在 USER CODE BEGIN 与 END 之间**
+
 ## EXTI
 
 ## TIM
