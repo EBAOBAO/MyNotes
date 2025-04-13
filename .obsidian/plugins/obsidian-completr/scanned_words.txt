@@ -107,6 +107,7 @@ Wr
 WHf
 WSF
 WordLength
+WriteBit
 HTML
 Hello
 Hz
@@ -261,6 +262,7 @@ Ejp
 EEEQ
 EZ
 ENABLE
+ERROR
 IE
 IDEA
 InnerClassExercise
@@ -403,6 +405,7 @@ Device
 DIV
 DanDianBiao
 DeInit
+DONE
 URL
 Undefined
 USB
@@ -700,6 +703,7 @@ ClockInitTypeDef
 ClockInitStruct
 ClockStructInit
 Cache
+COMMAND
 String
 Symbol
 Swift
@@ -979,6 +983,7 @@ sy
 specified
 structure
 std
+strcmp
 python
 pytohn
 px
@@ -1267,6 +1272,7 @@ OOq
 OO
 OLEDFunction
 ODR
+OFF
 control
 core
 cmd
