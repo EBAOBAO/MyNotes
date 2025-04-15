@@ -2248,6 +2248,12 @@ else if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1) == GPIO_PIN_RESET)
 
 ## USART
 
+![[UARTMode.png]]
+
+基本上只用得到异步模式。
+
+connectivity -> USART1
+
 ## I2C
 
 ## SPI
