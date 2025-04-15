@@ -2256,6 +2256,7 @@ connectivity -> USART1
 
 `UART_HandleTypeDef huart1;` : 串口1的 *句柄（这个东西在hal库编程中十分重要！）* ，包含了跟串口1相关的所有数据。
 `HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout)` : 发送数据，参数：句柄， 发送数据， 发送数据的数量（单位为字节），超时时间（单位为 ms， **一般这里填 `HAL_MAX_DELAY`**）。返回数据发送成功（`HAL_OK`）或失败。
+`HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout)` : 接收数据（pdata 是指向接收缓冲区的指针）。
 
 ```c
 uint8_t byteNumber = 0x5a;
