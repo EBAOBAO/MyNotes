@@ -1822,6 +1822,29 @@ int main()
 ```
 
 # I2C 通信
+
+通过串口可以让单片机跟一个设备间点对点通信，但要想跟多个设备通信，就要使用 *总线* ，**I2C** 就是一种总线结构，就能让单片机作为主机，其他设备作为从机进行多设备通信。
+
+I2C 由两条线组成：SCL（Serial Clock，串行时钟线） 与 SDA（Serial Data，串行数据线）。
+
+![[I2Cjiexian.png]]
+
+之所以都使用开漏输出与上拉电阻，是因为要实现 *逻辑线与*。
+
+通信过程：
+
+1. 起始位：SCL 高电压时，SDA 发送下降沿（空闲状态时 SCL 与 SDA 都是高电压）。
+2. 寻址：有 7 位地址与 10 位地址，10 位较复杂。寻完后发送 R/W# 位填写数据传输方向，在之后主机释放 SDA（置高电平）。
+3. 数据传输：从机通过将 SDA 拉低来发送应答信号 ACK，告诉主机寻址成功，没有从机发送应答信号则情况为 NAK（地址不存在，从机正忙或从机故障）。然后一方向另一方发送一个字节的数据，释放掉 SDA 等待确认接收，接收方接收到就拉低回复 ACK ，随后以此类推可以传输多个字节。
+4. 停止位：数据传输结束后，主机通过在 SCL 高电压时向 SDA 发送一个上升沿来发送停止位。
+
+![[I2Cchuanshu.png]]
+
+传输速率：
+
+![[I2CMode.png]]
+
+F103c8t6 只支持 Sm 与 Fm。快速模式下还可设置时钟信号的占空比，2:1（低电压持续时间时高电压的两倍） 或 16:9 ，若无特殊说明一般选 2:1 的占空比。
 # SPI 通信
 
 # CAN 通信
@@ -2269,6 +2292,19 @@ HAL_UART_Transmit(&huart1, byteArray, 5, HAL_MAX_DELAY);
 HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
 HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), HAL_MAX_DELAY);
 // 注意：要使用 strlen() 需要引入 string.h ，应该把 include 语句写于 USER CODE Includes 之中。
+```
+
+```c
+// 写在循环中
+HAL_UART_Receive(&huart1, &dataRcvd, 1, HAL_MAX_DELAY);
+if (dataRcvd == '1')
+{
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+}
+else if (dataRcvd == '0')
+{
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+}
 ```
 
 ## I2C
