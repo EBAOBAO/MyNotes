@@ -2257,6 +2257,21 @@ connectivity -> USART1
 `UART_HandleTypeDef huart1;` : 串口1的 *句柄（这个东西在hal库编程中十分重要！）* ，包含了跟串口1相关的所有数据。
 `HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout)` : 发送数据，参数：句柄， 发送数据， 发送数据的数量（单位为字节），超时时间（单位为 ms， **一般这里填 `HAL_MAX_DELAY`**）。返回数据发送成功（`HAL_OK`）或失败。
 
+```c
+uint8_t byteNumber = 0x5a;
+uint8_t byteArray[] = {1, 2, 3, 4, 5};
+char ch = 'a';
+char *str = "Hello world";
+
+HAL_UART_Transmit(&huart1, &byteNumber, 1, HAL_MAX_DELAY);
+HAL_UART_Transmit(&huart1, byteArray, 5, HAL_MAX_DELAY);
+HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
+HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), HAL_MAX_DELAY);
+// 注意：要使用 strlen() 需要引入 string.h ，应该把 include 语句写于 USER CODE Includes 之中。
+```
+
 ## I2C
+
+## 时钟系统
 
 ## SPI
