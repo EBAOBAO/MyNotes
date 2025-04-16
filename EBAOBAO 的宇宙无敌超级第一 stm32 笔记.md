@@ -1847,6 +1847,10 @@ I2C 由两条线组成：SCL（Serial Clock，串行时钟线） 与 SDA（Seria
 F103c8t6 只支持 Sm 与 Fm。快速模式下还可设置时钟信号的占空比，2:1（低电压持续时间时高电压的两倍） 或 16:9 ，若无特殊说明一般选 2:1 的占空比。
 
 I2C 有三种不同的工作模式，标准 I2C 接口以及 SMBus 系统管理总线（一般用不到）。
+
+`HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)` : 写数据
+
+`HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)`  : 读数据
 # SPI 通信
 
 # CAN 通信

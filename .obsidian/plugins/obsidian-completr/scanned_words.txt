@@ -597,6 +597,7 @@ Dx
 Dj
 Dop
 DELAY
+DevAddress
 URL
 Undefined
 USB
@@ -721,6 +722,7 @@ hx
 he
 hN
 huart
+hi
 body
 bit
 byte
@@ -2418,6 +2420,7 @@ MR
 MSc
 McN
 MJ
+Master
 KB
 Keymap
 Keil
