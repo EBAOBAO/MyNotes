@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "d34cf8b16d66ad5c",
+            "id": "f6a4fbd9fcbed17e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,7 +35,8 @@
               "title": "matlab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "matlab.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+              "title": "matlab 的大纲"
             }
           },
           {
@@ -197,21 +198,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e6411536b01743f",
+  "active": "f6a4fbd9fcbed17e",
   "lastOpenFiles": [
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+    "java/SE/java SE.md",
+    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+    "matlab.md",
     "imgs/imgSTM32/I2CMode.png",
     "imgs/imgSTM32/I2Cchuanshu.png",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "imgs/imgSTM32/I2Cjiexian.png",
     "imgs/imgSTM32/TIMtype.png",
     "imgs/imgSTM32/UARTMode.png",
-    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "imgs/imgSTM32/USARTjieshuju.png",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "elec/电子百科.md",
-    "matlab.md",
     "qt.md",
-    "java/SE/java SE.md",
     "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
     "java/java 设计模式.md",
     "java/java 算法基础.md",
@@ -225,7 +226,6 @@
     "imgs/imgSTM32/TIMoutMode.png",
     "imgs/imgSTM32/GTIMout.png",
     "imgs/imgSTM32/HTIMout.png",
-    "imgs/imgSTM32/GTIMkuang.png",
     "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
     "elec/电分.md",
     "前端/hc 乱记.md",
