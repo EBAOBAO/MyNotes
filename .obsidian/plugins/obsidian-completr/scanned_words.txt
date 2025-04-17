@@ -1122,6 +1122,7 @@ Sud
 SL
 StatusTypeDef
 Size
+SendCommand
 Python
 PACKAGE
 PARAMETER
@@ -1525,6 +1526,7 @@ Lc
 Lo
 LB
 Ll
+Lora
 Array
 Access
 API
