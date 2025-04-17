@@ -2313,6 +2313,25 @@ else if (dataRcvd == '0')
 }
 ```
 
+```c
+#include "Lora.h"
+#include "stm32f10x.h"                  // Device header
+#include "stm32f1xx_hal.h"
+#include <string.h>
+
+void Lora_Init()
+{
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+	Lora_SendCommand("AT");
+}
+
+void Lora_SendCommand(const char *command)
+{
+	HAL_UART_Transmit(&huart1, (uint8_t*)command, strlen(command), HAL_MAX_DELAY);
+}
+```
+
 ## I2C
 
 ## 时钟系统

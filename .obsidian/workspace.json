@@ -49,8 +49,7 @@
               "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -212,11 +211,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f6a4fbd9fcbed17e",
+  "active": "1e6411536b01743f",
   "lastOpenFiles": [
+    "matlab.md",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
-    "matlab.md",
     "java/SE/java SE.md",
     "imgs/imgSTM32/I2CMode.png",
     "imgs/imgSTM32/I2Cchuanshu.png",
