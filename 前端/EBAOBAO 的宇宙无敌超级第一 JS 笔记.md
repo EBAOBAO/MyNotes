@@ -1376,9 +1376,10 @@ for (let x of a) {
 }
 ```
 
-更不用说 `for ... in` 还无法遍历 Map 和 Set 了，这就是为什么要引入新的`for ... of`循环。
+> [!info] info
+> 如果一个对象是是可迭代的，那么它就应该实现一个 `Symbol.iterator` 方法，这个方法应当返回一个迭代器对象。`for...of` 循环会调用该对象的 `Symbol.iterator` 方法以获取一个迭代器（iterator）对象，然后不断调用 `next()` 方法，循环变量会取到返回的对象的属性 `value`，那就是元素的值，直到 `next()` 方法返回的对象中的 `done` 为 `true`。
 
-*如果一个对象是是可迭代的，那么它就应该实现一个 `Symbol.iterator` 方法，这个方法应当返回一个迭代器对象。`for...of` 循环会调用该对象的 `Symbol.iterator` 方法以获取一个迭代器（iterator）对象，然后不断调用 `next()` 方法，循环变量会取到返回的对象的属性 `value`，那就是元素的值，直到 `next()` 方法返回的对象中的 `done` 为 `true`。*
+更不用说 `for ... in` 还无法遍历 Map 和 Set 了，这就是为什么要引入新的`for ... of`循环。
 
 然而，更好的方式是直接使用`iterable`内置的`forEach`方法，它接收一个函数，每次迭代就自动回调该函数。以`Array`为例：
 
@@ -1425,5 +1426,118 @@ a.forEach(function (element) {
 # 函数
 
 基本上所有的高级语言都支持函数，JavaScript也不例外。JavaScript的函数不但是“头等公民”，而且可以像变量一样使用，具有非常强大的抽象能力。
+
+## 定义和调用
+
+要定义一个函数，可以像这样：
+
+```javascript
+function abs(x) {
+    if (x >= 0) {
+        return x;
+    } else {
+        return -x;
+    }
+}
+```
+
+上述`abs()`函数的定义如下：
+
+- `function`指出这是一个函数定义；
+- `abs`是函数的名称；
+- `(x)`括号内列出函数的参数，多个参数以`,`分隔；
+- `{ ... }`之间的代码是函数体，可以包含若干语句，甚至可以没有任何语句。
+
+请注意，函数体内部的语句在执行时，一旦执行到`return`时，函数就执行完毕，并将结果返回。因此，函数内部通过条件判断和循环可以实现非常复杂的逻辑。
+
+由于JavaScript的函数也是一个对象，上述定义的`abs()`函数实际上是一个函数对象，而函数名`abs`可以视为指向该函数的变量。
+
+因此，第二种定义函数的方式如下：
+
+```javascript
+let abs = function (x) {
+    if (x >= 0) {
+        return x;
+    } else {
+        return -x;
+    }
+};
+```
+
+在这种方式下，`function (x) { ... }`是一个 *匿名函数*，它 **没有函数名。但是，这个匿名函数赋值给了变量`abs`，所以，通过变量`abs`就可以调用该函数。**
+
+上述两种定义 **完全等价** ，注意第二种方式按照完整语法需要在函数体末尾加一个`;`，表示赋值语句结束。
+
+调用函数时，就按顺序传入参数即可：
+
+```javascript
+abs(10); // 返回10
+abs(-9); // 返回9
+```
+
+**由于JavaScript允许传入任意个参数而不影响调用，因此传入的参数比定义的参数多也没有问题，虽然函数内部并不需要这些参数** ：
+
+```javascript
+abs(10, 'blablabla'); // 返回10
+abs(-9, 'haha', 'hehe', null); // 返回9
+```
+
+**传入的参数比定义的少也没有问题**：
+
+```javascript
+abs(); // 返回NaN
+```
+
+此时`abs(x)`函数的参数`x`将收到`undefined`，计算结果为`NaN`。
+
+要避免收到`undefined`，可以对参数进行检查：
+
+```javascript
+function abs(x) {
+    if (typeof x !== 'number') {
+        throw 'Not a number';
+    }
+    if (x >= 0) {
+        return x;
+    } else {
+        return -x;
+    }
+}
+```
+
+### arguments
+
+JavaScript还有一个免费赠送的关键字`arguments`，它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。`arguments`类似`Array`但它不是一个`Array`。利用`arguments`，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值：
+
+```javascript
+function abs() {
+    if (arguments.length === 0) {
+        return 0;
+    }
+    let x = arguments[0];
+    return x >= 0 ? x : -x;
+}
+
+abs(); // 0
+abs(10); // 10
+abs(-9); // 9
+```
+
+实际上`arguments`最常用于判断传入参数的个数。你可能会看到这样的写法：
+
+```javascript
+// foo(a[, b], c)
+// 接收2~3个参数，b是可选参数，如果只传2个参数，b默认为null：
+function foo(a, b, c) {
+    if (arguments.length === 2) {
+        // 实际拿到的参数是a和b，c为undefined
+        c = b; // 把b赋给c
+        b = null; // b变为默认值
+    }
+    // ...
+}
+```
+
+要把中间的参数`b`变为“可选”参数，就只能通过`arguments`判断，然后重新调整参数并赋值。
 
 ## 回调函数
