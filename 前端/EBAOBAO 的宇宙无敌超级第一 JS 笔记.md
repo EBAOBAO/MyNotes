@@ -9,7 +9,7 @@ let totalDays = cday.daysInMonth   //创建月天数
 let remainingDays = totalDays- cday.day + 1 //创建月天数减创建时间 还剩多少天
 
 //计算倒计天数
-let tarday = "2025-03-18"
+let tarday = "2025-05-08"
 let targetDate = dv.date(tarday)
 let timeDiff = targetDate - cday
 let daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24))   //倒计天数
