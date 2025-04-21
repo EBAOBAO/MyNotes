@@ -1825,6 +1825,8 @@ int main()
 
 通过串口可以让单片机跟一个设备间点对点通信，但要想跟多个设备通信，就要使用 *总线* ，**I2C** 就是一种总线结构，就能让单片机作为主机，其他设备作为从机进行多设备通信（I2C 还可以多主多从通信，但较复杂）。
 
+如果有一个芯片，它可以干很多事情，而且像单片机一样，这个芯片里的众多外设也都是通过读写寄存器来控制运行的，很显然要让这个芯片工作我们只用成功都谢谢这些寄存器就行了。单片机读写自己的寄存器可以直接通过内部的数据总线来实现，但这个模块的寄存器再单片机外部，不太可能将单片机内部的数据总线 追出来是两个芯片合为一体，所以你需要一种通信协议，再单片机和外部模块间连接少量的几根线，实现单片机读写外部模块寄存器的功能。当然你可以使用串口+数据包来完成这个功能，不过可以明显发现首先这里不太用得着全双工协议，因为在整个过程中并不需要同时进行发送与接收，所以总是有一根信号线处于空闲状态，就造成了资源浪费，然后最好还给协议加上一个应答机制，顺便一根线上还得接多个模块，并且是同步时序（异步时序很依赖硬件外部的支持，这也就是为什么很难用软件实现）。
+
 I2C 由两条线组成：SCL（Serial Clock，串行时钟线） 与 SDA（Serial Data，串行数据线）。
 
 ![[I2Cjiexian.png]]
@@ -1847,10 +1849,6 @@ I2C 由两条线组成：SCL（Serial Clock，串行时钟线） 与 SDA（Seria
 F103c8t6 只支持 Sm 与 Fm。快速模式下还可设置时钟信号的占空比，2:1（低电压持续时间时高电压的两倍） 或 16:9 ，若无特殊说明一般选 2:1 的占空比。
 
 I2C 有三种不同的工作模式，标准 I2C 接口以及 SMBus 系统管理总线（一般用不到）。
-
-`HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)` : 写数据
-
-`HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)`  : 读数据
 # SPI 通信
 
 # CAN 通信
@@ -2333,6 +2331,10 @@ void Lora_SendCommand(const char *command)
 ```
 
 ## I2C
+
+`HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)` : 写数据
+
+`HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)`  : 读数据
 
 ## 时钟系统
 
