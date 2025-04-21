@@ -1540,4 +1540,94 @@ function foo(a, b, c) {
 
 要把中间的参数`b`变为“可选”参数，就只能通过`arguments`判断，然后重新调整参数并赋值。
 
+### rest参数
+
+由于JavaScript函数允许接收任意个参数，于是我们就不得不用`arguments`来获取所有参数：
+
+```javascript
+function foo(a, b) {
+    let i, rest = [];
+    if (arguments.length > 2) {
+        for (i = 2; i<arguments.length; i++) {
+            rest.push(arguments[i]);
+        }
+    }
+    console.log('a = ' + a);
+    console.log('b = ' + b);
+    console.log(rest);
+}
+```
+
+为了获取除了已定义参数`a`、`b`之外的参数，我们不得不用`arguments`，并且循环要从索引`2`开始以便排除前两个参数，这种写法很别扭，只是为了获得额外的`rest`参数，有没有更好的方法？
+
+ES6标准引入了rest参数，上面的函数可以改写为：
+
+```javascript
+function foo(a, b, ...rest) {
+    console.log('a = ' + a);
+    console.log('b = ' + b);
+    console.log(rest);
+}
+
+foo(1, 2, 3, 4, 5);
+// 结果:
+// a = 1
+// b = 2
+// Array [ 3, 4, 5 ]
+
+foo(1);
+// 结果:
+// a = 1
+// b = undefined
+// Array []
+```
+
+rest参数只能写在最后，前面用`...`标识，从运行结果可知，传入的参数先绑定`a`、`b`，多余的参数以数组形式交给变量`rest`，所以，不再需要`arguments`我们就获取了全部参数。
+
+如果传入的参数连正常定义的参数都没填满，也不要紧，rest参数会接收一个空数组（注意不是`undefined`）。
+
+### **小心你的return语句**
+
+前面我们讲到了JavaScript引擎有一个在行末自动添加分号的机制，这可能让你栽到return语句的一个大坑：
+
+```javascript
+function foo() {
+    return { name: 'foo' };
+}
+
+foo(); // { name: 'foo' }
+```
+
+如果把return语句拆成两行：
+
+```javascript
+function foo() {
+    return
+        { name: 'foo' };
+}
+
+foo(); // undefined
+```
+
+_要小心了_，由于JavaScript引擎在行末自动添加分号的机制，上面的代码实际上变成了：
+
+```javascript
+function foo() {
+    return; // 自动添加了分号，相当于return undefined;
+        { name: 'foo' }; // 这行语句已经没法执行到了
+}
+```
+
+所以正确的多行写法是：
+
+```javascript
+function foo() {
+    return { // 这里不会自动加分号，因为{表示语句尚未结束
+        name: 'foo'
+    };
+}
+```
+
+## 变量作用域与解构赋值
+
 ## 回调函数
