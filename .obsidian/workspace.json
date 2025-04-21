@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+                "file": "elec/电子百科.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1"
+              "title": "电子百科"
             }
           },
           {
@@ -226,12 +226,13 @@
   },
   "active": "1e6411536b01743f",
   "lastOpenFiles": [
+    "elec/电子百科.md",
+    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+    "matlab.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "项目开发日志.md",
     "pr基操.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
-    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
-    "matlab.md",
     "java/SE/java SE.md",
     "imgs/imgSTM32/I2CMode.png",
     "imgs/imgSTM32/I2Cchuanshu.png",
@@ -240,7 +241,6 @@
     "imgs/imgSTM32/UARTMode.png",
     "imgs/imgSTM32/USARTjieshuju.png",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
-    "elec/电子百科.md",
     "qt.md",
     "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
     "java/java 设计模式.md",
