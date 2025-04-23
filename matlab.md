@@ -159,8 +159,28 @@ disp(变量|表达式|'字符串')
 格式化输出：
 
 ```matlab
-
+fprintf('格式字符串', [变量]);
 ```
+
+格式字符串占位符跟c语言相同  
 
 # 流程控制
 
+if...else：
+
+```matlab
+
+```
+
+switch...case：
+
+```matlab
+switch 表达式
+	case {表达式1，表达式2……}
+		语句
+	case {表达式1，表达式2……}
+		语句
+	otherwise
+		语句
+end
+```

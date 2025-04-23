@@ -63,7 +63,8 @@
               "title": "EBAOBAO 的宇宙无敌超级第一 JS 笔记"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -199,8 +200,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           }
         ],
@@ -218,20 +219,17 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "1e6411536b01743f",
+  "active": "f6a4fbd9fcbed17e",
   "lastOpenFiles": [
+    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "imgs/imgSTM32/clockTree.png",
     "elec/电子百科.md",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "matlab.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "项目开发日志.md",
     "pr基操.md",
     "java/SE/java SE.md",
@@ -255,7 +253,6 @@
     "imgs/imgSTM32/PWMcalc.png",
     "imgs/imgSTM32/TIMoutMode.png",
     "imgs/imgSTM32/GTIMout.png",
-    "imgs/imgSTM32/HTIMout.png",
     "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
     "elec/电分.md",
     "前端/hc 乱记.md",
