@@ -723,6 +723,7 @@ he
 hN
 huart
 hi
+hub
 body
 bit
 byte
@@ -1210,6 +1211,7 @@ Pt
 PF
 Pdr
 PM
+PCIe
 sup
 sqrt
 settings
@@ -1899,6 +1901,7 @@ csq
 cm
 ckn
 cO
+cortex
 unit
 utf
 unicode
@@ -1967,6 +1970,7 @@ ut
 uls
 un
 uRd
+usb
 arithmetic
 application
 appearance
@@ -2786,6 +2790,7 @@ rP
 rIq
 rhb
 rest
+ram
 environment
 editor
 encodings
@@ -3072,6 +3077,7 @@ fQ
 fW
 faj
 fw
+flash
 general
 gbk
 gb
