@@ -77,8 +77,7 @@
               "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
             }
           },
           {
@@ -224,7 +223,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -239,14 +239,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a1e0716b6a9da574",
+  "active": "1e6411536b01743f",
   "lastOpenFiles": [
+    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "matlab.md",
     "imgs/imgSTM32/clockTree.png",
     "elec/电子百科.md",
-    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "项目开发日志.md",
     "pr基操.md",
     "java/SE/java SE.md",
