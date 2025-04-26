@@ -223,8 +223,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -241,10 +240,10 @@
   },
   "active": "1e6411536b01743f",
   "lastOpenFiles": [
+    "matlab.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
-    "matlab.md",
     "imgs/imgSTM32/clockTree.png",
     "elec/电子百科.md",
     "项目开发日志.md",
