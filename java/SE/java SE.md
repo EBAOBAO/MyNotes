@@ -6731,7 +6731,7 @@ boolean isValidMobileNumber(String s) {
 
 使用正则表达式的好处有哪些？**一个正则表达式就是一个描述规则的字符串**，所以，只需要编写正确的规则，我们就可以让正则表达式引擎去判断目标字符串是否符合规则。
 
-正则表达式是一套标准，它可以用于任何语言。Java标准库的 `java.util.regex` 包内置了正则表达式引擎，在Java程序中使用正则表达式非常简单。
+正则表达式是一套标准，它可以用于任何语言。*Java标准库的 `java.util.regex` 包内置了正则表达式引擎，在Java程序中使用正则表达式非常简单。*
 
 举个例子：要判断用户输入的年份是否是`20##`年，我们先写出规则如下：
 
@@ -6888,6 +6888,153 @@ public class Main {
 -   `A38000`：因为`\d{3,5}`可以匹配5个数字`38000`。
 
 如果没有上限，那么修饰符`{n,}`就可以匹配至少n个字符。
+
+# 复杂匹配规则
+
+### 匹配开头和结尾
+
+用正则表达式进行多行匹配时，我们用`^`表示开头，`$`表示结尾。例如，`^A\d{3}$`，可以匹配`"A001"`、`"A380"`。
+
+### 匹配指定范围
+
+如果我们规定一个7~8位数字的电话号码不能以`0`开头，应该怎么写匹配规则呢？`\d{7,8}`是不行的，因为第一个`\d`可以匹配到`0`。
+
+使用`[...]`可以匹配范围内的字符，例如，`[123456789]`可以匹配`1`~`9`，这样就可以写出上述电话号码的规则：`[123456789]\d{6,7}`。
+
+把所有字符全列出来太麻烦，`[...]`还有一种写法，直接写`[1-9]`就可以。
+
+要匹配大小写不限的十六进制数，比如`1A2b3c`，我们可以这样写：`[0-9a-fA-F]`，它表示一共可以匹配以下任意范围的字符：
+
+- `0-9`：字符`0`~`9`；
+- `a-f`：字符`a`~`f`；
+- `A-F`：字符`A`~`F`。
+
+如果要匹配6位十六进制数，前面讲过的`{n}`仍然可以继续配合使用：`[0-9a-fA-F]{6}`。
+
+`[...]`还有一种排除法，即不包含指定范围的字符。假设我们要匹配任意字符，但不包括数字，可以写`[^1-9]{3}`：
+
+- 可以匹配`"ABC"`，因为不包含字符`1`~`9`；
+- 可以匹配`"A00"`，因为不包含字符`1`~`9`；
+- 不能匹配`"A01"`，因为包含字符`1`；
+- 不能匹配`"A05"`，因为包含字符`5`。
+
+### 或规则匹配
+
+用`|`连接的两个正则规则是 **或** 规则，例如，`AB|CD`表示可以匹配`AB`或`CD`。
+
+我们来看这个正则表达式`java|php`：
+
+```java
+// regex
+public class Main {
+    public static void main(String[] args) {
+        String re = "java|php";
+        System.out.println("java".matches(re));
+        System.out.println("php".matches(re));
+        System.out.println("go".matches(re));
+    }
+}
+```
+
+它可以匹配`"java"`或`"php"`，但无法匹配`"go"`。
+
+要把`go`也加进来匹配，可以改写为`java|php|go`。
+
+### 使用括号
+
+现在我们想要匹配字符串`learn java`、`learn php`和`learn go`怎么办？一个最简单的规则是`learn\sjava|learn\sphp|learn\sgo`，但是这个规则太复杂了，可以把公共部分提出来，然后用`(...)`把子规则括起来表示成`learn\s(java|php|go)`。
+
+```java
+// regex
+public class Main {
+    public static void main(String[] args) {
+        String re = "learn\\s(java|php|go)";
+        System.out.println("learn java".matches(re));
+        System.out.println("learn Java".matches(re));
+        System.out.println("learn php".matches(re));
+        System.out.println("learn Go".matches(re));
+    }
+}
+```
+
+上面的规则仍然不能匹配`learn Java`、`learn Go`这样的字符串。试修改正则，使之能匹配大写字母开头的`learn Java`、`learn Php`、`learn Go`。
+
+# 分组匹配
+
+我们前面讲到的`(...)`可以用来把一个子规则括起来，这样写`learn\s(java|php|go)`就可以更方便地匹配长字符串了。
+
+实际上`(...)`还有一个重要作用，就是分组匹配。
+
+我们来看一下如何用正则匹配`区号-电话号`码这个规则。利用前面讲到的匹配规则，写出来很容易：
+
+```plain
+\d{3,4}\-\d{6,8}
+```
+
+虽然这个正则匹配规则很简单，但是往往匹配成功后，下一步是提取区号和电话号码，分别存入数据库。于是问题来了：如何提取匹配的子串？
+
+当然可以用`String`提供的`indexOf()`和`substring()`这些方法，但它们从正则匹配的字符串中提取子串没有通用性，下一次要提取`learn\s(java|php)`还得改代码。
+
+正确的方法是用`(...)`先把要提取的规则分组，把上述正则表达式变为`(\d{3,4})\-(\d{6,8})`。
+
+现在问题又来了：匹配后，如何按括号提取子串？
+
+现在我们没办法用`String.matches()`这样简单的判断方法了，必须引入`java.util.regex`包，用`Pattern`对象匹配，匹配后获得一个`Matcher`对象，如果匹配成功，就可以直接从`Matcher.group(index)`返回子串：
+
+```java
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Pattern p = Pattern.compile("(\\d{3,4})\\-(\\d{7,8})");
+        Matcher m = p.matcher("010-12345678");
+        if (m.matches()) {
+            String g1 = m.group(1);
+            String g2 = m.group(2);
+            System.out.println(g1); // 010
+            System.out.println(g2); // 12345678
+        } else {
+            System.out.println("匹配失败!");
+        }
+    }
+}
+```
+
+运行上述代码，会得到两个匹配上的子串`010`和`12345678`。
+
+要特别注意，`Matcher.group(index)`方法的参数用1表示第一个子串，2表示第二个子串。如果我们传入0会得到什么呢？答案是`010-12345678`，即整个正则匹配到的字符串。
+
+### Pattern
+
+我们在前面的代码中用到的正则表达式代码是`String.matches()`方法，而我们在分组提取的代码中用的是`java.util.regex`包里面的`Pattern`类和`Matcher`类。实际上这两种代码本质上是一样的，因为`String.matches()`方法内部调用的就是`Pattern`和`Matcher`类的方法。
+
+但是反复使用`String.matches()`对同一个正则表达式进行多次匹配效率较低，因为每次都会创建出一样的`Pattern`对象。完全可以先创建出一个`Pattern`对象，然后反复使用，就可以实现编译一次，多次匹配：
+
+```java
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Pattern pattern = Pattern.compile("(\\d{3,4})\\-(\\d{7,8})");
+        pattern.matcher("010-12345678").matches(); // true
+        pattern.matcher("021-123456").matches(); // false
+        pattern.matcher("022#1234567").matches(); // false
+        // 获得Matcher对象:
+        Matcher matcher = pattern.matcher("010-12345678");
+        if (matcher.matches()) {
+            String whole = matcher.group(0); // "010-12345678", 0表示匹配的整个字符串
+            String area = matcher.group(1); // "010", 1表示匹配的第1个子串
+            String tel = matcher.group(2); // "12345678", 2表示匹配的第2个子串
+            System.out.println(area);
+            System.out.println(tel);
+        }
+    }
+}
+```
+
+使用`Matcher`时，必须首先调用`matches()`判断是否匹配成功，匹配成功后，才能调用`group()`提取子串。
+
+利用提取子串的功能，我们轻松获得了区号和号码两部分。
 # (19) 反射
 
 什么是反射？
