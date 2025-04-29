@@ -7035,6 +7035,152 @@ public class Main {
 使用`Matcher`时，必须首先调用`matches()`判断是否匹配成功，匹配成功后，才能调用`group()`提取子串。
 
 利用提取子串的功能，我们轻松获得了区号和号码两部分。
+
+# 非贪婪匹配
+
+在介绍非贪婪匹配前，我们先看一个简单的问题：
+
+给定一个字符串表示的数字，判断该数字末尾`0`的个数。例如：
+
+- `"123000"`：3个`0`
+- `"10100"`：2个`0`
+- `"1001"`：0个`0`
+
+可以很容易地写出该正则表达式：`(\d+)(0*)`，Java代码如下：
+
+```java
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Pattern pattern = Pattern.compile("(\\d+)(0*)");
+        Matcher matcher = pattern.matcher("1230000");
+        if (matcher.matches()) {
+            System.out.println("group1=" + matcher.group(1)); // "1230000"
+            System.out.println("group2=" + matcher.group(2)); // ""
+        }
+    }
+}
+```
+
+然而打印的第二个子串是空字符串`""`。
+
+实际上，我们期望分组匹配结果是：
+
+|input|`\d+`|`0*`|
+|---|---|---|
+|123000|"123"|"000"|
+|10100|"101"|"00"|
+|1001|"1001"|""|
+
+但实际的分组匹配结果是这样的：
+
+|input|`\d+`|`0*`|
+|---|---|---|
+|123000|"123000"|""|
+|10100|"10100"|""|
+|1001|"1001"|""|
+
+仔细观察上述实际匹配结果，实际上它是完全合理的，因为`\d+`确实可以匹配后面任意个`0`。
+
+这是因为正则表达式默认使用 *贪婪匹配* ：任何一个规则，它总是尽可能多地向后匹配，因此，`\d+`总是会把后面的`0`包含进来。
+
+要让`\d+`尽量少匹配，让`0*`尽量多匹配，我们就必须让`\d+`使用非贪婪匹配。在规则`\d+`后面加个`?`即可表示非贪婪匹配。我们改写正则表达式如下：
+
+```java
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Pattern pattern = Pattern.compile("(\\d+?)(0*)");
+        Matcher matcher = pattern.matcher("1230000");
+        if (matcher.matches()) {
+            System.out.println("group1=" + matcher.group(1)); // "123"
+            System.out.println("group2=" + matcher.group(2)); // "0000"
+        }
+    }
+}
+```
+
+因此，给定一个匹配规则，加上`?`后就变成了非贪婪匹配。
+
+我们再来看这个正则表达式`(\d??)(9*)`，注意`\d?`表示匹配0个或1个数字，后面第二个`?`表示非贪婪匹配，因此，给定字符串`"9999"`，匹配到的两个子串分别是`""`和`"9999"`，因为对于`\d?`来说，可以匹配1个`9`，也可以匹配0个`9`，但是因为后面的`?`表示非贪婪匹配，它就会尽可能少的匹配，结果是匹配了0个`9`。
+
+# 搜索和替换
+
+### 分割字符串
+
+使用正则表达式分割字符串可以实现更加灵活的功能。`String.split()`方法传入的正是正则表达式。我们来看下面的代码：
+
+```java
+"a b c".split("\\s"); // { "a", "b", "c" }
+"a b  c".split("\\s"); // { "a", "b", "", "c" }
+"a, b ;; c".split("[\\,\\;\\s]+"); // { "a", "b", "c" }
+```
+
+如果我们想让用户输入一组标签，然后把标签提取出来，因为用户的输入往往是不规范的，这时，使用合适的正则表达式，就可以消除多个空格、混合`,`和`;`这些不规范的输入，直接提取出规范的字符串。
+
+### 搜索字符串
+
+使用正则表达式还可以搜索字符串，我们来看例子：
+
+```java
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "the quick brown fox jumps over the lazy dog.";
+        Pattern p = Pattern.compile("\\wo\\w");
+        Matcher m = p.matcher(s);
+        while (m.find()) {
+            String sub = s.substring(m.start(), m.end());
+            System.out.println(sub);
+        }
+    }
+}
+```
+
+我们获取到`Matcher`对象后，不需要调用`matches()`方法（因为匹配整个串肯定返回false），而是反复调用`find()`方法，在整个串中搜索能匹配上`\\wo\\w`规则的子串，并打印出来。这种方式比`String.indexOf()`要灵活得多，因为我们搜索的规则是3个字符：中间必须是`o`，前后两个必须是字符`[A-Za-z0-9_]`。
+
+### 替换字符串
+
+使用正则表达式替换字符串可以直接调用`String.replaceAll()`，它的第一个参数是正则表达式，第二个参数是待替换的字符串。我们还是来看例子：
+
+```java
+// regex
+public class Main {
+    public static void main(String[] args) {
+        String s = "The     quick\t\t brown   fox  jumps   over the  lazy dog.";
+        String r = s.replaceAll("\\s+", " ");
+        System.out.println(r); // "The quick brown fox jumps over the lazy dog."
+    }
+}
+```
+
+上面的代码把不规范的连续空格分隔的句子变成了规范的句子。可见，灵活使用正则表达式可以大大降低代码量。
+
+### 反向引用
+
+如果我们要把搜索到的指定字符串按规则替换，比如前后各加一个`<b>xxxx</b>`，这个时候，使用`replaceAll()`的时候，我们传入的第二个参数可以使用`$1`、`$2`来反向引用匹配到的子串。例如：
+
+```java
+// regex
+public class Main {
+    public static void main(String[] args) {
+        String s = "the quick brown fox jumps over the lazy dog.";
+        String r = s.replaceAll("\\s([a-z]{4})\\s", " <b>$1</b> ");
+        System.out.println(r);
+    }
+}
+```
+
+上述代码的运行结果是：
+
+```plain
+the quick brown fox jumps <b>over</b> the <b>lazy</b> dog.
+```
+
+它实际上把任何4字符单词的前后用`<b>xxxx</b>`括起来。实现替换的关键就在于`" <b>$1</b> "`，它用匹配的分组子串`([a-z]{4})`替换了`$1`。
 # (19) 反射
 
 什么是反射？
