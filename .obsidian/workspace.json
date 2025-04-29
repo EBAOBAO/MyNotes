@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "电赛报告.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "电赛报告"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记"
             }
           },
           {
@@ -149,7 +149,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -213,13 +214,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "电赛报告.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "电赛报告 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的大纲"
             }
           },
           {
@@ -255,9 +256,9 @@
   },
   "active": "d280e4df760e80eb",
   "lastOpenFiles": [
+    "电赛报告.md",
     "imgs/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3696854521143172676&skey=@crypt_19d019d9_34c8aa74e4ede26f4b51dba7589ef8cd&mmweb_appid=wx_webfilehelper.jpg",
     "imgs/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3501656238992583008&skey=@crypt_19d019d9_34c8aa74e4ede26f4b51dba7589ef8cd&mmweb_appid=wx_webfilehelper.jpg",
-    "电赛报告.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "matlab.md",
     "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
@@ -285,7 +286,6 @@
     "数理乱记.md",
     "乱记.md",
     "imgs/imgSTM32/PWMcalc.png",
-    "imgs/imgSTM32/TIMoutMode.png",
     "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
     "elec/电分.md",
     "前端/hc 乱记.md",
