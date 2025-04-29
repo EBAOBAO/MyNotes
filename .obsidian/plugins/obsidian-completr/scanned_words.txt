@@ -358,6 +358,7 @@ HU
 Hnb
 HD
 HR
+Hong
 Brendan
 BOM
 Boolean
@@ -455,6 +456,8 @@ BLag
 BK
 BxK
 BnF
+Blocks
+Bob
 Eich
 ECMAScript
 ES
@@ -699,6 +702,7 @@ Ieo
 Ilt
 Ih
 IoyjQ
+IllegalAccessException
 DOM
 Dictionary
 DVD
@@ -984,6 +988,7 @@ hKOo
 hvK
 hir
 hu
+hash
 body
 bit
 byte
@@ -1095,6 +1100,7 @@ bx
 bM
 bpq
 bK
+brown
 Title
 TB
 Test
@@ -1348,6 +1354,7 @@ CO
 CZY
 Cv
 CZxf
+CharSequence
 String
 Symbol
 Swift
@@ -1485,6 +1492,9 @@ Sx
 SD
 SKe
 SiZ
+Simple
+Student
+SecurityManager
 Python
 PACKAGE
 PARAMETER
@@ -1792,6 +1802,11 @@ sXh
 sej
 sv
 shn
+sameClass
+stdClass
+setAccessible
+substring
+setName
 python
 pytohn
 px
@@ -1915,6 +1930,11 @@ pJq
 pIq
 pZ
 piy
+printObjectInfo
+printClassInfo
+primitive
+protected
+parseInt
 List
 LAN
 LOCAL
@@ -2012,6 +2032,8 @@ LG
 LJ
 LN
 LcS
+LogFactory
+Logger
 Array
 Access
 API
@@ -2262,6 +2284,8 @@ mMKh
 mQb
 mW
 mph
+myVar
+myvar
 Object
 Operating
 Outer
@@ -2512,6 +2536,10 @@ cD
 cscl
 cqw
 cY
+cls
+create
+createLog
+createJdkLog
 unit
 utf
 unicode
@@ -2735,6 +2763,7 @@ aQ
 aap
 ad
 awy
+apache
 logic
 live
 long
@@ -2837,6 +2866,8 @@ lI
 lzbH
 la
 lK
+lazy
+learnjava
 GHz
 GB
 GBSG
@@ -3271,6 +3302,9 @@ Mic
 MKJ
 Mx
 Mrz
+Month
+Modifier
+Ming
 KB
 Keymap
 Keil
@@ -3568,6 +3602,8 @@ jzF
 jE
 jMF
 jYY
+jumps
+javax
 development
 double
 desc
@@ -3681,6 +3717,7 @@ dX
 dsK
 dZj
 dyO
+dog
 runtime
 run
 ring
@@ -3802,6 +3839,7 @@ rNKA
 ra
 rZK
 roc
+reflection
 environment
 editor
 encodings
@@ -4059,6 +4097,19 @@ imt
 iv
 ij
 iwR
+itranswarp
+instanceof
+isInterface
+isEnum
+isArray
+isPrimitive
+isClassPresent
+isFinal
+isPublic
+isProtected
+isPrivate
+isStatic
+invoke
 file
 for
 float
@@ -4172,6 +4223,9 @@ fMu
 fhW
 fq
 fhe
+fox
+forName
+factory
 general
 gbk
 gb
@@ -4278,6 +4332,26 @@ gqt
 gG
 ght
 gho
+getFullName
+getFirstName
+getLastName
+getSimpleName
+getPackage
+getField
+getDeclaredField
+getFields
+getDeclaredFields
+grade
+getType
+getModifiers
+getMethod
+getDeclaredMethod
+getMethods
+getDeclaredMethods
+getScore
+getGrade
+getReturnType
+getParameterTypes
 template
 templates
 tab
@@ -4380,6 +4454,7 @@ tk
 tx
 trY
 tR
+throws
 Views
 VARIABLE
 Vector
@@ -4851,6 +4926,7 @@ oaKq
 okk
 oii
 onN
+over
 XXX
 XcbvjtWfpeOT
 XHR
@@ -4930,6 +5006,7 @@ Xk
 XL
 XXy
 Xx
+Xiao
 zzz
 zJEN
 zoI
@@ -5094,6 +5171,7 @@ yfs
 yO
 ymR
 yYq
+year
 YEAR
 YYYY
 YanWeiMin
@@ -5414,6 +5492,7 @@ xc
 xMK
 xyc
 xkE
+xxxx
 qq
 quot
 qJ
@@ -5487,5 +5566,6 @@ qRx
 qzl
 qYW
 qNh
+quick
 Öf
 ÄO
