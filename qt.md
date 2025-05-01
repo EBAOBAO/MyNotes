@@ -90,7 +90,7 @@ int main() {
 
 创建自己的命名空间是 c++ 中组织代码的一种好方法，命名空间可以帮助避免名称冲突，并清晰地组织代码。
 
-```c
+```cpp
 #ifndef CIR_H
 #define CIR_H
 
@@ -113,3 +113,35 @@ namespace cir {
 ## 输入输出
 
 c++ 中的输入与输出主要是通过标准库的输入输出流来实现的。最常用的是 iostream 库，它提供了用于输入和输出的基本流类，包括 `cin`、`cout`、`cerr` 与 `clog` 。
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    cout << "you entered: " << num << endl;
+    clog << "Logging: user entered a number." << endl;
+    return 0;
+}
+```
+
+`cout << ""` 这样的语句的语法看起来不像是对象或函数之类的东西，有点奇怪，事实上这样的语句是基于 C++ 的对象和操作符重载机制实现的：
+
+首先，`cout` 是什么东西？它是一个全局对象，属于 `std::ostream` 类型。`std::ostream` 是标准库中定义的一个类，专门用于输出流操作。`cout` 是这个类的一个实例，它与标准输出（通常是终端或屏幕）绑定。然后，`<<` 是一个操作符，但它并不是普通的操作符，而是被 **重载** 了的。对于 `std::ostream` 类，`<<` 操作符被重载为一种特殊的输出操作。
+
+```cpp
+std::ostream& operator<<(const char* str){...}
+```
+
+但 *重载操作符* 又是什么东西？
+
+重载操作符（Operator Overloading）是 C++ 中一个非常强大的特性，它允许开发者为类定义自定义的操作符行为。简单来说，就是让类的对象可以使用普通的操作符（如 `+`、`-`、`<<` 等）进行操作，就像内置类型（如 `int`、`float`）一样。这种特性在 C 中是没有的，是 C++ 面向对象特性的一部分。
+
+比如说，你可以定义一个类 `MyClass`，然后让它的对象支持 `+`、`<<` 或 `==` 等操作符。这样，当你对 `MyClass` 的对象使用这些操作符时，C++ 会调用你定义的函数来执行相应的操作。
+
+如果你熟悉 C 语言，可以把它看作是 C++ 对 C 的一种扩展，让代码更直观、更易读，同时保持灵活性。

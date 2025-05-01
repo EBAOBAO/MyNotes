@@ -2540,6 +2540,7 @@ cls
 create
 createLog
 createJdkLog
+cli
 unit
 utf
 unicode
@@ -3493,6 +3494,7 @@ wd
 wF
 wrb
 wJf
+webpack
 java
 jdk
 javac
@@ -4547,6 +4549,8 @@ VmSQ
 Vbv
 VHc
 Vhq
+Vue
+Vite
 view
 void
 values
@@ -4633,6 +4637,8 @@ vWdwO
 vy
 vmog
 ve
+vue
+vite
 num
 new
 name
