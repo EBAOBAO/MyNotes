@@ -2348,5 +2348,4 @@ void Lora_SendCommand(const char *command)
 
 ![[clockTree.png]]
 
-这里左边这颗树为芯片上绝大部分模块提供时钟，右边只为 RTC 模块与 IWDG 模块提供时钟。两边的树都有两个树根（两种不同的时钟来源）：HSI 与 HSE 、LSI 与 LSE 。
-## SPI
+这里左边这颗树为芯片上绝大部分模块提供时钟，右边只为 RTC 模块与 IWDG 模块提供时钟。两边的树都有两个树根（两种不同的时钟来源）：HSI 与 HSE 、LSI 与 LSE 。## SPI
