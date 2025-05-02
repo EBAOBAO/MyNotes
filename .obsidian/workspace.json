@@ -172,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 C++ 笔记 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
             }
           },
           {
@@ -214,8 +214,10 @@
   },
   "active": "c8a46821531e7b21",
   "lastOpenFiles": [
-    "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
+    "imgs/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3696854521143172676&skey=@crypt_19d019d9_34c8aa74e4ede26f4b51dba7589ef8cd&mmweb_appid=wx_webfilehelper.jpg",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+    "imgs/imgSTM32/zhongduanLi.png",
+    "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
@@ -228,7 +230,6 @@
     "java/SE/java SE.md",
     "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
     "电赛报告.md",
-    "imgs/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3696854521143172676&skey=@crypt_19d019d9_34c8aa74e4ede26f4b51dba7589ef8cd&mmweb_appid=wx_webfilehelper.jpg",
     "imgs/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3501656238992583008&skey=@crypt_19d019d9_34c8aa74e4ede26f4b51dba7589ef8cd&mmweb_appid=wx_webfilehelper.jpg",
     "imgs/imgSTM32/clockTree.png",
     "elec/电子百科.md",
@@ -247,10 +248,8 @@
     "Test.md",
     "数理乱记.md",
     "乱记.md",
-    "imgs/imgSTM32/PWMcalc.png",
     "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
     "elec/电分.md",
-    "python/python 声音处理.md",
     "imgs/imgBlender",
     "未命名 1.canvas",
     "未命名.canvas",

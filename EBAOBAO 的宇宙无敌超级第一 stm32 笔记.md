@@ -655,6 +655,9 @@ int main()
 
 ![中断](Zhongduan.png)
 
+![[zhongduanLi.png]]
+
+中断编程的优点：突破了按部就班的做事方式，能够更快地响应突发事件。
 ## STM32 中断
 
 STM32 中有 68 个可屏蔽中断通道（=中断源，虽然对于一个具体的型号可能没那么多，具体要以对应型号的数据手册为准），几乎所有的模块都能申请中断，像EXTI、TIM、ADC、USART、SPI、I2C、RTC 等外设。
@@ -2359,6 +2362,12 @@ void Lora_SendCommand(const char *command)
 
 时钟信号从树根产生，经过树干的加工运算之后得到 SYSCLK ，其最高频率为 72MHz ，这是个承上启下的节点，在分析时钟树的时候非常重要。首先它有三种来源：HSI、HSE 与锁相环 PLL（一种变频器，可对时钟信号的频率做乘法，可实现最高16倍频），然后 PLL 也有三种来源：HSI / 2 、HSE 与 HSE / 2 。
 
-SYSCLK 又引出了树冠：先是 AHB 分频器，后是 APB1 、APB2 分频器，他们能对输入时钟频率做除法。SYSCLK 经过 AHB 分频后产生关键节点 HCLK ，最高频率为 72MHz ，对应了 AHB 总线的最高频率 。对于之后的分频器也是类似，如图所示。
+SYSCLK 又引出了树冠：先是 AHB 分频器，后是 APB1 、APB2 分频器，他们能对输入时钟频率做除法。SYSCLK 经过 AHB 分频后产生关键节点 HCLK ，最高频率为 72MHz （Cortex-m3 内核就连接在这里），对应了 AHB 总线的最高频率 。对于之后的分频器也是类似，如图所示。
+
+RCC（Reset & Clock Controller，复位和时钟控制器）-> 需要的外部时钟源 \[Crystal/Ceramic Resonator（晶体/陶瓷震荡器，另一个旁路时钟源是直接使用生成好的时钟信号）\]
 
 ## SPI
+
+## 中断
+
+
