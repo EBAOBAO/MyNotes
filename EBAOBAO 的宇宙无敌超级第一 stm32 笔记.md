@@ -2347,4 +2347,6 @@ void Lora_SendCommand(const char *command)
 单片机需要给每个模块提供时序信号，并且每个模块需要的时钟的频率是不同的，故需要时钟树来进行时钟信号的产生和分配。
 
 ![[clockTree.png]]
+
+这里左边这颗树为芯片上绝大部分模块提供时钟，右边只为 RTC 模块与 IWDG 模块提供时钟。
 ## SPI
