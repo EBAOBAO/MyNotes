@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -172,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的大纲"
             }
           },
           {
@@ -196,8 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,14 +211,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c8a46821531e7b21",
+  "active": "0fbceca8a8b5ff09",
   "lastOpenFiles": [
-    "imgs/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3696854521143172676&skey=@crypt_19d019d9_34c8aa74e4ede26f4b51dba7589ef8cd&mmweb_appid=wx_webfilehelper.jpg",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+    "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
+    "imgs/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3696854521143172676&skey=@crypt_19d019d9_34c8aa74e4ede26f4b51dba7589ef8cd&mmweb_appid=wx_webfilehelper.jpg",
     "imgs/imgSTM32/zhongduanLi.png",
     "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
-    "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",

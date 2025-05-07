@@ -34,10 +34,6 @@ x, y, z = 0, 1, 2
 HUMOU_SALARY = 0
 ```
 
-### 数
-
-> "Hell SU meal?" ——宇宙混沌大帝Humou
-
 ## 数据类型转换
 
 Python 数据类型转换可以分为两种：
@@ -95,6 +91,8 @@ print("num_new 数据类型为:",type(num_new))
 # 字面量
 
 ## 数
+
+> "Hell SU meal?" ——宇宙混沌大帝Humou
 
 python中有整数与浮点数
 
