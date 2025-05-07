@@ -1076,7 +1076,7 @@ TypeError: person() missing 2 required keyword-only arguments: 'city' and 'job'
 
 装饰器本质上是一个 Python 函数或类，它可以让其他函数或类在不需要做任何代码修改的前提下增加额外功能，装饰器的返回值也是一个函数/类对象。
 
-本质上，decorator就是一个返回函数的高阶函数。所以，我们要定义一个能打印日志的decorator，可以定义如下：
+**本质上，decorator就是一个返回函数的高阶函数。** 所以，我们要定义一个能打印日志的decorator，可以定义如下：
 
 ```python
 def log(func):
