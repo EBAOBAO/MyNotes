@@ -579,7 +579,7 @@ d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
 `items()`：返回一个键值对视图对象（可迭代）
 `keys()`：返回键的视图对象（可迭代）
 `values()`：返回值的视图对象（可迭代）
-`pop(<key>)`：删除`<key>`对应的键值对并返回该键对应的值，若键不存在则抛出 `KeyError` 异常。
+`pop(<key>)`：删除`<key>`对应的键值对并返回该键对应的值，若键不存在则抛出 `KeyError` 异常（还可以在 key 后添加一参数作为默认返回值）。
 
 使用例：
 
@@ -1332,9 +1332,88 @@ def blabla(
 
 ### 元组解包
 
-在 Python 中，元组解包（tuple unpacking）是指将元组中的元素逐一并赋值给多个变量的过程。这在处理多个值时非常方便，
+在 Python 中，元组解包（tuple unpacking）是指将元组中的元素逐一并赋值给多个变量的过程。这在处理多个值时非常方便：
 
+```python
+# 定义一个元组
+point = (3, 4)
 
+# 解包元组
+x, y = point
+
+# 打印解包后的值
+print("x =", x)  # 输出：x = 3
+print("y =", y)  # 输出：y = 4
+```
+
+是的，这样赋值都算是解包，现在我们就理解
+
+```python
+x, y, z = 1, 2, 3
+```
+
+这种赋值语句的运行逻辑了：**实际上，这样的语句在底层是先将 1, 2, 3 识别为一个元组，然后再解包赋给 x, y, z。**
+
+当你有一个函数需要多个参数，而这些参数已经存储在一个列表或元组中时，可以使用 `*` 将其解包为单独的参数。
+
+```python
+# 元组解包
+point = (3, 4)
+x, y = point
+print(x, y)  # 输出：3 4
+
+# 列表解包
+colors = ['red', 'green', 'blue']
+r, g, b = colors
+print(r, g, b)  # 输出：red green blue
+```
+
+还可以使用 `*` 解包一个可迭代对象并将其元素包含在新列表中（合并列表）！
+
+```python
+# 解包一个列表到另一个列表
+list1 = [1, 2, 3]
+list2 = [*list1, 4, 5, 6]
+print(list2)  # 输出：[1, 2, 3, 4, 5, 6]
+
+# 解包多个列表
+list3 = [*list1, *list2]
+print(list3)  # 输出：[1, 2, 3, 1, 2, 3, 4, 5, 6]
+```
+
+事实上，在 Python 3.5+ 中，只要是可迭代对象，就可以被这样解包，这被称为 *“扩展解包”（Extended Unpacking）* ：
+
+```python
+name = "Alice"
+age = 30
+kw = {'height': 175, 'weight': 65}
+
+# 使用扩展解包合并列表
+result = [name, age, *(kw.values())]
+print(result)  # 输出：['Alice', 30, 175, 65]
+```
+
+顺带一提，**列表解包和元组解包在 Python 中是同一回事，都是将容器中的元素逐一赋值给多个变量。解包操作不关心容器的类型（列表或元组），而是关心容器中的元素数量和变量数量是否匹配**。
+
+类似地，字典也有解包的操作，也可以用来传递参数，合并字典等：
+
+```python
+def person(name, age):
+    return f"{name} is {age} years old."
+
+info = {'name': 'Alice', 'age': 30}
+result = person(**info)  # 解包字典为关键字参数
+print(result)  # 输出：Alice is 30 years old.
+```
+
+```python
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+
+# 使用 ** 解包并合并字典
+merged_dict = {**dict1, **dict2}
+print(merged_dict)  # 输出：{'a': 1, 'b': 2, 'c': 3, 'd': 4}
+```
 
 ## 迭代
 
