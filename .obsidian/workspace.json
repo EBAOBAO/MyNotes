@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -182,7 +181,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,6 +199,7 @@
   },
   "active": "e1b858c333698ba2",
   "lastOpenFiles": [
+    "imgs/imgSTM32/paidui.png",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "matlab.md",
