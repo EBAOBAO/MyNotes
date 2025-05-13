@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#app",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -211,7 +211,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f85a6125a0730ded",
+  "active": "c7b138c2bcccb2dd",
   "lastOpenFiles": [
     "Test.md",
     "jekyll.md",
