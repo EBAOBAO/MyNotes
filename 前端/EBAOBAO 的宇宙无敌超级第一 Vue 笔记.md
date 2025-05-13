@@ -32,4 +32,8 @@ createApp(App).mount('#app')
 
 首先，它引入了一个样式，然后又引入了一个 `{ createApp }` ，它就像你要种花时的花盆，是“基础”，就是在创建应用。再之后又引用了 App ，这就是一个 *组件* ，像是 “花的根”，以后写出的各种 .vue 文件，也都是一个个组件，像花的枝杈各种器官之类的，都要安装在 App 这个最基础的组件上。最后就是将你的花插在花盆里（`createApp(App)`），并将这盆花摆在某个位置（`mount('#app')`：挂载到 *#app* 这个容器，即 index.html 的那个 id 为 app 的 div，之中）。
 
-自己写的组件要放在 components 中，
+自己写的组件要放在 components 中，一个 .vue 文件中要写三种标签：
+
+1. template : 写 html 结构
+2. script : 写脚本的，JS 或 TS（可以 `<template lang="ts">`）
+3. style : 写样式的
