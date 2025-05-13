@@ -37,3 +37,6 @@ createApp(App).mount('#app')
 1. template : 写 html 结构
 2. script : 写脚本的，JS 或 TS（可以 `<template lang="ts">`）
 3. style : 写样式的
+
+## 补充：配置代码片段
+
