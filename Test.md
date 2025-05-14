@@ -71,11 +71,19 @@ sdgsdgs
 | dfdfhdf   | dfhdfhdfhd |
 
 ```tx
-First Header | Second Header | Third Header |
-:----------: | :-----------: | :----------- | 
-Content      |   *Long Cell* || 
-Content      |    **Cell**   |     Cell     | 
+阶段 | 直接产物 | ATP产量
+:----: | --------------: | ---------:
+糖酵解 | 2 ATP ||
+^^ | 2 NADH | 3--5 ATP |
+丙酮酸氧化 | 2 NADH | 5 ATP |
+柠檬酸循环 | 2 ATP ||
+^^ | 6 NADH | 15 ATP |
+^^ | 2 FADH2 | 3 ATP |
+**30--32** ATP |||
 ```
+
+
+
 
 sgsdgss `sefsdfs`
 : sdsdfsdfsdfsd`asfasfa`jdfd
@@ -252,3 +260,8 @@ notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 
 如果说，如今往流浪汉铁腕里扔钢镚已是令人嗤之以鼻，那么在手机上花点钱就能投喂流浪猫则是当下的潮流。这种模式十分有趣地勾勒出一种看似新颖的欲望图景，
 
+[^1]: dgfdfg 
+	sdfsdfsdfsdf
+	sdf
+	sdf
+	sdfsdf
