@@ -62,20 +62,6 @@
               "icon": "lucide-file",
               "title": "EBAOBAO 的宇宙无敌超级第一 JS 笔记"
             }
-          },
-          {
-            "id": "67c20e7347aec49c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Test.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Test"
-            }
           }
         ]
       }
@@ -223,7 +209,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,13 +227,13 @@
   },
   "active": "9250754456b16d15",
   "lastOpenFiles": [
-    "Templates/MyDataviewJSBlock.md",
-    "java/SE/java SE.md",
-    "Test.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+    "java/SE/java SE.md",
+    "Templates/MyNoun.md",
+    "Templates/MyDataviewJSBlock.md",
+    "Test.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "blender.md",
-    "Templates/MyNoun.md",
     "Templates/MyTablet.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记.md",
     "Templates",
