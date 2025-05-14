@@ -1548,6 +1548,8 @@ beYV
 bcc
 bWD
 bRJM
+baload
+bastore
 Title
 TB
 Test
@@ -2535,6 +2537,7 @@ sghQqq
 snQT
 syyy
 sPPP
+simple
 python
 pytohn
 px
@@ -2722,6 +2725,8 @@ pEl
 pwlE
 pJu
 pLv
+possible
+precisely
 List
 LAN
 LOCAL
@@ -3389,6 +3394,8 @@ OJJJLL
 OLL
 Ooh
 OMM
+Oracle
+Overload
 control
 core
 cmd
@@ -3617,6 +3624,7 @@ cP
 cYN
 cbb
 center
+conditions
 unit
 utf
 unicode
@@ -5508,6 +5516,7 @@ rQM
 rVG
 rwbbbll
 rqN
+represents
 environment
 editor
 encodings
@@ -5890,6 +5899,8 @@ iii
 iiiW
 iwX
 iRBB
+its
+isn
 file
 for
 float
@@ -6406,6 +6417,7 @@ tHHH
 tfm
 tlC
 tbody
+two
 Views
 VARIABLE
 Vector
@@ -6794,6 +6806,7 @@ nTbz
 nNJ
 nTT
 nDy
+newarray
 Father
 FIELD
 Field
@@ -7078,6 +7091,7 @@ oHH
 oyd
 oVo
 oXX
+only
 XXX
 XcbvjtWfpeOT
 XHR

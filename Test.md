@@ -22,6 +22,8 @@ When you're ready, delete this note and make the vault your own.
 
 [Obsidian-DATAVIEW 官方文档 中文版 05 Javascript API JS接口 - 知乎](https://zhuanlan.zhihu.com/p/508434025)
 
+[obsidian：双向链接的基本用法 - 知乎](https://zhuanlan.zhihu.com/p/499417467)
+
 # 1！5！
 
 ## sdsdfs

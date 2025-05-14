@@ -134,8 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -170,12 +169,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "java/SE/java SE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的出链列表"
+              "title": "java SE 的出链列表"
             }
           },
           {
@@ -241,10 +240,10 @@
   "active": "9250754456b16d15",
   "lastOpenFiles": [
     "Test.md",
+    "java/SE/java SE.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "blender.md",
-    "java/SE/java SE.md",
     "Templates/MyNoun.md",
     "Templates/MyTablet.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记.md",
