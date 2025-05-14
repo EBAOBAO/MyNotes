@@ -480,9 +480,10 @@ double d = 1.14514E5
 
 （**注意使用科学计数法后的数据默认是double类型的**）
 
-[Java 科学计数法-CSDN博客](https://blog.csdn.net/yinni11/article/details/88710061)
 
-[java科学计数法的基本使用与如何看科学计数法_java 科学计数法用什么表示-CSDN博客](https://blog.csdn.net/qq_50816785/article/details/110732566)
+扩展链接：
+- [Java 科学计数法-CSDN博客](https://blog.csdn.net/yinni11/article/details/88710061)
+- [java科学计数法的基本使用与如何看科学计数法_java 科学计数法用什么表示-CSDN博客](https://blog.csdn.net/qq_50816785/article/details/110732566)
 
 ### 字符型
 
@@ -917,13 +918,13 @@ for(……) {
 
 ## 键盘输入
 
-- 创建扫描器（对象）（需导入java.uil.*）:
+创建扫描器（对象）（需导入java.uil.*）:
 
 ```java
 Scanner input = new Scanner(System.in);
 ```
 
-- 调用功能
+调用功能
 
 ```java
 String name = input.next();
@@ -932,7 +933,30 @@ int age = input.nextInt();
 
 这里有些细节，`next()`方法读取到空格就停止读取了，如果你想要将一整行读进去，你应该使用 `nextLine()` 方法！
 
-注意：**`next()` 等方法调用后，会留一个’\n‘不读**
+注意：**`next()` 等方法调用后，会残留换行符！！**
+
+这就可能导致一些问题的出现，比如对于这个案例 [^1] 来说：
+
+```java
+public class LearningI {  
+    public static void main(String[] args) throws IOException, ClassNotFoundException {  
+        Scanner sc = new Scanner(System.in);  
+  
+        System.out.println("请输入一个整数:");  
+        int num = sc.nextInt();  
+  
+        System.out.println("请输入一行字符串:");  
+        String str = sc.nextLine();  
+  
+        System.out.println("你输入的整数是: " + num);  
+        System.out.println("你输入的字符串是: " + str);  
+    }  
+}
+```
+
+---
+
+[^1]: 案例来自 [Java Scanner 输入换行符残留问题解析与解决_java输入换行符-CSDN博客](https://blog.csdn.net/qq_38955667/article/details/146550408#:~:text=%E8%A6%81%E8%A7%A3%E5%86%B3%E6%8D%A2%E8%A1%8C%E7%AC%A6%E6%AE%8B%E7%95%99%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8F%AF%E5%9C%A8%20nextInt%28%29%20%E3%80%81%20nextDouble%28%29%20%E7%AD%89%E6%96%B9%E6%B3%95%E4%B9%8B%E5%90%8E%EF%BC%8C%E8%B0%83%E7%94%A8%20nextLine%28%29,%E6%96%B9%E6%B3%95%E6%9D%A5%E6%B6%88%E8%80%97%E6%8E%89%E8%BE%93%E5%85%A5%E7%BC%93%E5%86%B2%E5%8C%BA%E4%B8%AD%E7%9A%84%E6%8D%A2%E8%A1%8C%E7%AC%A6%E3%80%82%20%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B%EF%BC%9A%20System.out.println%28%22%E8%AF%B7%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0%3A%22%29%3B%20sc.nextLine%28%29%3B%20%2F%2F%20%E6%B6%88%E8%80%97%E6%8E%89%E8%BE%93%E5%85%A5%E7%BC%93%E5%86%B2%E5%8C%BA%E4%B8%AD%E7%9A%84%E6%8D%A2%E8%A1%8C%E7%AC%A6%20System.out.println%28%22%E8%AF%B7%E8%BE%93%E5%85%A5%E4%B8%80%E8%A1%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%3A%22%29%3B)，侵删。
 
 # (5) 数组相关
 
