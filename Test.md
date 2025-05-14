@@ -63,12 +63,12 @@ sdgsdgs
 
 "sdsdgs"
 
-|zxfdfsdfs| fdgdfhdhd |
-|--|--|
-| dfdfhdf | dfhdfhdfhd |
-| dfdfhdf | dfhdfhdfhd |
-| dfdfhdf | dfhdfhdfhd |
-| dfdfhdf | dfhdfhdfhd |
+| zxfdfsdfs | fdgdfhdhd  |
+| --------- | ---------- |
+| dfdfhdf   | dfhdfhdfhd |
+| dfdfhdf   | dfhdfhdfhd |
+| dfdfhdf   | dfhdfhdfhd |
+| dfdfhdf   | dfhdfhdfhd |
 
 sgsdgss `sefsdfs`
 : sdsdfsdfsdfsd`asfasfa`jdfd
