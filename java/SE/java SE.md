@@ -327,8 +327,27 @@ if (...) { // if开始
 | **浮点型** | float | 4B |
 | ^^ | double | 8B |
 | **字符型** | char | 2B |
-| **布尔型** | boolean |  |
+| **布尔型** | boolean | ? |
 ```
+
+相信你也注意到了，这里其他类型都有字节标识，唯独 boolean 没有，这是怎么回事呢？来看看 java 官网的说法：
+
+> boolean: The boolean data type has only two possible values: true and false. Use this data type for simple flags that track true/false conditions. This data type represents one bit of information, but its “size” isn’t something that’s precisely defined.
+> 
+> 翻译：
+> 布尔数据类型只有两个可能的值：true和false。 将此数据类型用于跟踪真/假条件的简单标志。 此数据类型表示一位信息，但其“大小”不是精确定义的内容。
+
+再看看 jdk 文档中的说法：
+
+> 虽然Java虚拟机定义了一个boolean类型，但它只为它提供了非常有限的支持。没有Java虚拟机指令专门用于对boolean值的操作。相反，Java编程语言中对boolean值进行操作的表达式被编译为使用Java虚拟机int数据类型的值。
+> 
+> Java虚拟机直接支持boolean数组。它的newarray指令可以创建boolean数组。使用byte数组指令baload和bastore访问和修改类型为boolean的数组。
+> 
+> > 在Oracle的Java虚拟机实现中，Java编程语言中的boolean数组被编码为Java虚拟机byte数组，每个布尔元素使用8位。
+> 
+> Java虚拟机使用1表示boolean数组组件的true，0表示false。其中Java编程语言布尔值由编译器映射到Java虚拟机类型int的值，编译器必须使用相同的编码。
+
+
 
 细节：
 1. `double num = 1.1f` 是合法的，这里是自动类型转换。
