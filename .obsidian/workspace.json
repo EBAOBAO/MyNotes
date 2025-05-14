@@ -134,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -239,8 +240,9 @@
   },
   "active": "9250754456b16d15",
   "lastOpenFiles": [
-    "Test.md",
+    "Templates/MyDataviewJSBlock.md",
     "java/SE/java SE.md",
+    "Test.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "blender.md",
