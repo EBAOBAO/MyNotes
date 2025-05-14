@@ -135,6 +135,19 @@ public class Debug03 {
 
 拓展：[Dos命令大全完整版](https://blog.csdn.net/chengxuyuanxb/article/details/81093398)
 
+## 进制转换
+
+…… => 十进制：从最低位开始，将每个位上的数提取出来乘基数的位数-1次幂并求和
+
+十进制 => ……：不断除以基数取余放在最右边
+
+二进制 => ……：
+
+- 八进制：每三位一组转为八进制
+- 十六进制：每四位一组转为十六进制
+
+…… => 二进制：与上面相反
+
 # Hello World 与基础语法
 
 ## hello world!
@@ -192,6 +205,7 @@ public class HelloWorld {
 拓展：[javadoc标签](https://www.cnblogs.com/jddreams/p/14503641.html)
 
 ## java代码规范基础
+
 1. 类、方法的注释要用javadoc来写
 2. 非Javadoc注释往往给代码维护者看，着重告诉读者为什么这样写，如何修改，注意什么问题等
 3. 用tab实现缩进
@@ -303,55 +317,18 @@ if (...) { // if开始
 
 ### 基本数据类型
 
-<table>
-	<tbody align="center" valign="center">
-		<tr>
-			<th colspan="3">基本数据类型</th>
-		</tr>
-		<tr>
-			<th>分类</th>
-			<th>数据类型</th>
-			<th>占用内存</th>
-		</tr>
-		<tr>
-			<th rowspan="4">整数型</th>
-			<td>byte</td>
-			<td>1B</td>
-		</tr>
-		<tr>
-			<td>short</td>
-			<td>2B</td>
-		</tr>
-		<tr>
-			<td>int</td>
-			<td>4B</td>
-		</tr>
-		<tr>
-			<td>long</td>
-			<td>8B</td>
-		</tr>
-		<tr>
-			<th rowspan="2">浮点型</th>
-			<td>float</td>
-			<td>4B</td>
-		</tr>
-		<tr>
-			<td>double</td>
-			<td>8B</td>
-		</tr>
-		<tr>
-			<th>字符型</th>
-			<td>char</td>
-			<td>2B</td>
-		</tr>
-		<tr>
-			<th>布尔型</th>
-			<td>char</td>
-			<td>2B</td>
-		</tr>
-	</tbody>
-</table>
-
+```tx
+| 分类 | 数据类型 | 占用内存 |
+| :--: | :--: | :-- |
+| **整数型** | byte | 1B |
+| ^^ | short | 2B |
+| ^^ | int | 4B |
+| ^^ | long | 8B |
+| **浮点型** | float | 4B |
+| ^^ | double | 8B |
+| **字符型** | char | 2B |
+| **布尔型** | boolean |  |
+```
 
 细节：
 1. `double num = 1.1f` 是合法的，这里是自动类型转换。
@@ -467,6 +444,18 @@ unicode工具：[*bean*](https://c.runoob.com/front-end/3602/)
 ## 基本数据类型
 
 ### 数值型
+
+首先，java 支持对于多种进制的数的字面量：
+- 二进制：以0b或0B开头
+- 十进制：正常
+- 八进制：以0开头
+- 十六进制：以0x或0X开头
+
+```java
+int a = 01001; //八进制，前缀为0
+int b = 0b1001; //二进制，前缀为0b
+int c = 0xff; //十六进制，前缀为0x
+```
 
 一个整数字面量的默认类型为 int，一个浮点数字面量的默认类型是 double。
 
@@ -740,34 +729,6 @@ System.out.println(e);
 7. 三元运算符
 8. 赋值运算符
 
-## 进制
-
-### 表示方式
-
-二进制：以0b或0B开头
-十进制：正常
-八进制：以0开头
-十六进制：以0x或0X开头
-
-```java
-int a = 01001; //八进制，前缀为0
-int b = 0b1001; //二进制，前缀为0b
-int c = 0xff; //十六进制，前缀为0x
-```
-
-### 转换
-
-…… => 十进制：从最低位开始，将每个位上的数提取出来乘基数的位数-1次幂并求和
-
-十进制 => ……：不断除以基数取余放在最右边
-
-二进制 => ……：
-
-- 八进制：每三位一组转为八进制
-- 十六进制：每四位一组转为十六进制
-
-…… => 二进制：与上面相反
-        
 ## 位运算
 
 - `~`: 按位取反, `&`, `|`, `^`: 按位逻辑运算
@@ -2175,120 +2136,110 @@ java 执行的程序 参数1 参数2 ……
 
 2) **类在什么时候被加载呢？？**
 
-3. 创建对象实例时(new)
-4. 创建子类对象实例的时候，父类也会被加载
-5. 使用类的静态成员时
+	1. 创建对象实例时(new)
+	2. 创建子类对象实例的时候，父类也会被加载
+	3. 使用类的静态成员时
 
 ```java
 package com.EBAOBAO.codeblock;
 
 public class CodeBlockDetail {
-    public static void main(String[] args) {
-        //类在什么时候被加载呢？？
-        //
-        //1. 创建对象实例时(new)
-        //2. 创建子类对象实例的时候，父类也会被加载
-        //3. 使用类的静态成员时
+	public static void main(String[] args) {
+		//类在什么时候被加载呢？？
+		//
+		//1. 创建对象实例时(new)
+		//2. 创建子类对象实例的时候，父类也会被加载
+		//3. 使用类的静态成员时
 
-        new AA(); // AA 111
-        new BB(); // AA 111 \n BB 111 (注意注销掉上一句，因为static方法只会被运行一次)
-        System.out.println(Cat.age); // meow meow \n 999
-    }
+		new AA(); // AA 111
+		new BB(); // AA 111 \n BB 111 (注意注销掉上一句，因为static方法只会被运行一次)
+		System.out.println(Cat.age); // meow meow \n 999
+	}
 }
 
 class AA {
-    static {
-        System.out.println("AA 111");
-    }
+	static {
+		System.out.println("AA 111");
+	}
 }
 
 class BB extends AA {
-    static {
-        System.out.println("BB 111");
-    }
+	static {
+		System.out.println("BB 111");
+	}
 }
 
 class Cat {
-    static {
-        System.out.println("meow meow");
-    }
+	static {
+		System.out.println("meow meow");
+	}
 
-    public static int age = 999;
+	public static int age = 999;
 }
 ```
 
 3) 只是使用类的静态成员时，普通代码块并不会执行
 
 4) 创建一个对象时在一个类中的调用顺序：
-
 	1. 静态代码块和静态属性初始化（若有多个，则按它们定义的顺序调用）
 	2. 普通代码块与普通属性初始化（若有多个，则按它们定义的顺序调用）
 	3. 构造方法
-
+	
 ```java
 package com.EBAOBAO.codeblock;
 
 public class CodeBlockDetail2 {
-    public static void main(String[] args) {
-        new A();
-        // get n1...
-        // A 01
-        // get n2...
-        // A 02
-        // A() constructor
-    }
+	public static void main(String[] args) {
+		new A();
+		// get n1...
+		// A 01
+		// get n2...
+		// A 02
+		// A() constructor
+	}
 }
-
 class A {
-    public A() {
-        System.out.println("A() constructor");
-    }
-
-    private int n2 = getN2();
-
-    public static int n1 = getN1();
-
-    {
-        System.out.println("A 02");
-    }
-
-    static {
-        System.out.println("A 01");
-    }
-
-    public static int getN1() {
-        System.out.println("get n1...");
-        return 100;
-    }
-
-    public int getN2() {
-        System.out.println("get n2...");
-        return 200;
-    }
+	public A() {
+		System.out.println("A() constructor");
+	}
+	private int n2 = getN2();
+	public static int n1 = getN1();
+	{
+		System.out.println("A 02");
+	}
+	static {
+		System.out.println("A 01");
+	}
+	public static int getN1() {
+		System.out.println("get n1...");
+		return 100;
+	}
+	public int getN2() {
+		System.out.println("get n2...");
+		return 200;
+	}
 }
-
 ```
 
 5) 构造器的最前面其实隐藏了`super()`和调用代码块。
 
 ```java
 class BBB {
-    pubolic BBB() {
-        // (1)super
-        // (2)本类的普通代码块
-        System.out.println("BBB()...");
-    }
+	pubolic BBB() {
+		// (1)super
+		// (2)本类的普通代码块
+		System.out.println("BBB()...");
+	}
 }
 ```
 
 6) 总结：创建一个子类时的调用顺序：
-
-7. 父类的静态代码块和静态属性
-8. 子类的静态代码块和静态属性
-9. 父类的普通代码块与普通属性初始化
-10. 父类的构造方法
-11. 子类的普通代码块与普通属性初始化
-12. 子类的构造方法
+	1. 父类的静态代码块和静态属性
+	2. 子类的静态代码块和静态属性
+	3. 父类的普通代码块与普通属性初始化
+	4. 父类的构造方法
+	5. 子类的普通代码块与普通属性初始化
+	6. 子类的构造方法
 
 **简而言之：加载类 -> 构造**
 
@@ -2357,7 +2308,6 @@ class GirlFriend {
                 '}';
     }
 }
-
 ```
 
 ### 懒汉式
@@ -2390,7 +2340,6 @@ class GirlFriend {
                 '}';
     }
 }
-
 ```
 
 ### 对比
@@ -2414,10 +2363,9 @@ class GirlFriend {
 
 1) final修饰的属性又叫常量，一般用XX_XX_XXX这样的形式命名
 2) **final修饰的属性在定义时必须赋初值，并且以后不能再修改**，可以在如下任何一个位置赋值：
-
-3. 定义时
-4. 在构造器中
-5. 在代码块中
+	1. 定义时
+	2. 在构造器中
+	3. 在代码块中
 
 ```java
 class AA {
@@ -2436,9 +2384,8 @@ class AA {
 ```
 
 3) 若final修饰的属性是静态的，则初始化的位置只能是：
-
-4. 定义时
-5. 在静态代码块里
+	1. 定义时
+	2. 在静态代码块里
 
 ```java
 class BB {

@@ -77,8 +77,7 @@
               "title": "Test"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Test.md",
+                "file": "java/SE/java SE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Test 的大纲"
+              "title": "java SE 的大纲"
             }
           },
           {
@@ -215,17 +214,16 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,14 +238,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "67c20e7347aec49c",
+  "active": "9250754456b16d15",
   "lastOpenFiles": [
-    "Templates/MyNoun.md",
-    "java/SE/java SE.md",
     "Test.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
+    "blender.md",
+    "java/SE/java SE.md",
+    "Templates/MyNoun.md",
     "Templates/MyTablet.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记.md",
-    "blender.md",
     "Templates",
     "imgs/2024-12-27/vtp8bYuzP5WJIrfX.png",
     "imgs/2024-12-27/TfgXfY3PbXMaL8Uh.png",
@@ -257,8 +257,6 @@
     "imgs/2024-02-07/M5w42JJ1MftrJjqj.png",
     "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
     "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "jekyll.md",
     "编曲乱记.md",
     "日常.md",
