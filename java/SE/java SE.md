@@ -303,34 +303,61 @@ if (...) { // if开始
 
 ### 基本数据类型
 
-#### 数值型
+<table>
+	<tbody align="center" valign="center">
+		<tr>
+			<th colspan="3">基本数据类型</th>
+		</tr>
+		<tr>
+			<th>分类</th>
+			<th>数据类型</th>
+			<th>占用内存</th>
+		</tr>
+		<tr>
+			<th rowspan="4">整数型</th>
+			<td>byte</td>
+			<td>1B</td>
+		</tr>
+		<tr>
+			<td>short</td>
+			<td>2B</td>
+		</tr>
+		<tr>
+			<td>int</td>
+			<td>4B</td>
+		</tr>
+		<tr>
+			<td>long</td>
+			<td>8B</td>
+		</tr>
+		<tr>
+			<th rowspan="2">浮点型</th>
+			<td>float</td>
+			<td>4B</td>
+		</tr>
+		<tr>
+			<td>double</td>
+			<td>8B</td>
+		</tr>
+		<tr>
+			<th>字符型</th>
+			<td>char</td>
+			<td>2B</td>
+		</tr>
+		<tr>
+			<th>布尔型</th>
+			<td>char</td>
+			<td>2B</td>
+		</tr>
+	</tbody>
+</table>
 
-整数：
-
-- byte: 1B
-- short: 2B
-- int: 4B
-- long: 8B
-
-浮点：
-
-- float: 4B
-- double: 8B
 
 细节：
-1. double num = 1.1f是行的（自动类型转换）
+1. `double num = 1.1f` 是合法的，这里是自动类型转换。
 2. 当对运算结果为小数的进行相等判断时要小心！应以作差法比较，容忍一定误差
-
-#### 字符型
-
-- char(2B) 
-
-字符型的变量存放数字也是可以的，本质是一整数，输出时会按照对应Unicode码输出字符
-
-#### 布尔型
-
-- boolean(1B)
-- 不可用数字代替true或false
+3. 字符型的变量存放数字也是可以的！本质是一整数，输出时会按照对应Unicode码输出字符
+4. **不可用数字代替true或false！！**
 
 ### 引用数据类型
 
@@ -385,11 +412,11 @@ flowchart LR
 
 简单地说，**混合运算时，自动将所有数据转为容量最大的那种** 。
 
-byte,short，char参与运算，自动转换为int
+byte,short，char参与运算，会自动转换为int。
 
-boolean不参与转换
+boolean不参与转换。
 
-把精度（容量）大的数赋值给精度（容量）小的数时会报错
+把精度（容量）大的数赋值给精度（容量）小的数时会报错。
 
 ### 强制类型转换
 
@@ -423,6 +450,7 @@ string->基本:
 
 
 ## 字符编码表
+
 - ASCII：共128个字符
 - Unicode：用两个字节表示字符
 - utf-8
@@ -770,10 +798,10 @@ int c = 0xff; //十六进制，前缀为0x
 2. 分支控制
 3. 循环控制
 
-## 1. 顺序控制
+## 顺序控制
 
 从上至下逐行进行，没有任何判断和跳转
-## 2. 分支控制
+## 分支控制
 
 语法：
 
@@ -825,7 +853,7 @@ switch(表达式) {
 2. 表达式返回值不能为 float,double,long,boolean
 3. **case后不能为变量**
 
-## 3. 循环控制
+## 循环控制
 
 ### for
 
@@ -861,7 +889,7 @@ while(循环条件) {
 }
 ```
 
-## 4. break与continue
+## break与continue
 
 ### break
 
@@ -887,7 +915,8 @@ for(……) {
 
 跳过**本次**循环
 
-## 5. 键盘输入
+## 键盘输入
+
 - 创建扫描器（对象）（需导入java.uil.*）:
 
 ```java
@@ -903,7 +932,7 @@ int age = input.nextInt();
 
 这里有些细节，`next()`方法读取到空格就停止读取了，如果你想要将一整行读进去，你应该使用 `nextLine()` 方法！
 
-注意：`next()` 等方法调用后，会留一个’\n‘不读
+注意：**`next()` 等方法调用后，会留一个’\n‘不读**
 
 # (5) 数组相关
 
