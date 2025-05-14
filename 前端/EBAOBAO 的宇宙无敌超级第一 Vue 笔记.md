@@ -51,7 +51,6 @@ package.json 内容：
     "vue-tsc": "^2.2.8"
   }
 }
-
 ```
 
 总之我们最得关心的就是 src 里面的东西，入口文件就是引入了 src 中的 main.ts，其中有这么些代码：
@@ -77,5 +76,84 @@ createApp(App).mount('#app')
 
 # 模板语法
 
+> Vue 使用一种基于 html 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 html，可以被符合规范的浏览器和 html 解析器解析。
+> —— vue 官网
 
+首先，这里有 *文本插值* ，使用了双大括号语法：
 
+```vue
+<template>
+  <p>{{ msg }}</p>
+</template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      msg: 'Hello World',
+    }
+  },
+}
+</script>
+```
+
+这样，只要在 js 的一个函数返回一个键值对对应关系就能直接在页面中显示内容了，而且这些键当然还能在日后动态地赋值！是不是很神奇？
+
+这个双花括号中是可以放很多东西的，比如一个单一的 js 表达式（**一段能被求值的 js 代码，可以合法地写在 `return` 后面的**）
+
+```vue
+<template>
+  <p>{{ num + 5 }}</p>
+</template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      num: 123,
+    }
+  },
+}
+</script>
+```
+
+如果你在这里用 `data()` 返回的文本是个 html 标签，情况又会怎么样呢？答案是：这时的文本不会被当成是一个 html 标签，而只是一段 *预格式化文本* 而已。要想像这样插入 html 元素的话，应该在元素中添加 `v-html` 属性：
+
+```vue
+<template>
+  <p>{{ rawHtml }}</p>
+  <span v-html="rawHtml"></span>
+</template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      rawHtml: '<a href="https://cn.bing.com">bing</a>',
+    }
+  },
+}
+</script>
+```
+
+这里它的渲染方式就是 `<span>` 中嵌套了一个 `<a>` 标签，我们将类似于 `v-html` 这样的东西称为 *指令* 。
+
+## 属性绑定
+
+一个标签当中会有属性，这里很可惜双大括号的语法不能在标签的属性中使用。不过要想响应式地绑定一个 attribute 也是可以做得到的，只要使用 `v-bind` 指令就可以了：
+
+```vue
+<template>
+  <div v-bind:class="msg">Test</div>
+</template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      msg: 'myClass',
+    }
+  },
+}
+</script>
+```
