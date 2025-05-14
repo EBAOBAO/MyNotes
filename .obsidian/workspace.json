@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+                "file": "java/SE/java SE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1"
+              "title": "java SE"
             }
           },
           {
@@ -77,8 +77,7 @@
               "title": "EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blender.md",
+                "file": "java/SE/java SE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "blender 的大纲"
+              "title": "java SE 的大纲"
             }
           },
           {
@@ -239,13 +238,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e1b858c333698ba2",
+  "active": "0fbceca8a8b5ff09",
   "lastOpenFiles": [
+    "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+    "blender.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记.md",
-    "blender.md",
-    "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "Test.md",
     "jekyll.md",
     "编曲乱记.md",
