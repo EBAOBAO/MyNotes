@@ -64,11 +64,18 @@ sdgsdgs
 "sdsdgs"
 
 | zxfdfsdfs | fdgdfhdhd  |
-| --------- | ---------- |
+|:--------- | ---------- |
 | dfdfhdf   | dfhdfhdfhd |
 | dfdfhdf   | dfhdfhdfhd |
 | dfdfhdf   | dfhdfhdfhd |
 | dfdfhdf   | dfhdfhdfhd |
+
+```tx
+First Header | Second Header | Third Header |
+:----------: | :-----------: | :----------- | 
+Content      |   *Long Cell* || 
+Content      |    **Cell**   |     Cell     | 
+```
 
 sgsdgss `sefsdfs`
 : sdsdfsdfsdfsd`asfasfa`jdfd
