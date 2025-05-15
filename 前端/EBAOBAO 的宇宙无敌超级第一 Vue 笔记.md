@@ -79,7 +79,7 @@ createApp(App).mount('#app')
 
 首先，这里有 *文本插值* ，使用了双大括号语法：
 
-```vue
+```xml
 <template>
   <p>{{ msg }}</p>
 </template>
@@ -99,7 +99,7 @@ export default {
 
 这个双花括号中是可以放很多东西的，比如一个单一的 js 表达式（**一段能被求值的 js 代码，可以合法地写在 `return` 后面的**）
 
-```vue
+```xml
 <template>
   <p>{{ num + 5 }}</p>
 </template>
@@ -117,7 +117,7 @@ export default {
 
 如果你在这里用 `data()` 返回的文本是个 html 标签，情况又会怎么样呢？答案是：这时的文本不会被当成是一个 html 标签，而只是一段 *预格式化文本* 而已。要想像这样插入 html 元素的话，应该在元素中添加 `v-html` 属性：
 
-```vue
+```xml
 <template>
   <p>{{ rawHtml }}</p>
   <span v-html="rawHtml"></span>
@@ -140,7 +140,7 @@ export default {
 
 一个标签当中会有属性，这里很可惜双大括号的语法不能在标签的属性中使用。不过要想响应式地绑定一个 attribute 也是可以做得到的，只要使用 `v-bind` 指令就可以了：
 
-```vue
+```xml
 <template>
   <div v-bind:class="msg">Test</div>
 </template>

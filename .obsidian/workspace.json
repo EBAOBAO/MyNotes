@@ -70,7 +70,7 @@
               "type": "markdown",
               "state": {
                 "file": "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -135,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -241,11 +242,11 @@
   },
   "active": "f85a6125a0730ded",
   "lastOpenFiles": [
+    "blender.md",
+    "Test.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-    "blender.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
-    "Test.md",
     "java/SE/java SE.md",
     "数理",
     "^.md",
