@@ -135,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -199,13 +200,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "java/SE/java SE.md",
+                "file": "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "java SE 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 matlab 笔记 的大纲"
             }
           },
           {
@@ -241,9 +242,9 @@
   },
   "active": "a5d86629c4d37a6e",
   "lastOpenFiles": [
-    "数理",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "数理",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "blender.md",
     "java/SE/java SE.md",
@@ -288,7 +289,6 @@
     "imgs/imgJavaSE",
     "elec",
     "imgs/imgDianBai",
-    "python",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
