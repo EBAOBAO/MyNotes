@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java/SE/java SE.md",
+                "file": "Test.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "java SE"
+              "title": "Test"
             }
           },
           {
@@ -70,14 +70,15 @@
               "type": "markdown",
               "state": {
                 "file": "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "EBAOBAO 的宇宙无敌超级第一 matlab 笔记"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -134,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -238,18 +240,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9250754456b16d15",
+  "active": "f85a6125a0730ded",
   "lastOpenFiles": [
-    "blender.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-    "数理",
+    "blender.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
+    "Test.md",
     "java/SE/java SE.md",
+    "数理",
     "^.md",
     "Templates/MyNoun.md",
     "Templates/MyDataviewJSBlock.md",
-    "Test.md",
     "Templates/MyTablet.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记.md",
     "Templates",
