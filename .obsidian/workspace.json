@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "java/SE/java SE.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -209,7 +209,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -226,8 +227,9 @@
   },
   "active": "9250754456b16d15",
   "lastOpenFiles": [
-    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+    "^.md",
     "java/SE/java SE.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "Templates/MyNoun.md",
     "Templates/MyDataviewJSBlock.md",
     "Test.md",
@@ -262,7 +264,6 @@
     "matlab.md",
     "imgs/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3696854521143172676&skey=@crypt_19d019d9_34c8aa74e4ede26f4b51dba7589ef8cd&mmweb_appid=wx_webfilehelper.jpg",
     "imgs/imgSTM32/zhongduanLi.png",
-    "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "C",
     "imgs/imgBlender",
     "未命名 1.canvas",
