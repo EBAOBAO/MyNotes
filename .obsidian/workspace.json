@@ -62,8 +62,19 @@
               "icon": "lucide-file",
               "title": "EBAOBAO 的宇宙无敌超级第一 matlab 笔记"
             }
+          },
+          {
+            "id": "b44766e92c9c1afb",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -120,8 +131,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -225,10 +235,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9250754456b16d15",
+  "active": "b44766e92c9c1afb",
   "lastOpenFiles": [
-    "java/projects.md",
     "java/java 算法基础.md",
+    "java/projects.md",
     "java/java 设计模式.md",
     "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
     "python/manim.md",
