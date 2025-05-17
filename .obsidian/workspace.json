@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java/java 算法基础.md",
+                "file": "C/计算机通识.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "java 算法基础"
+              "title": "计算机通识"
             }
           },
           {
@@ -132,7 +132,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -238,6 +239,8 @@
   },
   "active": "9250754456b16d15",
   "lastOpenFiles": [
+    "java/SE/java SE.md",
+    "C/计算机通识.md",
     "未命名.md",
     "java/java 算法基础.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
@@ -257,7 +260,6 @@
     "python/manim.md",
     "python/flask.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
-    "java/SE/java SE.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "blender.md",
     "Templates/MyDataviewJSBlock.md",
@@ -275,7 +277,6 @@
     "日常.md",
     "项目开发日志.md",
     "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
-    "数理乱记.md",
     "C",
     "imgs/imgBlender",
     "未命名 1.canvas",
