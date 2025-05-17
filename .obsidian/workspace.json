@@ -75,7 +75,8 @@
               "title": "fQgxzMkbcXMisSKR"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -237,11 +238,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9250754456b16d15",
+  "active": "e1b858c333698ba2",
   "lastOpenFiles": [
+    "数理/数理乱记.md",
     "^.md",
     "blender.md",
-    "数理/数理乱记.md",
     "aTemplates/MyNoun.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "aTemplates/MyMatrix.md",
