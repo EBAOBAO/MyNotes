@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -240,19 +240,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8aaca278fc395d0e",
+  "active": "b57447ea8a03d1ba",
   "lastOpenFiles": [
+    "数理/数理乱记.md",
+    "C/计算机通识.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
-    "数理/数理乱记.md",
     "blender.md",
     "^.md",
     "aTemplates/MyNoun.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "aTemplates/MyMatrix.md",
     "elec/电路分析.md",
-    "C/计算机通识.md",
     "java/SE/java SE.md",
     "java/java 算法基础.md",
     "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
