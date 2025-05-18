@@ -857,6 +857,7 @@ EzE
 EzH
 EX
 EZn
+EEVEE
 IE
 IDEA
 InnerClassExercise
@@ -1610,6 +1611,7 @@ bss
 ba
 bKS
 bn
+blender
 Title
 TB
 Test
@@ -1976,6 +1978,7 @@ Comment
 CX
 CxV
 CXM
+CYCLES
 String
 Symbol
 Swift
