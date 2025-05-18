@@ -106,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -213,10 +212,13 @@
   },
   "active": "9250754456b16d15",
   "lastOpenFiles": [
+    "imgs/imgxiangmu/BMP280电路连接.png",
+    "项目开发日志.md",
+    "imgs/imgxiangmu",
+    "imgs/新建文件夹",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
-    "项目开发日志.md",
     "blender.md",
     "项目.md",
     "数理/数理乱记.md",
@@ -248,9 +250,7 @@
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "数理",
     "Templates/MyTablet.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记.md",
     "aTemplates",
-    "imgs/2024-10-26/0sdalM1n2elyW1yd.png",
     "C",
     "imgs/imgBlender",
     "未命名 1.canvas",
@@ -259,8 +259,6 @@
     "新建 文本文档.txt",
     "imgs/imgSTM32",
     "imgs/imgJavaSE",
-    "elec",
-    "imgs/imgDianBai",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
