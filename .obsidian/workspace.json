@@ -106,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -213,9 +212,13 @@
   },
   "active": "9250754456b16d15",
   "lastOpenFiles": [
+    "^.md",
+    "项目开发日志.md",
+    "imgs/imgxiangmu/滤波器设置.png",
+    "imgs/imgxiangmu/设置osrs_p.png",
+    "imgs/imgxiangmu/BMP280测量流程图.png",
     "imgs/imgxiangmu/BMP280块图.png",
     "imgs/imgxiangmu/BMP280电路连接.png",
-    "项目开发日志.md",
     "imgs/imgxiangmu",
     "imgs/新建文件夹",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
@@ -226,7 +229,6 @@
     "数理/数理乱记.md",
     "C/计算机通识.md",
     "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
-    "^.md",
     "aTemplates/MyNoun.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "aTemplates/MyMatrix.md",
@@ -237,10 +239,6 @@
     "imgs/2024-10-26/gS4rIMZbBk85TjHK.png",
     "imgs/2024-11-16/kqKeYeM6u0SHyo06.png",
     "imgs/2024-12-27/vtp8bYuzP5WJIrfX.png",
-    "imgs/2024-12-27/TfgXfY3PbXMaL8Uh.png",
-    "imgs/2024-12-27/jZsRogbK7KJdv5wB.png",
-    "imgs/2024-02-07/M5w42JJ1MftrJjqj.png",
-    "imgs/imgJavaSE/BufferedInputStream.png",
     "Test.md",
     "java/projects.md",
     "java/java 设计模式.md",
