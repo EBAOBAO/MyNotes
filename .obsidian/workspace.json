@@ -49,8 +49,7 @@
               "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -212,10 +211,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a5d86629c4d37a6e",
+  "active": "9250754456b16d15",
   "lastOpenFiles": [
-    "项目开发日志.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "项目开发日志.md",
     "^.md",
     "imgs/imgxiangmu/滤波器设置.png",
     "imgs/imgxiangmu/设置osrs_p.png",
@@ -224,7 +224,6 @@
     "imgs/imgxiangmu/BMP280电路连接.png",
     "imgs/imgxiangmu",
     "imgs/新建文件夹",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "blender.md",
     "项目.md",
