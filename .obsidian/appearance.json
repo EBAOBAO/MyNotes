@@ -1,4 +1,8 @@
 {
   "cssTheme": "Blue Topaz",
-  "theme": "system"
+  "theme": "system",
+  "enabledCssSnippets": [
+    "mer",
+    "merForBlueTopaz"
+  ]
 }

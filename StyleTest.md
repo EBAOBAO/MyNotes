@@ -1,4 +1,3 @@
-This is your new *vault*.
 
 Make a note of something, [[EBAOBAO 的宇宙无敌超级第一 stm32 笔记]], or try [the Importer](https://help.obsidian.md/Plugins/Importer)!
 
