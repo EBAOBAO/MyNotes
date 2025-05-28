@@ -23,16 +23,17 @@
             "id": "cc7eccd8123aae99",
             "type": "leaf",
             "state": {
-              "type": "mindmapview",
+              "type": "markdown",
               "state": {
-                "file": "数理/微分方程.md"
+                "file": "Test.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "blocks",
-              "title": "微分方程"
+              "icon": "lucide-file",
+              "title": "Test"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -193,13 +194,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cc7eccd8123aae99",
+  "active": "b89bc0c4da8baf59",
   "lastOpenFiles": [
+    "数理/未命名.canvas",
+    "数理/数学",
+    "数理/未命名.md",
+    "数理/微分方程.md",
+    "例子.md",
+    "Test.md",
     "数理/数理乱记.md",
     "数理/动力学.md",
     "数理/Drawing 2025-05-28 14.18.55.excalidraw.md",
-    "数理/未命名.canvas",
-    "数理/微分方程.md",
     "数理/线性代数.canvas",
     "音乐/和弦理论笔记.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
@@ -229,20 +234,16 @@
     "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
     "aTemplates/MyNoun.md",
     "aTemplates/MyMatrix.md",
-    "elec/电路分析.md",
-    "java/java 算法基础.md",
     "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
     "imgs/2024-10-26/gS4rIMZbBk85TjHK.png",
     "imgs/2024-11-16/kqKeYeM6u0SHyo06.png",
     "imgs/2024-12-27/vtp8bYuzP5WJIrfX.png",
-    "Test.md",
     "数理",
     "aTemplates",
     "C",
     "imgs/imgBlender",
     "imgs/2024-10-04",
     "新建 文本文档.txt",
-    "imgs/imgSTM32",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
