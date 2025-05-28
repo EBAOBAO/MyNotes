@@ -24,6 +24,30 @@ When you're ready, delete this note and make the vault your own.
 
 [obsidian：双向链接的基本用法 - 知乎](https://zhuanlan.zhihu.com/p/499417467)
 
+```mermaid
+---
+title: 自动转换
+--- 
+flowchart LR
+	byte --> short
+	short --> int
+	int --> long
+	long --> float
+	float --> double
+	char --> int
+```
+
+```mermaid
+mindmap
+	((JavaScript))
+		EMCAScript
+			核心语言功能
+		文档对象模型
+			DOM，操作网页内容
+		浏览器对象模型
+			BOM，与浏览器交互
+```
+
 # 1！5！
 
 ## sdsdfs
