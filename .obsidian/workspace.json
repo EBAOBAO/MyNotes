@@ -11,12 +11,14 @@
             "id": "6623d056a019f43e",
             "type": "leaf",
             "state": {
-              "type": "mindmapview",
+              "type": "markdown",
               "state": {
-                "file": "数理/数学/微分方程/微分方程.md"
+                "file": "java/SE/java SE.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "blocks",
-              "title": "微分方程"
+              "icon": "lucide-file",
+              "title": "java SE"
             }
           }
         ]
@@ -140,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数理/数学/微分方程/微分方程.md",
+                "file": "java/SE/java SE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "微分方程 的大纲"
+              "title": "java SE 的大纲"
             }
           },
           {
@@ -164,8 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,9 +183,23 @@
   },
   "active": "6623d056a019f43e",
   "lastOpenFiles": [
-    "音乐/和弦理论笔记.md",
-    "数理/数学/微分方程/微分方程.md",
     "Test.md",
+    "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
+    "C/计算机通识.md",
+    "aTemplates/MyNoun.md",
+    "aTemplates/MyMatrix.md",
+    "数理/数学/微分方程/微分方程.md",
+    "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
+    "数理/物理学/动力学/动力学.md",
+    "数理/数学/线性代数/线性代数.canvas",
+    "java/SE/java SE.md",
+    "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
+    "数理/物理学/动力学/L0cqIAdMt9D5iaV4.png",
+    "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
+    "imgs/2024-02-07/M5w42JJ1MftrJjqj.png",
+    "imgs/imgSTM32/OC.png",
+    "数理/物理学/动力学/Drawing 2025-05-28 23.20.02.excalidraw.md",
+    "音乐/和弦理论笔记.md",
     "数理/数学/微分方程/Drawing 2025-05-28 16.34.09.excalidraw.md",
     "数理/数学/微分方程/偏微分方程.md",
     "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",
@@ -199,38 +214,24 @@
     "数理/物理学/电磁学",
     "数理/物理学/动力学",
     "数理/物理学",
-    "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
     "数理/数学/微分方程",
     "数理/数学/片段",
     "aTemplates/MyDataviewJSBlock.md",
-    "数理/物理学/动力学/动力学.md",
     "数理/未命名.canvas",
     "数理/数学",
     "数理/未命名.md",
     "例子.md",
     "数理/数理乱记.md",
-    "数理/数学/线性代数/线性代数.canvas",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
-    "java/SE/java SE.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
-    "前端/hc 乱记.md",
-    "项目开发日志.md",
     "未命名 1.canvas",
     "音乐",
-    "编曲乱记.md",
     "imgs/imgxiangmu/滤波器设置.png",
     "imgs/imgxiangmu/设置osrs_p.png",
     "imgs/imgxiangmu/BMP280测量流程图.png",
     "imgs/imgxiangmu/BMP280块图.png",
     "imgs/imgxiangmu/BMP280电路连接.png",
-    "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
-    "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
-    "imgs/2024-10-26/gS4rIMZbBk85TjHK.png",
-    "imgs/2024-11-16/kqKeYeM6u0SHyo06.png",
-    "imgs/2024-12-27/vtp8bYuzP5WJIrfX.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
