@@ -4908,6 +4908,7 @@ RCD
 RJD
 RvgQ
 RVU
+Root
 Memory
 MB
 MemberInnerClass
@@ -5954,6 +5955,7 @@ raI
 rhPs
 rios
 rOsLbRjz
+rich
 environment
 editor
 encodings
