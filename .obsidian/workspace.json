@@ -39,14 +39,12 @@
             "id": "ab8cce60dcafe8ff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mindmapview",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
-                "mode": "source",
-                "source": false
+                "file": "数理/微分方程.md"
               },
-              "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
+              "icon": "blocks",
+              "title": "微分方程"
             }
           }
         ],
@@ -107,8 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -172,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "数理/微分方程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
+              "title": "微分方程 的大纲"
             }
           },
           {
@@ -213,17 +210,21 @@
   },
   "active": "ab8cce60dcafe8ff",
   "lastOpenFiles": [
+    "数理/数学.canvas",
+    "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "数理/微分方程.md",
+    "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
+    "java/SE/java SE.md",
+    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "音乐/和弦理论笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "前端/hc 乱记.md",
-    "数理/数学.canvas",
     "数理/Drawing 2025-05-24 17.35.52.excalidraw.md",
     "项目开发日志.md",
     "未命名 1.canvas",
     "音乐",
     "编曲乱记.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "^.md",
     "imgs/imgxiangmu/滤波器设置.png",
     "imgs/imgxiangmu/设置osrs_p.png",
@@ -239,10 +240,8 @@
     "C/计算机通识.md",
     "imgs/2024-10-04/fQgxzMkbcXMisSKR.png",
     "aTemplates/MyNoun.md",
-    "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "aTemplates/MyMatrix.md",
     "elec/电路分析.md",
-    "java/SE/java SE.md",
     "java/java 算法基础.md",
     "imgs/2024-07-09/L0cqIAdMt9D5iaV4.png",
     "imgs/2024-10-26/gS4rIMZbBk85TjHK.png",
@@ -251,9 +250,6 @@
     "Test.md",
     "java/projects.md",
     "java/java 设计模式.md",
-    "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
-    "python/manim.md",
-    "python/flask.md",
     "数理",
     "aTemplates",
     "C",

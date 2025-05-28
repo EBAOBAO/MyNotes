@@ -1700,6 +1700,7 @@ bbs
 bSx
 bQc
 bLwzb
+basic
 Title
 TB
 Test
@@ -3505,6 +3506,7 @@ mL
 mx
 mLd
 mLjig
+mindmap
 Object
 Operating
 Outer
