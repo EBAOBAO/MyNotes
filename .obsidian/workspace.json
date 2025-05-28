@@ -49,7 +49,8 @@
               "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -106,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -170,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 matlab 笔记 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的大纲"
             }
           },
           {
@@ -194,8 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,18 +211,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9250754456b16d15",
+  "active": "ab8cce60dcafe8ff",
   "lastOpenFiles": [
+    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "音乐/和弦理论笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "前端/hc 乱记.md",
     "数理/数学.canvas",
     "数理/Drawing 2025-05-24 17.35.52.excalidraw.md",
     "项目开发日志.md",
     "未命名 1.canvas",
-    "音乐/和弦理论笔记.md",
     "音乐",
     "编曲乱记.md",
-    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "^.md",
     "imgs/imgxiangmu/滤波器设置.png",
