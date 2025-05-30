@@ -274,11 +274,9 @@ efe edB | dBA ABd | efe edB | gdB ABd |
 efe edB | d2d def | gfe edB |1 dBA ABd :|2 dBA AFD |]
 ```
 
-```tab
-tabstave notation=true
+```quicktab
 notes 4-5-6b7/3 10/4 | 5-4-2/3 2/2
 
-tabstave notation=true
 notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 ```
 

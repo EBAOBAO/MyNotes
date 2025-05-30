@@ -3,6 +3,7 @@
   "theme": "system",
   "enabledCssSnippets": [
     "mer",
-    "merForBlueTopaz"
+    "merForBlueTopaz",
+    "betterVextab"
   ]
 }
