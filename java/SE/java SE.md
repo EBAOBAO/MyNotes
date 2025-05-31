@@ -6472,7 +6472,7 @@ write(String, off, len)
 
 在这里使用了 *装饰者模式* ！
 
-## 文件字节流
+## 文件节点流
 
 ![InputStream](InputStream.png)
 
@@ -6562,8 +6562,6 @@ public class LearnCode {
 `public FileOutputStream(String name/File file, boolean append)`
 	若设置 `append` 为 true ，则往文件中添加内容而不是覆盖。
 
-## 文件字符流
-
 ### FileReader
 
 构造器：
@@ -6587,12 +6585,14 @@ Reader 抽象基类方法，以及
 
 ## 缓冲处理流
 
+“缓冲”这个名字有些匪夷所思，让人很难想到它是干什么用的。事实上文件节点流会在每次读写操作的时候直接访问文件，这样简单直接，但要是要读写大量数据的话就可能会因为磁盘的访问次数太多导致效率低下。为了提高数据读写的效率，可以将数据在内存缓冲区中暂存，当缓冲区满了或者执行了刷新操作时，才将数据真正写入目标设备或从源设备读取数据。**这也正是缓冲流的意义所在：减少底层I/O操作的次数，一次性处理更多数据。**
+
+不过当然这些过程的实现早已在底层被封装好了，对我们这些方法的使用者来说，其实缓冲流相比文件节点流并没有特别“特殊”的方法
+
 ### BufferedReader
 
 - `public BufferedReader(Reader in)`
 	在创建 BufferedReader 对象时，要向构造器中传入一个 Reader 。
-- `public String readLine()`
-	按行读取，文件读取完毕时返回 `null` 。
 - `public void close()`
 	关闭流，注意这个方法被调用时底层会调用被包装的流的 `close()` ，故不需要自己去关闭被包装的流。
 
@@ -6711,6 +6711,10 @@ public class LearningI {
 ## 标准输入输出流
 
 在学习 Java 技术的时候我们就经常会用到 `System.in` 标准输入与 `System.out` 标准输出，它们实际上分别是 InputStream（*当然这是个接口，真正的运行时类型是 BufferedInputStream*） 与 PrintStreram 的属性，标准输入的默认设备就是键盘，而标准输出的默认设备就是显示器。
+
+当然，对它们的使用也早已是老生常谈了，这里无需再赘述。
+
+
 
 # (17) 单元测试
 ## Junit 使用
