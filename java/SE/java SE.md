@@ -4579,7 +4579,9 @@ String s = "EBAOBAO";
 
 从常量池中寻找"EBAOBAO"数据空间，若找到，直接指向；若没找到则创建一个后指向。
 
-s最终指向常量池中"EBAOBAO"的空间地址。
+s 最终指向常量池中"EBAOBAO"的空间地址。
+
+（……基本上可以这么理解，不过）
 
 法2：调用构造器
 
@@ -4587,7 +4589,7 @@ s最终指向常量池中"EBAOBAO"的空间地址。
 String s2 = new String("EBAOBAO");
 ```
 
-在堆内存中创建String对象空间，里面维护了value属性，value指向常量池中的"EBAOBAO"字符串常量。
+在堆内存中创建String对象空间，里面维护了value属性，value指向常量池中的"EBAOBAO"。
 
 s2最终指向的是堆中对象的空间地址。
 
@@ -4621,6 +4623,8 @@ System.out.println(a == b); // false，它们比较的并不是“数值”
 System.out.println(a == b.intern()); // true，intern()返回b对象对应在池中的字符串
 System.out.println(b == b.intern()); // false，显而易见
 ```
+
+根据上述讨论，我们可以知道如果我们仅仅只是想判断两个字符串的内容是否相等，基本上只要使用 String 重载过的 `equals()` 就行了。
 
 `String`是不可变字符序列，大量改动就会产生大量副本，但其复用率高，所以最好用作某种“常量”，少改动。
 

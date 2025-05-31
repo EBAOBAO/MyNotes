@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
+                "file": "java/SE/java SE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 Vue 笔记"
+              "title": "java SE"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -142,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "StyleTest.md",
+                "file": "java/SE/java SE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "StyleTest 的大纲"
+              "title": "java SE 的大纲"
             }
           },
           {
@@ -166,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,6 +184,7 @@
   },
   "active": "6623d056a019f43e",
   "lastOpenFiles": [
+    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "数理/数学/多元微积分/多元微积分.md",
     "数理/数学/多元微积分/片段.md",
     "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
@@ -201,7 +202,6 @@
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 html & CSS 笔记.md",
     "前端/hc 乱记.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "Excalidraw/Drawing 2025-03-06 17.06.35.excalidraw.md",
     "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
