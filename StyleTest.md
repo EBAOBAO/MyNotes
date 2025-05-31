@@ -47,11 +47,6 @@ mindmap
 			BOM，与浏览器交互
 ```
 
-# 1！5！
-
-## sdsdfs
-
-### sdfsdfsd
 
 > vxcvxcvxd
 > ***fsdfsdfsd***

@@ -6486,7 +6486,6 @@ write(String, off, len)
 
 ### FileInputStream
 
-
 构造器：
 
  - `FileInputStream(String name)`
@@ -6496,9 +6495,7 @@ write(String, off, len)
 - `FileInputStream(FileDescriptor fdObj)`
 	:通过一个文件描述符创建。
 
-常用方法：
-
-就是那些抽象基类方法。
+常用方法：就是那些抽象基类方法。
 
 **使用这些方法时，在结尾时要 `close()` ，且时刻要注意异常处理！！**
 
@@ -6712,6 +6709,8 @@ public class LearningI {
 ```
 
 ## 标准输入输出流
+
+在学习 Java 技术的时候我们就经常会用到 `System.in` 标准输入与 `System.out` 标准输出，它们实际上分别是 InputStream（*当然这是个接口，真正的运行时类型是 BufferedInputStream*） 与 PrintStreram 的属性，标准输入的默认设备就是键盘，而标准输出的默认设备就是显示器。
 
 # (17) 单元测试
 ## Junit 使用
