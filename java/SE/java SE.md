@@ -1752,7 +1752,7 @@ package com.bean.polymorphism.dynamic_;
  * **java的动态绑定机制**  
  * 
  * 1. 当调用对象方法的时候，该方法会和该对象的内存地址/运行类型绑定  
- * 2. 当调用对象属性的时候，无动态绑定机制，调用的即调用方法所在类里的属性  
+ * 2. 当调用对象属性的时候，无动态绑定机制，  
  *  
  */
  
@@ -1760,7 +1760,8 @@ public class DynamicBinding {
     public static void main(String[] args) {  
         F a = new S();  
         System.out.println(a.geti());  
-        System.out.println(a.geti1());  
+        System.out.println(a.geti1()); 
+        System.out.println(a.i); 
     }  
 }  
   
@@ -6714,7 +6715,7 @@ public class LearningI {
 
 ## 转换流
 
-
+默认情况下，字符流读取文件按照 utf-8 编码来读取，但文件不一定是 utf-8 编码的，所以应该想个办法来指定读取时的编码方式
 
 # (17) 单元测试
 ## Junit 使用
