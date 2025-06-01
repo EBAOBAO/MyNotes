@@ -6717,9 +6717,26 @@ public class LearningI {
 
 先前我们使用字符流来读写文件内容，一切好像发生的理所应当，没什么问题，但现在我们要开始面对一个不得不面对的问题了，也就是乱码。
 
-到这里你也应该察觉到乱码的出现大致上是和编码格式有关联的，
+到这里你也应该察觉到乱码的出现大致上是和编码格式有关联的，是的，Java 中的字符流实际上是有指定其所读写的编码格式的，且默认情况下会指定系统默认的字符编码，若字符流所指定的编码格式与被读写文件的编码格式不一致的情况下就会出现乱码。
 
-默认情况下，字符流读取文件按照 utf-8 编码来读取，但文件不一定是 utf-8 编码的，所以应该想个办法来指定读取时的编码方式
+```java title=查看系统默认字符编码
+import java.nio.charset.Charset;
+
+public class DefaultCharsetExample {
+    public static void main(String[] args) {
+        String defaultCharset = Charset.defaultCharset().name();
+        System.out.println("系统默认字符编码: " + defaultCharset);
+    }
+}
+```
+
+这个时候该怎么办呢？就要用到 *转换流* 了！转换流可以将字节流转换为字符流，而且可以在这一转换过程中指定转换的编码格式！
+
+拥有这样的功能，转换流不仅可以保证正确读写文件，而且在网络通信中，数据通常以字节流的形式传输，使用转换流还可以方便地进行字符编码和解码。
+
+## InputStreamReader
+
+## OutputStreamWriter
 
 # (17) 单元测试
 ## Junit 使用
