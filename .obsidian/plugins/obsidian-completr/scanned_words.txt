@@ -174,6 +174,7 @@ JJwo
 JJx
 JIg
 Jiun
+JarInputStream
 Navigator
 NB
 Number
@@ -668,6 +669,7 @@ HsN
 HPM
 HDl
 HmO
+Hashtable
 Brendan
 BOM
 Boolean
@@ -1343,6 +1345,7 @@ IOo
 IOL
 IMN
 InputStreamReader
+InflaterInputStream
 DOM
 Dictionary
 DVD
@@ -2484,6 +2487,7 @@ CNC
 Cqq
 Crzs
 Charset
+CharArrayReader
 String
 Symbol
 Swift
@@ -2707,6 +2711,7 @@ Sjhc
 SYT
 Sih
 StandardCharsets
+StringReader
 Python
 PACKAGE
 PARAMETER
@@ -3223,6 +3228,7 @@ sOo
 stw
 swO
 sOf
+separator
 python
 pytohn
 px
@@ -3435,6 +3441,9 @@ ptn
 pnEV
 pin
 pJwp
+printFiles
+putNextEntry
+props
 List
 LAN
 LOCAL
@@ -4542,6 +4551,12 @@ charset
 chinese
 content
 charsetDecoder
+createTempFile
+canRead
+canWrite
+canExecute
+closeEntry
+csv
 unit
 utf
 unicode
@@ -5131,6 +5146,8 @@ lkN
 lSU
 lcQRR
 lcRRT
+listFiles
+load
 GHz
 GB
 GBSG
@@ -5934,6 +5951,7 @@ MgJ
 MOx
 McOL
 Mow
+MANIFEST
 KB
 Keymap
 Keil
@@ -6692,6 +6710,7 @@ dhF
 dif
 dmi
 defaultCharset
+deleteOnExit
 runtime
 run
 ring
@@ -6924,6 +6943,8 @@ rrZd
 rYwAem
 rJJd
 rJK
+reader
+readAllBytes
 environment
 editor
 encodings
@@ -7111,6 +7132,8 @@ eVHw
 eSo
 edv
 eJJC
+exclamation
+endsWith
 interface
 idea
 import
@@ -7362,6 +7385,9 @@ iINO
 iOG
 iIN
 iam
+icon
+inputStreamFromClassPath
+inputStreamFromFile
 file
 for
 float
@@ -7585,6 +7611,7 @@ fgz
 fNO
 foJa
 ffm
+fas
 general
 gbk
 gb
@@ -7786,6 +7813,8 @@ gaU
 gTO
 gAy
 gOk
+getNextEntry
+getResourceAsStream
 template
 templates
 tab
@@ -7995,6 +8024,7 @@ tyWe
 tOU
 tvun
 tec
+toPath
 Views
 VARIABLE
 Vector
@@ -8698,6 +8728,9 @@ FEZ
 FRRD
 FIJ
 FYl
+FilenameFilter
+FilterInputStream
+FilterOutputStream
 out
 outer
 ordinal
@@ -9184,6 +9217,7 @@ zJn
 zEy
 zJC
 zoG
+zip
 yyyy
 yba
 yield
@@ -9670,6 +9704,9 @@ Zdy
 ZYx
 ZNNKL
 ZJx
+ZipInputStream
+ZipEntry
+ZipOutputStream
 Qt
 Qn
 QJk

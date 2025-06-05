@@ -5305,7 +5305,26 @@ Instant now = Instant.now();
 
 ## 框架体系
 
-![框架体系图](https://mermaid.ink/img/pako:eNqlUr1KA0EQfpWwRUggvsCmEi0sciBELOSa8XYuWdyfY3cODCGlkkLRRiysfQCrFD7PIb6FuznCcVzSxKl25vv225nZb8kyK5BxpqURGorU9EIMfj8eq9f1sM5i9BWNz6xSmJG0pj-jcfX8Vq3fa2LD23En0lNktZEYp87BIsJdiHOZWTPIwfdyOMH7TIGG-N6wy51Ic4div8516NK64_XjAFM80P8F-HkA_9d9M8FBuSuH2AJiVwkU292_PB3YfZRLdt94_F73ysQiwa3C7q1LZwt0JNG3sThES6fxkK82n9XD5ufrm42YRqdBiuDDZeSmjOaoMWU8HAXmUCpKWWpWgQol2enCZIyTK3HEykIA4bmEmQPNeA7Kh2oB5sbaJkchgyWS2utby6_-APkl3tU?type=png)
+```mermaid
+mindmap
+	(集合)
+        {{Collection 单列集合}}
+            {{List}}
+                ArrayList
+                LinkedList
+                Vector
+            {{Set}}
+                HashSet
+                    LinkedHashSet
+                TreeSet
+        {{Map 双列集合}}
+            HashMap
+                LinkedHashMap
+            Hashtable
+                Properties
+            TreeMap
+        Collections工具类
+```
 
 使用集合，我们可以动态地保存任意多个对象，还能用各种简单的方法操作它们，非常方便！
 
@@ -6635,12 +6654,29 @@ public class LearnCode {
 
 `public FileReader(String fileName)/(File file)/(FileDescriptor fd)`
 
+如果我们读取一个纯ASCII编码的文本文件，就这样从创建 FileReader 对象是没有问题的。但如果文件中包含中文，就会出现乱码，因为 `FileReader` 有指定编码来读取文件，而其默认的编码与系统相关，例如，Windows系统的默认编码可能是`GBK`，打开一个`UTF-8`编码的文本文件就会出现乱码。要避免乱码问题，我们需要在创建`FileReader`时指定编码：
+
+```java
+Reader reader = new FileReader("src/readme.txt", StandardCharsets.UTF_8);
+```
+
+```java title=查看系统默认字符编码
+import java.nio.charset.Charset;
+
+public class DefaultCharsetExample {
+    public static void main(String[] args) {
+        String defaultCharset = Charset.defaultCharset().name();
+        System.out.println("系统默认字符编码: " + defaultCharset);
+    }
+}
+```
+
 常用方法：
 
 Reader 抽象基类方法，以及
 
 `public String readLine()`
-	读取并返回一整行（不带 `\n` ），读完了返回 null 。
+	读取并返回一整行（不含 `\n` ），读完了返回 null 。
 
 ### FileWiter
 
@@ -6783,22 +6819,9 @@ public class LearningI {
 
 ## 转换字符流
 
-先前我们使用字符流来读写文件内容，一切好像发生的理所应当，没什么问题，但现在我们要开始面对一个不得不面对的问题了，也就是乱码。
+除了特殊的`CharArrayReader`和`StringReader`，普通的`Reader`实际上是基于`InputStream`构造的，因为`Reader`需要从`InputStream`中读入字节流（`byte`），然后，根据编码设置，再转换为`char`就可以实现字符流。如果我们查看`FileReader`的源码，它在内部实际上持有一个`FileInputStream`。
 
-到这里你也应该察觉到乱码的出现大致上是和编码格式有关联的，是的，Java 中的字符流实际上是有指定其所读写的编码格式的，且默认情况下会指定系统默认的字符编码，若字符流所指定的编码格式与被读写文件的编码格式不一致的情况下就会出现乱码。
-
-```java title=查看系统默认字符编码
-import java.nio.charset.Charset;
-
-public class DefaultCharsetExample {
-    public static void main(String[] args) {
-        String defaultCharset = Charset.defaultCharset().name();
-        System.out.println("系统默认字符编码: " + defaultCharset);
-    }
-}
-```
-
-这个时候该怎么办呢？当然，使用字节流读写会是一种办法：
+我们先前有提到过字符流编码的问题。这里还有很多指定字符编码来读写的方法，比如使用字节流来读写：
 
 ```java title=
 import java.io.FileInputStream;
@@ -6822,7 +6845,7 @@ public class ByteStreamReadExample {
 }
 ```
 
-不过，我们还是希望使用字符流来读写纯文本文件的，因为这样会有更高的效率。这时就要用到 *转换流* 了！转换流可以将字节流转换为字符流，而且可以在这一转换过程中指定转换的编码格式！
+另外还可以用到 *转换流* 。转换流可以将字节流转换为字符流，而且可以在这一转换过程中指定编码格式。
 
 拥有这样的功能，转换流不仅可以保证正确读写文件，而且在网络通信中，数据通常以字节流的形式传输，使用转换流还可以方便地进行字符编码和解码。
 
@@ -6843,6 +6866,12 @@ InputStreamReader(InputStream, Charset) // 指定编码的构造器！！
 InputStreamReader(InputStream, charsetDecoder)
 ```
 
+```java title=基础使用
+try (Reader reader = new InputStreamReader(new FileInputStream("src/readme.txt"), "UTF-8")) {
+    // TODO:
+}
+```
+
 ### OutputStreamWriter
 
 构造器：
@@ -6855,6 +6884,47 @@ OutputStreamWriter(OutputStream, charsetDecoder)
 ```
 
 ## 打印流
+
+可以将信息打印到指定的位置，额外提供了一些写入各种数据类型的方法，只有输出流而没有输入流。
+
+主要就是多了各种 `print()` 与 `println()` ：
+
+- 写入`int`：`print(int)`
+- 写入`boolean`：`print(boolean)`
+- 写入`String`：`print(String)`
+- 写入`Object`：`print(Object)`，实际上相当于`print(object.toString())`
+- ...
+- （以及对应的一组`println()`方法）
+
+我们经常使用的`System.out.println()`实际上就是使用`PrintStream`打印各种数据。其中，`System.out`是系统默认提供的`PrintStream`，表示标准输出：
+
+```java
+System.out.print(12345); // 输出12345
+System.out.print(new Object()); // 输出类似java.lang.Object@3c7a835a
+System.out.println("Hello"); // 输出Hello并换行
+```
+
+`System.err`是系统默认提供的标准错误输出。
+
+**`PrintStream`和`OutputStream`相比，除了添加了一组`print()`/`println()`方法，可以打印各种数据类型，比较方便外，它还有一个额外的优点，就是不会抛出`IOException`，这样我们在编写代码的时候，就不必捕获`IOException`。**
+
+`PrintStream`最终输出的总是byte数据，而`PrintWriter`则是扩展了`Writer`接口，它的`print()`/`println()`方法最终输出的是`char`数据。两者的使用方法几乎是一模一样的：
+
+```java
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args)     {
+        StringWriter buffer = new StringWriter();
+        try (PrintWriter pw = new PrintWriter(buffer)) {
+            pw.println("Hello");
+            pw.println(12345);
+            pw.println(true);
+        }
+        System.out.println(buffer.toString());
+    }
+}
+```
 
 ## 操作Zip
 

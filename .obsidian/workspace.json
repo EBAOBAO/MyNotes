@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "7a58bacd0e79f42c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-06-05 22.58.45.excalidraw"
+            }
+          },
+          {
             "id": "3c0f42fd545d57a3",
             "type": "leaf",
             "state": {
@@ -198,8 +210,9 @@
   },
   "active": "6623d056a019f43e",
   "lastOpenFiles": [
-    "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
+    "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md",
     "java/SE/java SE.md",
+    "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
     "java/Web/java Web.md",
     "java/SE/JVM 原理.md",
     "C/编译原理.md",
@@ -224,7 +237,6 @@
     "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "jekyll.md",
     "aTemplates/MyDataviewJSBlock.md",
-    "aTemplates/MyNoun.md",
     "imgs/imgSTM32/15-2 读取芯片ID.jpg",
     "imgs/imgSTM32/clockTree.png",
     "imgs/imgJavaSE/LocalDateTime.png",
