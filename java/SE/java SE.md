@@ -6713,7 +6713,7 @@ public class LearningI {
 
 当然，对它们的使用也早已是老生常谈了，这里无需再赘述。
 
-## 转换流
+## 转换字符流
 
 先前我们使用字符流来读写文件内容，一切好像发生的理所应当，没什么问题，但现在我们要开始面对一个不得不面对的问题了，也就是乱码。
 
@@ -6735,6 +6735,12 @@ public class DefaultCharsetExample {
 拥有这样的功能，转换流不仅可以保证正确读写文件，而且在网络通信中，数据通常以字节流的形式传输，使用转换流还可以方便地进行字符编码和解码。
 
 ## InputStreamReader
+
+先看类图：
+
+![InputStreamReader](InputStreamReader.png)
+
+
 
 ## OutputStreamWriter
 
