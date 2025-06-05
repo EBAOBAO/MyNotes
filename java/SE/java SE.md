@@ -6911,18 +6911,12 @@ System.out.println("Hello"); // 输出Hello并换行
 `PrintStream`最终输出的总是byte数据，而`PrintWriter`则是扩展了`Writer`接口，它的`print()`/`println()`方法最终输出的是`char`数据。两者的使用方法几乎是一模一样的：
 
 ```java
-import java.io.*;
-
-public class Main {
-    public static void main(String[] args)     {
-        StringWriter buffer = new StringWriter();
-        try (PrintWriter pw = new PrintWriter(buffer)) {
-            pw.println("Hello");
-            pw.println(12345);
-            pw.println(true);
-        }
-        System.out.println(buffer.toString());
-    }
+public static void main(String[] args) throws IOException {  
+    String filePath = "D:\\workspace\\IO\\out.txt";  
+    try (final PrintWriter printWriter = new PrintWriter(new FileWriter(filePath))) {  
+        printWriter.println(123123);  
+        printWriter.println("huhuHumour");  
+    }  
 }
 ```
 
