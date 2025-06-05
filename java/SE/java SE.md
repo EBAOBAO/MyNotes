@@ -6730,7 +6730,7 @@ public class DefaultCharsetExample {
 }
 ```
 
-这个时候该怎么办呢？就要用到 *转换流* 了！转换流可以将字节流转换为字符流，而且可以在这一转换过程中指定转换的编码格式！
+这个时候该怎么办呢？当然，使用字节流读写是一种办法，但就要用到 *转换流* 了！转换流可以将字节流转换为字符流，而且可以在这一转换过程中指定转换的编码格式！
 
 拥有这样的功能，转换流不仅可以保证正确读写文件，而且在网络通信中，数据通常以字节流的形式传输，使用转换流还可以方便地进行字符编码和解码。
 
@@ -6752,6 +6752,15 @@ InputStreamReader(InputStream, charsetDecoder)
 ```
 
 ### OutputStreamWriter
+
+构造器：
+
+```java
+OutputStreamWriter(OutputStream)
+OutputStreamWriter(OutputStream, String)
+OutputStreamWriter(OutputStream, Charset) // 指定编码的构造器！！
+OutputStreamWriter(OutputStream, charsetDecoder)
+```
 
 ## 打印流
 
