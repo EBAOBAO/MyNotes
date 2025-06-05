@@ -312,12 +312,29 @@ format(123, "*<10")
 | %x  | 十六进制整数 |
 
 有些时候，字符串里面的`%`是一个普通字符怎么办？这个时候就需要转义，用`%%`来表示一个`%`……不过不管怎样，在现代 Python 开发中，`str.format()` 和f字符串更加灵活和强大，所以比起这种类似 c 语言的格式化方式我们还是推荐使用 `str.format()` 和f字符串。
+
 ## 字符串常用方法
 
-`upper()` : 全部字母改为大写
-`lower()` : 全部字母改为小写
-`title()` : 所有单词首字母大写，其他字母小写
-`replace(<o>, <n>)`：替换内容并返回（原字符串不变）
+*注意：以下所有方法不会更改原本的字符串的内容，只会返回处理的结果。例如：*
+
+```python
+str = "sssEBAOBAOsss"
+
+print(str.upper()) # SSSEBAOBAOSSS
+print(str) # sssEBAOBAOsss，str内容没变。
+```
+
+`upper()` 
+	全部字母改为大写
+	
+`lower()`
+	全部字母改为小写
+	
+`title()`
+	所有单词首字母大写，其他字母小写
+	
+`replace(<o>, <n>)`
+	替换内容并返回（原字符串不变）
     
 ```python
 str = "yOu aRe soo hUMOu"
@@ -329,17 +346,36 @@ print(str.upper()) # 输出：YOU ARE SOO HUMOU
 
 删除空白的方法：
 
-`rstrip()` : 删除字符串末尾的空白
-`lstrip()`: 删除字符串开头的空白
-`strip()` : 删除字符串开头与末尾的空白
+`rstrip()/('指定字符')``
+	删除字符串末尾的空白或指定字符
+	
+`lstrip()/('指定字符')`
+	删除字符串开头的空白或指定字符
+	
+`strip()/('指定字符')` 
+	删除字符串开头与末尾的空白或指定字符
+
+```python
+>>> "ssssdfuhsidfhiusdfisdufssssssss".strip('s')
+'dfuhsidfhiusdfisduf'
+```
 
 注：
 
 1. 这些方法只返回修改后字符串，并不对原来变量所指向的字符串有所改动，若想改动应重新对其赋值。上面的也是！
 2. `\n` 也算空白！！
 
-- `count(<c>)`
-- `isdigit()`
+`count(<c>)`
+	统计字符出现次数并返回结果
+	
+`isdigit()/isnumeric()/isdicimal()`
+	判断字符串内容是否为数字
+`islower()`
+`isprintable()`
+`isspace()`
+`split()`
+`join()`
+
 #### 编码与解码
 
 单个字符的编码相关 *函数*：
@@ -449,10 +485,22 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid 
 
 添加或删除元素的方法：
 
-`append(<value>)` : 在结尾处添加元素
-`insert(<index>, <value>) `: 在相应位置插入元素
-`pop(<index>)` : 删除并返回列表中相应位置元素，参数缺省则为最后一个元素
-`remove(<value>)` : 删除列表中第一个相应值的元素，列表中没有就报错
+`append(<value>)` 
+	在结尾处添加元素
+	
+`insert(<index>, <value>) `
+	在相应位置插入元素
+	
+`pop(<index>)` 
+	删除并返回列表中相应位置元素，参数缺省则为最后一个元素
+	
+`remove(<value>)` 
+	删除列表中第一个相应值的元素，列表中没有就报错
+	
+`clear()`
+	清空列表
+	
+`copy()`
 
 也可以这样删除元素：
 
@@ -462,8 +510,11 @@ del list[i]
 
 排序相关的方法：
 
-`sort(reverse)` : 替换原来的列表的排序，参数reverse默认为False，即升序排序
-`reverse()` : 倒序（替换原列表）
+`sort(reverse)`
+	替换原来的列表的排序，参数reverse默认为False，即升序排序
+	
+`reverse()`
+	倒序（替换原列表）
 
 ```python
 list1 = ['wuLingHongGuang', 'guangLun3000', 'UFO', 'bean','ufo']
@@ -485,9 +536,14 @@ print(list1)
 
 ## 函数
 
-`len()`：取列表长度
-`sorted(list, reverse)` : 返回排序后列表，不改变原列表
-`list()`：将可迭代对象（iterable，如字符串、元组、集合、字典、生成器等）转换为列表
+`len()`
+	取列表长度
+	
+`sorted(list, reverse)`
+	返回排序后列表，不改变原列表
+	
+`list()`
+	将可迭代对象（iterable，如字符串、元组、集合、字典、生成器等）转换为列表
 
 ```python
 list(range())
