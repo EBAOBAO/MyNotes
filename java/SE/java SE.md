@@ -6734,15 +6734,26 @@ public class DefaultCharsetExample {
 
 拥有这样的功能，转换流不仅可以保证正确读写文件，而且在网络通信中，数据通常以字节流的形式传输，使用转换流还可以方便地进行字符编码和解码。
 
-## InputStreamReader
+### InputStreamReader
+
+将字节流包装为字符流。
 
 先看类图：
 
 ![InputStreamReader](InputStreamReader.png)
 
+构造器：
 
+```java
+InputStreamReader(InputStream)
+InputStreamReader(InputStream, String)
+InputStreamReader(InputStream, Charset) // 指定编码的构造器！！
+InputStreamReader(InputStream, charsetDecoder)
+```
 
-## OutputStreamWriter
+### OutputStreamWriter
+
+## 打印流
 
 # (17) 单元测试
 ## Junit 使用
