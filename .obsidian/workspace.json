@@ -11,12 +11,14 @@
             "id": "6623d056a019f43e",
             "type": "leaf",
             "state": {
-              "type": "mindmapview",
+              "type": "markdown",
               "state": {
-                "file": "数理/物理学/动力学/动力学.md"
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "blocks",
-              "title": "动力学"
+              "icon": "lucide-file",
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记"
             }
           },
           {
@@ -90,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -154,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "英语.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "英语 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的大纲"
             }
           },
           {
@@ -178,8 +181,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,8 +198,8 @@
   },
   "active": "6623d056a019f43e",
   "lastOpenFiles": [
-    "英语.md",
     "数理/物理学/动力学/动力学.md",
+    "英语.md",
     "数理/物理学/电磁学/电磁学.md",
     "数理/数学/多元微积分/多元微积分.md",
     "elec/电路分析.md",
