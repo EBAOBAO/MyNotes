@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "音乐/和弦理论笔记.md",
+                "file": "网安.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "和弦理论笔记"
+              "title": "网安"
             }
           },
           {
@@ -213,9 +213,10 @@
   },
   "active": "7a58bacd0e79f42c",
   "lastOpenFiles": [
+    "音乐/和弦理论笔记.md",
+    "elec/电路分析.md",
     "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md",
     "StyleTest.md",
-    "elec/电路分析.md",
     "java/Web/java Web.md",
     "C/计算机通识.md",
     "java/SE/java SE.md",
@@ -239,7 +240,6 @@
     "elec/电子百科.md",
     "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
     "jekyll.md",
-    "aTemplates/MyDataviewJSBlock.md",
     "imgs/imgSTM32/15-2 读取芯片ID.jpg",
     "imgs/imgSTM32/clockTree.png",
     "imgs/imgJavaSE/LocalDateTime.png",
