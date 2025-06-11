@@ -41,15 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "StyleTest.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "StyleTest"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -171,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "java/Web/java Web.md",
+                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "java Web 的大纲"
+              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记 的大纲"
             }
           },
           {
@@ -195,8 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -211,13 +211,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6623d056a019f43e",
+  "active": "3c0f42fd545d57a3",
   "lastOpenFiles": [
-    "网安.md",
-    "音乐/和弦理论笔记.md",
-    "elec/电路分析.md",
-    "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md",
     "StyleTest.md",
+    "网安.md",
+    "elec/电路分析.md",
+    "音乐/和弦理论笔记.md",
+    "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md",
     "java/Web/java Web.md",
     "C/计算机通识.md",
     "java/SE/java SE.md",

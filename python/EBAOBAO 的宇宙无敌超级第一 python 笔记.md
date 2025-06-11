@@ -1800,7 +1800,5 @@ class Student(object):
 
 ## turtle
 
-- 
-
 
 
