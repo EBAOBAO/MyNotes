@@ -49,8 +49,7 @@
               "title": "StyleTest"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -212,8 +211,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7a58bacd0e79f42c",
+  "active": "6623d056a019f43e",
   "lastOpenFiles": [
+    "网安.md",
     "音乐/和弦理论笔记.md",
     "elec/电路分析.md",
     "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md",
@@ -240,7 +240,6 @@
     "数理/数学/微分方程/微分方程.md",
     "elec/电子百科.md",
     "C/EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
-    "jekyll.md",
     "imgs/imgSTM32/15-2 读取芯片ID.jpg",
     "imgs/imgSTM32/clockTree.png",
     "imgs/imgJavaSE/LocalDateTime.png",
