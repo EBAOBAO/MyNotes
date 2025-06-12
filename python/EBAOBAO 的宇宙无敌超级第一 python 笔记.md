@@ -589,6 +589,18 @@ for循环后面还可以加上if判断来进行筛选：
 [4, 16, 36, 64, 100]
 ```
 
+```python title=从一个记载着单词及其含义的文件中读出一个字典
+with open(filename, 'r', encoding='utf-8') as f:
+	for line in f:
+		# 只分割第一个空格，保留释义中的空格
+		parts = line.strip().split(' ')
+		parts = [x.strip() for x in parts if x.strip()!='']
+		print(parts)
+		word = parts[0]
+		meaning = ' '.join(parts[1:])
+		word_dict[word.lower()] = meaning
+```
+
 但是，我们不能在最后的`if`加上`else`，解决方法是像：
 
 ```python
