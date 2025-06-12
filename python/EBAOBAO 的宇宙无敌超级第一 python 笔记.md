@@ -374,7 +374,7 @@ print(str.upper()) # 输出：YOU ARE SOO HUMOU
 `isprintable()`
 `isspace()`
 `split()`
-`join()`
+`join(seq)`
 
 #### 编码与解码
 
