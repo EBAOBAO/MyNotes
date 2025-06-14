@@ -80,10 +80,6 @@ STM32内部采用分区供电的方式，故供电口会较多（Vxx_1/2/3）。
 
 JLINK：ARM -> Segger -> USBDriver
 
-# cubeMX
-
-
-
 # 建立工程
 
 ![工程架构](projectStructure.png)
@@ -237,6 +233,12 @@ void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
 启动文件有许多类型，要根据芯片型号来选择：
 
 ![类型](QiDongWenJian.png)
+
+## 调试代码
+
+先用魔术棒 -> c/c++ 编辑 *代码优化等级* ，一般来说，优化等级越低，代码体积越大，会导致效率变低，但调试信息会更完整，故我们调试时使用较低的优化等级，然后在发布前逐步提高优化等级，以提高代码的性能和效率。
+
+调出监视菜单：View -> Watch windows -> watch 1
 
 # GPIO
 
