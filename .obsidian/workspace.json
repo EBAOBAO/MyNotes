@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -212,11 +211,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3c0f42fd545d57a3",
+  "active": "7a58bacd0e79f42c",
   "lastOpenFiles": [
-    "网安.md",
     "elec/电路分析.md",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
+    "网安.md",
     "StyleTest.md",
     "音乐/和弦理论笔记.md",
     "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md",
