@@ -2715,6 +2715,7 @@ SYT
 Sih
 StandardCharsets
 StringReader
+Stream
 Python
 PACKAGE
 PARAMETER
@@ -3233,6 +3234,8 @@ swO
 sOf
 separator
 services
+seed
+seq
 python
 pytohn
 px
@@ -4565,6 +4568,7 @@ canExecute
 closeEntry
 csv
 cnblog
+choice
 unit
 utf
 unicode
@@ -4752,6 +4756,7 @@ uat
 umx
 uzYl
 underscore
+uniform
 arithmetic
 application
 appearance
@@ -6957,6 +6962,7 @@ rJJd
 rJK
 reader
 readAllBytes
+randrange
 environment
 editor
 encodings
