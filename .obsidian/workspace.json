@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网安.md",
+                "file": "EBAOBAO 的网安笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "网安"
+              "title": "EBAOBAO 的网安笔记"
             }
           },
           {
@@ -47,6 +47,18 @@
               },
               "icon": "lucide-file",
               "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记"
+            }
+          },
+          {
+            "id": "d71a078411451639",
+            "type": "leaf",
+            "state": {
+              "type": "mindmapview",
+              "state": {
+                "file": "数理/物理学/动力学/动力学.md"
+              },
+              "icon": "blocks",
+              "title": "动力学"
             }
           }
         ],
@@ -172,13 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网安.md",
+                "file": "EBAOBAO 的网安笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "网安 的大纲"
+              "title": "EBAOBAO 的网安笔记 的大纲"
             }
           },
           {
@@ -214,10 +226,11 @@
   },
   "active": "7a58bacd0e79f42c",
   "lastOpenFiles": [
+    "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
+    "EBAOBAO 的网安笔记.md",
+    "数理/物理学/动力学/动力学.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
     "elec/电路分析.md",
-    "网安.md",
-    "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "StyleTest.md",
     "音乐/和弦理论笔记.md",
     "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md",
@@ -231,7 +244,6 @@
     "C/EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
     "imgs/imgJavaSE/InputStreamReader.png",
     "InputStreamReader.png.md",
-    "数理/物理学/动力学/动力学.md",
     "英语.md",
     "数理/物理学/电磁学/电磁学.md",
     "数理/数学/多元微积分/多元微积分.md",
