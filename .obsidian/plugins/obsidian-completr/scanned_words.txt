@@ -515,6 +515,7 @@ WWXG
 WNM
 Workstation
 Watch
+WAF
 HTML
 Hello
 Hz
@@ -855,6 +856,7 @@ BJRI
 BJJ
 ByteStreamReadExample
 BEGIN
+Boot
 Eich
 ECMAScript
 ES
@@ -2495,6 +2497,7 @@ Cqq
 Crzs
 Charset
 CharArrayReader
+CDN
 String
 Symbol
 Swift
@@ -2927,6 +2930,7 @@ Pfa
 PtIO
 PCI
 Private
+PHP
 sup
 sqrt
 settings

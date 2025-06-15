@@ -53,12 +53,14 @@
             "id": "d71a078411451639",
             "type": "leaf",
             "state": {
-              "type": "mindmapview",
+              "type": "markdown",
               "state": {
-                "file": "数理/物理学/动力学/动力学.md"
+                "file": "StyleTest.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "blocks",
-              "title": "动力学"
+              "icon": "lucide-file",
+              "title": "StyleTest"
             }
           }
         ],
@@ -227,11 +229,11 @@
   "active": "7a58bacd0e79f42c",
   "lastOpenFiles": [
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
-    "EBAOBAO 的网安笔记.md",
+    "StyleTest.md",
     "数理/物理学/动力学/动力学.md",
     "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+    "EBAOBAO 的网安笔记.md",
     "elec/电路分析.md",
-    "StyleTest.md",
     "音乐/和弦理论笔记.md",
     "imgs/imgJavaSE/Drawing 2025-06-05 22.58.45.excalidraw.md",
     "java/Web/java Web.md",
