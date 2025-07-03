@@ -1,0 +1,10 @@
+{
+  "templater-obsidian:MyTemplates/Alpha.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "A"
+    }
+  ]
+}
