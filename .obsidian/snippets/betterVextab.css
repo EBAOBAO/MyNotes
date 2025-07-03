@@ -1,0 +1,25 @@
+.block-language-vextab, .block-language-tab, .block-language-quicktab{
+  background-color: transparent !important;
+}
+
+.theme-dark .block-language-vextab, .theme-dark .block-language-tab, .theme-dark .block-language-quicktab {
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.block-language-vextab svg text[x="275"], .block-language-tab svg text[x="275"], .block-language-quicktab svg text[x="275"] {
+  display:none;
+}
+
+.block-language-vextab, .block-language-quicktab{
+  background-color: transparent !important;
+}
+
+.theme-dark .block-language-vextab, .theme-dark .block-language-quicktab {
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.block-language-vextab svg text[x="275"], .block-language-quicktab svg text[x="275"] {
+  display:none;
+}

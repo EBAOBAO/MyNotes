@@ -47,8 +47,6 @@
 
 ![pESxJ0A.png](https://s21.ax1x.com/2025/01/02/pESxJ0A.png)
 
-
-
 # Hello World!
 
 ```c
