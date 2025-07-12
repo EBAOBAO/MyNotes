@@ -1,5 +1,3 @@
-# 我的web前端笔记
-
 # Hello World!
 
 **`html`** 是用来描述网页的一种语言（Hyper Text Markup Language，超文本标记语言）
@@ -435,7 +433,7 @@ html字符实体（character entities）
 </p>
 ```
 
-文本<sup>`<sup>上标（行内）`</sup><sub>`<sub>下标（行内）`</sub>
+`<sup>`<sup>上标（行内）</sup>`<sub>`<sub>下标（行内）</sub>
 
 `<ruby>`、`<rt>`、`<rp>`：<ruby>注音<rt>zhu yin</rt></ruby>
 `<rt>`用以标记注音符号，`<rp>`是在浏览器不支持`<ruby>`时显示的内容。
@@ -774,19 +772,19 @@ name1=value1&name2=value2
 
  单击没有任何属性的表单按钮的默认行为会将表单提交到表单的 action 属性中指定的位置。然而，依赖默认行为可能造成混乱。 应该将值为 submit 的 type 属性添加到 button 以明确它是一个提交按钮。
 
-| 属性 | 值 | 描述 |
-|--|--|--|
-| autofocus | autofocus | 指定当页面加载的时候，按钮将获得焦点。 |
-| disabled | disabled | 禁用按钮。 |
-| form | form_id | 指定按钮所关联的表单 ID。 |
-| formaction | url | 覆盖 form 元素的 action 属性。注释：该属性与 type="submit" 配合使用。 |
-| formenctype | application/x-www-form-urlencoded、multipart/form-data、text/plain | 覆盖 form 元素的 enctype 属性。注释：该属性与 type="submit" 配合使用。 |
-| formmethod | get、post | 覆盖 form 元素的 method 属性。注释：该属性与 type="submit" 配合使用。 |
-| formnovalidate | formnovalidate | 覆盖 form 元素的 novalidate 属性。注释：该属性与 type="submit" 配合使用。 |
-| formtarget | _blank、_self、_parent、_top、framename | 覆盖 form 元素的 target 属性。注释：该属性与 type="submit" 配合使用。 |
-| name | button_name | 指定按钮的名称。 |
-| type | button（无效果）、reset（清空表单内容）、submit（提交给服务器） | 指定按钮的类型。 |
-| value | text | 指定按钮的初始值。注释：可由脚本进行修改。 |
+| 属性             | 值                                                                | 描述                                                    |
+| -------------- | ---------------------------------------------------------------- | ----------------------------------------------------- |
+| autofocus      | autofocus                                                        | 指定当页面加载的时候，按钮将获得焦点。                                   |
+| disabled       | disabled                                                         | 禁用按钮。                                                 |
+| form           | form_id                                                          | 指定按钮所关联的表单 ID。                                        |
+| formaction     | url                                                              | 覆盖 form 元素的 action 属性。注释：该属性与 type="submit" 配合使用。     |
+| formenctype    | application/x-www-form-urlencoded、multipart/form-data、text/plain | 覆盖 form 元素的 enctype 属性。注释：该属性与 type="submit" 配合使用。    |
+| formmethod     | get、post                                                         | 覆盖 form 元素的 method 属性。注释：该属性与 type="submit" 配合使用。     |
+| formnovalidate | formnovalidate                                                   | 覆盖 form 元素的 novalidate 属性。注释：该属性与 type="submit" 配合使用。 |
+| formtarget     | _blank、_self、_parent、_top、framename                              | 覆盖 form 元素的 target 属性。注释：该属性与 type="submit" 配合使用。     |
+| name           | button_name                                                      | 指定按钮的名称。                                              |
+| type           | button（无效果）、reset（清空表单内容）、submit（提交给服务器）                         | 指定按钮的类型。                                              |
+| value          | text                                                             | 指定按钮的初始值。注释：可由脚本进行修改。                                 |
 
 `<output>`（行内）：输出计算结果。
 `<textarea>`（块级）：多行文本输入（默认字体为等宽字体）。

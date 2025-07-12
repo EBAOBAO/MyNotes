@@ -6,9 +6,9 @@
 [windows 常用的shell（cmd.exe）命令大全 - 小林野夫 - 博客园 (cnblogs.com)](https://www.cnblogs.com/cdaniu/p/15168720.html)
 [Windows Shell 常用命令](https://zhuanlan.zhihu.com/p/143381025)
 
-# 内容概览
+# 常用指令集
 
-设定用户名：`git config --global user.name "EBAOBAO
+设定用户名：`git config --global user.name "EBAOBAO"`
 设定邮箱：`git config --global user.email "..."`
 使用 `git config --global -l` 或 `git config --list` 来查看配置。
 
@@ -34,6 +34,13 @@
 删除远程库：`git remote rm <name>`
 查看远程库信息：`git remote -v`
 从远程库克隆：`git clone git@github.com:michaelliao/gitskills.git`
+
+# 使用 git 来远程同步 obsidian
+
+## pc 端
+
+
+
 # 走进git
 
 ## 什么是 git
@@ -88,6 +95,7 @@ git config --global user.email "..."
 ```
 
 使用 `git config --global -l` 或 `git config --list` 来查看配置。
+
 # git 基础操作
 
 ## 创建仓库

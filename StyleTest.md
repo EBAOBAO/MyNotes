@@ -1,6 +1,5 @@
-This is your new *vault*.
 
-Make a note of something, [[EBAOBAO 的宇宙无敌超级第一 stm32 笔记]], or try [the Importer](https://help.obsidian.md/Plugins/Importer)!
+Make a note of something, [[从（1）开始学习 stm32 开发]], or try [the Importer](https://help.obsidian.md/Plugins/Importer)!
 
 When you're ready, delete this note and make the vault your own.
 
@@ -22,11 +21,31 @@ When you're ready, delete this note and make the vault your own.
 
 [Obsidian-DATAVIEW 官方文档 中文版 05 Javascript API JS接口 - 知乎](https://zhuanlan.zhihu.com/p/508434025)
 
-# 1！5！
+[obsidian：双向链接的基本用法 - 知乎](https://zhuanlan.zhihu.com/p/499417467)
 
-## sdsdfs
+```mermaid
+---
+title: 自动转换
+--- 
+flowchart LR
+	byte --> short
+	short --> int
+	int --> long
+	long --> float
+	float --> double
+	char --> int
+```
 
-### sdfsdfsd
+```mermaid
+mindmap
+	((JavaScript))
+		EMCAScript
+			核心语言功能
+		文档对象模型
+			DOM，操作网页内容
+		浏览器对象模型
+			BOM，与浏览器交互
+```
 
 > vxcvxcvxd
 > ***fsdfsdfsd***
@@ -55,6 +74,10 @@ When you're ready, delete this note and make the vault your own.
 - dfdfgdfgdfg
 
 
+> [!NOTE] Title
+> Contents
+
+
 ---
 
 ```
@@ -63,12 +86,27 @@ sdgsdgs
 
 "sdsdgs"
 
-|zxfdfsdfs| fdgdfhdhd |
-|--|--|
-| dfdfhdf | dfhdfhdfhd |
-| dfdfhdf | dfhdfhdfhd |
-| dfdfhdf | dfhdfhdfhd |
-| dfdfhdf | dfhdfhdfhd |
+| zxfdfsdfs | fdgdfhdhd  |
+|:--------- | ---------- |
+| dfdfhdf   | dfhdfhdfhd |
+| dfdfhdf   | dfhdfhdfhd |
+| dfdfhdf   | dfhdfhdfhd |
+| dfdfhdf   | dfhdfhdfhd |
+
+```tx
+阶段 | 直接产物 | ATP产量
+:----: | --------------: | ---------:
+糖酵解 | 2 ATP ||
+^^ | 2 NADH | 3--5 ATP |
+丙酮酸氧化 | 2 NADH | 5 ATP |
+柠檬酸循环 | 2 ATP ||
+^^ | 6 NADH | 15 ATP |
+^^ | 2 FADH2 | 3 ATP |
+**30--32** ATP |||
+```
+
+
+
 
 sgsdgss `sefsdfs`
 : sdsdfsdfsdfsd`asfasfa`jdfd
@@ -217,9 +255,29 @@ classDiagram
     }
 ```
 
+```music-abc
+X:1
+T:The Legacy Jig
+M:6/8
+L:1/8
+R:jig
+K:G
+GFG BAB | gfg gab | GFG BAB | d2A AFD |
+GFG BAB | gfg gab | age edB |1 dBA AFD :|2 dBA ABd |:
+efe edB | dBA ABd | efe edB | gdB ABd |
+efe edB | d2d def | gfe edB |1 dBA ABd :|2 dBA AFD |]
+```
+
+```quicktab
+notes 4-5-6b7/3 10/4 | 5-4-2/3 2/2
+
+notes 6-7b9b7/3 7/4 | 9-8-7-6/2
+```
+
 ## 摘抄：爱猫与男娘——作为真实的虚拟
 
 [爱猫与男娘——作为真实的虚拟_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Ef421i7EC/?spm_id_from=333.788.recommend_more_video.8&vd_source=7a774f3cabca1af30bf72e095164a42b) 作者：符号社
 
 如果说，如今往流浪汉铁腕里扔钢镚已是令人嗤之以鼻，那么在手机上花点钱就能投喂流浪猫则是当下的潮流。这种模式十分有趣地勾勒出一种看似新颖的欲望图景，
 
+$$$$

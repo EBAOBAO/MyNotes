@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"c74e5913e4420b2e","x":-380,"y":-140,"width":250,"height":60,"type":"text","text":"# 线性方程组"},
+		{"id":"2a292f56c9d0f9ee","x":-40,"y":-340,"width":250,"height":60,"type":"text","text":"# 矩阵"}
+	],
+	"edges":[]
+}
