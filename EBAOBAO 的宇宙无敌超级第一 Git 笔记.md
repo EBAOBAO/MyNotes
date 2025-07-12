@@ -16,6 +16,7 @@
 添加修改：`git add <fileEdit>`
 移除修改：`git rm <fileEdit>`
 提交修改：`git commit -m <message>`
+添加所有修改：`git add --all`
 
 查询状态：`git status`
 查询具体修改内容：`git diff <file>`
@@ -24,13 +25,16 @@
 记录每一次命令: `git reflog`
 
 回滚版本：`git reset --hard HEAD^/<版本号头几位>` （版本号可以用上面那些指令执行）
+撤销提交（回滚版本，但是保留所有修改在暂存区，且不改变任何文件内容）
 
 丢弃工作区的修改：`git checkout -- file`（用版本库里的版本替换工作区的版本）
 撤销暂存区修改：`git reset HEAD <file>`
 
 创建 ssh key：`ssh-keygen -t rsa -C "youremail@example.com"`
-添加远程库：`git remote add origin <link>`
-把本地库的所有内容推送到远程库上：`git push -u origin master`，后 `git push origin master`
+
+添加远程库：`git remote add origin(或者随便你自己起的名) <link>`
+把本地库的所有内容推送到远程库上：`git push -u origin(远程库名) master(指定推送的远程库的分支)`，后 `git push origin master`
+强制推送至远程库：`git push origin master --force`
 删除远程库：`git remote rm <name>`
 查看远程库信息：`git remote -v`
 从远程库克隆：`git clone git@github.com:michaelliao/gitskills.git`
@@ -570,7 +574,7 @@ $ git commit -m "remove test.txt"
 
 ……好吧，这也许有点难以直观地理解：一个被“删除”的文件该如何被“提交”呢？
 
-先手动删除文件，然后使用`git rm <file>`和`git add<file>`效果是一样的。
+先手动删除文件，然后使用`git rm <file>`和`git add <file>`效果是一样的。
 
 另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
 
@@ -580,13 +584,7 @@ $ git checkout -- test.txt
 
 `git checkout`其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 
-注意
-
-从来没有被添加到版本库就被删除的文件，是无法恢复的！
-
-### 小结
-
-命令`git rm`用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失**最近一次提交后你修改的内容**。
+注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！
 
 
 # 远程仓库
