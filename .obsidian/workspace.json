@@ -4,53 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1f4e342369053af0",
+        "id": "e61e0e0993c9ee87",
         "type": "tabs",
         "children": [
           {
-            "id": "1e6411536b01743f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记"
-            }
-          },
-          {
-            "id": "f6a4fbd9fcbed17e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "matlab.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "matlab"
-            }
-          },
-          {
-            "id": "4b52dd2d0b589fbf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1"
-            }
-          },
-          {
-            "id": "0fbceca8a8b5ff09",
+            "id": "2e319c42665e25ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -64,7 +22,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -96,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#app",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -121,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -157,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
+                "file": "java/SE/java SE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "EBAOBAO 的宇宙无敌超级第一 stm32 笔记 的出链列表"
+              "title": "java SE 的出链列表"
             }
           },
           {
@@ -201,8 +158,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           }
         ],
@@ -226,56 +183,57 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0fbceca8a8b5ff09",
+  "active": "2e319c42665e25ae",
   "lastOpenFiles": [
-    "项目开发日志.md",
-    "pr基操.md",
-    "EBAOBAO 的宇宙无敌超级第一 stm32 笔记.md",
-    "EBAOBAO 的宇宙无敌超级第一 C 笔记 V1.2.1.md",
-    "matlab.md",
-    "java/SE/java SE.md",
-    "imgs/imgSTM32/I2CMode.png",
-    "imgs/imgSTM32/I2Cchuanshu.png",
-    "imgs/imgSTM32/I2Cjiexian.png",
-    "imgs/imgSTM32/TIMtype.png",
-    "imgs/imgSTM32/UARTMode.png",
-    "imgs/imgSTM32/USARTjieshuju.png",
-    "EBAOBAO 的宇宙无敌超级第一 C++ 笔记.md",
-    "elec/电子百科.md",
-    "qt.md",
-    "java/EBAOBAO 的宇宙无敌超级第一 java 笔记.md",
-    "java/java 设计模式.md",
-    "java/java 算法基础.md",
-    "编曲乱记.md",
-    "计算机通识.md",
-    "Test.md",
-    "EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
-    "数理乱记.md",
-    "乱记.md",
-    "imgs/imgSTM32/PWMcalc.png",
-    "imgs/imgSTM32/TIMoutMode.png",
-    "imgs/imgSTM32/GTIMout.png",
-    "imgs/imgSTM32/HTIMout.png",
-    "Excalidraw/Drawing 2025-03-15 16.06.12.excalidraw.md",
-    "elec/电分.md",
     "前端/hc 乱记.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
+    "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
+    "前端/从（0）开始学 html & CSS.md",
+    "从（1）开始学习 stm32 开发.md",
+    "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
+    "C/从（0）开始学 C ！.md",
+    "java/从（0）开始学 java ！.md",
+    "项目开发日志.md",
+    "cubase 记录.md",
+    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "教程编写",
+    "InputStreamReader.png.md",
+    "elec/电路分析.md",
+    "elec/电子百科.md",
+    "项目.md",
+    "StyleTest.md",
+    "java/java 算法基础.md",
+    "batch_commit_push.bat",
+    "新建文本文档.txt",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
-    "python/python 声音处理.md",
-    "imgs/imgBlender",
-    "blender.md",
-    "Excalidraw/Drawing 2025-03-09 15.56.48.excalidraw.md",
-    "Excalidraw/Drawing 2025-03-11 20.41.18.excalidraw.md",
+    "java/SE/java SE.md",
+    "java/SE/JVM 原理.md",
+    "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
+    "数理/数学/多元微积分/多元微积分.md",
+    "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
+    "数理/数理乱记.md",
+    "Excalidraw/Drawing 2025-03-06 17.06.35.excalidraw.md",
+    "Mybooks/code/Android开发入门与实战体验.pdf",
+    "Mybooks/code/黑客工具全攻略.pdf",
+    "Mybooks/code/黑客入门新手特训.pdf",
+    "Mybooks/math/诺贝尔物理学奖获得者著作选译系列/13456276_高分子物理学中的标度概念＝SCALING.pdf",
+    "Mybooks/math/普林斯顿数学指南全3册/普林斯顿数学指南  第1卷_13450905.pdf",
+    "自由逸致.md",
+    "Mybooks/四六级范文.pdf",
+    "Mybooks/四六级写作精品句型和高级词汇.pdf",
+    "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
+    "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
+    "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/3.png",
+    "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/1.png",
+    "Mybooks/pupupu/BLACKSOULS-青蛙的华尔兹图片谱.1/3.png",
+    "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/2.png",
+    "Mybooks/pupupu/BLACKSOULS-青蛙的华尔兹图片谱.1/2.png",
+    "Mybooks/pupupu/BLACKSOULS-青蛙的华尔兹图片谱.1/1.png",
+    "Mybooks/code/MathJax basic tutorial and quick reference - Mathematics Meta Stack Exchange_files/teams-promo.svg",
+    "Mybooks/code/MathJax basic tutorial and quick reference - Mathematics Meta Stack Exchange_files/so.png",
+    "数理/数学/线性代数/线性代数.canvas",
+    "数理/未命名.canvas",
     "未命名 1.canvas",
-    "未命名.canvas",
-    "imgs/2024-10-04",
-    "新建 文本文档.txt",
-    "imgs/imgSTM32",
-    "imgs/imgJavaSE",
-    "未命名",
-    "elec",
-    "imgs/imgDianBai",
-    "python",
-    "前端",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
