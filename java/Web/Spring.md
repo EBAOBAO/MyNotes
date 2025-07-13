@@ -28,8 +28,8 @@ Maven 本身解压后就能用，并不需要作配置。如果要做配置的�
 
 指定本地仓库位置：
 
-```xml
-<localRepository></localRepository>
+```xml title=conf/settings.xml
+<localRepository>D:\MavenRepository</localRepository>
 ```
 
 # 快速上手
