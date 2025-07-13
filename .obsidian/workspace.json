@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
+                "file": "java/Web/Spring.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 Git 笔记"
+              "title": "Spring"
             }
           }
         ],
@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -186,12 +185,16 @@
   },
   "active": "2e319c42665e25ae",
   "lastOpenFiles": [
+    "日常.md",
+    "java/Web/Spring.md",
+    "未命名.md",
+    "java/SE/java SE.md",
+    "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
     "前端/hc 乱记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "前端/从（0）开始学 html & CSS.md",
     "从（1）开始学习 stm32 开发.md",
-    "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "C/从（0）开始学 C ！.md",
     "java/从（0）开始学 java ！.md",
     "项目开发日志.md",
@@ -207,19 +210,15 @@
     "batch_commit_push.bat",
     "新建文本文档.txt",
     "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
-    "java/SE/java SE.md",
     "java/SE/JVM 原理.md",
     "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
     "数理/数学/多元微积分/多元微积分.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
-    "数理/数理乱记.md",
-    "Excalidraw/Drawing 2025-03-06 17.06.35.excalidraw.md",
     "Mybooks/code/Android开发入门与实战体验.pdf",
     "Mybooks/code/黑客工具全攻略.pdf",
     "Mybooks/code/黑客入门新手特训.pdf",
     "Mybooks/math/诺贝尔物理学奖获得者著作选译系列/13456276_高分子物理学中的标度概念＝SCALING.pdf",
     "Mybooks/math/普林斯顿数学指南全3册/普林斯顿数学指南  第1卷_13450905.pdf",
-    "自由逸致.md",
     "Mybooks/四六级范文.pdf",
     "Mybooks/四六级写作精品句型和高级词汇.pdf",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
