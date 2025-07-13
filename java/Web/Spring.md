@@ -32,4 +32,29 @@ Maven 本身解压后就能用，并不需要作配置。如果要做配置的�
 <localRepository>D:\MavenRepository</localRepository>
 ```
 
+指定远程仓库服务器：
+
+```xml title=conf/settings.xml
+<mirrors>
+	<!-- mirror
+	 | Specifies a repository mirror site to use instead of a given repository. The repository that
+	 | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
+	 | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
+	 |
+	<mirror>
+	  <id>mirrorId</id>
+	  <mirrorOf>repositoryId</mirrorOf>
+	  <name>Human Readable Name for this Mirror.</name>
+	  <url>http://my.repository.com/repo/path</url>
+	</mirror>
+	 -->
+	<mirror>
+      <id>aliyun</id>
+      <mirrorOf>*</mirrorOf>
+      <name>阿里云公共仓库</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+</mirrors>
+```
+
 # 快速上手
