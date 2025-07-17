@@ -13,16 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
+                "file": "blender.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 python 笔记"
+              "title": "blender"
             }
           }
-        ],
-        "stacked": true
+        ]
       }
     ],
     "direction": "vertical"
@@ -144,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
+                "file": "blender.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的宇宙无敌超级第一 Git 笔记 的大纲"
+              "title": "blender 的大纲"
             }
           },
           {
@@ -186,9 +185,12 @@
   },
   "active": "2e319c42665e25ae",
   "lastOpenFiles": [
+    "未命名.md",
+    "随便记",
+    "blender.md",
+    "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "java/Web/Spring.md",
     "日常.md",
-    "未命名.md",
     "java/SE/java SE.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 JS 笔记.md",
@@ -210,18 +212,14 @@
     "java/java 算法基础.md",
     "batch_commit_push.bat",
     "新建文本文档.txt",
-    "python/EBAOBAO 的宇宙无敌超级第一 python 笔记.md",
     "java/SE/JVM 原理.md",
     "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
-    "数理/数学/多元微积分/多元微积分.md",
-    "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "Mybooks/code/Android开发入门与实战体验.pdf",
     "Mybooks/code/黑客工具全攻略.pdf",
     "Mybooks/code/黑客入门新手特训.pdf",
     "Mybooks/math/诺贝尔物理学奖获得者著作选译系列/13456276_高分子物理学中的标度概念＝SCALING.pdf",
     "Mybooks/math/普林斯顿数学指南全3册/普林斯顿数学指南  第1卷_13450905.pdf",
     "Mybooks/四六级范文.pdf",
-    "Mybooks/四六级写作精品句型和高级词汇.pdf",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
     "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/3.png",
