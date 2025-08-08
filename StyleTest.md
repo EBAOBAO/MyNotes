@@ -281,5 +281,3 @@ notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 [爱猫与男娘——作为真实的虚拟_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Ef421i7EC/?spm_id_from=333.788.recommend_more_video.8&vd_source=7a774f3cabca1af30bf72e095164a42b) 作者：符号社
 
 如果说，如今往流浪汉铁腕里扔钢镚已是令人嗤之以鼻，那么在手机上花点钱就能投喂流浪猫则是当下的潮流。这种模式十分有趣地勾勒出一种看似新颖的欲望图景，
-
-顶冬季顶冬季大够大够叫叫叫一段一段一断一断一断一断一断一断一断带一段dai'r
