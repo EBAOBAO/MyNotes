@@ -165,3 +165,4 @@ CDN : 内容分发服务，旨在提高访问速度
 win + r -> services.msc -> windows update -> 常规 -> 禁用 -> 恢复 -> （第一次失败）无操作
 
 win + r -> gpedit.msc -> windows配置 -> windows update -> 配置自动更新
+
