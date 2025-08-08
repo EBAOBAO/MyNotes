@@ -1,6 +1,9 @@
 .trash
-Mybooks/*
+Mybooks/
 .obsidian/
 .stfolder/
 .stfolder (1)/
 .verysync/
+*.pdf
+*.rar
+*.zip
