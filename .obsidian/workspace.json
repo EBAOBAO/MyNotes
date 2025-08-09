@@ -34,23 +34,9 @@
               "icon": "lucide-file",
               "title": "EBAOBAO 的网安笔记"
             }
-          },
-          {
-            "id": "b5f9e148bb5f472d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "StyleTest.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "StyleTest"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -216,13 +202,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b5f9e148bb5f472d",
+  "active": "8d7f624925e0c107",
   "lastOpenFiles": [
+    "音乐/和弦理论笔记.md",
+    "StyleTest.md",
     "EBAOBAO 的网安笔记.md",
     "python/爬虫.md",
     "Mybooks/[手枪霰弹枪步枪拆解图集].(The.Gun.Digest.Book.of.Exploded.Gun.Drawings).Harold.Murtz.pdf",
     "Mybooks/[教你练肌肉].The.Weight.Training.Handbook.2005.CHS.Scan-UNKNOWN.pdf",
-    "StyleTest.md",
     "InputStreamReader.png.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "cubase 记录.md",
@@ -254,7 +241,6 @@
     "数理/数学/多元微积分/片段.md",
     "随便记/学车.md",
     "数理/数学/多元微积分/多元微积分.md",
-    "随便记/未命名思维导图.md",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
     "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/3.png",

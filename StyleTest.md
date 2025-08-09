@@ -15,8 +15,6 @@ When you're ready, delete this note and make the vault your own.
 
 ###### sdfsdfsdfsdf
 
-`sdfsdf`
-
 **sdfsdf** *sdfsdfsd* ***sdfsdfsdsdfaodishfoisd***
 
 [Obsidian-DATAVIEW 官方文档 中文版 05 Javascript API JS接口 - 知乎](https://zhuanlan.zhihu.com/p/508434025)
@@ -50,8 +48,9 @@ mindmap
 > vxcvxcvxd
 > ***fsdfsdfsd***
 > **fsdf**
+> *sadufhiuwedf*
 
-`vsvs`
+`vsvs` 
 
 **vscvcvsc**
 
