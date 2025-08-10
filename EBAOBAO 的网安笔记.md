@@ -28,6 +28,8 @@ A 要知道哪个设备是路由器，就要在 A 设置 *默认网关* 。*默�
 
 也就是说，网络层本身没有传输包的功能，包的实际传输是委托给数据链路层来实现的。交换机中有 Mac 地址表，路由器中有路由表，ARP 缓存表设备与路由器中都有。
 
+![](https://mermaid.ink/img/pako:eNqrVkrOT0lVslIqLkksSXXJTEwvSszVLTOKyYspebJr0ovGKc_3TlTQ1bVTANLPd895sW7f0yXtIFmwBhRRhWqQeEzJi-3rn0_Z-HTmCgj3ya4lz3oXPZuzC8J9OWPT88bVTxfNBHFrQQSKGSCrnuzYDVRuiEfOCI-cMVa5Z3N6n3YtBDpKSUcpN7UoNzEzBehroIsVFGKUSjJSc1NjlKyAzJTEouwYpZi8WqC6xNKS_ODKvGQlq5Ki0lQdpdKCFEQgwQQLEvOi8vOB3LTEnGIgPzUlsyS_yBcSquDArQUA78Wszw?type=png)
+
 # dns
 
 **DNS（Domain Name System，域名系统）** 是互联网的“电话簿”，它的核心功能是将人类可读的域名（如 `www.google.com`）转换为机器可识别的 IP 地址（如 `142.250.189.196`）。没有 DNS，我们就需要记住复杂的数字串才能访问网站。
@@ -60,15 +62,15 @@ A 要知道哪个设备是路由器，就要在 A 设置 *默认网关* 。*默�
 
 简单的说：买服务器 → 装环境 → 传代码 → 绑域名。
 
+不过这套流程在今天已经有些过时了，特别是手动装中间件那部分。现在连阿里云腾讯云都默认提供宝塔镜像。
+
 `主机记录（域名前缀）.域名`
 
-常规的网站搭建情况：
+常规的网站部署中的 **路由分发策略** （用于将不同业务或服务映射到同一服务器的不同入口）：
 
-- *子域名模式搭建*：搭建子域名站点（baidu.com -> tieba.baidu.com 一个程序，xxx.baidu.com 一个程序）
+- *子域名模式搭建*：搭建子域名站点，通过 *DNS 解析* 将不同子域名指向同一服务器 IP ，然后服务器 Web 程序（如 Nginx）根据 `Host` 头将请求路由到不同服务（baidu.com -> tieba.baidu.com 一个程序，xxx.baidu.com 一个程序）
 - *端口模式*：xxx.baidu.com 一个程序，xxx.baidu.com:88 一个程序
 - *目录模式*：xxx.baidu.com/faker 一个程序，xxx.baidu.com/bbs 一个程序
-
-其他：分配站（cnblog）（更安全）、集成软件、docker容器等
 
 中间件配置
 - 身份验证
@@ -119,7 +121,7 @@ js | 前端
 
 安全测试：能找到后端就测后端，找不到尝试寻找框架是否存在历史漏洞，还没有的话基本上就只能从社工或其他的应用点入手了。
 
-**用集成式环境搭建（宝塔）**：方便，会自动对权限配置做限制（文件管理会锁定目录，命令执行无法执行）（phpstudy：不安全 ，可以执行命令，自己装 iis ：有些命令可以执行，有些目录可访问）
+**用集成式环境搭建（宝塔）**：方便，会自动对权限配置做限制（文件管理会锁定目录，命令执行无法执行）（phpstudy：不安全 ，可以执行命令。自己装 iis ：有些命令可以执行，有些目录可访问）
 
 `whoami` : 查看当前用户
 
@@ -128,8 +130,6 @@ js | 前端
 **建站/分配站**：利用别人的域名、模板来搭建，攻的是别人的托管平台，收集信息环节就可以分辨出来（基本不必测试这种网站，这种网站没东西）
 
 静态网站：html 等写的网站，数据全都在html源码中，不会进行传输（js传输不算），这样就没有漏洞。另外还有“伪静态”这种东西
-
-![](https://mermaid.ink/img/pako:eNqrVkrOT0lVslIqLkksSXXJTEwvSszVLTOKyYspebJr0ovGKc_3TlTQ1bVTANLPd895sW7f0yXtIFmwBhRRhWqQeEzJi-3rn0_Z-HTmCgj3ya4lz3oXPZuzC8J9OWPT88bVTxfNBHFrQQSKGSCrnuzYDVRuiEfOCI-cMVa5Z3N6n3YtBDpKSUcpN7UoNzEzBehroIsVFGKUSjJSc1NjlKyAzJTEouwYpZi8WqC6xNKS_ODKvGQlq5Ki0lQdpdKCFEQgwQQLEvOi8vOB3LTEnGIgPzUlsyS_yBcSquDArQUA78Wszw?type=png)
 
 part1: 网络安全 win
 part2: 系统安全 linux
