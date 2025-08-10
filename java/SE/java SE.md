@@ -5647,6 +5647,8 @@ java 的集合里存放的对象都会赋给里面的 Object 类对象，我们�
 
 在 Java 语言处于还没有出现泛型的版本时，只能通过 Object 是所有类型的父类和类型强制转换两个特点的配合来实现类型泛化。例如在哈希表的存取中，JDK 1.5 之前使用 HashMap 的 `get()` 方法，返回值就是一个 Object 对象，由于Java语言里面所有的类型都继承于 java.lang.Object，那 Object 转型为任何对象成都是有可能的。但是也因为有无限的可能性，就只有程序员和运行期的虚拟机才知道这个 Object 到底是个什么类型的对象。在编译期间，编译器无法检查这个Object 的强制转型是否成功，如果仅仅依赖程序员去保障这项操作的正确性，许多 ClassCastException 的风险就会被转嫁到程序运行期之中。
 
+也许我们可以为各种类单独开发诸如 `StringArrayList` 这样的类，但显然这太麻烦了。
+
 **泛型（generic）** 又称参数化类型，是 jdk 5.0 出现的新特性，解决数据类型的安全性问题，可以保证在编译时没发出警告的话运行时就不会产生 ClassCastExeption 异常。
 
 泛型能够在类声明时通过一个标识表示类中某个属性的类型，或者是某个方法的返回值类型，或参数类型。
@@ -5712,30 +5714,34 @@ public static <T> T add(T x, T y) { return y; }
 
 1. 泛型也可以在接口名的声明后被声明。
 
-	```java
-	// 还可以像这样连着声明好几个
-	public interface Huhu<K, V> {}
-	```
+```java
+// 还可以像这样连着声明好几个
+public interface Huhu<K, V> {}
+```
 
-	常用字母`T`来作为泛型名（意为“Type”）。
+常用字母`T`来作为泛型名（意为“Type”）。
 
 2. **泛型只能传入引用类型，不能传入基本数据类型。**
-3. 在泛型指定了一个具体类型后，能将一个它的子类型的对象传给相关变量（就是可以向下转型）。
-4. 编译器会根据声明的泛型类型来推断出具体对象的泛型类型，这使我们常常能够省略一些代码：
-	```java
-	List<Integer> li = new ArrayList<>();
-	
-	//相当于……
-	
-	List<Integer> li = new ArrayList<Integer>();
-	```
-	而且，我们推荐使用这种简化后的写法。
-5. 该写泛型的地方不写，省略掉的话，默认给泛型传入 Object。
 
+3. 在泛型指定了一个具体类型后，能将一个它的子类型的对象传给相关变量（就是可以向下转型）。
+
+4. 编译器会根据声明的泛型类型来推断出具体对象的泛型类型，这使我们常常能够省略一些代码：
+
+```java
+List<Integer> li = new ArrayList<>();
+
+//相当于……
+
+List<Integer> li = new ArrayList<Integer>();
+```
+
+而且，我们推荐使用这种简化后的写法。
+
+5. 该写泛型的地方不写，省略掉的话，默认给泛型传入 Object。
 
 ### 类型擦除
 
-**事实上，泛型信息只存在于代码预编译时，编译器编译的时候与泛型相关的信息会被擦除掉，专业术语叫做类型擦除。也就是说，成功编译过后的 class 文件中不包含任何泛型信息，泛型信息不会进入到运行时阶段。** 大部分情况下，类型参数 T 被擦除后都会以 Object 类进行替换；而有一种情况则不是，那就是使用到了 extends 和 super 语法的有界类型参数。在这样的情况下还要维护泛型的性质，就会导致java的泛型有诸多限制：
+**事实上，泛型信息只存在于代码预编译时，编译器编译结束后在运行时与泛型相关的信息会被擦除掉，专业术语叫做类型擦除。也就是说，成功编译过后的 class 文件中不包含任何泛型信息，泛型信息不会进入到运行时阶段。** 大部分情况下，类型参数 T 被擦除后都会以 Object 类进行替换；而有一种情况则不是，那就是使用到了 extends 和 super 语法的有界类型参数。在这样的情况下还要维护泛型的性质，就会导致java的泛型有诸多限制：
 
 首先，无论泛型的类型是什么，编译器都认为带泛型的那个类是同一个类（那些对象`getClass()`方法返回的结果都是一样的）。
  
@@ -5757,6 +5763,25 @@ T blah = new T();
 List<Object> li = new ArrayList<String>();
 ```
 
+这是当然的，假设`ArrayList<Integer>`可以向上转型为`ArrayList<Number>`，观察一下代码：
+
+```java
+// 创建ArrayList<Integer>类型：
+ArrayList<Integer> integerList = new ArrayList<Integer>();
+// 添加一个Integer：
+integerList.add(new Integer(123));
+// “向上转型”为ArrayList<Number>：
+ArrayList<Number> numberList = integerList;
+// 添加一个Float，因为Float也是Number：
+numberList.add(new Float(12.34));
+// 从ArrayList<Integer>获取索引为1的元素（即添加的Float）：
+Integer n = integerList.get(1); // ClassCastException!
+```
+
+我们把一个`ArrayList<Integer>`转型为`ArrayList<Number>`类型后，这个`ArrayList<Number>`就可以接受`Float`类型，因为`Float`是`Number`的子类。但是，`ArrayList<Number>`实际上和`ArrayList<Integer>`是同一个对象，也就是`ArrayList<Integer>`类型，它不可能接受`Float`类型， 所以在获取`Integer`的时候将产生`ClassCastException`。
+
+实际上，编译器为了避免这种错误，根本就不允许把`ArrayList<Integer>`转型为`ArrayList<Number>`。而且据上文你也知道，**`ArrayList<Integer>`和`ArrayList<Number>`两者完全就不是继承关系。**
+
 不过，使用 **通配符** 的话，泛型就能变得更加灵活！
 
 ```java
@@ -5774,13 +5799,13 @@ List<? extends Object> li = new ArrayList<String>();
 
 ```java
 // 这么写是错的
-ArrayList<String>[] = new ArrayList<String>[3];
+ArrayList<String>[] arr = new ArrayList<String>[3];
 ```
 
 不过，你可以像这样：
 
 ```java
-ArrayList<String>[] = (ArrayList<String>[]) new ArrayList<?>[3];
+ArrayList<String>[] arr = (ArrayList<String>[]) new ArrayList<?>[3];
 ```
 
 
