@@ -5739,6 +5739,19 @@ List<Integer> li = new ArrayList<Integer>();
 
 5. 该写泛型的地方不写，省略掉的话，默认给泛型传入 Object。
 
+像使用`ArrayList`时，如果不定义泛型类型时，泛型类型实际上就是`Object`：
+
+```java
+// 编译器警告:
+List list = new ArrayList();
+list.add("Hello");
+list.add("World");
+String first = (String) list.get(0);
+String second = (String) list.get(1);
+```
+
+不过这样只把`<T>`当作`Object`使用显然没有发挥泛型的优势。
+
 ### 类型擦除
 
 **事实上，泛型信息只存在于代码预编译时，编译器编译结束后在运行时与泛型相关的信息会被擦除掉，专业术语叫做类型擦除。也就是说，成功编译过后的 class 文件中不包含任何泛型信息，泛型信息不会进入到运行时阶段。** 大部分情况下，类型参数 T 被擦除后都会以 Object 类进行替换；而有一种情况则不是，那就是使用到了 extends 和 super 语法的有界类型参数。在这样的情况下还要维护泛型的性质，就会导致java的泛型有诸多限制：
