@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java/SE/java SE.md",
+                "file": "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "java SE"
+              "title": "EBAOBAO 的宇宙无敌超级第一 Git 笔记"
             }
           },
           {
@@ -120,8 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -217,11 +216,11 @@
   },
   "active": "20b7f40cdbf0cfb7",
   "lastOpenFiles": [
+    "java/SE/java SE.md",
     "java/从（0）开始学 java ！.md",
     "java/Web/java Web.md",
     "java/Web/Spring.md",
     "java/projects.md",
-    "java/SE/java SE.md",
     "python/爬虫.md",
     "EBAOBAO 的网安笔记.md",
     "C/计算机通识.md",

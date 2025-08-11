@@ -6,7 +6,7 @@
 [windows 常用的shell（cmd.exe）命令大全 - 小林野夫 - 博客园 (cnblogs.com)](https://www.cnblogs.com/cdaniu/p/15168720.html)
 [Windows Shell 常用命令](https://zhuanlan.zhihu.com/p/143381025)
 
-# 常用指令集
+# 常用指令速查
 
 设定用户名：`git config --global user.name "EBAOBAO"`
 设定邮箱：`git config --global user.email "..."`
