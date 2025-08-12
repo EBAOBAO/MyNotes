@@ -8,32 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5cf5c000ef113f59",
+            "id": "8d7f624925e0c107",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Mybooks/math/费曼物理学讲义 第一卷_1983.pdf"
+                "file": "Mybooks/code/黑客入门新手特训.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "费曼物理学讲义 第一卷_1983"
-            }
-          },
-          {
-            "id": "8d7f624925e0c107",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "数理/物理学/乱记.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "乱记"
+              "title": "黑客入门新手特训"
             }
           }
         ],
@@ -202,11 +185,24 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5cf5c000ef113f59",
+  "active": "8d7f624925e0c107",
   "lastOpenFiles": [
-    "EBAOBAO 的网安笔记.md",
+    "Mybooks/code/黑客攻防技术宝典Web实战篇(第2版) (图灵程序设计丛书•网络安全系列) (Dafydd Stuttard) (Z-Library).pdf",
+    "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
+    "Mybooks/code/黑客攻防实战详解.pdf",
+    "Mybooks/code/Web前端开发最佳实践.html.pdf",
+    "Mybooks/math/GTM全集270含翻译版/GTM019.希尔伯特空间问题集Halmos,林辰译.pdf",
+    "Mybooks/math/GTM全集270含翻译版/GTM031.抽象代数讲义 2（中文版，Nathan Jacobson）.pdf",
+    "Mybooks/math/GTM全集270含翻译版/GTM032.抽象代数讲义 3（中文版，Nathan Jacobson）.pdf",
+    "Mybooks/math/GTM全集270含翻译版/GTM030.抽象代数讲义 1（中文版，Nathan Jacobson）.pdf",
+    "Mybooks/math/GTM全集270含翻译版/GTM006.Projective.Planes,.Daniel.R..Hughes,.Fred.C..Piper.（投射平面）.pdf",
+    "Mybooks/math/GTM全集270含翻译版/GTM007.数论教程(塞尔(SERRE,J.P.)着冯克勤翻译).pdf",
+    "Mybooks/math/GTM全集270含翻译版/GTM004.A.Course.in.Homological.Algebra.-.P.J.Hilton,U.Stammbach.pdf",
+    "数理/数学/线性代数/线性代数.canvas",
+    "数理/数学/微积分基础/微积分基础.md",
+    "数理/数学/微积分基础/微积分基础.md",
     "数理/物理学/乱记.canvas",
-    "Mybooks/math/费曼物理学讲义 第一卷_1983.pdf",
+    "EBAOBAO 的网安笔记.md",
     "前端/hc 乱记.md",
     "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
     "前端/从（0）开始学 JS.md",
@@ -221,8 +217,6 @@
     "C/计算机通识.md",
     "音乐/和弦理论笔记.md",
     "StyleTest.md",
-    "Mybooks/[手枪霰弹枪步枪拆解图集].(The.Gun.Digest.Book.of.Exploded.Gun.Drawings).Harold.Murtz.pdf",
-    "Mybooks/[教你练肌肉].The.Weight.Training.Handbook.2005.CHS.Scan-UNKNOWN.pdf",
     "InputStreamReader.png.md",
     "cubase 记录.md",
     "jekyll.md",
@@ -231,16 +225,6 @@
     "数理/数理乱记.md",
     "数理/物理学/电磁学/电磁学.md",
     "数理/物理学/动力学/动力学.md",
-    "数理/数学/线性代数/线性代数.canvas",
-    "数理/数学/微分方程/微分方程.md",
-    "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
-    "Mybooks/code/HTML5与CSS3权威指南（第3版·下册）.html.pdf",
-    "Mybooks/精分/拉康论爱——对拉康研讨班Ⅷ的探索.pdf",
-    "Mybooks/精分/齐泽克本体论(1).pdf",
-    "Mybooks/精分/剩余享乐.pdf",
-    "Mybooks/精分/法哲学原理（含Marks批判）英汉对译.pdf",
-    "Mybooks/精分/超越福柯.pdf",
-    "Mybooks/电子版日语教材/N2语法  新日语能力考试考前对策.pdf",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
     "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/3.png",
