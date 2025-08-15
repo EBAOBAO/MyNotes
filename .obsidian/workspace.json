@@ -37,14 +37,17 @@
             "id": "39252396bf139c9f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "前端/从（1）开始学 Vue 笔记.md",
-                "mode": "source",
-                "source": false
+                "file": "数理/数学/线性代数/线性代数.canvas",
+                "viewState": {
+                  "x": -215,
+                  "y": -190,
+                  "zoom": -0.8162545039708455
+                }
               },
-              "icon": "lucide-file",
-              "title": "从（1）开始学 Vue 笔记"
+              "icon": "lucide-layout-dashboard",
+              "title": "线性代数"
             }
           }
         ],
@@ -119,8 +122,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -184,13 +186,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/从（1）开始学 Vue 笔记.md",
+                "file": "数理/数学/线性代数/线性代数.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "从（1）开始学 Vue 笔记 的大纲"
+              "title": "线性代数 的大纲"
             }
           }
         ],
@@ -216,8 +218,15 @@
   },
   "active": "39252396bf139c9f",
   "lastOpenFiles": [
-    "前端/从（0）开始学 JS.md",
+    "数理/数学/级数/阶跃响应函数与冲激响应函数.md",
+    "数理/数学/级数",
+    "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
+    "数理/数学/微分方程/微分方程.md",
+    "数理/数学/线性代数/线性代数.canvas",
+    "数理/物理学/动力学/动力学.md",
+    "乱记.md",
     "前端/从（1）开始学 Vue 笔记.md",
+    "前端/从（0）开始学 JS.md",
     "python/从（0）开始学习 python.md",
     "从（1）开始学习 stm32 开发.md",
     "cubase 记录.md",
@@ -233,8 +242,6 @@
     "Mybooks/code/黑客攻防技术宝典Web实战篇(第2版) (图灵程序设计丛书•网络安全系列) (Dafydd Stuttard) (Z-Library).pdf",
     "Mybooks/code/黑客攻防实战详解.pdf",
     "Mybooks/code/Web前端开发最佳实践.html.pdf",
-    "Mybooks/math/GTM全集270含翻译版/GTM019.希尔伯特空间问题集Halmos,林辰译.pdf",
-    "数理/数学/线性代数/线性代数.canvas",
     "数理/数学/微积分基础/微积分基础.md",
     "数理/数学/微积分基础/微积分基础.md",
     "数理/物理学/乱记.canvas",
@@ -248,12 +255,6 @@
     "C/计算机通识.md",
     "音乐/和弦理论笔记.md",
     "StyleTest.md",
-    "InputStreamReader.png.md",
-    "jekyll.md",
-    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-    "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
-    "数理/数理乱记.md",
-    "数理/物理学/电磁学/电磁学.md",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
     "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/3.png",
