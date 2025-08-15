@@ -1209,14 +1209,15 @@ def log(func):
     return wrapper
 ```
 
-然后像这样：
+然后像这样使用这个很熟：
 
 ```python
 def now():
-	print('2015-3-25')
+	print('2025-8-15')
 
 now = log(now)
 now()
+
 """
 call now():
 2015-3-25
@@ -1231,7 +1232,17 @@ def now():
     print('2015-3-25')
 ```
 
-如果decorator本身需要传入参数，那就需要编写一个返回decorator的高阶函数，写出来会更复杂。比如，要自定义log的文本：
+如果decorator本身需要传入参数，当然可以像这样：
+
+```python
+def decorator(text, func):
+    def wrapper(*args, **kw):
+        print('%s %s():' % (text, func.__name__))
+        return func(*args, **kw)
+    return wrapper
+```
+
+那就需要编写一个返回decorator的高阶函数，写出来会更复杂。比如，要自定义log的文本：
 
 ```python
 def log(text):
