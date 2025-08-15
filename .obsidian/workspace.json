@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/从（0）开始学习 python.md",
+                "file": "前端/从（1）开始学 Vue 笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "从（0）开始学习 python"
+              "title": "从（1）开始学 Vue 笔记"
             }
           }
         ],
@@ -184,13 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python/从（0）开始学习 python.md",
+                "file": "前端/从（1）开始学 Vue 笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "从（0）开始学习 python 的大纲"
+              "title": "从（1）开始学 Vue 笔记 的大纲"
             }
           }
         ],
@@ -198,7 +198,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,10 +216,12 @@
   },
   "active": "39252396bf139c9f",
   "lastOpenFiles": [
+    "前端/从（0）开始学 JS.md",
+    "前端/从（1）开始学 Vue 笔记.md",
+    "python/从（0）开始学习 python.md",
     "从（1）开始学习 stm32 开发.md",
     "cubase 记录.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
-    "python/从（0）开始学习 python.md",
     "python/爬虫.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
     "EBAOBAO 的网安笔记.md",
@@ -236,8 +239,6 @@
     "数理/数学/微积分基础/微积分基础.md",
     "数理/物理学/乱记.canvas",
     "前端/hc 乱记.md",
-    "前端/EBAOBAO 的宇宙无敌超级第一 Vue 笔记.md",
-    "前端/从（0）开始学 JS.md",
     "前端/从（0）开始学 html & CSS.md",
     "java/SE/java SE.md",
     "java/从（0）开始学 java ！.md",
