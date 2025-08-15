@@ -34,7 +34,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -201,11 +200,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8d7f624925e0c107",
+  "active": "95ffb52fd26624f9",
   "lastOpenFiles": [
+    "EBAOBAO 的网安笔记.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
     "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
-    "EBAOBAO 的网安笔记.md",
     "Mybooks/code/操作系统实现之路.pdf",
     "Mybooks/code/编译器设计之路.pdf",
     "Mybooks/code/《Pro Git》中文版.pdf",
