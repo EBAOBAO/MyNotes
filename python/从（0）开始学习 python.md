@@ -1209,7 +1209,7 @@ def log(func):
     return wrapper
 ```
 
-然后像这样使用这个很熟：
+然后像这样使用这个函数：
 
 ```python
 def now():
