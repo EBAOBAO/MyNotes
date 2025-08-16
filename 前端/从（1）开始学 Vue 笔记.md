@@ -8,7 +8,7 @@ vite 是新一代 *前端构建工具*，构建速度快于 webpack ，写TS之�
 
 要创建工程还需要具备 node.js 环境，直接上网搜索官网并下载稳定版即可，要知道自己的电脑是否有 node.js，cmd 中输入 `node` 指令就可以观察到了。
 
-使用 `npm create vite@latest` 来搭建。
+**使用 `npm create vite@latest` 来搭建。之后全选 no 。然后命令行所在目录中就会多出一个项目文件夹。**
 
 新建项目后先来观察：
 
@@ -16,7 +16,7 @@ vite 是新一代 *前端构建工具*，构建速度快于 webpack ，写TS之�
 
 再看 public 文件夹，这就是脚手架的根目录，现在只放了页签图标。还有 src 文件夹，这里就是工作所在的地方了，存放源代码。
 
-最后就是文件夹外面的那些零零散散的文件了，env.d.ts 引入了一个东西，说明这个项目需要依赖，执行 `npm i` 可以安装项目运行所需的所有的依赖（安装好就会出现文件夹 node_modules），这个文件的作用就是让 TS 能认识  .jpg、.txt 这样的文件。index.html 就是入口文件了，一般来说拿到一个前端项目后你需要查看 package.json 来寻找短命令，像这里就是"dev"，所以你应该运行 `npm run dev` 来启动程序。package.json 就是 *信息描述文件* 。还有几个 json 文件都是 TS 的配置文件。那个 vite.config.js 就是整个工程的配置文件，能去安装插件、配置代理等等。
+最后就是文件夹外面的那些零零散散的文件了，env.d.ts 引入了一个东西，说明这个项目需要依赖，**进入到项目所在目录，执行 `npm i` 或 `cnpm install`**（cnpm 是由淘宝团队维护的 npm 镜像工具，服务器位于国内，用于解决 npm 官方源（国外服务器）在国内下载速度慢的问题。）可以安装项目运行所需的所有的依赖（安装好就会出现文件夹 node_modules），这个文件的作用就是让 TS 能认识  .jpg、.txt 这样的文件。index.html 就是入口文件了，一般来说拿到一个前端项目后你需要查看 package.json 来寻找短命令，像这里就是"dev"，所以你应该运行 `npm run dev` 来启动程序。package.json 就是 *信息描述文件* 。还有几个 json 文件都是 TS 的配置文件。那个 vite.config.js 就是整个工程的配置文件，能去安装插件、配置代理等等。
 
 ```json title:package.json
 {
@@ -68,6 +68,10 @@ createApp(App).mount('#app')
 1. template : 写 html 结构
 2. script : 写脚本的，JS 或 TS（可以 `<template lang="ts">`）
 3. style : 写样式的
+
+## 运行
+
+
 
 ## 补充：配置代码片段
 
@@ -137,7 +141,7 @@ export default {
 
 ## 属性绑定
 
-一个标签当中会有属性，这里很可惜双大括号的语法不能在标签的属性中使用。不过要想响应式地绑定一个 attribute 也是可以做得到的，只要使用 `v-bind` 指令就可以了：
+一个标签当中会有属性，很可惜双大括号的语法不能在标签的属性中使用。不过要想响应式地绑定一个 attribute 也是可以做得到的，只要使用 `v-bind` 指令就可以了：
 
 ```xml
 <template>
