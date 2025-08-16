@@ -46,9 +46,19 @@
               "icon": "lucide-file",
               "title": "乱记"
             }
+          },
+          {
+            "id": "3c1eeff63ece55aa",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -119,8 +129,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -214,8 +223,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "39252396bf139c9f",
+  "active": "3c1eeff63ece55aa",
   "lastOpenFiles": [
+    "EBAOBAO 的网安笔记.md",
+    "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
+    "乱记.md",
     "blender 记录.md",
     "数理/数学/线性代数/线性代数.canvas",
     "数理/数学/级数/阶跃响应函数与冲激响应函数.md",
@@ -223,7 +235,6 @@
     "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
     "数理/数学/微分方程/微分方程.md",
     "数理/物理学/动力学/动力学.md",
-    "乱记.md",
     "前端/从（1）开始学 Vue 笔记.md",
     "前端/从（0）开始学 JS.md",
     "python/从（0）开始学习 python.md",
@@ -231,8 +242,6 @@
     "cubase 记录.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "python/爬虫.md",
-    "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
-    "EBAOBAO 的网安笔记.md",
     "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
     "Mybooks/code/操作系统实现之路.pdf",
     "Mybooks/code/编译器设计之路.pdf",
@@ -253,7 +262,6 @@
     "java/projects.md",
     "C/计算机通识.md",
     "音乐/和弦理论笔记.md",
-    "StyleTest.md",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
     "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/3.png",
