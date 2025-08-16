@@ -720,7 +720,7 @@ name1=value1&name2=value2
 	<tr>
 		<th>required</th>
 		<td>---</td>
-		<td>必填需</td>
+		<td>必填</td>
 	</tr>
 	<tr>
 		<th>checked</th>
