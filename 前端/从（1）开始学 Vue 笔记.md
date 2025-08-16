@@ -165,7 +165,7 @@ export default {
 
 显然这个 `v-bind` 是会相当常用的，因此事实上它也有简写的方法：
 
-```ts
+```xml
 <template>
   <div :id="dynamicID" :class="dynamicClass">Test</div>
 </template>
@@ -183,4 +183,20 @@ export default {
 ```
 
 在学习 html 的过程中我们还遇到过一些只有一个一般与属性名称相同的值的布尔属性，**在这里它会根据传入的 true/false 值来决定该属性是否该存在于该元素上。**
+
+```xml
+<template>
+  <button :disabled="isDisabled">按一下</button>
+</template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      isDisabled: true
+    }
+  }
+}
+</script>
+```
 

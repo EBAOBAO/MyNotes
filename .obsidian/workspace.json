@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "EBAOBAO 的网安笔记.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -40,7 +40,7 @@
               "type": "markdown",
               "state": {
                 "file": "乱记.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -230,11 +230,11 @@
   },
   "active": "3c1eeff63ece55aa",
   "lastOpenFiles": [
-    "前端/从（0）开始学 html & CSS.md",
-    "前端/从（1）开始学 Vue 笔记.md",
-    "EBAOBAO 的网安笔记.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
     "乱记.md",
+    "前端/从（1）开始学 Vue 笔记.md",
+    "EBAOBAO 的网安笔记.md",
+    "前端/从（0）开始学 html & CSS.md",
     "blender 记录.md",
     "数理/数学/线性代数/线性代数.canvas",
     "数理/数学/级数/阶跃响应函数与冲激响应函数.md",
