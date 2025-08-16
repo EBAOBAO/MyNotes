@@ -123,6 +123,7 @@ export default {
 ```xml
 <template>
   <p>{{ rawHtml }}</p>
+  <!-- 这里不会将返回的 rawhtml 当成 html 标签-->
   <span v-html="rawHtml"></span>
 </template>
 
