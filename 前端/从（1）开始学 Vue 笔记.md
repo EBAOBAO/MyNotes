@@ -193,6 +193,7 @@ export default {
 export default {
   data() {
     return {
+	  // 注意这里是一个布尔值而不是一个字符串
       isDisabled: true
     }
   }
@@ -200,3 +201,23 @@ export default {
 </script>
 ```
 
+除了这些外，`v-bind` 还可以用来给一个标签动态绑定多个属性：
+
+```xml
+<template>
+  <button v-bind="objectOfAttrs">Test</button>
+</template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      objectOfAttrs: {
+        id: '1919810',
+        disabled: true
+      }
+    }
+  }
+}
+</script>
+```
