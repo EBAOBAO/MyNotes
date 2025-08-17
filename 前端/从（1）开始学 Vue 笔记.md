@@ -238,3 +238,21 @@ vue 可以根据条件来渲染不同的视图。
 - `v-show`
 
 `v-if` 的用法：
+
+```xml
+<template>
+    <!-- 若 flag 为 true ，则标签显示，否则无法显示 -->
+    <div v-if="flag">看见我了吗？</div>
+    <div v-else>看不见吧</div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            flag: true
+        }
+    }
+}
+</script>
+```
