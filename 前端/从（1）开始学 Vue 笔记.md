@@ -389,3 +389,6 @@ export default {
 }
 </script>
 ```
+
+`v-for` 不仅可以用来遍历数组，还可以用来遍历对象：
+
