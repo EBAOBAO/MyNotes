@@ -71,7 +71,7 @@ createApp(App).mount('#app')
 
 ## 运行
 
-
+有时 powershell 没有权限来运行，可以用 `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` 临时获得权限。
 
 ## 补充：配置代码片段
 
@@ -372,7 +372,7 @@ export default {
 </script>
 ```
 
-这里也可以用 `v-for="... of ..."` 来 更贴近 js 的迭代器语法：
+这里也可以用 `v-for="... of ..."` 来 更贴近 js 的迭代器语法，Vue为了降低学习成本，在模板语法中统一了`of`和`in`的行为，使两者完全等价，所以其实怎么写都没差就是了：
 
 ```xml
 <template>
