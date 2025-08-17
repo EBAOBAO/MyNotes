@@ -1295,7 +1295,7 @@ for (let x in a) {
 
 
 > [!info] Tips
-> 为什么遍历不到 `length` 属性呢？事实上，`length` 在 JavaScript 引擎内部被设计为当数组的索引属性发生变化时，自动进行更新，而不是作为一个普通的、可枚举的属性被 `for...in` 循环遍历。
+> 为什么遍历不到 `length` 属性呢？事实上，`length` 在 JavaScript 引擎内部被设计为当数组的索引属性发生变化时，自动进行更新，而不是作为一个普通的、**可枚举的属性** 被 `for...in` 循环遍历。
 > 
 > 而且，在 JavaScript 中，对象的属性有一个 *[内部属性](https://blog.csdn.net/qq_31190615/article/details/90613697)*  `[[Enumerable]]`，它决定了该属性是否可以被 `for...in` 循环遍历。`for...in` 循环会遍历对象自身和继承的、可枚举的属性。而数组的 `length` 属性虽然存在于数组对象上，但由于它的 `[[Enumerable]]` 属性为 `false`，所以不符合 `for...in` 循环的遍历条件，从而不会被遍历到。
 > 
