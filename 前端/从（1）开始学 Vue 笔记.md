@@ -256,3 +256,33 @@ export default {
 }
 </script>
 ```
+
+```xml
+<template>
+    <!-- 多分支 -->
+    <div v-if="type === 'A'">A</div>
+    <div v-else-if="type === 'B'">B</div>
+    <div v-else-if="type === 'C'">C</div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            type: 'B'
+        }
+    }
+}
+</script>
+```
+
+`v-show` 与 `v-if` 几乎相同，唯一的区别在于 `v-if` 可以配合 `v-else` 之类的而 `v-show` 不行。
+
+不过这当然不意味着 `v-show` 没有存在的必要。事实上，`v-if` 会真正地做到条件渲染：接收到 true 时重建/开始渲染区块，接收到 false 时销毁/不开始渲染区块，而 `v-show` 只是单纯地更改元素的 CSS display 属性而已。**也就是说，`v-if` 有更高的切换开销，如果需要频繁切换，`v-show` 会更合适一点。**
+
+# 列表渲染
+
+列表渲染基本上会是页面最常见的渲染效果，比如一条条的新闻之类的。
+
+使用 `v-for` 指令基于一个数组来渲染一个列表，要使用到 `item in items` 的特殊的值，其中 `items` 是指定的数组，`item` 是用以迭代数组元素的变量。
+
