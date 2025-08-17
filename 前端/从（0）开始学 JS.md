@@ -1295,19 +1295,39 @@ for (let x in a) {
 
 
 > [!info] Tips
-> 为什么遍历不到 `length` 属性呢？事实上，`length` 在 JavaScript 引擎内部被设计为当数组的索引属性发生变化时，自动进行更新，而不是作为一个普通的、**可枚举的属性** 被 `for...in` 循环遍历。
+> 为什么遍历不到 `length` 属性呢？事实上，`length` 在 JavaScript 引擎内部被设计为当数组的索引属性发生变化时，自动进行更新的属性，而不是作为一个普通的、**可枚举的属性** 被 `for...in` 循环遍历。
 > 
-> 而且，在 JavaScript 中，对象的属性有一个 *[内部属性](https://blog.csdn.net/qq_31190615/article/details/90613697)*  `[[Enumerable]]`，它决定了该属性是否可以被 `for...in` 循环遍历。`for...in` 循环会遍历对象自身和继承的、可枚举的属性。而数组的 `length` 属性虽然存在于数组对象上，但由于它的 `[[Enumerable]]` 属性为 `false`，所以不符合 `for...in` 循环的遍历条件，从而不会被遍历到。
-> 
-> 这时候就会有人问了：可以将`length` 的 `enumerable` 设置为 `true` 吗？好吧，可以是可以的，尽管这不符合常规用法。不过这是个内部属性，所以不能够直接通过复制的方式进行修改，如果你真的想修改 `[[Enumerable]]` 的话，你可以尝试这样：
-> 
+> 准确地说是这样：在 JavaScript 中，每个对象属性都有一个关联的描述符对象，它包含以下关键标志：
 > ```javascript
-Object.defineProperty(a, 'length', {
-  enumerable: true
+> {
+ > 	value: 2,         // 属性值
+ > 	writable: true,    // 是否可修改
+ > 	enumerable: false, // 是否可枚举 ← 关键点
+ > 	configurable: false // 是否可删除或修改特性
+ > }
+> ```
+> 其中的 `enumerable` 决定了该属性是否可以被 `for...in` 循环遍历（可枚举）。而数组的 `length` 属性的`enumerable`会被 JavaScript 引擎**刻意设计为不可枚举**。
+> 
+> 以下实验理论上可以验证这里的说法：
+> ```js
+> // 1. 正常数组的 length 不可枚举
+const arr = ['a', 'b'];
+for (const key in arr) {
+  console.log(key); // 只输出 "0", "1"
+}
+> 
+// 2. 手动修改为可枚举
+Object.defineProperty(arr, 'length', {
+  enumerable: true // 强制设为可枚举，不过由于 configurable 也是 false 所以其实这里会报错 
 });
+> 
+// 3. 此时 for...in 会包含 length
+for (const key in arr) {
+  console.log(key); // 输出 "0", "1", "length"
+}
 > ```
 > 
-> ……不过这也并不是`for...in` 循环不能遍历到它的主要原因。事实上，**上面的代码运行的时候会报错，你无法修改 `length` 的 `enumerable`。** 数组的 `length` 属性具有特殊性，它在 JavaScript 引擎内部被特殊处理，不会也不能够被 `for...in` 循环遍历到。
+> ……这里的强制修改是失败的，虽然也存在一些更麻烦的方法可以修改它的这些标签，不过经过以上的讨论我们已经明白了为什么 `for...in` 不能遍历到 `length`，不必执着于此了。更何况 JavaScript 需要通过限制核心属性的修改来保证语言稳定性和性能，尊重 JavaScript 的内置属性设计别乱搞对我们用户而言显然也是更好的选择。 
 
 **`for ... of`循环则完全修复了这些问题，它通过调用可迭代对象的迭代器（iterator）来获取元素，这样就会只循环集合本身的元素：**
 
@@ -1320,9 +1340,23 @@ for (let x of a) {
 ```
 
 > [!info] info
-> 如果一个对象是是可迭代的，那么它就应该实现一个 `Symbol.iterator` 方法，这个方法应当返回一个迭代器对象。`for...of` 循环会调用该对象的 `Symbol.iterator` 方法以获取一个迭代器（iterator）对象，然后不断调用 `next()` 方法，循环变量就会取到该方法返回的对象的属性 `value`，那就是元素的值，直到 `next()` 方法返回的对象中的 `done` 为 `true`。
+> 如果一个对象是是可迭代的，那么它就应该实现一个 `Symbol.iterator` 方法，这个方法应当返回一个迭代器对象。`for...of` 循环会调用该对象的 `Symbol.iterator` 方法以获取这个迭代器对象，然后不断调用迭代器对象的 `next()` 方法，循环变量就会取到该方法返回的对象的属性 `value`，那就是元素的值，直到 `next()` 方法返回的对象中的 `done` 为 `true`。
 
-更不用说 `for ... in` 还无法遍历 Map 和 Set 了，这就是为什么要引入新的`for ... of`循环。
+更不用说 `for ... in` 还无法遍历 Map 和 Set 了（*它们的内容不是作为属性存储的，而是保存在引擎内部的 \[\[SetData\]\] 和 \[\[MapData\]\] 槽中*），这就是为什么要引入新的`for ... of`循环。
+
+```js title=Set和Map为什么不能被for...in遍历
+const set = new Set([1, 2, 3]);
+const map = new Map([['a', 1], ['b', 2]]);
+
+// 检查可枚举属性
+console.log(Object.keys(set));    // []
+console.log(Object.keys(map));    // []
+
+// 检查所有自身属性（包含不可枚举）
+console.log(Object.getOwnPropertyNames(set)); // []
+console.log(Object.getOwnPropertyNames(map)); // []
+// 显然 set 和 map 好像都是没有属性的
+```
 
 然而，更好的方式是直接使用`iterable`内置的`forEach`方法，它接收一个函数，每次迭代就自动回调该函数。以`Array`为例：
 
