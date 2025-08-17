@@ -371,3 +371,21 @@ export default {
 }
 </script>
 ```
+
+这里也可以用 `v-for="... of ..."` 来 更贴近 js 的迭代器语法：
+
+```xml
+<template>
+    <div v-for="item of ss">{{ item }}</div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            ss: new Set([111, 222, 333])
+        }
+    }
+}
+</script>
+```
