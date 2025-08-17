@@ -307,6 +307,128 @@ to[R=$R_2$, i>_=$i_2$]
 \end{document}
 ```
 
+```tikz
+\begin{document}
+  \begin{tikzpicture}[domain=0:4]
+    \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+    \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+    \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
+    \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
+    \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+    \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+  \end{tikzpicture}
+\end{document}
+```
+
+
+```tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[colormap/viridis]
+\addplot3[
+	surf,
+	samples=18,
+	domain=-3:3
+]
+{exp(-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
+```
+
+```math
+||{"id":933187298776}||
+
+a + a = b
+```
+```tikz
+\usepackage{chemfig}
+\begin{document}
+\definesubmol\fragment1{
+    (-[:#1,0.85,,,draw=none]
+    -[::126]-[::-54](=_#(2pt,2pt)[::180])
+    -[::-70](-[::-56.2,1.07]=^#(2pt,2pt)[::180,1.07])
+    -[::110,0.6](-[::-148,0.60](=^[::180,0.35])-[::-18,1.1])
+    -[::50,1.1](-[::18,0.60]=_[::180,0.35])
+    -[::50,0.6]
+    -[::110])
+    }
+\chemfig{
+!\fragment{18}
+!\fragment{90}
+!\fragment{162}
+!\fragment{234}
+!\fragment{306}
+}
+\end{document}
+```
+
+
+```tikz
+\begin{document}
+\begin{tikzpicture}
+\draw (0, 0)--(5, 0);
+\draw[->] (0, -1)--(5, -1);
+\draw[<-] (0, -2)--(5, -2);
+\draw[<->] (0, -3)--(5, -3);
+\draw[|<->|] (0, -4)--(5, -4);
+\draw (0, -5) to (5, -5);
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=latex]
+\draw[->] (0, -1)--(5, -1);
+\draw[<-] (0, -2)--(5, -2);
+\draw[<->] (0, -3)--(5, -3);
+\draw[|<->|] (0, -4)--(5, -4);
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth]
+\draw[->] (0, -1)--(5, -1);
+\draw[<-] (0, -2)--(5, -2);
+\draw[<->] (0, -3)--(5, -3);
+\draw[|<->|] (0, -4)--(5, -4);
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth]
+% 虚线
+\draw[dashed] (0,0)--(5,0);
+% 点线
+\draw[dotted] (0,-1)--(5,-1);
+% 点划线
+\draw[dashdotted] (0,-2)--(5,-2);
+% 不同粗细
+\draw[|<->|, dashed, thick] (0, -3)--(5, -3);
+\draw[very thick] (0,-4)--(5,-4);
+\draw[ultra thick] (0,-5)--(5,-5);
+\draw[thin] (0,-6)--(5,-6);
+% 标注
+\draw[|<->|, dashed, thick] (0, -7)--node{18cm}(5, -7); % 这样不太好
+\draw[|<->|, dashed, thick] (0, -8)--node[above]{18cm}(5, -8); % 上方不错
+\draw[|<->|, dashed, thick] (0, -9)--node[below]{18cm}(5, -9); % 下方也行
+\draw[|<->|, dashed, thick] (0, -10)--node[left]{18cm}(5, -10);
+\draw[|<->|, dashed, thick] (0, -11)--node[right]{18cm}(5, -11);
+\draw[|<->|, dashed, thick] (0, -12)--node[below=3mm]{18cm}(5, -12); % 指定下方距离
+\end{tikzpicture}
+\end{document}
+```
+
 ## 摘抄：爱猫与男娘——作为真实的虚拟
 
 [爱猫与男娘——作为真实的虚拟_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Ef421i7EC/?spm_id_from=333.788.recommend_more_video.8&vd_source=7a774f3cabca1af30bf72e095164a42b) 作者：符号社
