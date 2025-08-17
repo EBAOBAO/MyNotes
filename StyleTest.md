@@ -275,6 +275,25 @@ notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 
  秋闱软月云梳翅， 松拥黛粉更航安。 快莺两望走夏蛙， 撇草追鱼滨鸟眠。
 
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american, voltage shift=0.5]
+\draw (0,0)
+to[isource, l=$I_0$, v=$V_0$] (0,3)
+to[short, -*, i=$I_0$] (2,3)
+to[R=$R_1$, i>_=$i_1$] (2,0) -- (0,0);
+\draw (2,3) -- (4,3)
+to[R=$R_2$, i>_=$i_2$]
+(4,0) to[short, -*] (2,0);
+\end{circuitikz}
+\end{document}
+```
+
+```latex
+
+```
+
 ## 摘抄：爱猫与男娘——作为真实的虚拟
 
 [爱猫与男娘——作为真实的虚拟_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Ef421i7EC/?spm_id_from=333.788.recommend_more_video.8&vd_source=7a774f3cabca1af30bf72e095164a42b) 作者：符号社
