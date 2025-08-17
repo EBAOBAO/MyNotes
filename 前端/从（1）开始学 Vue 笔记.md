@@ -304,5 +304,70 @@ export default {
 
 大多数情况下，我们渲染的数据源来源于网络请求，这些数据基本上都是 JSON 格式的。
 
+```xml
+<template>
+    <div v-for="hero in heroes">
+        <h3>{{ hero.name }}</h3>
+        <p>I'm {{ hero.age }} years old.</p>
+    </div>
+</template>
 
+<script>
+export default {
+    data() {
+        return {
+	        // 假装下面这些是从网上过来的数据
+            heroes: [
+                {
+                    name: "baoabao",
+                    age: 123
+                },
+                {
+                    name: "humou",
+                    age: 114514
+                },
+                {
+                    name: "jibalao",
+                    age: 1919
+                }
+            ]
+        }
+    }
+}
+</script>
+```
 
+除此外，`v-for` 还能将当前项的索引赋给第二个变量：
+
+```xml
+<template>
+    <div v-for="(hero, index) in heroes">
+        <h3>{{ index }}-{{ hero.name }}</h3>
+        <p>I'm {{ hero.age }} years old.</p>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+	        // 假装下面这些是从网上过来的数据
+            heroes: [
+                {
+                    name: "baoabao",
+                    age: 123
+                },
+                {
+                    name: "humou",
+                    age: 114514
+                },
+                {
+                    name: "jibalao",
+                    age: 1919
+                }
+            ]
+        }
+    }
+}
+</script>
+```
