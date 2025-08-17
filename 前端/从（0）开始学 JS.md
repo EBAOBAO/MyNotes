@@ -594,6 +594,118 @@ s.substring(7); // 从索引7开始到结束，返回'world'
 
 `split('<char>')` 则将字符串以指定字符分隔为一个数组。
 
+# 对象
+
+啊，我有说过JavaScript其实是一门面向对象语言吗？不过与 Java 语言不同，JavaScript 中并没有在语言层面上明确有 ”类“ 这样的说法，**事实上，JavaScript 所拥有的是一个又一个的具体的对象** ，JavaScript 的对象是一组由键-值组成的无序集合，也更像是 map 或 pytohn 中的 Dictionary 而非传统意义上的 Object，例如：
+
+```js
+var person = {
+    name: 'Bob',
+    age: 20,
+    tags: ['js', 'web', 'mobile'],
+    city: 'Beijing',
+    hasCar: true,
+    zipcode: null
+};
+```
+
+## 访问属性
+
+JavaScript对象的键都是字符串类型，值可以是任意数据类型。上述`person`对象一共定义了6个键值对，而每个键值对又可以被称为对象的 *属性* ，键就是其属性名，值就是其属性值，一般我们就会这么说：`person`的`name`属性为`'Bob'`，`zipcode`属性为`null`。
+
+要获取一个对象的属性，我们用`对象变量.属性名`的方式：
+
+```javascript
+person.name; // 'Bob'
+person.zipcode; // null
+```
+
+但这种访问方式要求属性名必须是一个有效的变量名，如果不是有效的变量名又该怎么办？首先，如果属性名包含特殊字符，在对象声明时就必须用`''`括起来：
+
+```javascript
+let xiaohong = {
+    name: '小红',
+    'middle-school': 'No.1 Middle School'
+};
+```
+
+像这里`xiaohong`的属性名`middle-school`不是一个有效的变量，就需要用`''`括起来。然后访问这个属性也无法使用`.`操作符，必须用`['xxx']`来访问：
+
+```javascript
+xiaohong['middle-school']; // 'No.1 Middle School'
+xiaohong['name']; // '小红'
+xiaohong.name; // '小红'
+```
+
+也可以用`xiaohong['name']`来访问`xiaohong`的`name`属性，不过`xiaohong.name`的写法显然更简洁。**我们在编写JavaScript代码的时候，属性名尽量使用标准的变量名，这样就可以直接通过`object.prop`的形式访问一个属性了。**
+
+JavaScript规定，访问不存在的属性不报错，而是返回`undefined`：
+
+```js
+let xiaoming = {
+    name: '小明'
+};
+
+console.log(xiaoming.name);
+console.log(xiaoming.age); // undefined
+```
+
+## 操作对象
+
+由于JavaScript的对象是动态类型，你可以自由地给一个对象添加或删除属性：
+
+```javascript
+let xiaoming = {
+    name: '小明'
+};
+
+xiaoming.age; // undefined
+xiaoming.age = 18; // 新增一个age属性
+xiaoming.age; // 18
+
+delete xiaoming.age; // 删除age属性
+xiaoming.age; // undefined
+
+delete xiaoming['name']; // 删除name属性
+xiaoming.name; // undefined
+
+delete xiaoming.school; // 删除一个不存在的school属性也不会报错
+```
+
+如果我们要检测`xiaoming`是否拥有某一属性，可以用`in`操作符：
+
+```javascript
+let xiaoming = {
+    name: '小明',
+    birth: 1990,
+    school: 'No.1 Middle School',
+    height: 1.70,
+    weight: 65,
+    score: null
+};
+
+'name' in xiaoming; // true
+'grade' in xiaoming; // false
+```
+
+不过要小心，如果`in`判断一个属性存在，这个属性不一定是`xiaoming`的，它可能是`xiaoming`*继承* 得到的：
+
+```javascript
+'toString' in xiaoming; // true
+```
+
+因为`toString`定义在`object`对象中，而所有对象最终都会在原型链上指向`object`，所以`xiaoming`也拥有`toString`属性。
+
+要判断一个属性是否是`xiaoming`自身拥有的，而不是继承得到的，可以用`hasOwnProperty()`方法：
+
+```javascript
+let xiaoming = {
+    name: '小明'
+};
+xiaoming.hasOwnProperty('name'); // true
+xiaoming.hasOwnProperty('toString'); // false
+```
+
 # 数组
 
 数组是一组按顺序排列的集合，集合的每个值称为元素。JavaScript 的数组可以包括任意数据类型，严格来说这更像 python 中的 List（列表）而非传统意义上的 Array。例如：
@@ -610,7 +722,7 @@ s.substring(7); // 从索引7开始到结束，返回'world'
 new Array(1, 2, 3); // 创建了数组[1, 2, 3]
 ```
 
-这么些也许更加接近于JavaScript中数组的本质，即 Array 类的一个对象。然而，出于代码的可读性考虑，强烈建议直接使用`[]`。
+这么写也许更加接近于JavaScript中数组的本质，即 *Array 类的一个对象。（这一点之后有详细的讨论）* 然而，出于代码的可读性考虑，强烈建议直接使用`[]`。
 
 数组的元素可以通过索引来访问。请注意，索引的起始值为`0`：
 
@@ -793,121 +905,10 @@ arr.concat(1, 2, [3, 4]); // ['A', 'B', 'C', 1, 2, 3, 4]
 let arr = ['A', 'B', 'C', 1, 2, 3];
 arr.join('-'); // 'A-B-C-1-2-3'
 ```
-# 对象
-
-啊，我有说过JavaScript其实是一门面向对象语言吗？不过与 Java 语言不同，JavaScript 中并没有在语言层面上明确有 ”类“ 这样的说法，**事实上，JavaScript 所拥有的是一个又一个的具体的对象** ，JavaScript 的对象是一组由键-值组成的无序集合，也更像是 map 或 pytohn 中的 Dictionary 而非传统意义上的 Object，例如：
-
-```js
-var person = {
-    name: 'Bob',
-    age: 20,
-    tags: ['js', 'web', 'mobile'],
-    city: 'Beijing',
-    hasCar: true,
-    zipcode: null
-};
-```
-
-## 访问属性
-
-JavaScript对象的键都是字符串类型，值可以是任意数据类型。上述`person`对象一共定义了6个键值对，而每个键值对又可以被称为对象的 *属性* ，键就是其属性名，值就是其属性值，一般我们就会这么说：`person`的`name`属性为`'Bob'`，`zipcode`属性为`null`。
-
-要获取一个对象的属性，我们用`对象变量.属性名`的方式：
-
-```javascript
-person.name; // 'Bob'
-person.zipcode; // null
-```
-
-但这种访问方式要求属性名必须是一个有效的变量名，如果不是有效的变量名又该怎么办？首先，如果属性名包含特殊字符，在对象声明时就必须用`''`括起来：
-
-```javascript
-let xiaohong = {
-    name: '小红',
-    'middle-school': 'No.1 Middle School'
-};
-```
-
-像这里`xiaohong`的属性名`middle-school`不是一个有效的变量，就需要用`''`括起来。然后访问这个属性也无法使用`.`操作符，必须用`['xxx']`来访问：
-
-```javascript
-xiaohong['middle-school']; // 'No.1 Middle School'
-xiaohong['name']; // '小红'
-xiaohong.name; // '小红'
-```
-
-也可以用`xiaohong['name']`来访问`xiaohong`的`name`属性，不过`xiaohong.name`的写法显然更简洁。**我们在编写JavaScript代码的时候，属性名尽量使用标准的变量名，这样就可以直接通过`object.prop`的形式访问一个属性了。**
-
-JavaScript规定，访问不存在的属性不报错，而是返回`undefined`：
-
-```js
-let xiaoming = {
-    name: '小明'
-};
-
-console.log(xiaoming.name);
-console.log(xiaoming.age); // undefined
-```
-
-## 操作对象
-
-由于JavaScript的对象是动态类型，你可以自由地给一个对象添加或删除属性：
-
-```javascript
-let xiaoming = {
-    name: '小明'
-};
-
-xiaoming.age; // undefined
-xiaoming.age = 18; // 新增一个age属性
-xiaoming.age; // 18
-
-delete xiaoming.age; // 删除age属性
-xiaoming.age; // undefined
-
-delete xiaoming['name']; // 删除name属性
-xiaoming.name; // undefined
-
-delete xiaoming.school; // 删除一个不存在的school属性也不会报错
-```
-
-如果我们要检测`xiaoming`是否拥有某一属性，可以用`in`操作符：
-
-```javascript
-let xiaoming = {
-    name: '小明',
-    birth: 1990,
-    school: 'No.1 Middle School',
-    height: 1.70,
-    weight: 65,
-    score: null
-};
-
-'name' in xiaoming; // true
-'grade' in xiaoming; // false
-```
-
-不过要小心，如果`in`判断一个属性存在，这个属性不一定是`xiaoming`的，它可能是`xiaoming`*继承* 得到的：
-
-```javascript
-'toString' in xiaoming; // true
-```
-
-因为`toString`定义在`object`对象中，而所有对象最终都会在原型链上指向`object`，所以`xiaoming`也拥有`toString`属性。
-
-要判断一个属性是否是`xiaoming`自身拥有的，而不是继承得到的，可以用`hasOwnProperty()`方法：
-
-```javascript
-let xiaoming = {
-    name: '小明'
-};
-xiaoming.hasOwnProperty('name'); // true
-xiaoming.hasOwnProperty('toString'); // false
-```
 
 ## 数组的本质？
 
-还记得我在 [[#数组]] 中提到过 “JavaScript中数组的本质是 Array 类的一个对象” 吗？是这样的，数组相当于一个对象，而其索引就是其属性名，也就是说
+还记得先前提到过 “JavaScript中数组的本质是 Array 类的一个对象” 吗？是这样的，数组相当于一个对象，而其索引就是其属性名，也就是说
 
 ```js
 let a = ['A', 'B', 'C'];
@@ -925,7 +926,7 @@ let a = {
 
 *几乎* 就是等价的。
 
-当然这里有一些细节值得讨论，比如有人可能会疑惑一个对象的属性名难道不是 string 类型的吗，是这样的，在 JavaScript 中，对象的键（包括数组的索引）在内部都是以字符串形式存储的，这里代码这样写也是合法的，甚至像第二种写法中你都能使用 `a[0]` 这样的方式来访问相应的属性值，不过无论你是在声明时还是在调用时使用数字作为对象的键，在底层它都会被转换为一个字符串，实际上存储的也是个字符串，简单的说整个流程也就像这样：
+当然这里有一些细节值得讨论，比如有人可能会疑惑一个对象的属性名难道不是 string 类型的吗，是这样的，在 JavaScript 中，对象的键（包括数组的索引）在内部都是以字符串形式存储的，这里代码这样写也是合法的，无论你是在声明时还是在调用时使用数字作为对象的键，在底层它都会被转换为一个字符串，实际上存储的也是个字符串，简单的说整个流程也就像这样：
 
 ```js
 // 在创建对象时
@@ -969,7 +970,7 @@ console.log(arr[0]); // 输出 'A'
 console.log(arr['0']); // 输出 'A'
 ```
 
-不信的话，这里还有一些实验来验证我的说法：
+不信的话，这里还有一些实验来验证此处的说法：
 
 > [!NOTE] 实验
 > 一：看看这段代码会输出什么样的结果
@@ -985,6 +986,7 @@ console.log(arr['0']); // 输出 'A'
 >二：一个对象可以随意添加或删除数组属性，可以尝试一下你能否给一个数组添加属性，比如 `a.name = "EBAOBAO"`。
 >
 >三：随便定义一个数组，然后看看 `a['0']` 这样的访问方式能不能访问到其中的元素。
+
 
 # 流程控制
 
@@ -1363,6 +1365,7 @@ a.forEach(function (element) {
 ```
 
 其实这个被回调的函数的参数名是什么都无所谓，重要的是 `foreach()` 会按照什么样的顺序向函数的参数列表中传入什么样的值（在 [[#回调函数]] 中我们会有详细记载）。
+
 # 函数
 
 基本上所有的高级语言都支持函数，JavaScript也不例外。JavaScript的函数不但是“头等公民”，而且可以像变量一样使用，具有非常强大的抽象能力。
