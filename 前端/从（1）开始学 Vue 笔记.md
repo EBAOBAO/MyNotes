@@ -286,3 +286,23 @@ export default {
 
 使用 `v-for` 指令基于一个数组来渲染一个列表，要使用到 `item in items` 的特殊的值，其中 `items` 是指定的数组，`item` 是用以迭代数组元素的变量。
 
+```xml
+<template>
+    <h1 v-for="i in names">{{ i }}</h1>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            names: ["baobao", "humou", "jibalao"]
+        }
+    }
+}
+</script>
+```
+
+大多数情况下，我们渲染的数据源来源于网络请求，这些数据基本上都是 JSON 格式的。
+
+
+
