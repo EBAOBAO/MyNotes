@@ -74,9 +74,19 @@
               "icon": "lucide-file",
               "title": "从（0）开始学 html & CSS"
             }
+          },
+          {
+            "id": "6e4797cf21992868",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -147,8 +157,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -242,12 +251,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3c1eeff63ece55aa",
+  "active": "6e4797cf21992868",
   "lastOpenFiles": [
-    "前端/从（0）开始学 html & CSS.md",
     "EBAOBAO 的网安笔记.md",
-    "前端/从（1）开始学 Vue 笔记.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
+    "前端/从（1）开始学 Vue 笔记.md",
+    "前端/从（0）开始学 html & CSS.md",
     "乱记.md",
     "blender 记录.md",
     "数理/数学/线性代数/线性代数.canvas",
