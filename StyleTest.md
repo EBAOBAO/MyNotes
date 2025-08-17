@@ -424,7 +424,16 @@ a + a = b
 \draw[|<->|, dashed, thick] (0, -9)--node[below]{18cm}(5, -9); % 下方也行
 \draw[|<->|, dashed, thick] (0, -10)--node[left]{18cm}(5, -10);
 \draw[|<->|, dashed, thick] (0, -11)--node[right]{18cm}(5, -11);
-\draw[|<->|, dashed, thick] (0, -12)--node[below=3mm]{18cm}(5, -12); % 指定下方距离
+\draw[|<->|, dashed, thick] (0, -12)--node[below=2mm]{18cm}(5, -12); % 指定下方距离
+\draw[|<->|, dashed, thick] (0, -13)--node[fill=white]{18cm}(5, -13); % 这样也不错
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth]
+\draw[|<->|] (0, 0)--node[fill=red!20!white]{18cm}(5, 0); % 20%为红色，剩下的是白色
 \end{tikzpicture}
 \end{document}
 ```
