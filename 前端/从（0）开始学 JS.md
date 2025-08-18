@@ -1889,11 +1889,29 @@ arr.reduce(function (x, y) {
 }); // 25
 ```
 
-如果数组元素只有1个，那么还需要提供一个额外的初始参数以便至少凑够两：
+如果数组元素只有1个，那么还需要提供一个额外的初始参数以便至少凑够两（**凑进去的那个参数会作为回调函数的第一个参数**），否则reduce会 **直接返回该元素，而不会执行回调函数**：
 
 ```javascript
 let arr = [123];
 arr.reduce(function (x, y) {
     return x + y;
 }, 0); // 123
+```
+
+```js
+let arr = [123];
+let r = arr.reduce(function (x, y) {
+    console.log(x); // 没输出
+    return x + y;
+});
+console.log(r); //123
+```
+
+```js
+let arr = [123];
+arr.reduce(function (x, y) {
+    console.log(x); // 0
+    console.log(y); // 123
+    return x + y;
+}, 0);
 ```

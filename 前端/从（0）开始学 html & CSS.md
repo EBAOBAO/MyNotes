@@ -1034,7 +1034,7 @@ JavaScript 是一个网页的灵魂！！
 
 ```html
 <!-- 注意，链接外部后元素内部不能有内容！ -->
-<script type="text/javascript" src="../js/hi.js"></script>
+<script type="text/javascript" src="./js/hi.js"></script>
 ```
 
 可用 `defer` 来延迟执行脚本（只能用于引用外部脚本文件）
@@ -1050,7 +1050,7 @@ JavaScript 是一个网页的灵魂！！
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="../js/hi.js"></script>
+    <script type="text/javascript" src="./js/hi.js"></script>
 </head>
 
 <body>
