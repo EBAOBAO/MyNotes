@@ -416,6 +416,8 @@ Object | true
 
 **关于`toPrimitive` ...**
 
+**`ToPrimitive` 是 ECMAScript 规范中的抽象操作，其实不是个用户可直接调用的函数，我们在此使用它仅仅只是为了便于理解 JavaScript 引擎内部将对象转换为原始值的实现逻辑而已。**
+
 
 
 ### 隐式类型转换
