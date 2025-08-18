@@ -392,3 +392,23 @@ export default {
 
 `v-for` 不仅可以用来遍历数组，还可以用来遍历对象：
 
+```xml
+<template>
+    <div v-for="item in userInfo">{{ item }}</div>
+    <!-- 这里的 item 会遍历到所有属性值 -->
+    <div v-for="(value, key, index) in userInfo">{{ index }}-{{ key }}-{{ value }}</div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            userInfo: {
+                name: "humou",
+                age: 114514
+            }
+        }
+    }
+}
+</script>
+```

@@ -90,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -226,13 +226,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/从（1）开始学 Vue 笔记.md",
+                "file": "前端/从（0）开始学 JS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "从（1）开始学 Vue 笔记 的大纲"
+              "title": "从（0）开始学 JS 的大纲"
             }
           }
         ],
@@ -240,8 +240,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -256,11 +255,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "39252396bf139c9f",
+  "active": "4c78b6f9bbc7a0bd",
   "lastOpenFiles": [
+    "前端/从（1）开始学 Vue 笔记.md",
     "前端/从（0）开始学 html & CSS.md",
     "前端/从（0）开始学 JS.md",
-    "前端/从（1）开始学 Vue 笔记.md",
     "乱记.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "StyleTest.md",
