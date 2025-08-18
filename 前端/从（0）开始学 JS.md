@@ -354,7 +354,7 @@ Boolean | 'true' 或 'false'
 Number | 对应的字符串
 String | 不变
 Symbol | 报错
-Object | 调用 `toPrimitive(obj, String)`
+Object | 调用 `ToPrimitive(obj, String)`
 ```
 
 除使用 `String(x)` 外，也可以使用模板字符串或拼串利用隐式类型转换机制来实现转为字符串。
@@ -377,7 +377,7 @@ Boolean | true -> 1
 Number | 不变
 String | 根据转换规则（见下文）
 Symbol | 报错
-Object | 调用 `toPrimitive(obj, Number)`
+Object | 调用 `ToPrimitive(obj, Number)`
 ```
 
 `String` 转换为 `Number` 类型的规则：
