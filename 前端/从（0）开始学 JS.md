@@ -271,6 +271,7 @@ console.log(1234567n / 789n); // 1564, 除法运算结果仍然是BigInt
 console.log(1234567n % 789n); // 571, 求余
 console.log(1234567n + 3456789); // Uncaught TypeError: Cannot mix BigInt and other types
 ```
+
 ### String
 
 字符串是以单引号'或双引号"括起来的任意文本，比如`'abc'`，`"xyz"`等等。
@@ -303,24 +304,6 @@ ASCII字符可以以`\x##`形式的十六进制表示，例如：
 字符串`;
 ```
 
-要把多个字符串连接起来，可以用`+`号连接：
-
-```javascript
-let name = '小明';
-let age = 20;
-let message = '你好, ' + name + ', 你今年' + age + '岁了!';
-alert(message);
-```
-
-如果有很多变量需要连接，用`+`号就比较麻烦。ES6新增了一种模板字符串，表示方法和上面的多行字符串一样，但是它会自动替换字符串中的变量：
-
-```javascript
-let name = '小明';
-let age = 20;
-let message = `你好, ${name}, 你今年${age}岁了!`;
-alert(message);
-```
-
 关于字符串还有很多操作，我们会在 [[#字符串]] 中有详细记录。
 ### Boolean
 
@@ -338,19 +321,71 @@ alert(message);
 
 ## 检测数据类型
 
+使用 `typeof` 运算符
+
 ## 类型转换
+
+JavaScript 向来因为它运算之中的类型转换机制相当复杂且玄学而饱受诟病，我在此尝试尽我自己所能将所有的这些整理清楚。
 
 JS 中有六种简单数据类型：`undefined`、`null`、`boolean`、`string`、`number`、`symbol`，以及一种复杂类型：`object`。 但是 JavaScript 只有到运行期间才会确定当前变量的类型。在运行期间，由于 JavaScript 没有对类型做严格限制，导致不同类型之间可以进行运算，这样就需要允许类型之间互相转换。
 
+一般来说，类型转换主要是基本类型转基本类型、复杂类型转基本类型两种。 转换的目标类型主要分为以下几种：
+
+1. 转换为 `string`
+2. 转换为 `number`
+3. 转换为 `boolean`
+
+我们也将按照这样的逻辑尝试总结各种类型转换：
+
 ### 显式类型转换
 
+- 转字符串：`String(x)`
+- 转数字：`Number(x)`
+- 转布尔：`Boolean(x)`
 
+**各种值转字符串的结果**：
+
+```tx
+原始类型 | 转换结果
+--- | ---
+Undefined | 'undefined'
+Null | 'null'
+Boolean | 'true' 或 'false'
+Number | 对应的字符串
+String | 不变
+Symbol | 报错
+Object | 调用toPrimitive(obj, String)
+```
+
+除使用 `String(x)` 外，也可以使用模板字符串或拼串利用隐式类型转换机制来实现转为字符串。
+
+```js
+`${undefined}` // 'undefined'
+`${true}` // 'true'
+''+NaN // 'NaN'
+```
+
+**各种值转数字的结果**：
+
+```tx
+原始类型 | 转换结果
+--- | ---
+Undefined | NaN
+Null | 0
+Boolean | true -> 1
+^^ | false -> 0
+Number | 不变
+String | 根据转换规则（见下文）
+Symbol | 报错
+Object | 调用toPrimitive(obj, Number)
+```
 
 ### 隐式类型转换
 
+隐式类型转换一般是在涉及到运算符的时候才会出现的情况，比如我们将两个变量相加，或者比较两个变量是否相等。 隐式类型转换其实在我们上面的例子中已经有所体现。对于对象转原始类型的转换，也会遵守 `ToPrimitive` 的规则
+
 # 运算符
 
-JavaScript 向来因为它之中的一些运算机制相当复杂且玄学而饱受诟病，我在此尽我自己所能记录下它的所有这些奇怪的运算。
 ## 算术运算
 
 Number可以直接做四则运算，规则和数学差不多一致，：
@@ -605,7 +640,7 @@ s.substring(7); // 从索引7开始到结束，返回'world'
 
 ## 拼串
 
-要把多个字符串连接起来，可以用 `+` 连接，也可以将变量的值转换为字符串后拼接：
+要把多个字符串连接起来，可以用`+`号连接：
 
 ```javascript
 let name = '小明';
@@ -614,7 +649,7 @@ let message = '你好, ' + name + ', 你今年' + age + '岁了!';
 alert(message);
 ```
 
-如果有很多变量需要连接，用`+`号就比较麻烦。ES6新增了一种模板字符串，表示方法和上面的多行字符串一样，但是它会自动替换字符串中的变量：
+如果有很多变量需要连接，用`+`号就比较麻烦。ES6新增了一种模板字符串，表示方法和多行字符串一样，但是它会自动替换字符串中的变量：
 
 ```javascript
 let name = '小明';
@@ -1898,6 +1933,17 @@ console.log(results); // [1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```js
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 arr.map(String); // ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+```
+
+还可以往 `map` 中传入带更多参数的函数，`map` 调用这个回调函数时，会将当前项传入第一个参数，将当前项的之前一项（如果当前项是第一项的话就传入0）传入第二个参数，将整个数组传入第三个参数：
+
+```js
+console.log([1,2,3].map(function (x, y, z) {
+  console.log(x); // 第一次的输出：1，第二次的输出：2
+  console.log(y); // 第一次的输出：0，第二次的输出：1
+  console.log(z); // 第一二次的输出：[1, 2, 3]
+  return x + y;
+})); // [1, 3, 5]
 ```
 
 #### reduce
