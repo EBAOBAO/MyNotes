@@ -340,11 +340,13 @@ alert(message);
 
 ## 类型转换
 
-### 隐式类型转换
+JS 中有六种简单数据类型：`undefined`、`null`、`boolean`、`string`、`number`、`symbol`，以及一种复杂类型：`object`。 但是 JavaScript 只有到运行期间才会确定当前变量的类型。在运行期间，由于 JavaScript 没有对类型做严格限制，导致不同类型之间可以进行运算，这样就需要允许类型之间互相转换。
 
 ### 显式类型转换
 
 
+
+### 隐式类型转换
 
 # 运算符
 
