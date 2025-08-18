@@ -1915,3 +1915,46 @@ arr.reduce(function (x, y) {
     return x + y;
 }, 0);
 ```
+
+```js
+[10, 20].reduce((x, y) => {
+  console.log(y); // 输出 10 \n 20 (执行2次)
+  return x + y;
+}, 0);
+// 实际过程：
+// 第一轮: x=0(初始), y=10 → 返回10
+// 第二轮: x=10, y=20 → 返回30
+```
+
+而且若 `reduce` 的回调函数没被传入任何参数的话就会报错，故也是 **为了安全考虑，我们建议任何时候使用 `reduce` 时，始终提供初始值。**
+
+## filter
+
+ilter也是一个常用的操作，它用于把`Array`的某些元素过滤掉，然后返回剩下的元素。
+
+和`map()`类似，`Array`的`filter()`也接收一个函数。和`map()`不同的是，`filter()`把传入的函数依次作用于每个元素，然后根据返回值是`true`还是`false`决定保留还是丢弃该元素。
+
+例如，在一个`Array`中，删掉偶数，只保留奇数，可以这么写：
+
+```javascript
+let arr = [1, 2, 4, 5, 6, 9, 10, 15];
+let r = arr.filter(function (x) {
+    return x % 2 !== 0;
+});
+r; // [1, 5, 9, 15]
+```
+
+把一个`Array`中的空字符串删掉，可以这么写：
+
+```javascript
+let arr = ['A', '', 'B', null, undefined, 'C', '  '];
+let r = arr.filter(function (s) {
+    return s && s.trim(); // 注意：IE9以下的版本没有trim()方法
+});
+r; // ['A', 'B', 'C']
+```
+
+可见用`filter()`这个高阶函数，关键在于正确实现一个“筛选”函数。
+
+## 数组的其他高阶函数
+
