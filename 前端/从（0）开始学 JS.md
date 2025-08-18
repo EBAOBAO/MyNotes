@@ -354,7 +354,7 @@ Boolean | 'true' 或 'false'
 Number | 对应的字符串
 String | 不变
 Symbol | 报错
-Object | 调用toPrimitive(obj, String)
+Object | 调用 `toPrimitive(obj, String)`
 ```
 
 除使用 `String(x)` 外，也可以使用模板字符串或拼串利用隐式类型转换机制来实现转为字符串。
@@ -377,8 +377,46 @@ Boolean | true -> 1
 Number | 不变
 String | 根据转换规则（见下文）
 Symbol | 报错
-Object | 调用toPrimitive(obj, Number)
+Object | 调用 `toPrimitive(obj, Number)`
 ```
+
+`String` 转换为 `Number` 类型的规则：
+
+1. 如果字符串中只包含数字，那么就转换为对应的数字。
+2. 如果字符串中只包含十六进制格式，那么就转换为对应的十进制数字。
+3. 如果字符串为空，那么转换为0。
+4. 如果字符串包含上述之外的字符，那么转换为 NaN。
+
+也可以利用 `+`（正号）可以将其他类型隐式转为 `number` 类型：
+
+```js
++undefined // NaN
++null // 0
++true // 1
++false // 0
+```
+
+**各种值转布尔值的结果**：
+
+```tx
+原始类型 | 转换结果
+--- | ---
+Undefined | false
+Null | false
+Boolean | 不变
+Number | 0（包括 +0、-0、0n） -> false, NaN -> false, 其他 -> true
+String | 空串 false , 其他 true
+Symbol | true
+Object | true
+```
+
+是的，所有的引用类型，包括数组（空数组也是）、函数之类的，都会被转换为 `true` ！
+
+
+
+**关于`toPrimitive` ...**
+
+
 
 ### 隐式类型转换
 
