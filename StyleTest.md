@@ -315,7 +315,7 @@ to[R=$R_2$, i>_=$i_2$]
     \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
     \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
     \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
-    \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+    \draw[color=green]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
     \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
   \end{tikzpicture}
 \end{document}
@@ -506,6 +506,26 @@ a + a = b
 \begin{tikzpicture}[>=latex]
 \draw[->] (-5,0)--(5,0)node[right]{$x$};
 \draw[->] (0,-1)--(0,9)node[right]{$y$};
+\node at (-.2,-.2){$O$};
+\foreach \x in {-4, -2, 2, 4}
+{
+	\draw (\x,0)node[below]{$\x$}--(\x,.1);
+}
+\foreach \y in {2, 4, 6, 8}
+{
+	\draw (0,\y)node[left]{$\y$}--(-.1,\y);
+}
+\foreach \x in {-3, -1, 1, 3}
+{
+	\draw (\x,0)--(\x,.1);
+}
+\foreach \y in {1, 3, 5, 7}
+{
+	\draw (0,\y)--(-.1,\y);
+}
+% domain: 定义域，samples: 需要取多少个点
+\draw[domain=-4:4, samples=1000, thick] plot(\x, {0.5*\x*\x});
+\node at (4.5,6){$y=\frac{1}{2}x^2$};
 \end{tikzpicture}
 \end{document}
 ```
