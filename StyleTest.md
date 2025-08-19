@@ -485,7 +485,7 @@ a + a = b
 \begin{document}
 \begin{tikzpicture}[>=latex]
 % 圆心 (0,0)，半径 1.5
-\draw[fill=red!20!black] (0,0)node{$g$} circle (1.5);
+\draw[fill=red!20!black] (0,0)node{$n$} circle (1.5);
 \end{tikzpicture}
 \end{document}
 ```
@@ -496,6 +496,15 @@ a + a = b
 \draw (0,0)--(4,0);
 \draw (0,0)--(45:4);
 \draw[->] (2,0) arc (0:45:2);
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=latex]
+\draw[->] (-5,0)--(5,0)node[right]{$x$};
+\draw[->] (0,-1)--(0,9)node[right]{$y$};
 \end{tikzpicture}
 \end{document}
 ```
