@@ -347,6 +347,7 @@ to[R=$R_2$, i>_=$i_2$]
 
 a + a = b
 ```
+
 ```tikz
 \usepackage{chemfig}
 \begin{document}
