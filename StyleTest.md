@@ -278,7 +278,7 @@ notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 ```tikz
 \usepackage{circuitikz}
 \begin{document}
-\begin{circuitikz}[american, voltage shift=0.5, scale=1.5]
+\begin{circuitikz}[american, voltage shift=0.5]
 \draw (0,0)
 to[isource, l=$I_0$, v=$V_0$] (0,3)
 to[short, -*, i=$I_0$] (2,3)
@@ -310,7 +310,7 @@ to[R=$R_2$, i>_=$i_2$]
 
 ```tikz
 \begin{document}
-  \begin{tikzpicture}[domain=0:4, scale=2]
+  \begin{tikzpicture}[domain=0:4]
     \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
     \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
     \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
@@ -328,7 +328,7 @@ to[R=$R_2$, i>_=$i_2$]
 
 \begin{document}
 
-\begin{tikzpicture}[scale=2]
+\begin{tikzpicture}
 \begin{axis}[colormap/viridis]
 \addplot3[
 	surf,
@@ -403,7 +403,7 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1.5, transform shape]
+\begin{tikzpicture}[>=stealth]
 % 虚线
 \draw[dashed] (0,0)--(5,0);
 % 点线
@@ -439,7 +439,7 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=latex, scale=2, transform shape]
+\begin{tikzpicture}[>=latex]
 \draw[->] (-1, 0)--(4, 0)node[right]{$x$};
 \draw[->] (0, -1)--(0, 4)node[left]{$y$};
 \draw (0, 2)node[left]{$N$}--(2,2)node[right]{$P(x,y)$}--(2,0)node[below]{$M$};
@@ -463,9 +463,8 @@ a + a = b
 ```
 
 ```tikz
-\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[>={Latex[scale=1.5]}, scale=1.5, transform shape]
+\begin{tikzpicture}[>=latex]
 \draw[->] (-5,0)--(5,0)node[right]{$x$};
 \draw[->] (0,-5)--(0,5)node[right]{$y$};
 \node at (-.2,-.2){$O$};
