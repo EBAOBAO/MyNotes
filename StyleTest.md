@@ -428,9 +428,10 @@ a + a = b
 ```
 
 ```tikz
-\usetikzlibrary{arrows.meta}
+% \usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[>={Stealth[scale=1.5]}, scale=1.5, transform shape]
+\tikzstyle{every node}=[scale=1.5]
+\begin{tikzpicture}[>=stealth]
 \draw[|<->|] (0, 0)--node[fill=red!20!white]{18cm}(5, 0); % 20%为红色，剩下的是白色
 \end{tikzpicture}
 \end{document}
