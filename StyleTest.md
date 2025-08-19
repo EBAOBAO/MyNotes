@@ -389,13 +389,13 @@ a + a = b
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
-\draw[|<->|, thick] (0, -4)--(5, -4);
+\draw[|<->|] (0, -4)--(5, -4);
 \end{tikzpicture}
 \begin{tikzpicture}[>=stealth]
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
-\draw[|<->|, thick] (0, -4)--(5, -4);
+\draw[|<->|] (0, -4)--(5, -4);
 \end{tikzpicture}
 \end{document}
 ```
@@ -431,7 +431,7 @@ a + a = b
 \begin{document}
 \tikzstyle{every node}=[scale=1.5]
 \begin{tikzpicture}[>=stealth, scale=1.5]
-\draw[|<->|] (0, 0)--node[fill=red!20!white]{18cm}(5, 0); % 20%为红色，剩下的是白色
+\draw[|<->|] (0, 0)--node[fill=red!20!black]{18cm}(5, 0); % 20%为红色，剩下的是黑色
 \end{tikzpicture}
 \end{document}
 ```
@@ -464,11 +464,38 @@ a + a = b
 ```tikz
 \begin{document}
 \begin{tikzpicture}[>=latex]
+\draw[fill=magenta] (-4,0)node[above]{$C$}--(0,3)node[right]{$B$}--(4,0)node[above]{$A$}--(0,-3)node[right]{$D$}--(-4,0);
 \draw[->] (-5,0)--(5,0)node[right]{$x$};
 \draw[->] (0,-5)--(0,5)node[right]{$y$};
 \node at (-.2,-.2){$O$};
+\end{tikzpicture}
+\end{document}
+```
 
-\draw (-4,0)node[above]{$C$}--(0,3)node[right]{$B$}--(4,0)node[above]{$A$}--(0,-3)node[right]{$D$}--(-4,0);
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=latex]
+\draw[fill=cyan] (0,0) rectangle (4,3);
+\fill[green, draw=magenta] (0,-3) rectangle (4,0);
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=latex]
+% 圆心 (0,0)，半径 1.5
+\draw[fill=red!20!black] (0,0)node{$g$} circle (1.5);
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=latex]
+\draw (0,0)--(4,0);
+\draw (0,0)--(45:4);
+\draw[->] (2,0) arc (0:45:2);
 \end{tikzpicture}
 \end{document}
 ```
