@@ -476,8 +476,8 @@ a + a = b
 ```tikz
 \begin{document}
 \begin{tikzpicture}[>=latex]
-\draw[fill=cyan] (0,0) rectangle (4,3);
-\fill[green, draw=magenta] (0,-3) rectangle (4,0);
+\draw[fill=cyan, thick] (0,0) rectangle (4,3);
+\fill[green, draw=magenta, ultra thick] (0,-3) rectangle (4,0);
 \end{tikzpicture}
 \end{document}
 ```
