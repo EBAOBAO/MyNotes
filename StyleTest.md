@@ -384,7 +384,6 @@ a + a = b
 ```
 
 ```tikz
-\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[>=latex]
 \draw[->] (0, -1)--(5, -1);
@@ -464,7 +463,7 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=latex]
+\begin{tikzpicture}[>=latex, scale=1.5, every node/.style={scale=1.5}, transform shape, line width=0.8pt]
 \draw[->] (-5,0)--(5,0)node[right]{$x$};
 \draw[->] (0,-5)--(0,5)node[right]{$y$};
 \node at (-.2,-.2){$O$};
