@@ -437,7 +437,7 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=latex, scale=2]
+\begin{tikzpicture}[>=latex, scale=2, transform shape]
 \draw[->] (-1, 0)--(4, 0)node[right]{$x$};
 \draw[->] (0, -1)--(0, 4)node[left]{$y$};
 \draw (0, 2)node[left]{$N$}--(2,2)node[right]{$P(x,y)$}--(2,0)node[below]{$M$};
@@ -462,7 +462,7 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=latex, scale=1.5, transform shape]
+\begin{tikzpicture}[>=latex]
 \draw[->] (-5,0)--(5,0)node[right]{$x$};
 \draw[->] (0,-5)--(0,5)node[right]{$y$};
 \node at (-.2,-.2){$O$};
