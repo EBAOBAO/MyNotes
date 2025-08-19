@@ -462,9 +462,12 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=latex, scale=2]
-\draw[->] (-5,0)--(5.0)node[right]{$x$};
-\draw[->] (-5,0)--(5.0)node[right]{$x$};
+\begin{tikzpicture}[>=latex, scale=1.5]
+\draw[->] (-5,0)--(5,0)node[right]{$x$};
+\draw[->] (0,-5)--(0,5)node[right]{$y$};
+\node at (-.2,-.2){$O$};
+
+\draw (-4,0)node[above]{$C$}--(0,3)node[right]{$B$}--(4,0)node[above]{$A$}--(0,-3)node[right]{$D$}--(-4,0);
 \end{tikzpicture}
 \end{document}
 ```
