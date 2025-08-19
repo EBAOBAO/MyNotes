@@ -386,13 +386,13 @@ a + a = b
 ```tikz
 \usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[>={Latex[scale=2]}, transform shape]
+\begin{tikzpicture}[>=latex]
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
 \draw[|<->|, thick] (0, -4)--(5, -4);
 \end{tikzpicture}
-\begin{tikzpicture}[>={Stealth[scale=2]}]
+\begin{tikzpicture}[>=stealth]
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
