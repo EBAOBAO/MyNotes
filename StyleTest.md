@@ -278,7 +278,7 @@ notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 ```tikz
 \usepackage{circuitikz}
 \begin{document}
-\begin{circuitikz}[american, voltage shift=0.5]
+\begin{circuitikz}[american, voltage shift=0.5, scale=1.5]
 \draw (0,0)
 to[isource, l=$I_0$, v=$V_0$] (0,3)
 to[short, -*, i=$I_0$] (2,3)
@@ -310,7 +310,7 @@ to[R=$R_2$, i>_=$i_2$]
 
 ```tikz
 \begin{document}
-  \begin{tikzpicture}[domain=0:4]
+  \begin{tikzpicture}[domain=0:4, scale=2]
     \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
     \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
     \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
@@ -328,7 +328,7 @@ to[R=$R_2$, i>_=$i_2$]
 
 \begin{document}
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=2]
 \begin{axis}[colormap/viridis]
 \addplot3[
 	surf,
@@ -385,18 +385,19 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=latex]
+\begin{tikzpicture}[>=latex, scale=2]
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
 \draw[|<->|] (0, -4)--(5, -4);
 \end{tikzpicture}
-\end{document}
-```
 
-```tikz
-\begin{document}
-
+\begin{tikzpicture}[>=stealth, scale=2]
+\draw[->] (0, -1)--(5, -1);
+\draw[<-] (0, -2)--(5, -2);
+\draw[<->] (0, -3)--(5, -3);
+\draw[|<->|] (0, -4)--(5, -4);
+\end{tikzpicture}
 \end{document}
 ```
 
@@ -455,6 +456,14 @@ a + a = b
 	\draw (0,\x)node[left]{$\x$}--(.1,\x);
 	\draw (\x*0.4, 0)node[below]{$\x$}--(\x*0.4, .1);
 }
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=latex]
+
 \end{tikzpicture}
 \end{document}
 ```
