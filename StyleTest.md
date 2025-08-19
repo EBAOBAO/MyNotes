@@ -431,7 +431,7 @@ a + a = b
 % \usetikzlibrary{arrows.meta}
 \begin{document}
 \tikzstyle{every node}=[scale=1.5]
-\begin{tikzpicture}[>=stealth]
+\begin{tikzpicture}[>=stealth, scale=1.5]
 \draw[|<->|] (0, 0)--node[fill=red!20!white]{18cm}(5, 0); % 20%为红色，剩下的是白色
 \end{tikzpicture}
 \end{document}
