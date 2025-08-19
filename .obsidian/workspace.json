@@ -161,7 +161,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -225,13 +226,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/从（0）开始学 JS.md",
+                "file": "StyleTest.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "从（0）开始学 JS 的大纲"
+              "title": "StyleTest 的大纲"
             }
           }
         ],
@@ -257,12 +258,12 @@
   },
   "active": "020c7dd364b17e5f",
   "lastOpenFiles": [
+    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "StyleTest.md",
     "前端/从（0）开始学 JS.md",
     "前端/从（0）开始学 html & CSS.md",
     "前端/从（1）开始学 Vue 笔记.md",
     "乱记.md",
-    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-    "StyleTest.md",
     "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
     "EBAOBAO 的网安笔记.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",

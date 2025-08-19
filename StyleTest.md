@@ -396,18 +396,13 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth]
-\draw[->] (0, -1)--(5, -1);
-\draw[<-] (0, -2)--(5, -2);
-\draw[<->] (0, -3)--(5, -3);
-\draw[|<->|] (0, -4)--(5, -4);
-\end{tikzpicture}
+
 \end{document}
 ```
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth]
+\begin{tikzpicture}[>=stealth, scale=2]
 % 虚线
 \draw[dashed] (0,0)--(5,0);
 % 点线
@@ -441,9 +436,25 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=latex]
+\begin{tikzpicture}[>=latex, scale=2]
 \draw[->] (-1, 0)--(4, 0)node[right]{$x$};
 \draw[->] (0, -1)--(0, 4)node[left]{$y$};
+\draw (0, 2)node[left]{$N$}--(2,2)node[right]{$P(x,y)$}--(2,0)node[below]{$M$};
+\node at (-.2,-.2){$O$};
+\end{tikzpicture}
+\end{document}
+```
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=latex]
+\draw[->] (-1, 0)--(4, 0)node[right]{$x$};
+\draw[->] (0, -1)--(0, 10)node[left]{$y$};
+\foreach \x in {1, 2, ..., 9}
+{
+	\draw (0,\x)node[left]{$\x$}--(.1,\x);
+	\draw (\x*0.4, 0)node[below]{$\x$}--(\x*0.4, .1);
+}
 \end{tikzpicture}
 \end{document}
 ```
