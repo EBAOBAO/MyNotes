@@ -386,14 +386,13 @@ a + a = b
 ```tikz
 \usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[>={Latex, scale=2}]
+\begin{tikzpicture}[>={Latex[scale=2]}, transform shape]
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
 \draw[|<->|] (0, -4)--(5, -4);
 \end{tikzpicture}
-
-\begin{tikzpicture}[>=stealth, scale=2]
+\begin{tikzpicture}[>={Stealth[scale=2]}]
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
@@ -404,7 +403,7 @@ a + a = b
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=2]
+\begin{tikzpicture}[>=stealth, scale=1.5, transform shape]
 % 虚线
 \draw[dashed] (0,0)--(5,0);
 % 点线
@@ -429,8 +428,9 @@ a + a = b
 ```
 
 ```tikz
+\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[>=stealth]
+\begin{tikzpicture}[>={Stealth[scale=1.5]}, scale=1.5, transform shape]
 \draw[|<->|] (0, 0)--node[fill=red!20!white]{18cm}(5, 0); % 20%为红色，剩下的是白色
 \end{tikzpicture}
 \end{document}
