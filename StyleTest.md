@@ -530,6 +530,14 @@ a + a = b
 \end{document}
 ```
 
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american]
+\end{circuitikz}
+\end{document}
+```
+
 ## 摘抄：爱猫与男娘——作为真实的虚拟
 
 [爱猫与男娘——作为真实的虚拟_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Ef421i7EC/?spm_id_from=333.788.recommend_more_video.8&vd_source=7a774f3cabca1af30bf72e095164a42b) 作者：符号社
