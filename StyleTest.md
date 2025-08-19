@@ -384,14 +384,15 @@ a + a = b
 ```
 
 ```tikz
+\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[>=latex]
+\begin{tikzpicture}[>={Latex[scale=1.1]}]
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
 \draw[|<->|] (0, -4)--(5, -4);
 \end{tikzpicture}
-\begin{tikzpicture}[>=stealth]
+\begin{tikzpicture}[>={Stealth[scale=1.1]}]
 \draw[->] (0, -1)--(5, -1);
 \draw[<-] (0, -2)--(5, -2);
 \draw[<->] (0, -3)--(5, -3);
