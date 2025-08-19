@@ -278,7 +278,7 @@ notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 ```tikz
 \usepackage{circuitikz}
 \begin{document}
-\begin{circuitikz}[american, voltage shift=0.5]
+\begin{circuitikz}[european, voltage shift=0.5]
 \draw (0,0)
 to[isource, l=$I_0$, v=$V_0$] (0,3)
 to[short, -*, i=$I_0$] (2,3)
