@@ -13,52 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf"
+                "file": "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf"
               },
               "icon": "lucide-file-text",
-              "title": "高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1)"
-            }
-          },
-          {
-            "id": "39252396bf139c9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/从（1）开始学 Vue 笔记.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "从（1）开始学 Vue 笔记"
-            }
-          },
-          {
-            "id": "4c78b6f9bbc7a0bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/从（0）开始学 JS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "从（0）开始学 JS"
-            }
-          },
-          {
-            "id": "df47f3709bc98045",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/从（0）开始学 html & CSS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "从（0）开始学 html & CSS"
+              "title": "电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library)"
             }
           },
           {
@@ -67,30 +25,17 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+                "file": "elec/电路分析.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 matlab 笔记"
-            }
-          },
-          {
-            "id": "020c7dd364b17e5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "StyleTest.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "StyleTest"
+              "title": "电路分析"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1,
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -257,19 +202,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "020c7dd364b17e5f",
+  "active": "6e4797cf21992868",
   "lastOpenFiles": [
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-    "前端/从（0）开始学 html & CSS.md",
-    "前端/从（0）开始学 JS.md",
-    "StyleTest.md",
-    "前端/从（1）开始学 Vue 笔记.md",
-    "乱记.md",
+    "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
+    "Mybooks/tech/电工学.pdf",
+    "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",
+    "Mybooks/tech/电路(第5版)学习指导与习题分析(配套邱关源主编电路第五版)-课后答案  刘崇新 罗先觉主编 2006年 高等教育出版社.pdf",
+    "Mybooks/tech/电路分析基础系统 (（美）托马斯 L.弗洛伊德，大卫 M.布奇拉著 etc.) (Z-Library).pdf",
     "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
+    "前端/从（1）开始学 Vue 笔记.md",
+    "前端/从（0）开始学 JS.md",
+    "前端/从（0）开始学 html & CSS.md",
+    "StyleTest.md",
+    "乱记.md",
     "EBAOBAO 的网安笔记.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
     "数理/数学/微积分基础/常用导数积分表.md",
-    "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
     "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "Mybooks/math/具体数学：计算机科学基础（第2版） (Ronald L. Graham, Donald E. Knuth etc.) (Z-Library).pdf",
     "Mybooks/精分/Critique of Hegels Philosophy Of Ri.pdf",
@@ -281,16 +230,12 @@
     "数理/数学/微积分基础/等价无穷小.md",
     "blender 记录.md",
     "数理/数学/线性代数/线性代数.canvas",
-    "数理/数学/级数",
     "数理/物理学/动力学/动力学.md",
     "python/从（0）开始学习 python.md",
     "从（1）开始学习 stm32 开发.md",
     "cubase 记录.md",
     "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
     "python/爬虫.md",
-    "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
-    "Mybooks/code/操作系统实现之路.pdf",
-    "Mybooks/code/编译器设计之路.pdf",
     "数理/物理学/乱记.canvas",
     "前端/hc 乱记.md",
     "java/SE/java SE.md",
