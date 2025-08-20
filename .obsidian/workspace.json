@@ -34,7 +34,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -202,10 +201,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "6e4797cf21992868",
+  "active": "02804dc753aacef3",
   "lastOpenFiles": [
-    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "elec/电路分析.md",
     "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
+    "StyleTest.md",
+    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "Mybooks/tech/电工学.pdf",
     "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",
     "Mybooks/tech/电路(第5版)学习指导与习题分析(配套邱关源主编电路第五版)-课后答案  刘崇新 罗先觉主编 2006年 高等教育出版社.pdf",
@@ -214,7 +215,6 @@
     "前端/从（1）开始学 Vue 笔记.md",
     "前端/从（0）开始学 JS.md",
     "前端/从（0）开始学 html & CSS.md",
-    "StyleTest.md",
     "乱记.md",
     "EBAOBAO 的网安笔记.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
@@ -240,7 +240,6 @@
     "前端/hc 乱记.md",
     "java/SE/java SE.md",
     "java/从（0）开始学 java ！.md",
-    "java/Web/java Web.md",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
     "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/3.png",

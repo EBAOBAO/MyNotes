@@ -278,7 +278,7 @@ notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 ```tikz
 \usepackage{circuitikz}
 \begin{document}
-\begin{circuitikz}[european, voltage shift=0.5]
+\begin{circuitikz}[american, voltage shift=0.5]
 \draw (0,0)
 to[isource, l=$I_0$, v=$V_0$] (0,3)
 to[short, -*, i=$I_0$] (2,3)
@@ -315,7 +315,7 @@ to[R=$R_2$, i>_=$i_2$]
     \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
     \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
     \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
-    \draw[color=green]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+    \draw[color=cyan]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
     \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
   \end{tikzpicture}
 \end{document}
@@ -431,8 +431,7 @@ a + a = b
 ```tikz
 % \usetikzlibrary{arrows.meta}
 \begin{document}
-\tikzstyle{every node}=[scale=1.5]
-\begin{tikzpicture}[>=stealth, scale=1.5]
+\begin{tikzpicture}[>=stealth]
 \draw[|<->|] (0, 0)--node[fill=red!20!black]{18cm}(5, 0); % 20%为红色，剩下的是黑色
 \end{tikzpicture}
 \end{document}
