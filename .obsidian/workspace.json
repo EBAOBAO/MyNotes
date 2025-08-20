@@ -34,6 +34,7 @@
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -201,10 +202,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "02804dc753aacef3",
+  "active": "6e4797cf21992868",
   "lastOpenFiles": [
-    "elec/电路分析.md",
     "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
+    "elec/电路分析.md",
     "StyleTest.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "Mybooks/tech/电工学.pdf",
