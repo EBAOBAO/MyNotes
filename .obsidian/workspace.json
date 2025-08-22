@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "elec/电路原理.md",
+                "file": "数理/数学/微积分基础/常用导数积分表.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "电路原理"
+              "title": "常用导数积分表"
             }
           }
         ],
@@ -106,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -204,11 +203,19 @@
   },
   "active": "6e4797cf21992868",
   "lastOpenFiles": [
+    "数理/数学/微积分基础/等价无穷小.md",
+    "数理/数学/微积分基础/微积分基础.md",
+    "数理/数理乱记.md",
+    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
+    "数理/数学/多元微积分/多元微积分.md",
+    "数理/数学/多元微积分/多元微积分00.md",
+    "数理/数学/多元微积分/片段.md",
+    "数理/数学/微积分基础/常用导数积分表.md",
+    "elec/电路原理.md",
     "StyleTest.md",
     "jekyll.md",
-    "elec/电路原理.md",
     "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
-    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "Mybooks/tech/电工学.pdf",
     "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",
     "Mybooks/tech/电路(第5版)学习指导与习题分析(配套邱关源主编电路第五版)-课后答案  刘崇新 罗先觉主编 2006年 高等教育出版社.pdf",
@@ -220,7 +227,6 @@
     "乱记.md",
     "EBAOBAO 的网安笔记.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
-    "数理/数学/微积分基础/常用导数积分表.md",
     "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "Mybooks/math/具体数学：计算机科学基础（第2版） (Ronald L. Graham, Donald E. Knuth etc.) (Z-Library).pdf",
     "Mybooks/精分/Critique of Hegels Philosophy Of Ri.pdf",
@@ -228,20 +234,13 @@
     "数理/数学/级数/阶跃响应函数与冲激响应函数.md",
     "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
     "数理/数学/微分方程/微分方程.md",
-    "数理/数学/微积分基础/微积分基础.md",
-    "数理/数学/微积分基础/等价无穷小.md",
     "blender 记录.md",
     "数理/数学/线性代数/线性代数.canvas",
     "数理/物理学/动力学/动力学.md",
     "python/从（0）开始学习 python.md",
     "从（1）开始学习 stm32 开发.md",
     "cubase 记录.md",
-    "EBAOBAO 的宇宙无敌超级第一 Git 笔记.md",
-    "python/爬虫.md",
     "数理/物理学/乱记.canvas",
-    "前端/hc 乱记.md",
-    "java/SE/java SE.md",
-    "java/从（0）开始学 java ！.md",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
     "Mybooks/pupupu/BLACKSOULS-血色之爱图片谱/3.png",
