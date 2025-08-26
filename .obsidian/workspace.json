@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "音乐/cubase 记录.md",
+                "file": "音乐/乱记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cubase 记录"
+              "title": "乱记"
             }
           },
           {
@@ -106,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -204,10 +203,10 @@
   },
   "active": "02804dc753aacef3",
   "lastOpenFiles": [
+    "音乐/cubase 记录.md",
     "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
     "音乐/乱记.md",
     "音乐/和弦理论笔记.md",
-    "音乐/cubase 记录.md",
     "数理/数学/微分方程/微分方程.md",
     "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
     "数理/数学/微积分基础/常用导数积分表.md",
