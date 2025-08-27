@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "基础乐理"
             }
+          },
+          {
+            "id": "7029d68ab07ae9f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "从（1）开始学习 stm32 开发.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "从（1）开始学习 stm32 开发"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -107,7 +121,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -171,13 +186,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "音乐/cubase 记录.md",
+                "file": "从（1）开始学习 stm32 开发.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "cubase 记录 的大纲"
+              "title": "从（1）开始学习 stm32 开发 的大纲"
             }
           }
         ],
@@ -185,8 +200,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,11 +216,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "6e4797cf21992868",
+  "active": "7029d68ab07ae9f8",
   "lastOpenFiles": [
-    "音乐/和弦理论笔记.md",
-    "音乐/基础乐理.md",
+    "elec/电路原理.md",
+    "随便记/学车.md",
     "音乐/cubase 记录.md",
+    "音乐/基础乐理.md",
+    "音乐/和弦理论笔记.md",
     "音乐/乱记.md",
     "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
     "数理/数学/微分方程/微分方程.md",
@@ -223,7 +239,6 @@
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "数理/数学/多元微积分/多元微积分.md",
     "数理/数学/多元微积分/片段.md",
-    "elec/电路原理.md",
     "StyleTest.md",
     "jekyll.md",
     "Mybooks/tech/电工学.pdf",
@@ -240,7 +255,6 @@
     "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "Mybooks/math/具体数学：计算机科学基础（第2版） (Ronald L. Graham, Donald E. Knuth etc.) (Z-Library).pdf",
     "Mybooks/精分/Critique of Hegels Philosophy Of Ri.pdf",
-    "^83d783.md",
     "数理/数学/线性代数/线性代数.canvas",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/2.png",
     "Mybooks/pupupu/BLACKSOULS2-永不终焉的茶会图片谱/1.png",
