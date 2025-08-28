@@ -34,9 +34,19 @@
               "icon": "lucide-file",
               "title": "基础乐理"
             }
+          },
+          {
+            "id": "b64bf7e35c02d15b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -107,8 +117,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -172,13 +181,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "音乐/基础乐理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "基础乐理 的大纲"
+              "title": "大纲"
             }
           }
         ],
@@ -186,7 +194,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,7 +211,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "6e4797cf21992868",
+  "active": "b64bf7e35c02d15b",
   "lastOpenFiles": [
     "音乐/cubase 记录.md",
     "音乐/基础乐理.md",
