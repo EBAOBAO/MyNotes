@@ -48,9 +48,21 @@
               "icon": "lucide-file",
               "title": "EBAOBAO 的网安笔记"
             }
+          },
+          {
+            "id": "5d3a7750f36bab6b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.9.12"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -217,7 +229,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b64bf7e35c02d15b",
+  "active": "5d3a7750f36bab6b",
   "lastOpenFiles": [
     "音乐/cubase 记录.md",
     "音乐/基础乐理.md",
