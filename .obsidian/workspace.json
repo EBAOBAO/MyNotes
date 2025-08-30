@@ -4,65 +4,42 @@
     "type": "split",
     "children": [
       {
-        "id": "58c8265416a574d8",
+        "id": "02a67198c11f5f45",
         "type": "tabs",
         "children": [
           {
-            "id": "02804dc753aacef3",
+            "id": "3a4f1740e9983b4a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "音乐/cubase 记录.md",
-                "mode": "source",
-                "source": false
+                "file": "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf"
               },
-              "icon": "lucide-file",
-              "title": "cubase 记录"
-            }
-          },
-          {
-            "id": "6e4797cf21992868",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "音乐/基础乐理.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "基础乐理"
-            }
-          },
-          {
-            "id": "b64bf7e35c02d15b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "EBAOBAO 的网安笔记.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "EBAOBAO 的网安笔记"
-            }
-          },
-          {
-            "id": "5d3a7750f36bab6b",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.12"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.9.12"
+              "icon": "lucide-file-text",
+              "title": "高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1)"
             }
           }
-        ],
-        "currentTab": 3
+        ]
+      },
+      {
+        "id": "16d47b95d3799d1e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5e4c7c2fb030a53",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数理/数学/微积分基础/常用导数积分表.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "常用导数积分表"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,20 +90,6 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "书签"
-            }
-          },
-          {
-            "id": "2e319c42665e25ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blender.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "blender"
             }
           }
         ]
@@ -198,13 +161,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的网安笔记.md",
+                "file": "数理/数学/微积分基础/常用导数积分表.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的网安笔记 的大纲"
+              "title": "常用导数积分表 的大纲"
             }
           }
         ],
@@ -229,11 +192,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5d3a7750f36bab6b",
+  "active": "c5e4c7c2fb030a53",
   "lastOpenFiles": [
+    "数理/数理乱记.md",
+    "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
+    "EBAOBAO 的网安笔记.md",
     "音乐/cubase 记录.md",
     "音乐/基础乐理.md",
-    "EBAOBAO 的网安笔记.md",
     "从（1）开始学习 stm32 开发.md",
     "elec/电路原理.md",
     "随便记/学车.md",
@@ -247,7 +212,6 @@
     "数理/数学/微积分基础/微积分基础.md",
     "数理/物理学/电磁学/电磁学.md",
     "数理/物理学/动力学/动力学.md",
-    "数理/数理乱记.md",
     "数理/物理学/乱记.canvas",
     "数理/数学/多元微积分/多元微积分00.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
@@ -260,10 +224,8 @@
     "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",
     "Mybooks/tech/电路(第5版)学习指导与习题分析(配套邱关源主编电路第五版)-课后答案  刘崇新 罗先觉主编 2006年 高等教育出版社.pdf",
     "Mybooks/tech/电路分析基础系统 (（美）托马斯 L.弗洛伊德，大卫 M.布奇拉著 etc.) (Z-Library).pdf",
-    "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
     "前端/从（1）开始学 Vue 笔记.md",
     "前端/从（0）开始学 JS.md",
-    "前端/从（0）开始学 html & CSS.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
     "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "Mybooks/math/具体数学：计算机科学基础（第2版） (Ronald L. Graham, Donald E. Knuth etc.) (Z-Library).pdf",
