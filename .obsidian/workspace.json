@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "02a67198c11f5f45",
+        "id": "8c5dac42c2add5f4",
         "type": "tabs",
         "children": [
           {
-            "id": "3a4f1740e9983b4a",
+            "id": "133b9e3a6713273b",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -18,13 +18,7 @@
               "icon": "lucide-file-text",
               "title": "高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1)"
             }
-          }
-        ]
-      },
-      {
-        "id": "16d47b95d3799d1e",
-        "type": "tabs",
-        "children": [
+          },
           {
             "id": "c5e4c7c2fb030a53",
             "type": "leaf",
@@ -40,7 +34,7 @@
             }
           },
           {
-            "id": "5ca994aec2cfc13a",
+            "id": "619ff9bb62b28b84",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -54,7 +48,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -176,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数理/数学/微积分基础/常用导数积分表.md",
+                "file": "EBAOBAO 的网安笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "常用导数积分表 的大纲"
+              "title": "EBAOBAO 的网安笔记 的大纲"
             }
           }
         ],
@@ -207,12 +201,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5ca994aec2cfc13a",
+  "active": "619ff9bb62b28b84",
   "lastOpenFiles": [
     "数理/数学/微积分基础/常用导数积分表.md",
-    "数理/数理乱记.md",
     "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
+    "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "EBAOBAO 的网安笔记.md",
+    "数理/数理乱记.md",
     "音乐/cubase 记录.md",
     "音乐/基础乐理.md",
     "从（1）开始学习 stm32 开发.md",
@@ -242,7 +237,6 @@
     "前端/从（1）开始学 Vue 笔记.md",
     "前端/从（0）开始学 JS.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
-    "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "Mybooks/math/具体数学：计算机科学基础（第2版） (Ronald L. Graham, Donald E. Knuth etc.) (Z-Library).pdf",
     "Mybooks/精分/Critique of Hegels Philosophy Of Ri.pdf",
     "数理/数学/线性代数/线性代数.canvas",
