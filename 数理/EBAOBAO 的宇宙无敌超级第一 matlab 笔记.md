@@ -213,6 +213,15 @@ $$
 `vpasolve(方程1, 方程2, ..., 待求变量)` ：解方程或方程组， 返回浮点数形式的解。
 
 ```matlab
+syms x; 
+answ = solve(sin(x)==1,x);
+```
+
+这里注意式子中要用两个等号表示相等。
+
+另外，对于单变量方程，也可以省略未知数，如果方程的等式右边是 0 也可以省略等式右边：
+
+```matlab
 syms x;
 disp(solve(x^3-2*x-1));
 %{
@@ -229,6 +238,40 @@ disp(vpasolve(x^3-2*x-1));
 
 %}
 ```
+
+也可以把一个等式赋给一个变量，然后向 `solve` 中传入它：
+
+```matlab
+syms x;
+equ = (sin(x)==1);%equ = sin(x)==1;
+answ = solve(equ);
+```
+
+像三角函数这种周期函数，如果要得到所有的解，则需要像这样加上条件
+
+```matlab
+[answ,params,conditions] = solve(equ,x,'returnconditions',true)
+```
+
+依旧是 `equ = (sin(x)==1)` ，输出结果：
+
+```
+answ =
+ 
+pi/2 + 2*pi*k
+ 
+ 
+params =
+ 
+k
+ 
+ 
+conditions =
+ 
+in(k, 'integer')
+```
+
+
 
 微分方程：`dsolve(方程)`（数值解不适用这个函数）
 
