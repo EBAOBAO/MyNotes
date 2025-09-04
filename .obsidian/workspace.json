@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数理/数学/微积分基础/常用导数积分表.md",
+                "file": "StyleTest.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "常用导数积分表"
+              "title": "StyleTest"
             }
           },
           {
@@ -217,15 +217,16 @@
   },
   "active": "af4010403c6b3cdf",
   "lastOpenFiles": [
-    "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
+    "StyleTest.md",
+    "音乐/基础乐理.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "数理/数学/微积分基础/常用导数积分表.md",
+    "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
     "blender 记录.md",
     "EBAOBAO 的网安笔记.md",
-    "数理/数学/微积分基础/常用导数积分表.md",
     "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "数理/数理乱记.md",
     "音乐/cubase 记录.md",
-    "音乐/基础乐理.md",
     "从（1）开始学习 stm32 开发.md",
     "elec/电路原理.md",
     "随便记/学车.md",
@@ -243,7 +244,6 @@
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
     "数理/数学/多元微积分/多元微积分.md",
     "数理/数学/多元微积分/片段.md",
-    "StyleTest.md",
     "jekyll.md",
     "Mybooks/tech/电工学.pdf",
     "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",

@@ -273,6 +273,14 @@ notes 4-5-6b7/3 10/4 | 5-4-2/3 2/2
 notes 6-7b9b7/3 7/4 | 9-8-7-6/2
 ```
 
+```music-abc
+X: 1
+T: Simple Tune
+M: 4/4
+K: C
+"This is a simple tune"c4 | "who's to say" d4 "what's for me to say" e4 | f4 g4 | a4 b2 | c4 ||
+```
+
  秋闱软月云梳翅， 松拥黛粉更航安。 快莺两望走夏蛙， 撇草追鱼滨鸟眠。
 
 ```tikz
