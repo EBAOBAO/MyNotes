@@ -11,12 +11,12 @@
             "id": "133b9e3a6713273b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "mindmapview",
               "state": {
-                "file": "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf"
+                "file": "数理/数学/多元微积分/多元微积分.md"
               },
-              "icon": "lucide-file-text",
-              "title": "高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1)"
+              "icon": "blocks",
+              "title": "多元微积分"
             }
           },
           {
@@ -60,19 +60,29 @@
               "icon": "lucide-file",
               "title": "StyleTest"
             }
-          },
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "f5ff9673eeeafa7b",
+        "type": "tabs",
+        "children": [
           {
             "id": "e3b8fc16262ae236",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "数理/数学/多元微积分/重积分.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "重积分"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -224,16 +234,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e3b8fc16262ae236",
+  "active": "af4010403c6b3cdf",
   "lastOpenFiles": [
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "数理/数学/多元微积分/多元微积分.md",
+    "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
+    "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
+    "数理/数学/多元微积分/重积分.md",
+    "数理/数学/微积分基础/常用导数积分表.md",
+    "数理/数学/微积分基础/微积分基础.md",
     "音乐/基础乐理.md",
     "StyleTest.md",
-    "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
-    "数理/数学/微积分基础/常用导数积分表.md",
     "blender 记录.md",
     "EBAOBAO 的网安笔记.md",
-    "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "数理/数理乱记.md",
     "音乐/cubase 记录.md",
     "从（1）开始学习 stm32 开发.md",
@@ -245,20 +258,17 @@
     "数理/数学/微分方程/微分方程.md",
     "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
     "数理/数学/微积分基础/等价无穷小.md",
-    "数理/数学/微积分基础/微积分基础.md",
     "数理/物理学/电磁学/电磁学.md",
     "数理/物理学/动力学/动力学.md",
     "数理/物理学/乱记.canvas",
     "数理/数学/多元微积分/多元微积分00.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
-    "数理/数学/多元微积分/多元微积分.md",
     "数理/数学/多元微积分/片段.md",
     "jekyll.md",
     "Mybooks/tech/电工学.pdf",
     "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",
     "Mybooks/tech/电路(第5版)学习指导与习题分析(配套邱关源主编电路第五版)-课后答案  刘崇新 罗先觉主编 2006年 高等教育出版社.pdf",
     "Mybooks/tech/电路分析基础系统 (（美）托马斯 L.弗洛伊德，大卫 M.布奇拉著 etc.) (Z-Library).pdf",
-    "前端/从（1）开始学 Vue 笔记.md",
     "Mybooks/code/黑客攻防与网络安全从新手到高手（绝招篇） (网络安全技术联盟) (Z-Library).pdf",
     "Mybooks/math/具体数学：计算机科学基础（第2版） (Ronald L. Graham, Donald E. Knuth etc.) (Z-Library).pdf",
     "Mybooks/精分/Critique of Hegels Philosophy Of Ri.pdf",
