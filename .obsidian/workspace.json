@@ -53,12 +53,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数理/数学/多元微积分/极限与偏导.md",
+                "file": "EBAOBAO 的网安笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "极限与偏导"
+              "title": "EBAOBAO 的网安笔记"
             }
           }
         ],
@@ -119,7 +119,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -216,11 +217,12 @@
   },
   "active": "e3b8fc16262ae236",
   "lastOpenFiles": [
+    "音乐/和弦理论笔记.md",
+    "数理/数学/多元微积分/极限与偏导.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
     "StyleTest.md",
     "音乐/基础乐理.md",
-    "数理/数学/多元微积分/极限与偏导.md",
     "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
     "数理/数学/多元微积分/多元微积分.md",
     "数理/数学/多元微积分/重积分.md",
@@ -234,7 +236,6 @@
     "从（1）开始学习 stm32 开发.md",
     "elec/电路原理.md",
     "随便记/学车.md",
-    "音乐/和弦理论笔记.md",
     "音乐/乱记.md",
     "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
     "数理/数学/微分方程/微分方程.md",
