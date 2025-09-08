@@ -11,12 +11,12 @@
             "id": "133b9e3a6713273b",
             "type": "leaf",
             "state": {
-              "type": "mindmapview",
+              "type": "pdf",
               "state": {
-                "file": "数理/数学/多元微积分/多元微积分.md"
+                "file": "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf"
               },
-              "icon": "blocks",
-              "title": "多元微积分"
+              "icon": "lucide-file-text",
+              "title": "高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library)"
             }
           },
           {
@@ -73,12 +73,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数理/数学/多元微积分/重积分.md",
+                "file": "数理/数学/多元微积分/极限与偏导.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "重积分"
+              "title": "极限与偏导"
             }
           }
         ]
@@ -138,7 +138,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -233,14 +234,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "133b9e3a6713273b",
+  "active": "e3b8fc16262ae236",
   "lastOpenFiles": [
+    "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
+    "数理/数学/多元微积分/多元微积分.md",
+    "数理/数学/多元微积分/极限与偏导.md",
+    "数理/数学/多元微积分/重积分.md",
+    "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
     "音乐/基础乐理.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-    "数理/数学/多元微积分/多元微积分.md",
-    "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
-    "Mybooks/math/高等数学第8版上册 (同济大学数学科学学院) (Z-Library) (1).pdf",
-    "数理/数学/多元微积分/重积分.md",
     "数理/数学/微积分基础/常用导数积分表.md",
     "数理/数学/微积分基础/微积分基础.md",
     "StyleTest.md",
@@ -262,7 +264,6 @@
     "数理/物理学/乱记.canvas",
     "数理/数学/多元微积分/多元微积分00.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
-    "数理/数学/多元微积分/片段.md",
     "jekyll.md",
     "Mybooks/tech/电工学.pdf",
     "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",
