@@ -61,8 +61,7 @@
               "title": "StyleTest"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "f5ff9673eeeafa7b",
@@ -234,8 +233,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "af4010403c6b3cdf",
+  "active": "133b9e3a6713273b",
   "lastOpenFiles": [
+    "音乐/基础乐理.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "数理/数学/多元微积分/多元微积分.md",
     "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
@@ -243,7 +243,6 @@
     "数理/数学/多元微积分/重积分.md",
     "数理/数学/微积分基础/常用导数积分表.md",
     "数理/数学/微积分基础/微积分基础.md",
-    "音乐/基础乐理.md",
     "StyleTest.md",
     "blender 记录.md",
     "EBAOBAO 的网安笔记.md",
