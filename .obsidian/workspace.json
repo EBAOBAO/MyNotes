@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+                "file": "java/SE/java SE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的宇宙无敌超级第一 matlab 笔记"
+              "title": "java SE"
             }
           },
           {
@@ -61,8 +61,7 @@
               "title": "爬虫"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#项目的",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -115,8 +114,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -185,13 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EBAOBAO 的网安笔记.md",
+                "file": "java/SE/java SE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EBAOBAO 的网安笔记 的大纲"
+              "title": "java SE 的大纲"
             }
           }
         ],
@@ -216,13 +214,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e3b8fc16262ae236",
+  "active": "619ff9bb62b28b84",
   "lastOpenFiles": [
+    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
+    "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
+    "python/爬虫.md",
     "EBAOBAO 的网安笔记.md",
     "音乐/和弦理论笔记.md",
     "数理/数学/多元微积分/极限与偏导.md",
-    "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
-    "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
     "StyleTest.md",
     "音乐/基础乐理.md",
     "Mybooks/math/高等数学 下册 第八版 (同济大学数学科学学院 编) (Z-Library).pdf",
@@ -247,7 +246,6 @@
     "数理/物理学/乱记.canvas",
     "数理/数学/多元微积分/多元微积分00.md",
     "数理/EBAOBAO 宇宙无敌超级第一线性代数笔记.md",
-    "jekyll.md",
     "Mybooks/tech/电工学.pdf",
     "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",
     "Mybooks/tech/电路(第5版)学习指导与习题分析(配套邱关源主编电路第五版)-课后答案  刘崇新 罗先觉主编 2006年 高等教育出版社.pdf",

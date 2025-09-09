@@ -6966,6 +6966,14 @@ public static void main(String[] args) throws IOException {
 }
 ```
 
+## 再谈 Properties
+
+`Properties` 类可以用来非常轻松地处理 *.properties* 配置文件，而程序对于配置文件的读取功能于面积功能当然是很有用的。
+
+传统方案实现：
+
+
+
 ## 操作Zip
 
 `ZipInputStream`是一种`FilterInputStream`，它可以直接读取zip包的内容：
