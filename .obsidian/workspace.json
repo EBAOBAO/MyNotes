@@ -53,12 +53,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EBAOBAO 的网安笔记.md",
+                "file": "python/爬虫.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的网安笔记"
+              "title": "爬虫"
             }
           }
         ],
@@ -94,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#app",
+                "query": "tag:#项目的",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -115,11 +115,13 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -216,6 +218,7 @@
   },
   "active": "e3b8fc16262ae236",
   "lastOpenFiles": [
+    "EBAOBAO 的网安笔记.md",
     "音乐/和弦理论笔记.md",
     "数理/数学/多元微积分/极限与偏导.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
@@ -229,7 +232,6 @@
     "数理/数学/微积分基础/常用导数积分表.md",
     "数理/数学/微积分基础/微积分基础.md",
     "blender 记录.md",
-    "EBAOBAO 的网安笔记.md",
     "数理/数理乱记.md",
     "音乐/cubase 记录.md",
     "从（1）开始学习 stm32 开发.md",
