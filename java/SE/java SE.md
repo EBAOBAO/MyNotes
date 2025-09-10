@@ -4614,8 +4614,8 @@ s2最终指向的是堆中对象的空间地址。
 
 ```mermaid
 flowchart TD
-poolString[变量 poolString<br>存在于栈帧] --> poolRef[引用]
-newString[变量 newString<br>存在于栈帧] --> newRef[引用]
+poolString[变量 s<br>存在于栈帧] --> poolRef[引用]
+newString[变量 s2<br>存在于栈帧] --> newRef[引用]
 
 subgraph Heap[堆内存]
     subgraph ConstantPool[字符串常量池]
@@ -4624,7 +4624,7 @@ subgraph Heap[堆内存]
 
     NewStringObj[String对象#2<br>（new String创建）]
 
-    PoolStringObj --> PoolValue[value数组<br>'h','e','l','l','o']
+    PoolStringObj --> PoolValue[value数组<br>'E','B','A','O','B','A','O']
     NewStringObj --> NewValue[value数组<br>'h','e','l','l','o']
 end
 
@@ -4632,7 +4632,6 @@ poolRef --> PoolStringObj
 newRef --> NewStringObj
 ```
 
-==pic==
 ### String 对象特性
 
 ```java
@@ -4647,10 +4646,32 @@ String b = "EBAOBAO";
 String c = a + b;
 ```
 
-这里共创建了3个对象，但注意**c指向的是堆中的对象！！**
+这里共创建了3个对象，但注意 **c指向的是堆中的对象！！**
 
 > 常量相加，看的是池
 > 变量相加，看的是堆
+
+不过，被 `final` 修饰的“变量” 算是个例外：它们虽然以变量的形式书写，但在编译时其值就已经被确定，因此它们会退化成“常量”，享受编译期优化。
+
+```java
+final String f1 = "Hello"; // 编译期常量
+final String f2 = "World"; // 编译期常量
+String s5 = f1 + f2; // 编译期可确定为 "HelloWorld"，结果在池中
+
+String s6 = "HelloWorld";
+System.out.println(s5 == s6); // true! 因为f1和f2是final常量，s5也在池中
+```
+
+另外还有个 `intern()` 方法可以主动将堆中的字符串对象引用驻留到常量池，并返回池中的引用。
+
+```java
+String s1 = "Hello";
+String s2 = "World";
+String s3 = (s1 + s2).intern(); // 运行时拼接，但主动将结果放入池中
+
+String s4 = "HelloWorld";
+System.out.println(s3 == s4); // true! 因为s3通过intern()指向了池中的对象
+```
 
 ### 细节
 
@@ -4659,7 +4680,7 @@ String a = "EBAOBAO";
 String b = new String("EBAOBAO");
 System.out.println(a.equals(b)); // true
 System.out.println(a == b); // false，它们比较的并不是“数值”
-System.out.println(a == b.intern()); // true，intern()返回b对象对应在池中的字符串
+System.out.println(a == b.intern()); // true，intern()可以主动将堆中的字符串对象引用驻留到常量池，并返回池中的引用。
 System.out.println(b == b.intern()); // false，显而易见
 ```
 
@@ -4687,7 +4708,7 @@ System.out.println(b == b.intern()); // false，显而易见
 	- `char charAt(int index)`
 		获取索引处字符
 	- `intern()`
-		返回常量池地址
+		主动将堆中的字符串对象引用驻留到常量池，并返回池中的引用。
 	- `public byte[] getBytes()/(Charset)`
 		（按某编码格式）返回对应字节数组
 	- `public char[] toCharArray()`
@@ -4711,13 +4732,13 @@ System.out.println(b == b.intern()); // false，显而易见
 		```java
 		// 这里参数不同，因为它是在String类里被调用的其他类的方法
 		public static int compareTo(byte[] value, byte[] other, int len1, int len2) {  
-		    int lim = Math.min(len1, len2);  
-		    for (int k = 0; k < lim; k++) {  
-		        if (value[k] != other[k]) {  
-		            return getChar(value, k) - getChar(other, k);  
-		        }  
-		    }  
-		    return len1 - len2;  
+			int lim = Math.min(len1, len2);  
+			for (int k = 0; k < lim; k++) {  
+				if (value[k] != other[k]) {  
+					return getChar(value, k) - getChar(other, k);  
+				}  
+			}  
+			return len1 - len2;  
 		}
 		```
 	- `static String format(String format, Object... args)`
