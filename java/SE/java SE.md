@@ -7019,6 +7019,23 @@ public class LearnCode {
 
 ### 使用例
 
+加载+读取配置文件的一般流程：
+
+```java
+public static void main(String[] args) throws IOException {  
+    Properties properties = new Properties();  
+    // 首先要加载一下相应的配置文件  
+    properties.load(new FileReader("src\\com\\EBAOBAO\\test\\TTT.properties"));  
+    // 可以像这样把键值对全部显示出来  
+    properties.list(System.out);  
+    // 不过一般来说，加载完配置文件后会获取一个或一些配置  
+    String user = properties.getProperty("user");  
+    System.out.println("用户是：" + user);  
+}
+```
+
+新建与修改配置文件的一般流程：
+
 
 
 ## 操作Zip
