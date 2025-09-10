@@ -4612,6 +4612,26 @@ String s2 = new String("EBAOBAO");
 
 s2最终指向的是堆中对象的空间地址。
 
+```mermaid
+flowchart TD
+poolString[变量 poolString<br>存在于栈帧] --> poolRef[引用]
+newString[变量 newString<br>存在于栈帧] --> newRef[引用]
+
+subgraph Heap[堆内存]
+    subgraph ConstantPool[字符串常量池]
+        PoolStringObj[String对象#1<br>（字面量“hello”）]
+    end
+
+    NewStringObj[String对象#2<br>（new String创建）]
+
+    PoolStringObj --> PoolValue[value数组<br>'h','e','l','l','o']
+    NewStringObj --> NewValue[value数组<br>'h','e','l','l','o']
+end
+
+poolRef --> PoolStringObj
+newRef --> NewStringObj
+```
+
 ==pic==
 ### String 对象特性
 
