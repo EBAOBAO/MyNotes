@@ -5539,45 +5539,47 @@ Map 用以保存具有映射关系的数据（键值对）。 `key` 不允许重
 
 ### 常用方法
 
-1. 增、改
-	- `put(key, value)`
-		新增键值对，出现与先前相同的 key 时就替换相应键值对。
-2. 删
-	- `remove(key)`
-		根据键删除键值对。
-	-  `boolean remove(key, value)`
-		删除键值对，若成功则返回 true。
-	- `void clear()`
-		清空。
+增、改
+- `put(key, value)`
+	新增键值对，出现与先前相同的 key 时就替换相应键值对。
+
+删
+- `remove(key)`
+	根据键删除键值对。
+-  `boolean remove(key, value)`
+	删除键值对，若成功则返回 true。
+- `void clear()`
+	清空。
 3. 查
-	- `int size()`
-		返回长度，亦即键值对数量。
-	- `boolean isEmpty()`
-		判断是否为空。
-	- `boolean containsKey(Object key)`
-		查找键是否存在。
-	- `V get(key)`
-		返回 key 对应的 value（可用Object对象来接收）。
-4. **遍历**
-	- `Set entrySet()`
-		返回含有键值对对象（Entry 类型）的set，**你不能够像collection那样直接遍历map！！**
-		
-		键值对本质上是 Node（一个内部类）对象，Node 实现了 Entry 接口，故也有地方说它是一个 Entry。Entry 接口提供了`getKey()`与`getValue()`两个重要方法。这些对象放在`entrySet`里。
-		```java
-		public static void main(String[] args) {  
-		    Map map = new HashMap();  
-		    Set entrys = map.entrySet();  
-		    System.out.println(entrys.getClass());  
-		    for (Object obj : entrys) {  
-		        Map.Entry entry = (Map.Entry) obj;  
-		        System.out.println(entry.getKey() + " " + entry.getValue());  
-		    }  
-		}
-		```
-	- `Set keySet()`
-		返回含有所有 key 的 set。
-	- `Collection values()`
-		返回含有所有 value 的 collection。
+- `int size()`
+	返回长度，亦即键值对数量。
+- `boolean isEmpty()`
+	判断是否为空。
+- `boolean containsKey(Object key)`
+	查找键是否存在。
+- `V get(key)`
+	返回 key 对应的 value（可用Object对象来接收）。
+
+**遍历**
+- `Set entrySet()`
+	返回含有键值对对象（Entry 类型）的set，**你不能够像collection那样直接遍历map！！**
+	
+	键值对本质上是 Node（一个内部类）对象，Node 实现了 Entry 接口，故也有地方说它是一个 Entry。Entry 接口提供了`getKey()`与`getValue()`两个重要方法。这些对象放在`entrySet`里。
+	```java
+	public static void main(String[] args) {  
+		Map map = new HashMap();  
+		Set entrys = map.entrySet();  
+		System.out.println(entrys.getClass());  
+		for (Object obj : entrys) {  
+			Map.Entry entry = (Map.Entry) obj;  
+			System.out.println(entry.getKey() + " " + entry.getValue());  
+		}  
+	}
+	```
+- `Set keySet()`
+	返回含有所有 key 的 set。
+- `Collection values()`
+	返回含有所有 value 的 collection。
 
 ### HashMap
 
@@ -7018,8 +7020,8 @@ public class LearnCode {
 	获取值
 `setProperty(key, value)`
 	设置键值对
-`store()`
-	将properties中的键值对存储至配置文件（中文会被存储为 unicode 码）。
+`store(writer/outputstream, comments)`
+	将properties中的键值对存储至配置文件（中文会被存储为 unicode 码），`comments` 可以指定文件开头的注释，一般传入 `null` 即可。
 
 ### 使用例
 
@@ -7040,7 +7042,17 @@ public static void main(String[] args) throws IOException {
 
 新建与修改配置文件的一般流程：
 
-
+```java
+public static void main(String[] args) throws IOException {  
+    Properties properties = new Properties();  
+    properties.setProperty("charset", "utf-8");  
+    properties.setProperty("encoding", "utf-8");  
+    properties.setProperty("line.separator", "\n");  
+    // 然后可以存储这些配置了，如果这个路径不存在的话会新建一个文件  
+    properties.store(new FileWriter("src\\gagaga.properties"), null);  
+    System.out.println("保存成功");  
+}
+```
 
 ## 操作Zip
 
