@@ -4608,7 +4608,7 @@ s 最终指向常量池中"EBAOBAO"的空间地址。
 String s2 = new String("EBAOBAO");
 ```
 
-在堆内存中创建String对象空间，里面维护了value属性，value指向常量池中的"EBAOBAO"。
+在堆内存中创建String对象空间，里面维护了value属性，value。
 
 s2最终指向的是堆中对象的空间地址。
 
