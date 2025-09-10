@@ -6972,7 +6972,29 @@ public static void main(String[] args) throws IOException {
 
 传统方案实现：
 
+```java
+package com.EBAOBAO.test;  
+  
+import java.io.*;  
+import java.nio.charset.Charset;  
+  
+public class LearnCode {  
+    public static void main(String[] args) throws IOException {  
+        FileReader in = new FileReader("src\\com\\EBAOBAO\\test\\TTT.properties");  
+        try (BufferedReader bur = new BufferedReader(in)) {  
+            String line = "";  
+            while ((line = bur.readLine()) != null) {  
+                String[] sp = line.split("=");  
+                if (sp.length == 2) {  
+                    System.out.println(sp[0] + "的值是" + sp[1]);  
+                }  
+            }  
+        }  
+    }  
+}
+```
 
+这样全部遍历的话，要单独获取其中某一份数据其实还是挺困难的。
 
 ## 操作Zip
 

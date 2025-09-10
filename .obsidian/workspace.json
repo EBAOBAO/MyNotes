@@ -61,7 +61,8 @@
               "title": "爬虫"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -214,8 +215,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "619ff9bb62b28b84",
+  "active": "af4010403c6b3cdf",
   "lastOpenFiles": [
+    "java/SE/java SE.md",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
     "python/爬虫.md",
