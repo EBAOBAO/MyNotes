@@ -958,6 +958,7 @@ public class LearningI {
 可存放多个同一类型的数据(元素)的类型
 
 定义语法：
+
 ```Java
 int[] num = {1,2,3,4,5};//静态初始化
 int num[]……; // 将 [] 放在变量后面也行
@@ -7005,7 +7006,7 @@ public class LearnCode {
 
 `Properties` 类常用方法：
 
-`load()`
+`load(reader/inputStream)`
 	加载配置文件的键值对到 Properties 对象。
 `list()`
 	将数据显示到指定设备（流对象）。
