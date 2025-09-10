@@ -4590,6 +4590,39 @@ String(char value[])
 
 ### 创建String对象
 
+```mermaid
+flowchart TD
+subgraph JVM内存逻辑分区
+    direction TB
+    subgraph Heap堆
+        direction LR
+        SCP[字符串常量池]
+        Young[年轻代<br>Eden+S0+S1]
+        Old[老年代]
+    end
+
+    Stack[虚拟机栈]
+    NativeStack[本地方法栈]
+    PC[程序计数器]
+
+    subgraph MetaSpace
+        ClassLoader[类加载器数据]
+        Klass[类元数据<br>（Klass结构）]
+        Code[方法代码<br>JIT编译后的代码]
+        Pool[运行时常量池]
+    end
+
+    DirectMemory[直接内存<br>（JVM之外）]
+end
+
+Stack -. 每个线程私有 .-> Stack
+NativeStack -. 每个线程私有 .-> NativeStack
+PC -. 每个线程私有 .-> PC
+
+Heap -. 所有线程共享 .-> Heap
+MetaSpace -. 所有线程共享 .-> MetaSpace
+```
+
 法1：直接赋值
 
 ```java
@@ -4600,7 +4633,7 @@ String s = "EBAOBAO";
 
 s 最终指向常量池中"EBAOBAO"的空间地址。
 
-不过要注意，**字符串的字面量从一开始就是对象，而不是这里的要在调用什么方法之后才转换成一个对象，**
+不过要注意，**字符串的字面量从一开始就是对象，而不是这里的要在调用什么方法之后才转换成一个对象，String 不是一个基本类型！！**
 
 （……基本上可以这么理解，不过）
 
