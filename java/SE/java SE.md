@@ -6968,7 +6968,7 @@ public static void main(String[] args) throws IOException {
 
 ## 再谈 Properties
 
-`Properties` 类可以用来非常轻松地处理 *.properties* 配置文件，而程序对于配置文件的读取功能于面积功能当然是很有用的。
+我们曾在集合中提到过 `Properties` 类，`Properties` 类可以用来非常轻松地处理 *.properties* 配置文件，而程序对于配置文件的读取与修改的功能当然是很有用的。
 
 传统方案实现：
 
@@ -6996,6 +6996,18 @@ public class LearnCode {
 
 这样全部遍历的话，要单独获取其中某一份数据其实还是挺困难的。
 
+`Properties` 类可以读写的配置文件的格式：*键=值* ，注意 **键值对中不要有空格，值不需要用引号括起来，默认类型是String。**
+
+`Properties` 类常用方法：
+
+`load()`
+	加载配置文件的键值对到 Properties 对象。
+`list()`
+	将数据显示到指定设备。
+`getProperty(key)`
+	获取值
+`setProperty(key, value)`
+	设置键值对
 ## 操作Zip
 
 `ZipInputStream`是一种`FilterInputStream`，它可以直接读取zip包的内容：
