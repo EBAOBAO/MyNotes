@@ -4594,7 +4594,7 @@ String(char value[])
 flowchart TD
 subgraph JVM内存逻辑分区
     direction TB
-    subgraph Heap堆
+    subgraph Heap
         direction LR
         SCP[字符串常量池]
         Young[年轻代<br>Eden+S0+S1]
