@@ -5987,7 +5987,7 @@ Thread.currentThread().getName();
 
 ```java
 try {  
-	// 关键在于，这个方法可能抛出一个 InterruptedException
+	// 这个方法可能抛出一个 InterruptedException，所以得 try-catch 一下
     Thread.sleep(1000);  
 } catch (InterruptedException e) {  
     e.printStackTrace();  
@@ -6064,108 +6064,6 @@ class ProxyThread implements Runnable {
 }
 ```
 
-## 线程终止
-
-当线程完成之后，它会自动退出，不过还可以通过使用变量控制 `run()` 方法退出的方式（即 *通知方式* ）停止线程。
-
-```java
-package com.EBAOBAO.thread_;  
-  
-public class Testing {  
-    public static void main(String[] args) throws InterruptedException {  
-        T t = new T();  
-        Thread thread = new Thread(t);  
-        thread.start();  
-  
-        Thread.sleep(10 * 1000);  
-        t.setLoop(false); // 通过调用相关方法通知线程结束  
-    }  
-}  
-  
-class T implements Runnable {  
-    private boolean loop = true;// loop 若为false，则循环结束，线程终止。  
-  
-    @Override  
-    public void run() {  
-        int i = 0;  
-        while (loop) {  
-            System.out.println("huhuhu" + i);  
-            try {  
-                Thread.sleep(50);  
-            } catch (InterruptedException e) {  
-                e.printStackTrace();  
-            }  
-            i++;  
-        }  
-    }  
-  
-    public void setLoop(boolean loop) {  
-        this.loop = loop;  
-    }  
-}
-```
-
-## Thread 常用方法
-
-- `public final synchronized void setName(String name)`
-	设置线程名称
-- `public final String getName()`
-	获取线程名称
-- `public static native Thread currentThread()`
-	获取当前线程对象
-- `public final void setPriority(int newPriority)`
-	设置线程优先级。
-	（当然还有个 `getPriority()`）
-	
-	- **高优先级的线程比低优先级的线程有更高的几率得到执行**，实际上这和操作系统及虚拟机版本相关，有可能即使设置了线程的优先级也不会产生任何作用。
-	- Java 默认的线程优先级是父线程的优先级，而非普通优先级 `Thread.NORM_PRIORITY `。不过由于 main 线程的优先级是普通优先级，故其子线程默认为普通优先级。
-	- 线程优先级对于不同的线程调度器可能有不同的含义，可能并不是你直观的推测。特别地，优先级并不一定是指CPU的分享。在UNIX系统，优先级或多或少可以认为是CPU的分配，但Windows不是这样。
-	- 线程的优先级通常是全局的和局部的优先级设定的组合。Java的 `setPriority()` 方法只应用于局部的优先级。换句话说，你不能在整个可能的范围内设定优先级，这通常是一种保护的方式，你大概不希望鼠标指针的线程或者处理音频数据的线程被其它随机的用户线程所抢占。
-	- 不同的系统有不同的线程优先级的取值范围，但是Java定义了10个级别（1-10）。这样就有可能出现几个线程在一个操作系统里有不同的优先级，在另外一个操作系统里却有相同的优先级，并因此可能有意想不到的行为。
-```java
-/**  
-  * The minimum priority that a thread can have.  
-  */ 
-public final static int MIN_PRIORITY = 1;  
-  
-/**  
-  * The default priority that is assigned to a thread.  
-  */
-public final static int NORM_PRIORITY = 5;  
-  
- /**  
-  * The maximum priority that a thread can have.  
-  */ 
-public final static int MAX_PRIORITY = 10;
-```
-- `public void interrupt()`
-	中断线程（并不是终止！！），会给线程传一个 InterruptedException。
-	一般用于提前唤醒正在休眠的线程（现在知道为什么 `sleep()` 要有异常处理了吧）。
-- `public static native void yield()`
-	让出 cpu 让其他线程执行。
-	但由于礼让的时间不确定（可能 cpu 资源比较充足），故也不一定礼让成功。
-- `public final void join() throws InterruptedException`
-	线程插队。
-	插队的线程一旦插队成功，就肯定先执行完插队的线程。
-
-## 用户线程与守护线程
-
-*用户线程*
-	也叫 *工作线程* ，等线程的任务完或通知结束后终止。
-
-*守护线程（Daemon）*
-	一般为工作线程服务，当所有用户线程终止，守护线程自动终止。
-	java 的垃圾回收机制就是一个守护线程。
-
-将线程设置为守护线程的方法：
-
-1. 在相关线程中写一个无限循环程序
-2. 然后像这样写：
-```java
-myDaemonThread.setDaemon(true);
-// 注意这一句要写在调用 start() 方法前面！
-```
-
 ## 线程七大状态
 
 在 java 中，线程的生命周期一共有7种状态。
@@ -6185,7 +6083,7 @@ public enum State {
      * state is executing in the Java virtual machine but it may     
      * be waiting for other resources from the operating system     
      * such as processor.     
-     * 可运行的，在 jvm 中执行的。
+     * 可运行的，正在 jvm 中执行的。
      */    
      RUNNABLE,  
   
@@ -6248,7 +6146,7 @@ public enum State {
 `RUNNABLE` 状态还有两种子状态：`READY` （线程被挂起）与 `RUNNING` （线程被调度器选中执行）。
 
 ```mermaid
-stateDiagram-v2
+stateDiagram
 	direction LR
 	[*] --> NEW: new
 	NEW --> RUNNABLE: start()
@@ -6277,6 +6175,113 @@ stateDiagram-v2
 
 `public State getState()`
 	获取状态。
+
+## 线程终止
+
+当线程完成之后，它会自动退出，不过还可以通过使用变量控制 `run()` 方法退出的方式（即 *通知方式* ）停止线程。
+
+```java
+package com.EBAOBAO.thread_;  
+  
+public class Testing {  
+    public static void main(String[] args) throws InterruptedException {  
+        T t = new T();  
+        Thread thread = new Thread(t);  
+        thread.start();  
+  
+        Thread.sleep(10 * 1000);  
+        t.setLoop(false); // 通过调用相关方法通知线程结束  
+    }  
+}  
+  
+class T implements Runnable {  
+    private boolean loop = true;// loop 若为false，则循环结束，线程终止。  
+  
+    @Override  
+    public void run() {  
+        int i = 0;  
+        while (loop) {  
+            System.out.println("huhuhu" + i);  
+            try {  
+                Thread.sleep(50);  
+            } catch (InterruptedException e) {  
+                e.printStackTrace();  
+            }  
+            i++;  
+        }  
+    }  
+  
+    public void setLoop(boolean loop) {  
+        this.loop = loop;  
+    }  
+}
+```
+
+可以调用 `stop()` 方法来强制终止线程，但 **强烈不推荐使用！！**
+
+## Thread 常用方法
+
+- `public final synchronized void setName(String name)`
+	设置线程名称
+- `public final String getName()`
+	获取线程名称
+- `public static native Thread currentThread()`
+	获取当前线程对象
+- `public final void setPriority(int newPriority)`
+	设置线程优先级。
+	（当然还有个 `getPriority()`）
+	
+	- **高优先级的线程比低优先级的线程有更高的几率得到执行**，实际上这和操作系统及虚拟机版本相关，有可能即使设置了线程的优先级也不会产生任何作用。
+	- Java 默认的线程优先级是父线程的优先级，而非普通优先级 `Thread.NORM_PRIORITY `。不过由于 main 线程的优先级是普通优先级，故其子线程默认为普通优先级。
+	- 线程优先级对于不同的线程调度器可能有不同的含义，可能并不是你直观的推测。特别地，优先级并不一定是指CPU的分享。在UNIX系统，优先级或多或少可以认为是CPU的分配，但Windows不是这样。
+	- 线程的优先级通常是全局的和局部的优先级设定的组合。Java的 `setPriority()` 方法只应用于局部的优先级。换句话说，你不能在整个可能的范围内设定优先级，这通常是一种保护的方式，你大概不希望鼠标指针的线程或者处理音频数据的线程被其它随机的用户线程所抢占。
+	- 不同的系统有不同的线程优先级的取值范围，但是Java定义了10个级别（**1低~10高**）。这样就有可能出现几个线程在一个操作系统里有不同的优先级，在另外一个操作系统里却有相同的优先级，并因此可能有意想不到的行为。
+	```java
+	/**  
+	  * The minimum priority that a thread can have.  
+	  */ 
+	public final static int MIN_PRIORITY = 1;  
+	  
+	/**  
+	  * The default priority that is assigned to a thread.  
+	  */
+	public final static int NORM_PRIORITY = 5;  
+	  
+	 /**  
+	  * The maximum priority that a thread can have.  
+	  */ 
+	public final static int MAX_PRIORITY = 10;
+	```
+	- 总而言之，**优先级高的线程被操作系统调度的优先级较高，操作系统对高优先级线程可能调度更频繁，但我们决不能通过设置优先级来确保高优先级的线程一定会先执行。**
+- `public void interrupt()`
+	`main`线程通过调用它来中断线程（并不是终止！！），会给线程传一个 InterruptedException。
+	一般用于提前唤醒正在休眠的线程（现在知道为什么 `sleep()` 要有异常处理了吧）。
+	但是要注意，`interrupt()`方法仅仅向线程发出了“中断请求”，至于线程是否能立刻响应，要看具体代码。
+- `public static native void yield()`
+	让出 cpu 让其他线程执行。
+	但由于礼让的时间不确定（可能 cpu 资源比较充足），故也不一定礼让成功。
+- `public final void join() throws InterruptedException`
+	线程插队。
+	插队的线程一旦插队成功，就肯定先执行完插队的线程。
+
+## 用户线程与守护线程
+
+*用户线程*
+	也叫 *工作线程* ，等线程的任务完或通知结束后终止。
+
+*守护线程（Daemon）*
+	一般为工作线程服务，当所有用户线程终止，守护线程自动终止。
+	java 的垃圾回收机制就是一个守护线程。
+
+将线程设置为守护线程的方法：
+
+1. 在相关线程中写一个无限循环程序
+2. 然后像这样写：
+
+```java
+myDaemonThread.setDaemon(true);
+// 注意这一句要写在调用 start() 方法前面！
+```
 
 ## 线程同步
 
