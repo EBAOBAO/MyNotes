@@ -1359,8 +1359,8 @@ Graphics 类提供了许多绘图方法，你可以将其对象就理解为一�
 示例：
 
 ```java
-Image img = Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/bg.png")); 
-// 这里的路径是从out->项目根目录开始读取的 
+Image img = ImageIO.read(new File(Panel.class.getResource("/bg.png")); 
+// 这里的路径是从项目根目录（src的父目录）开始读取的 
 g.drawImage(img, 10, 10, this);
 ```
 
