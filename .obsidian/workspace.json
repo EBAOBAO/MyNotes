@@ -240,7 +240,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -258,14 +259,14 @@
   },
   "active": "e86e3ede1c59da68",
   "lastOpenFiles": [
+    "java/projects.md",
+    "java/SE/java SE.md",
     "音乐/cubase 记录.md",
     "乱记.md",
-    "java/projects.md",
     "音乐/基础乐理.md",
     "python/python 声音处理.md",
     "StyleTest.md",
     "python/爬虫.md",
-    "java/SE/java SE.md",
     "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
     "数理/EBAOBAO 的宇宙无敌超级第一 matlab 笔记.md",
     "EBAOBAO 的网安笔记.md",

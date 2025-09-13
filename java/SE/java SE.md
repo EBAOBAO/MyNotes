@@ -5027,7 +5027,7 @@ private static <T> void binarySort(T[] a, int lo, int hi, int start,
 }
 ```
 
-可看到，底层（在数组规模较小时）调用了`binarySort`（二分插入排序）方法，该方法调用了`c.compare(pivot, a[mid])`来对排序加以定制。
+总而言之，底层（在数组规模较小时）调用了`binarySort`（二分插入排序）方法，该方法调用了`c.compare(pivot, a[mid])`来对排序加以定制。
 
 至于“定制”的方法，从源码知 `c.compare(pivot, a[mid]) < 0` 时查找的区间右边界左移，那么compare方法若返回 `o1 - o2` 则升序排序，返回 `o2 - o1` 则降序排序。
 
@@ -6587,6 +6587,34 @@ public class Main {
 `mkdirs()` 与 `mkdir()` 的区别如下：
 
 `new File("/tmp/one/two/three").mkdirs();`  执行后， 会建立tmp/one/two/three四级目录；而`new File("/tmp/one/two/three").mkdir();` 则不会建立任何目录， 因为找不到/tmp/one/two目录， 结果返回false
+
+## 使用例
+
+```java
+public static void main(String[] args) throws IOException {  
+    String directoryPath = "E:\\myTemp";  
+    File file = new File(directoryPath);  
+    if (!file.exists()) {  
+        if (file.mkdirs()) {  
+            System.out.println(directoryPath + "创建成功");  
+        } else {  
+            System.out.println(directoryPath + "创建失败");  
+        }  
+    }  
+    String filePath = directoryPath + "\\hello.txt";  
+    file = new File(filePath);  
+    if (!file.exists()) {  
+        if (file.createNewFile()) {  
+            System.out.println(filePath + "创建成功");  
+        } else {  
+            System.out.println(filePath + "创建失败");  
+        }  
+    } else {  
+        System.out.println(filePath + "已经存在！");  
+    }  
+}
+```
+
 
 ## Java IO流相关介绍
 
