@@ -1330,31 +1330,31 @@ Component 类提供了两个与绘图相关的最重要的方法：
 Graphics 类提供了许多绘图方法，你可以将其对象就理解为一支画笔：
 
 `drawLine(int x1, int y1, int x2, int y2)`
-: 直线
+	直线
 
 `drawRect(int x1, int y1, int width, int height)`
-: 矩形边框
+	矩形边框
 
 `drawOval(int x1, int y1, int width, int height)`
-: 椭圆边框
+	椭圆边框
 
 `fillRect(int x1, int y1, int width, int height)`
-: 填充矩形
+	填充矩形
 
 `fillOval(int x1, int y1, int width, int height)`
-: 填充椭圆
+	填充椭圆
 
 `drawImage(Image img, int x, int y, ..)`
-: 图片
+	图片
 
 `drawString(String str, int x, int y)`
-: 文本
+	文本
 
 `setfont(Font font)`
-: 设置字体
+	设置字体
 
 `setColor(Color c)`
-: 设置画笔颜色（Color 类中有一些静态属性，也可以看看它的那些构造器）
+	设置画笔颜色（Color 类中有一些静态属性，也可以看看它的那些构造器）
 
 示例：
 
