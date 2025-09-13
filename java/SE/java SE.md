@@ -6584,6 +6584,10 @@ public class Main {
 - `public boolean delete()`
 	删除当前File对象表示的目录，当前目录必须为空才能删除成功。
 
+`mkdirs()` 与 `mkdir()` 的区别如下：
+
+`new File("/tmp/one/two/three").mkdirs();`  执行后， 会建立tmp/one/two/three四级目录；而`new File("/tmp/one/two/three").mkdir();` 则不会建立任何目录， 因为找不到/tmp/one/two目录， 结果返回false
+
 ## Java IO流相关介绍
 
 *I/O* 是 Input/Output 的缩写，I/O 技术是十分使用的技术，用于数据传输：读/写文件，网络通讯……
