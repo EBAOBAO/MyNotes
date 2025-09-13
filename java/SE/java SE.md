@@ -6635,6 +6635,8 @@ public class Main {
 
 ## 使用例
 
+创建路径+创建文件
+
 ```java
 public static void main(String[] args) throws IOException {  
     String directoryPath = "E:\\myTemp";  
