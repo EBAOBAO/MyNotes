@@ -1419,3 +1419,42 @@ class Panel extends JPanel implements KeyListener {
 ```java
 jFrame.addKeyListener(myPanel);
 ```
+
+## 思路：两矩形的碰撞检测
+
+```java
+/**  
+ * 两坦克的碰撞检测  
+ * 因为我自己写得太复杂了所以用了AI。  
+ * AI真好用你知道吗。  
+ * @param t 目标坦克  
+ * @return true 碰上  
+ * false 没碰上  
+ */  
+private boolean hit(Tank t) {  
+    // 获取当前坦克的边界框（考虑方向）  
+    int thisWidth = (this.getDirection() == 1 || this.getDirection() == 3) ? 60 : 40;  
+    int thisHeight = (this.getDirection() == 1 || this.getDirection() == 3) ? 40 : 60;  
+  
+    // 获取目标坦克的边界框（考虑方向）  
+    int targetWidth = (t.getDirection() == 1 || t.getDirection() == 3) ? 60 : 40;  
+    int targetHeight = (t.getDirection() == 1 || t.getDirection() == 3) ? 40 : 60;  
+  
+    // 计算两个矩形的边界  
+    int thisLeft = this.getX();  
+    int thisRight = this.getX() + thisWidth;  
+    int thisTop = this.getY();  
+    int thisBottom = this.getY() + thisHeight;  
+  
+    int targetLeft = t.getX();  
+    int targetRight = t.getX() + targetWidth;  
+    int targetTop = t.getY();  
+    int targetBottom = t.getY() + targetHeight;  
+  
+    // 检查是否发生碰撞  
+    return thisRight > targetLeft &&  
+            thisLeft < targetRight &&  
+            thisBottom > targetTop &&  
+            thisTop < targetBottom;  
+}
+```
