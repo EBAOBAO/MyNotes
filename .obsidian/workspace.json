@@ -95,16 +95,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java/projects.md",
+                "file": "elec/电路原理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "projects"
+              "title": "电路原理"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -257,10 +257,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "51f3a903c881e444",
+  "active": "e86e3ede1c59da68",
   "lastOpenFiles": [
-    "java/SE/java SE.md",
+    "elec/电路原理.md",
+    "elec/数字电子技术.md",
+    "elec/模拟电子技术.md",
     "java/projects.md",
+    "java/SE/java SE.md",
     "音乐/cubase 记录.md",
     "乱记.md",
     "音乐/基础乐理.md",
@@ -281,14 +284,11 @@
     "blender 记录.md",
     "数理/数理乱记.md",
     "从（1）开始学习 stm32 开发.md",
-    "elec/电路原理.md",
     "随便记/学车.md",
     "音乐/乱记.md",
     "Mybooks/tech/电路原理 (于歆杰, 朱桂萍, 陆文娟) (Z-Library).pdf",
     "数理/数学/微分方程/微分方程.md",
     "数理/数学/微分方程/解 n 阶常系数齐次线性微分方程.md",
-    "数理/数学/微积分基础/等价无穷小.md",
-    "数理/物理学/电磁学/电磁学.md",
     "数理/物理学/乱记.canvas",
     "Mybooks/tech/电工学.pdf",
     "Mybooks/tech/电路（第5版）-邱关源&罗先觉，2006.pdf",
