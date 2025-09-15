@@ -104,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -257,16 +257,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e86e3ede1c59da68",
+  "active": "e3b8fc16262ae236",
   "lastOpenFiles": [
+    "音乐/基础乐理.md",
+    "java/SE/java SE.md",
     "elec/电路原理.md",
     "elec/数字电子技术.md",
     "elec/模拟电子技术.md",
     "java/projects.md",
-    "java/SE/java SE.md",
     "音乐/cubase 记录.md",
     "乱记.md",
-    "音乐/基础乐理.md",
     "python/python 声音处理.md",
     "StyleTest.md",
     "python/爬虫.md",
