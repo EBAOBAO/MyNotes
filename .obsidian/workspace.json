@@ -104,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -257,10 +257,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "51f3a903c881e444",
+  "active": "37b4ca42a798f52c",
   "lastOpenFiles": [
-    "未命名.md",
     "数理/数学/概率论与数理统计.md",
+    "未命名.md",
     "音乐/cubase 记录.md",
     "elec/电路原理.md",
     "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
