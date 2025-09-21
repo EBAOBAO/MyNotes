@@ -67,12 +67,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EBAOBAO 的网安笔记.md",
+                "file": "elec/电子百科.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EBAOBAO 的网安笔记"
+              "title": "电子百科"
             }
           },
           {
@@ -161,8 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a75f923a627f52b6",
@@ -259,9 +258,9 @@
   },
   "active": "37b4ca42a798f52c",
   "lastOpenFiles": [
+    "EBAOBAO 的网安笔记.md",
     "数理/数学/概率论与数理统计.md",
     "音乐/cubase 记录.md",
-    "EBAOBAO 的网安笔记.md",
     "音乐/乱记.md",
     "音乐/基础乐理.md",
     "未命名.md",
