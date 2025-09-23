@@ -103,8 +103,7 @@
               "title": "概率论与数理统计"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -256,8 +255,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "37b4ca42a798f52c",
+  "active": "af4010403c6b3cdf",
   "lastOpenFiles": [
+    "elec/数字电子技术.md",
     "java/SE/java SE.md",
     "C/计算机通识.md",
     "elec/电子百科.md",
@@ -271,7 +271,6 @@
     "elec/电路原理.md",
     "Mybooks/code/韩顺平_循序渐进学Java零基础【完整笔记】 (1).pdf",
     "python/爬虫.md",
-    "elec/数字电子技术.md",
     "elec/模拟电子技术.md",
     "java/projects.md",
     "乱记.md",
