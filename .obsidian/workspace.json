@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "af4010403c6b3cdf",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Mybooks/math/诺贝尔物理学奖获得者著作选译系列/13640271_泡利物理学讲义第一二三卷.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "13640271_泡利物理学讲义第一二三卷"
-            }
-          },
-          {
             "id": "c5e4c7c2fb030a53",
             "type": "leaf",
             "state": {
@@ -103,8 +91,7 @@
               "title": "概率论与数理统计"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -258,8 +245,8 @@
   },
   "active": "c7b138c2bcccb2dd",
   "lastOpenFiles": [
-    "elec/数字电子技术.md",
     "elec/电子技术大全.md",
+    "elec/数字电子技术.md",
     "elec/模拟电子技术.md",
     "Mybooks/math/诺贝尔物理学奖获得者著作选译系列/13640271_泡利物理学讲义第一二三卷.pdf",
     "Mybooks/math/普林斯顿数学指南全3册/普林斯顿数学指南  第3卷_13451565.pdf",
