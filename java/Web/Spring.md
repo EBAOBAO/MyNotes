@@ -73,6 +73,19 @@ SpringBoot 是一个基于 Spring 的全新框架，旨在简化 Spring 应用�
 
 可以使用 idea 提供的 Spring Inittializr 来创建 SpringBoot 应用。
 
+[IDEA2024创建SpringBoot项目（详细教程）-CSDN博客](https://blog.csdn.net/2401_87463146/article/details/142342236)
+
+那个  main -> java 里的一个类就是启动程序。
+
+后端项目的目的就是接收浏览器的请求，我们的第一步就是使用 *控制器* 组件：
+
+```java
+package org.example.myspringboottesting.controller;  
+  
+public class HelloController {  
+}
+```
+
 ## 部署开发环境
 
 ## 系统配置
