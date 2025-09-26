@@ -65,7 +65,13 @@ Maven 本身解压后就能用，并不需要作配置。如果要做配置的�
 
 ## 什么是 SpringBoot
 
+SpringBoot 是一个基于 Spring 的全新框架，旨在简化 Spring 应用的搭建与开发。
+
+现在的 javaEE 的开发通常涉及到三个框架：Spring、SpringMVC 与 mybatis（[SSM框架讲解_ssm架构-CSDN博客](https://blog.csdn.net/weixin_45650003/article/details/121623824)），但它们的配置相当繁琐，而 SpringBoot 就可以大大简化这个流程。
+
 ## Hello SpringBoot
+
+可以使用 idea 提供的 Spring Inittializr 来创建 SpringBoot 应用。
 
 ## 部署开发环境
 
